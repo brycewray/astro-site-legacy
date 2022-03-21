@@ -1,6 +1,6 @@
 ---
 setup: |
-  import Layout from '@layouts/BlogPost.astro'
+  import Layout from '@layouts/Post.astro'
   import Cool from '@components/Author.astro'
 title: "Using Dart Sass with Hugo—the sequel"
 subtitle: "A solution for even Node-haters"

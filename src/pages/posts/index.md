@@ -1,6 +1,6 @@
 ---
 setup: |
-  import Layout from '@layouts/BlogPost.astro'
+  import Layout from '@layouts/Post.astro'
   import Cool from '@components/Author.astro'
 title: Hello world!
 publishDate: 12 Sep 2021
