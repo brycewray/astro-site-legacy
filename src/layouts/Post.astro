@@ -1,7 +1,7 @@
 ---
-import BaseHead from '@components/BaseHead.astro';
-import BlogHeader from '@components/BlogHeader.astro';
-import BlogPost from '@components/BlogPost.astro';
+import Head from '@components/Head.astro';
+import Header from '@components/Header.astro';
+import Post from '@components/Post.astro';
 
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
@@ -10,15 +10,15 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 <html lang={content.lang || 'en'}>
 	<head>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-lucario.css"/>
-		<BaseHead {title} {description} {permalink} />
+		<Head {title} {description} {permalink} />
 	</head>
 
 	<body>
-		<BlogHeader />
+		<Header />
 		<div class="wrapper">
-			<BlogPost {title} {author} {heroImage} {publishDate} {alt}>
+			<Post {title} {author} {heroImage} {publishDate} {alt}>
 				<slot />
-			</BlogPost>
+			</Post>
 		</div>
 	</body>
 </html>

@@ -1,8 +1,8 @@
 ---
 // Component Imports
-import BaseHead from '@components/BaseHead.astro';
-import BlogHeader from '@components/BlogHeader.astro';
-import BlogPostPreview from '@components/BlogPostPreview.astro';
+import Head from '@components/Head.astro';
+import Header from '@components/Header.astro';
+import PostPreview from '@components/PostPreview.astro';
 
 interface MarkdownFrontmatter {
 	publishDate: number;
@@ -27,7 +27,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 
 <html lang="en">
 	<head>
-		<BaseHead {title} {description} {permalink} />
+		<Head {title} {description} {permalink} />
 
 		<style>
 			header {
@@ -66,7 +66,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 	</head>
 
 	<body>
-		<BlogHeader />
+		<Header />
 		<div class="wrapper">
 			<main class="content">
 				<section class="intro">
@@ -74,7 +74,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(
 					<p>{description}</p>
 				</section>
 				<section aria-label="Blog post list">
-					{allPosts.map((p) => <BlogPostPreview post={p} />)}
+					{allPosts.map((p) => <PostPreview post={p} />)}
 				</section>
 			</main>
 		</div>
