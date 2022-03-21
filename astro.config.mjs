@@ -17,6 +17,9 @@ export default defineConfig({
           }],
           "remark-footnotes",
         ],
+        rehypePlugins: [
+          "rehype-external-links",
+        ],
         // syntaxHighlight: "shiki",
       },
     ]
