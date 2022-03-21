@@ -17,7 +17,7 @@ export default defineConfig({
           }],
           "remark-footnotes",
         ],
-        syntaxHighlight: "shiki",
+        // syntaxHighlight: "shiki",
       },
     ]
   }
