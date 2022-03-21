@@ -5,3 +5,17 @@ html, body {
     color: lightgoldenrodyellow;
   }
 }
+
+
+h1, h2, h3, h4, p, li {
+  @media (prefers-color-scheme: dark) {
+    color: lightgray;
+  }
+}
+
+a {
+  color: blue;
+  @media (prefers-color-scheme: dark) {
+    color: cyan;
+  }
+}

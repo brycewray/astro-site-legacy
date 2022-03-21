@@ -7,4 +7,18 @@ export default defineConfig({
 	buildOptions: {
 		site: 'https://example.com/',
 	},
+  markdownOptions: {
+    render: [
+      "@astrojs/markdown-remark",
+      {
+        remarkPlugins: [
+          ["remark-smartypants", {
+            dashes: "oldschool",
+          }],
+          "remark-footnotes",
+        ],
+        syntaxHighlight: "shiki",
+      },
+    ]
+  }
 });
