@@ -1,0 +1,7 @@
+html, body {
+  background: lightgoldenrodyellow;
+  @media (prefers-color-scheme: dark) {
+    background: black;
+    color: lightgoldenrodyellow;
+  }
+}
