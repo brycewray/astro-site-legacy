@@ -1,12 +1,13 @@
 ---
 import Imgc from "@components/Imgc.astro"
 
-import Head from '@components/Head.astro';
-import Header from '@components/Header.astro';
-import Post from '@components/Post.astro';
+import Head from '@components/Head.astro'
+import Header from '@components/Header.astro'
+import Post from '@components/Post.astro'
+import Footer from '@components/Footer.astro'
 
-const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt, featured_image, featured_image_alt, featured_image_width, featured_image_height } = content;
+const { content } = Astro.props
+const { title, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height } = content
 ---
 
 <html lang={content.lang || 'en'}>
@@ -17,7 +18,7 @@ const { title, description, publishDate, author, heroImage, permalink, alt, feat
 	<body>
 		<Header />
 		<div class="wrapper">
-			<Post {title} {author} {heroImage} {publishDate} {alt}>
+			<Post >
         <Imgc
           url={featured_image}
           alt={featured_image_alt}
@@ -28,5 +29,6 @@ const { title, description, publishDate, author, heroImage, permalink, alt, feat
 				<slot />
 			</Post>
 		</div>
+    <Footer />
 	</body>
 </html>
