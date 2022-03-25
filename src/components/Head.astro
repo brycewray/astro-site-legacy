@@ -6,13 +6,30 @@ export interface Props {
 	description: string;
 	permalink: string;
 }
-const { title, description, permalink } = Astro.props;
+const { title, description, permalink, featured_image } = Astro.props;
+
+const currentUrl = Astro.request.url
+const canonicalUrl = Astro.request.canonicalURL
+
+let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
+
+let fallbackImg = "typewriter-monochrome_2242164_6260x4374.jpg"
+
+let imageToUse = ''
+
+if (featured_image == null) {
+  imageToUse = socialImg + fallbackImg
+} else {
+  imageToUse = socialImg + featured_image
+}
+
+// import SiteParams from "@data/siteparams.json"
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Astro" />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
@@ -24,14 +41,45 @@ const { title, description, permalink } = Astro.props;
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="https://astro.build/social.jpg?v=1" />
+<meta property="og:image" content={imageToUse} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:card" content={imageToUse} />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://astro.build/social.jpg?v=1" />
+<meta property="twitter:image" content={imageToUse} />
+
+<!-- **** BEGINNING, favicons **** -->
+
+<!-- generics -->
+<link rel="icon" type="image/svg+xml" href="/assets/images/svgs/svgNavIcon_reduced-2021-05-22.svg" charset="utf-8" />
+<link rel="alternate icon" href="/assets/images/icons/favicon-32x32.png" />
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-57x57.png" sizes="57x57" />
+<link rel="icon" type="image/png" href="/assets/images/icons/favicon-96x96.png" sizes="96x96" />
+<link rel="mask-icon" href="/assets/images/svgs/svgNavIcon_reduced_black.svg" /><!-- Safari 9.0+ -->
+
+<!-- iOS -->
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="167x167" href="/assets/images/icons/apple-touch-icon-167x167.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-icon-180x180.png" />
+<link rel="apple-touch-icon" sizes="1024x1024" href="/assets/images/icons/apple-icon-1024x1024.png" />
+
+<!-- Android -->
+<link rel="shortcut icon" sizes="196x196" href="/assets/images/icons/favicon-196x196.png" />
+
+<!-- Windows 8, IE 10 -->
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="/assets/images/icons/ms-icon-144x144.png" />
+
+<!-- Windows 8.1 and up, IE 11 -->
+<meta name="msapplication-config" content="/browserconfig.xml" />
+
+<!-- **** CONCLUSION, favicons **** -->
+
 
 <!-- fonts -->
 <link rel="preload" href="/assets/fonts/PublicSans-Regular-VF-2-000_2021-11-01_subset.woff2" crossorigin="anonymous" as="font" type="font/woff2" />
