@@ -1,82 +1,68 @@
 ---
-// Component Imports
-import Head from '@components/Head.astro';
-import Header from '@components/Header.astro';
-import PostPreview from '@components/PostPreview.astro';
+import { format } from "date-fns"
+
+import Head from '@components/Head.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
 
 interface MarkdownFrontmatter {
 	publishDate: number;
 }
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
 let title = 'BryceWray.com';
 let description = 'brycewray.com — Observations, opinions, geekery.';
 let permalink = 'https://www.brycewray.com/';
 
-// Data Fetching: List all Markdown posts in the repo.
-
 let allPosts = await Astro.fetchContent('./posts/**/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+allPosts = allPosts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+let postsNumber = allPosts.length
+let latestThree = allPosts.slice(0, 3)
 ---
 
 <html lang="en">
 	<head>
 		<Head {title} {description} {permalink} />
-
-		<style>
-			header {
-				width: 100%;
-				height: 100%;
-				background-color: var(--theme-bg-offset);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.content {
-				margin-top: 4rem;
-				margin-bottom: 8rem;
-			}
-
-			.content :global(main > * + *) {
-				margin-top: 1rem;
-			}
-
-			.intro {
-				padding-bottom: 4rem;
-				margin-bottom: 2rem;
-				border-bottom: 4px solid var(--theme-divider);
-			}
-
-			.intro > * {
-				margin: 0;
-			}
-
-			.latest {
-				font-size: 2.5rem;
-				font-weight: 700;
-			}
-		</style>
 	</head>
 
 	<body>
 		<Header />
 		<div class="wrapper">
 			<main class="content">
-				<section class="intro">
-					<h1 class="latest">{title}</h1>
-					<p>{description}</p>
-				</section>
-				<section aria-label="Blog post list">
-					{allPosts.map((p) => <PostPreview post={p} />)}
-				</section>
+        <div class="container-home">
+          <div class="homeOpen">
+            <h1>Welcome&nbsp;to brycewray.com, offering&nbsp;<a href="/about/">its&nbsp;owner</a>&rsquo;s &ldquo;observations, opinions, and&nbsp;geekiness&rdquo; since&nbsp;2018.</h1>
+          </div>
+          <div class="homePost-Div">
+            <div class="post-line"></div>
+            <h2 class="homePost-Latest">Latest <a href="/posts">posts</a></h2>
+            <section aria-label="Three most recent posts">
+              {latestThree.map((post) => (
+                <div>
+                  <h2 class="homePost-Title">
+                    <a href={post.url}>{post.title}</a>
+                  </h2>
+                  <p class="homePost-Subtitle">
+                    {post.subtitle}
+                  </p>
+                  <p class="homePost-Description">
+                    <em>{post.description}</em>
+                  </p>
+                  <p class="homePost-Dates">
+                    <strong>{format(new Date(post.date), "MMMM d, yyyy")}</strong>
+                    {post.lastmod && (
+                      <br /><span class="pokey">Last modified {format(new Date(post.lastmod), "MMMM d, yyyy")}</span>
+                    )}
+                  </p>
+                </div>
+              ) )}
+            </section>
+            <p class="homePost-Finish">
+              <a href="/posts/"><strong>All {postsNumber} posts</strong></a> <span class="pokey"><em>(listed five per page)</em></span>
+            </p>
+          </div>
+        </div>
 			</main>
 		</div>
+    <Footer />
 	</body>
 </html>
