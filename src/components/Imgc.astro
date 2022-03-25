@@ -1,0 +1,92 @@
+---
+import Md5 from "md5"
+
+const RespSizes = [ 300, 450, 600, 750, 900, 1050, 1250, 1350, 1500 ]
+let CloudiBase = 'https://res.cloudinary.com/brycewray-com/image/upload'
+let LQIPholder = 'f_jpg,q_1,w_20/'
+let XFmPart1 = 'f_auto,q_auto:eco,w_'
+let XFmPart2 = ',x_0,z_1/'
+
+const { url, alt, width, height, tmpl } = Astro.props;
+
+let ImgBmd5 = "ImgB-" + Md5(url)
+
+var DivClass, ImgClass, NscClass, DataSzes
+DivClass = ImgClass = NscClass = DataSzes = ''
+
+if (!tmpl) tmpl == 'none'
+
+switch(tmpl) {
+  /* === 'index'case used with home page when it had a hero image (pre-Jan. 2021)
+  case 'index':
+    DivClass = `h-full`
+    ImgClass = `nScrHidden object-cover object-center h-full w-full containedImage animate-fade`
+    NscClass = `imgCover hero`
+    DataSzes = `100vw`
+    break
+  */
+  case 'posts':
+    DivClass = `h-full ${ImgBmd5}` // can't use the md5-generated class name here for some reason; insert below
+    ImgClass = `nScrHidden imgCover hero animate-fade`
+    NscClass = `imgCover aspect-[${width}/${height}]`
+    DataSzes = `(min-width: 1024px) 100vw, 50vw`
+    break
+  default:
+    DivClass = `relative`
+    ImgClass = `w-full h-auto aspect-[${width}/${height}] animate-fade`
+    NscClass = `w-full h-auto aspect-[${width}/${height}]`
+    DataSzes = `(min-width: 1024px) 100vw, 50vw`
+}
+
+  /*
+  ================================================================
+  Fetch the LQIP from Cloudinary and convert it to a Base64 string
+  ================================================================
+  With immense thanks to "Aankhen" on the Eleventy Discord, 2022-01-22:
+  - https://discord.com/channels/741017160297611315/934524410591838249/
+  Also, https://stackoverflow.com/questions/41846669/download-an-image-using-axios-and-convert-it-to-base64
+  */
+
+  async function GetBase64(UrlFor64) {
+    const Response = await fetch
+      .get(UrlFor64, {
+        responseType: 'arraybuffer'
+      })
+    return Buffer.from(Response.data, 'binary').toString('base64')
+  }
+
+  let LQIP_b64 = await GetBase64(CloudiBase + LQIPholder + url)
+
+  /*
+  ================================================================
+  End, LQIP-to-Base64
+  ================================================================
+  */
+
+---
+
+<style nonce="DhcnhD3khTMePgXw">
+  .{ImgBmd5} {
+    background: url(data:image/jpeg;base64,${LQIP_b64});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+<div class={DivClass} {ImgBmd5}>
+<noscript>
+  <img class={NscClass} src={CloudiBase + XFmPart1 + "600" + XFmPart2 + url} alt={alt} />
+</noscript>
+<img class={ImgClass} src={CloudiBase + XFmPart1 + "600" + XFmPart2 + url} srcset={
+  RespSizes.forEach(size => {
+    if (size <= width) {
+      {CloudiBase + XFmPart1 + size + XFmPart2 + url} ${size}w
+    }
+  }).join(', ')
+} alt={alt} width={width} height={height} {
+  if (tmpl !== "posts") {
+    loading="lazy"
+  }
+}
+  sizes={DataSzes} />
+</div>

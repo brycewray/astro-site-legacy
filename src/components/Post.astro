@@ -1,12 +1,7 @@
 ---
-export interface Props {
-	title: string;
-	publishDate: string;
-	heroImage: string;
-	alt: string;
-}
+import Imgc from "../components/Imgc.astro"
 
-const { title, author, publishDate, heroImage, alt } = Astro.props;
+const { title, author, publishDate, featured_image, featured_image_alt } = Astro.props;
 ---
 
 <div class="container-narrower">
@@ -16,13 +11,11 @@ const { title, author, publishDate, heroImage, alt } = Astro.props;
   </header>
 	<article class="content article">
     <main>
+      <Imgc
+        url={featured_image}
+        alt={featured_image_alt}
+      />
       <slot />
     </main>
 	</article>
 </div>
-
-<style>
-  .test-style {
-    color: rebeccapurple;
-  }
-</style>
