@@ -1,7 +1,5 @@
 ---
-import Imgc from "../components/Imgc.astro"
-
-const { title, author, publishDate, featured_image, featured_image_alt } = Astro.props;
+const { title, author, publishDate } = Astro.props;
 ---
 
 <div class="container-narrower">
@@ -11,10 +9,6 @@ const { title, author, publishDate, featured_image, featured_image_alt } = Astro
   </header>
 	<article class="content article">
     <main>
-      <Imgc
-        url={featured_image}
-        alt={featured_image_alt}
-      />
       <slot />
     </main>
 	</article>

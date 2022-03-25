@@ -1,10 +1,12 @@
 ---
+import Imgc from "@components/Imgc.astro"
+
 import Head from '@components/Head.astro';
 import Header from '@components/Header.astro';
 import Post from '@components/Post.astro';
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+const { title, description, publishDate, author, heroImage, permalink, alt, featured_image, featured_image_alt, featured_image_width, featured_image_height } = content;
 ---
 
 <html lang={content.lang || 'en'}>
@@ -16,6 +18,13 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 		<Header />
 		<div class="wrapper">
 			<Post {title} {author} {heroImage} {publishDate} {alt}>
+        <Imgc
+          url={featured_image}
+          alt={featured_image_alt}
+          width={featured_image_width}
+          height={featured_image_height}
+          tmpl="posts"
+        />
 				<slot />
 			</Post>
 		</div>
