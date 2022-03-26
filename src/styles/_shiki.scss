@@ -1,0 +1,59 @@
+@use 'variables' as var;
+
+:root {
+  --shiki-color-text: #EEEEEE;
+  --shiki-color-background: #333333;
+  --shiki-token-constant: #660000;
+  --shiki-token-string: #770000;
+  --shiki-token-comment: #880000;
+  --shiki-token-keyword: #990000;
+  --shiki-token-parameter: #AA0000;
+  --shiki-token-function: #BB0000;
+  --shiki-token-string-expression: #CC0000;
+  --shiki-token-punctuation: #DD0000;
+  --shiki-token-link: #EE0000;
+}
+
+code {
+  font-family: var.$monospaced;
+  font-kerning: none;
+  font-variant-ligatures: none;
+  background: var.$blueLightCode;
+  @media screen and (prefers-color-scheme: dark) {
+    background: var.$code-bkgd-dark-mode;
+  }
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #fff; // was #a9eafa
+  background-color: transparent;
+  font-family: var.$monospaced;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: hsl(220, 4%, 16%); /* #27282a for checking in WebAIM */
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
