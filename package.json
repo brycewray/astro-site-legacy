@@ -6,7 +6,7 @@
     "dev": "astro dev --host 192.168.254.10",
     "start": "astro dev --host 192.168.254.10",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview --host 192.168.254.10"
   },
   "devDependencies": {
     "@astrojs/preact": "^0.0.2",
