@@ -1,0 +1,15 @@
+{
+  "origins": [
+    "https://www.brycewray.com",
+    "https://brycewray.com",
+    "https://hugo-site-vercel.vercel.app",
+    "https://eleventy-site-1wo.pages.dev",
+    "https://eleventy-site-vercel.vercel.app",
+    "https://astro-site-vercel.vercel.app"
+  ],
+  "originsRegex": [
+    "http://localhost:[0-9]+",
+    "http://192.168.254.10:[0-9]+"
+  ],
+  "defaultCommentOrder": "oldest"
+}

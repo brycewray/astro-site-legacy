@@ -1,4 +1,6 @@
 ---
+import Comments from "@components/Comments.astro"
+
 const { title, author, publishDate, featured_image, featured_image_alt } = Astro.props;
 ---
 
@@ -11,5 +13,6 @@ const { title, author, publishDate, featured_image, featured_image_alt } = Astro
     <main>
       <slot />
     </main>
+    <Comments />
 	</article>
 </div>
