@@ -1,0 +1,29 @@
+---
+import { format } from "date-fns"
+
+const { title, subtitle, description, date, lastmod } = Astro.props;
+---
+
+<div class="billboard-div">
+  <div class="billboard-title-block">
+    <h1 class="billboard-title-text">{title}</h1>
+    {subtitle && (
+      <h2 class="billboard-subtitle-text">{subtitle}</h2>
+    ) || (
+      <p>&nbsp;</p>
+    )}
+    {description && (
+      <p class="billboard-description-text"><em>{description}</em></p>
+    ) || (
+      <p>&nbsp;</p>
+    )}
+    <p class="billboard-p-text">
+      <strong>{format(new Date(date), "MMMM d, yyyy")}</strong><br />
+      {lastmod && (
+        <span class="pokey">Last modified {format(new Date(lastmod), "MMMM d, yyyy")}</span>
+      ) || (
+        <span class="pokey">&nbsp;</span>
+      )}
+    </p>
+  </div>
+</div>
