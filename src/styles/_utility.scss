@@ -134,9 +134,13 @@
   border: 1px solid hsl(0, 0%, 20%);
   margin: 0.5em auto;
   width: 100%;
-  padding: 1.5em;
+  padding: 1em 1.25em;
   @media (prefers-color-scheme: dark) {
     border: 1px solid var.$grey-1;
+  }
+  p {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -148,6 +152,9 @@
   background: hsl(52, 100%, 85%);
   @media (prefers-color-scheme: dark) {
     background: hsl(40, 100%, 10%);
+  }
+  p {
+    font-size: 85%;
   }
 }
 
