@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.header-anchor {
+article h1 a, article h2 a, article h3 a, article h4 a, article h5 a, article h6 a {
   border: none;
   color: var.$black;
   @media screen and (prefers-color-scheme: dark) {

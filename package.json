@@ -20,6 +20,8 @@
     "sass": "^1.49.9"
   },
   "dependencies": {
-    "preact": "^10.6.6"
+    "preact": "^10.6.6",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-slug": "^5.0.1"
   }
 }

@@ -15,12 +15,17 @@ export default defineConfig({
           ["remark-smartypants", {
             dashes: "oldschool",
           }],
-          "remark-footnotes",
+          "remark-footnotes"
         ],
         rehypePlugins: [
           "rehype-external-links",
+          "rehype-slug",
+          ["rehype-autolink-headings", {
+            behavior: "wrap",
+            test: [ 'article h1', 'article h2', 'article h3', 'article h4', 'article h5', 'article h6']
+          }]
         ],
-        // syntaxHighlight: "shiki",
+        syntaxHighlight: 'prism',
       },
     ]
   }
