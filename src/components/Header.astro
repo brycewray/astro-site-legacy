@@ -1,7 +1,7 @@
 ---
-const allPosts = Astro.fetchContent('../pages/posts/**/*.md')
-const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date))
-const newestPost = sortedPosts[1]
+let allPosts = await Astro.fetchContent('../pages/posts/**/*.md')
+allPosts = allPosts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+let newestPost = allPosts[0].url
 ---
 <header>
   <nav class="nav">
@@ -13,7 +13,7 @@ const newestPost = sortedPosts[1]
     <ul class="nav-Menu">
       <li><a href="/" aria-label="Home page"><img src="/assets/images/svgs/svgNavIcon.svg" alt="Logo for brycewray.com website" /></a></li>
       <li><a href="/about/" aria-label="About me">About</a></li>
-      <li><a href={newestPost.url} title="Newest post" aria-label="Newest post">Newest post</a></li>
+      <li><a href={newestPost} title="Newest post" aria-label="Newest post">Newest post</a></li>
       <li><a href="/posts/" aria-label="Posts">All posts</a></li>
       <li><a href="/privacy/" aria-label="Privacy policy">Privacy</a></li>
       <li><a href="/contact/" aria-label="Contact me">Contact</a></li>
