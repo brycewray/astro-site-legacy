@@ -1,14 +1,8 @@
 ---
 import Comments from "@components/Comments.astro"
-
-const { title, author, publishDate, featured_image, featured_image_alt } = Astro.props;
 ---
 
 <div class="container-narrower">
-  <header>
-    <h1 class="title">{title}</h1>
-    <p class="publish-date">{publishDate}</p>
-  </header>
 	<article class="content article">
     <main>
       <slot />

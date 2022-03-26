@@ -1,4 +1,5 @@
 ---
+import { format } from "date-fns"
 import Imgc from "@components/Imgc.astro"
 
 import Head from '@components/Head.astro'
@@ -7,7 +8,7 @@ import Post from '@components/Post.astro'
 import Footer from '@components/Footer.astro'
 
 const { content } = Astro.props
-const { title, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height } = content
+const { title, subtitle, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption } = content
 ---
 
 <html lang={content.lang || 'en'}>
@@ -17,18 +18,42 @@ const { title, description, date, lastmod, permalink, featured_image, featured_i
 
 	<body>
 		<Header />
-		<div class="wrapper">
+      <div class="background-hero-image-div">
+        <div class="background-hero-div">
+          <Imgc
+            url={featured_image}
+            alt={featured_image_alt}
+            width={featured_image_width}
+            height={featured_image_height}
+            tmpl="posts"
+          />
+        </div>
+        <div class="background-hero-wrapper-div">
+          <div class="background-hero-title-block">
+            <h1 class="background-hero-title-text">{title}</h1>
+            <h2 class="background-hero-subtitle-text">{subtitle}</h2>
+            <p class="background-hero-description-text"><em>{description}</em></p>
+            <p class="background-hero-p-text">
+              <strong>{format(new Date(date), "MMMM d, yyyy")}</strong><br />
+              {lastmod && (
+                <span class="pokey">Last modified {format(new Date(lastmod), "MMMM d, yyyy")}</span>
+              ) || (
+                <span class="pokey">&nbsp;</span>
+              )}
+            </p>
+            <p class="featured-image-caption">
+              {featured_image_caption && (
+                <span><Fragment set:html={featured_image_caption}></span>
+              ) || (
+                <span>&nbsp;</span>
+              )}
+            </p>
+          </div>
+        </div>
+      </div>
 			<Post >
-        <Imgc
-          url={featured_image}
-          alt={featured_image_alt}
-          width={featured_image_width}
-          height={featured_image_height}
-          tmpl="posts"
-        />
 				<slot />
 			</Post>
-		</div>
     <Footer />
 	</body>
 </html>
