@@ -9,10 +9,31 @@
   =======
 */
 
+const { TweetID } = Astro.props
 
-// let BearerToken = import.meta.env.BEARER_TOKEN
-const { BEARER_TOKEN } = import.meta.env
+const BearerToken = import.meta.env.PUBLIC_BEARER_TOKEN
+// const AuthHeaders = "Authorization: Bearer " + BearerToken
+const jsonURL1 = "https://api.twitter.com/2/tweets?ids="
+const jsonURL2 = "&expansions=author_id,attachments.media_keys&tweet.fields=created_at,text,attachments,entities,source&user.fields=name,username,profile_image_url&media.fields=preview_image_url,type,url,alt_text"
+
+let JsonOut = ''
+
+const response = await fetch(jsonURL1 + TweetID + jsonURL2, {
+  method: "get",
+  headers: {
+    "Authorization": `Bearer ${BearerToken}`
+  }
+})
+const JsonData = await response.json()
+console.log(JsonData)
+
+let Test = JsonData.data[0].text
+// as in Hugo, will have to check for presence/absence
+// of various objects and arrays
+// to avoid crashes/errors
 
 ---
 
-<p>A tweet will go here.</p>
+<p class="pokey">A tweet will go here.<br />
+TweetID = {TweetID}<br />
+Test = {Test}</p>
