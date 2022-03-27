@@ -27,4 +27,9 @@ export default defineConfig({
       },
     ]
   },
+  vite: {
+    ssr: {
+      external: ['twitter-api-client'],
+    },
+  },
 })
