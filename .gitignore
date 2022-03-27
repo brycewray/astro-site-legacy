@@ -21,3 +21,6 @@ start.sh
 build.sh
 testbuild.sh
 push.sh
+
+#static tweet stuff
+tweetcurl*.json
