@@ -11,17 +11,16 @@
   "devDependencies": {
     "@astrojs/preact": "^0.0.2",
     "@astrojs/renderer-preact": "^0.5.0",
-    "@rebelchris/astro-static-tweet": "^0.0.8",
-    "astro": "^0.25.2",
+    "astro": "^0.25.4",
     "axios": "^0.26.1",
     "date-fns": "^2.28.0",
     "md5": "^2.3.0",
     "rehype-external-links": "^1.0.1",
     "remark-footnotes": "^4.0.1",
-    "sass": "^1.49.9"
+    "sass": "^1.49.10"
   },
   "dependencies": {
-    "preact": "^10.6.6",
+    "preact": "^10.7.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1"
   }
