@@ -11,13 +11,14 @@
   "devDependencies": {
     "@astrojs/preact": "^0.0.2",
     "@astrojs/renderer-preact": "^0.5.0",
-    "astro": "^0.25.4",
+    "@rebelchris/astro-static-tweet": "^0.0.8",
+    "astro": "^0.26.0",
     "axios": "^0.26.1",
     "date-fns": "^2.28.0",
     "md5": "^2.3.0",
     "rehype-external-links": "^1.0.1",
     "remark-footnotes": "^4.0.1",
-    "sass": "^1.49.10"
+    "sass": "^1.49.11"
   },
   "dependencies": {
     "preact": "^10.7.0",
