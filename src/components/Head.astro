@@ -9,7 +9,7 @@ export interface Props {
 const { title, description, permalink, featured_image } = Astro.props;
 
 const currentUrl = Astro.request.url
-const canonicalUrl = Astro.request.canonicalURL
+const canonicalUrl = Astro.canonicalURL
 
 let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
 
