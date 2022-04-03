@@ -13,8 +13,8 @@ let title = 'BryceWray.com';
 let description = 'brycewray.com — Observations, opinions, geekery.';
 let permalink = 'https://www.brycewray.com/';
 
-let allPosts = await Astro.fetchContent('./posts/**/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+let allPosts = await Astro.glob('./posts/**/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 let postsNumber = allPosts.length
 let latestThree = allPosts.slice(0, 3)
 ---
@@ -39,18 +39,18 @@ let latestThree = allPosts.slice(0, 3)
               {latestThree.map((post) => (
                 <div>
                   <h2 class="homePost-Title">
-                    <a href={post.url}>{post.title}</a>
+                    <a href={post.url}>{post.frontmatter.title}</a>
                   </h2>
                   <p class="homePost-Subtitle">
-                    {post.subtitle}
+                    {post.frontmatter.subtitle}
                   </p>
                   <p class="homePost-Description">
-                    <em>{post.description}</em>
+                    <em>{post.frontmatter.description}</em>
                   </p>
                   <p class="homePost-Dates">
-                    <strong>{format(new Date(post.date), "MMMM d, yyyy")}</strong>
-                    {post.lastmod && (
-                      <br /><span class="pokey">Last modified {format(new Date(post.lastmod), "MMMM d, yyyy")}</span>
+                    <strong>{format(new Date(post.frontmatter.date), "MMMM d, yyyy")}</strong>
+                    {post.frontmatter.lastmod && (
+                      <br /><span class="pokey">Last modified {format(new Date(post.frontmatter.lastmod), "MMMM d, yyyy")}</span>
                     )}
                   </p>
                 </div>

@@ -6,6 +6,7 @@
   - https://hugo.md/post/update-rendering-static-tweets/
   - https://github.com/KyleMit/eleventy-plugin-embed-tweet
   - https://www.stackbit.com/blog/advanced-hugo-templates/
+  - https://github.com/rebelchris/astro-static-tweet/blob/master/StaticTweet.astro
   =======
 */
 
@@ -16,24 +17,74 @@ const BearerToken = import.meta.env.PUBLIC_BEARER_TOKEN
 const jsonURL1 = "https://api.twitter.com/2/tweets?ids="
 const jsonURL2 = "&expansions=author_id,attachments.media_keys&tweet.fields=created_at,text,attachments,entities,source&user.fields=name,username,profile_image_url&media.fields=preview_image_url,type,url,alt_text"
 
-let JsonOut = ''
-
 const response = await fetch(jsonURL1 + TweetID + jsonURL2, {
   method: "get",
   headers: {
     "Authorization": `Bearer ${BearerToken}`
   }
 })
-const JsonData = await response.json()
-console.log(JsonData)
+const Json = await response.json()
 
-let Test = JsonData.data[0].text
+const JsonData = Json.data[0]
+const JsonIncludes = Json.includes
+
 // as in Hugo, will have to check for presence/absence
 // of various objects and arrays
 // to avoid crashes/errors
 
+let created_at = ''; let profile_image_url = ''; let name = ''; let username = ''
+
+let text = JsonData.text
+created_at = JsonData.created_at
+let author_id = JsonData.author_id
+let source = JsonData.source
+let entities = JsonData.entities
+let hashtags = entities.hashtags
+let urls = entities.urls
+let urlsImages = urls.images
+let mentions = entities.mentions
+
+let media = JsonIncludes.media
+let users = JsonIncludes.users
+
+/*
+if (urlsImages) {
+  urlsImages.forEach(item => {
+    if (typeof item === "object" && item !== null) {
+      Object.entries(item).forEach(subitem => {
+        const [key, value] = subitem
+        console.log("ObjSubitem", key, " -> ", value)
+        text += subitem
+      })
+    } else if (Array.isArray(item) && item !== null) {
+      item.forEach(subitem => {
+        const [key, value] = subitem
+        console.log("ArrSubitem", key, " -> ", value)
+      })
+    } else {
+      console.log("Item -> ", item)
+      text += item
+    }
+  })
+}
+*/
+
+if (urls) {
+  if(typeof urls === "object") {
+    console.log("It's an object")
+  } else if(Array.isArray(urls)) {
+  console.log("It's an array")
+  } else {
+    console.log("It's neither")
+  }
+} else {
+  console.log("It doesn't exist")
+}
+
+// console.log(text)
 ---
 
 <p class="pokey">A tweet will go here.<br />
 TweetID = {TweetID}<br />
-Test = {Test}</p>
+Test = {urlsImages}
+</p>

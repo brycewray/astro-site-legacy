@@ -1,6 +1,6 @@
 ---
-let allPosts = await Astro.fetchContent('../pages/posts/**/*.md')
-allPosts = allPosts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+let allPosts = await Astro.glob('../pages/posts/**/*.md')
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
 let newestPost = allPosts[0].url
 ---
 <header>
