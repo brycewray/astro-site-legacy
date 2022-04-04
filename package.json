@@ -18,7 +18,8 @@
     "md5": "^2.3.0",
     "rehype-external-links": "^1.0.1",
     "remark-footnotes": "^4.0.1",
-    "sass": "^1.49.11"
+    "sass": "^1.49.11",
+    "twitter-api-client": "^1.5.2"
   },
   "dependencies": {
     "preact": "^10.7.0",
