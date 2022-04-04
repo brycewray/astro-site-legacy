@@ -24,13 +24,12 @@ const response = await fetch(jsonURL1 + TweetID + jsonURL2, {
   }
 })
 const Json = await response.json()
-
-let { JsonData } = Json
+const JsonData = Json.data[0]
 
 let text = ''; let created_at = ''; let profile_image_url = ''; let name = ''; let username = ''
 
 text = JsonData.text
-
+console.log("text = ", text)
 ---
 
 <p>Tweet will go here</p>
