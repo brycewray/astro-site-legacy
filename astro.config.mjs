@@ -9,7 +9,6 @@ export default defineConfig({
         dashes: "oldschool",
       }],
       "remark-footnotes",
-      "@astrojs/markdown-remark",
     ],
     rehypePlugins: [
       "rehype-external-links",
@@ -19,7 +18,7 @@ export default defineConfig({
         test: [ 'article h1', 'article h2', 'article h3', 'article h4', 'article h5', 'article h6']
       }]
     ],
-    // syntaxHighlight: 'prism',
+    syntaxHighlight: 'prism',
     shikiConfig: {
       wrap: true,
     },
