@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.brycewray.com/',
-  // publicDir: './publicDir',
   markdown: {
     remarkPlugins: [
       ["remark-smartypants", {

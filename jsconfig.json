@@ -7,7 +7,7 @@
       "@layouts/*": ["src/layouts/*"],
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
-      "@public/*": ["publicDir/*"],
+      "@public/*": ["public/*"],
       "@svg/*": ["src/assets/svg/*"]
     }
   }
