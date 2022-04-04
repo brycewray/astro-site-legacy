@@ -25,66 +25,13 @@ const response = await fetch(jsonURL1 + TweetID + jsonURL2, {
 })
 const Json = await response.json()
 
-const JsonData = Json.data[0]
-const JsonIncludes = Json.includes
+let { JsonData } = Json
 
-// as in Hugo, will have to check for presence/absence
-// of various objects and arrays
-// to avoid crashes/errors
+let text = ''; let created_at = ''; let profile_image_url = ''; let name = ''; let username = ''
 
-let created_at = ''; let profile_image_url = ''; let name = ''; let username = ''
+text = JsonData.text
 
-let text = JsonData.text
-created_at = JsonData.created_at
-let author_id = JsonData.author_id
-let source = JsonData.source
-let entities = JsonData.entities
-let hashtags = entities.hashtags
-let urls = entities.urls
-let urlsImages = urls.images
-let mentions = entities.mentions
-
-let media = JsonIncludes.media
-let users = JsonIncludes.users
-
-/*
-if (urlsImages) {
-  urlsImages.forEach(item => {
-    if (typeof item === "object" && item !== null) {
-      Object.entries(item).forEach(subitem => {
-        const [key, value] = subitem
-        console.log("ObjSubitem", key, " -> ", value)
-        text += subitem
-      })
-    } else if (Array.isArray(item) && item !== null) {
-      item.forEach(subitem => {
-        const [key, value] = subitem
-        console.log("ArrSubitem", key, " -> ", value)
-      })
-    } else {
-      console.log("Item -> ", item)
-      text += item
-    }
-  })
-}
-*/
-
-if (urls) {
-  if(typeof urls === "object") {
-    console.log("It's an object")
-  } else if(Array.isArray(urls)) {
-  console.log("It's an array")
-  } else {
-    console.log("It's neither")
-  }
-} else {
-  console.log("It doesn't exist")
-}
-
-// console.log(text)
 ---
 
-<p class="pokey">A tweet will go here.<br />
-TweetID = {TweetID}<br />
-Test = {urlsImages}
-</p>
+<p>Tweet will go here</p>
+<p>{text}</p>
