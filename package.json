@@ -21,7 +21,7 @@
     "twitter-api-client": "^1.5.2"
   },
   "dependencies": {
-    "preact": "^10.7.0",
+    "preact": "^10.7.1",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1"
   }
