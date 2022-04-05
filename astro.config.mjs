@@ -4,7 +4,6 @@ import { defineConfig } from 'astro/config'
 export default defineConfig({
 	site: 'https://www.brycewray.com/',
   markdown: {
-    mode: 'mdx',
     remarkPlugins: [
       ["remark-smartypants", {
         dashes: "oldschool",
