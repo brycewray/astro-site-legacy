@@ -39,10 +39,30 @@ text = JsonData.text
 
 if (JsonData.entities.urls) {
   JsonData.entities.urls.forEach((url) => {
-    text = text.replace(
-      url.url,
-      `<a target="_blank" rel="noreferrer noopener" href="${url.expanded_url}">${url.display_url}</a>`
-    )
+    if (!url.images) {
+      if (!url.unwound_url) {
+        if (url.display_url.includes ("buff.ly")) {
+          text = text.replace(
+            url.url,
+            `<a href=${url.url} target="_blank" rel="noopener">${url.display_url}</a>`
+          )
+        } else {
+          text = text.replace(
+            url.url,
+            ``
+          )
+        }
+      } else {
+        text = text.replace(
+          url.url,
+          `<a href=${url.url} target="_blank" rel="noopener">${url.display_url}</a>`
+        )
+      }
+    } else {
+      text = text.replace(
+        url.url,
+        `<a href=${url.url} target="_blanl" rel="noopener">${url.display_url}</a>`)
+    }
   })
 }
 
@@ -59,7 +79,7 @@ if (JsonData.entities.hashtags) {
   JsonData.entities.hashtags.forEach((hashtag) => {
     text = text.replace(
       `#${hashtag.tag}`,
-      `<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/hashtag/${hashtag.tag}">#${hashtag.tag}</a>`
+      `<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/hashtag/${hashtag.tag}?src=hash&ref_src=twsrc">#${hashtag.tag}</a>`
     )
   })
 }
