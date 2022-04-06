@@ -1,4 +1,6 @@
 ---
+import { format } from "date-fns"
+
 /*
   =======
   Based on...
@@ -9,8 +11,6 @@
   - https://github.com/rebelchris/astro-static-tweet/blob/master/StaticTweet.astro
   =======
 */
-
-// import { format } from "date-fns"
 
 const { TweetID } = Astro.props
 
@@ -91,7 +91,7 @@ if (JsonIncludes.media) {
   <p class="tweet-body" set:html={text} />
   <span set:html={imageItems} />
   <div class="tweet-footer">
-    <a href=`https://twitter.com/${username}/status/${TweetID}` class="tweet-date" target="_blank" rel="noopener">{created_at}</a>&nbsp;<span class="legal">(UTC)</span>
+    <a href=`https://twitter.com/${username}/status/${TweetID}` class="tweet-date" target="_blank" rel="noopener">{format(new Date(created_at), "MMMM d, yyyy • h:mm aa")}</a>&nbsp;<span class="legal">(UTC)</span>
   </div>
 </blockquote>
 
