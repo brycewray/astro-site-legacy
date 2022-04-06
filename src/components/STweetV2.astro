@@ -46,10 +46,6 @@ if (JsonData.entities.urls) {
   })
 }
 
-if (JsonData.entities.urls.start) {
-  console.log ("Start = ", JsonData.entities.urls.start)
-}
-
 if (JsonData.entities.mentions) {
   JsonData.entities.mentions.forEach((mention) => {
     text = text.replace(
