@@ -1,187 +1,140 @@
 ---
-// derived from https://github.com/rebelchris/astro-static-tweet as of 2022-04-04
-// -- depends on v.1.x Twitter API; the v.2.x Twitter API Client is still TBD,
-// as seen at https://github.com/FeedHive/twitter-api-client/projects/1#card-46281826
-
-import { TwitterClient } from 'twitter-api-client';
-const twitterClient = new TwitterClient({
-  apiKey: import.meta.env.PUBLIC_TWITTER_API_KEY,
-  apiSecret: import.meta.env.PUBLIC_TWITTER_API_SECRET,
-  accessToken: import.meta.env.PUBLIC_TWITTER_ACCESS_TOKEN,
-  accessTokenSecret: import.meta.env.PUBLIC_TWITTER_ACCESS_TOKEN_SECRET,
-});
-
-const { id } = Astro.props;
-
-const data = await twitterClient.tweets.statusesShow({
-  id: id,
-  tweet_mode: 'extended',
-});
-
-let { full_text } = data;
-
-if (data.in_reply_to_screen_name) {
-  full_text = full_text.replace(`@${data.in_reply_to_screen_name}`, '');
+export interface Props {
+	id: string;
 }
 
-data.entities.urls.forEach((url) => {
-  full_text = full_text.replace(
-    url.url,
-    `<a rel="noreferrer noopener" target="_blank" href="${url.url}">${url.display_url}</a>`
-  );
-});
+/*
+Based on...
+- https://github.com/hugomd/blog/blob/6ad96b24117255c2a9912c566ffd081bd9bbd6f1/layouts/shortcodes/statictweet.html
+- https://hugo.md/post/update-rendering-static-tweets/
+- https://github.com/KyleMit/eleventy-plugin-embed-tweet
+- https://github.com/rebelchris/astro-static-tweet/blob/master/StaticTweet.astro
+- https://www.brycewray.com/posts/2022/04/static-tweets-astro/
+*/
 
-data.entities.user_mentions.forEach((mention) => {
-  full_text = full_text.replace(
-    `@${mention.screen_name}`,
-    `<a rel="noreferrer noopener" target="_blank" href="https://twitter.com/${mention.screen_name}">@${mention.screen_name}</a>`
-  );
-});
+const { id } = Astro.props as Props;
 
-data.entities?.hashtags.forEach((hashtag) => {
-  full_text = full_text.replace(
-    `#${hashtag.text}`,
-    `<a rel="noreferrer noopener" target="_blank" href="https://twitter.com/hashtag/${hashtag.text}">#${hashtag.text}</a>`
-  );
-});
+const formatError = (...lines) => lines.join('\n         ');
 
-if (data.entities.media) {
-  data.entities.media.forEach((media) => {
-    full_text = full_text.replace(media.url, '');
-  });
+// Thanks to eleventy-plugin-embed-twitter
+// https://github.com/gfscott/eleventy-plugin-embed-twitter/blob/main/lib/extractMatch.js
+const urlPattern = /(?=(\s*))\1(?:<a [^>]*?>)??(?=(\s*))\2(?:https?:)??(?:\/\/)??(?:w{3}\.)??(?:twitter\.com)\/([a-zA-Z0-9_]{1,15})?(?:\/(?:status)\/)(\d+)?(?:[^\s<>]*)(?=(\s*))\5(?:<\/a>)??(?=(\s*))\6/;
+const idRegExp = /^\d+$/;
+
+function extractID(idOrUrl: string) {
+	if (idRegExp.test(idOrUrl)) return idOrUrl;
+	const match = idOrUrl.match(urlPattern);
+	return match?.[4];
 }
+
+/** Fetch a URL and parse it as JSON, but catch errors to stop builds erroring. */
+async function safeGet(url: string) {
+	try {
+		const res = await fetch(url);
+		if (!res.ok) throw new Error(formatError(`Failed to fetch ${url}`, `Error ${res.status}: ${res.statusText}`))
+		return await res.json();
+	} catch (e) {
+		console.error(formatError(`[error]  Tweet.astro`, e?.message ?? e));
+	}
+}
+
+async function fetchTweet(id) {
+	return await safeGet(`https://cdn.syndication.twimg.com/tweet?id=${id}`);
+}
+
+function buildContent(tweet) {
+	if (!tweet) return {};
+
+	const { name = '', screen_name = '', profile_image_url_https = '' } = tweet.user;
+	let { created_at = '', text = '' } = tweet;
+	let images = [];
+	let video;
+	let imageCount = 0;
+
+	if (tweet.entities.urls) {
+		tweet.entities.urls.forEach(({ url, display_url, expanded_url }) => {
+			text = text.replace(
+				url,
+				`<a href=${expanded_url}>${display_url}</a>`
+			);
+		});
+	}
+
+	if (tweet.entities.user_mentions) {
+		tweet.entities.user_mentions.forEach(({ screen_name }) => {
+			text = text.replace(
+				`@${screen_name}`,
+				`<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/${screen_name}">@${screen_name}</a>`
+			);
+		});
+	}
+
+	if (tweet.entities.hashtags) {
+		tweet.entities.hashtags.forEach((tag) => {
+			text = text.replace(
+				`#${tag.text}`,
+				`<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/hashtag/${tag.text}?src=hash&ref_src=twsrc">#${tag.text}</a>`
+			);
+		});
+	}
+
+	text = text.replace(/(?:\r\n|\r|\n)/g, '<br/>');
+
+	if (tweet.entities.media && !tweet.video) {
+		tweet.entities.media.forEach(({ url, expanded_url }) => {
+			if (url) {
+				text = text.replace(url, expanded_url);
+			}
+		});
+	}
+
+	if (tweet.photos) {
+		imageCount = tweet.photos.length;
+		tweet.photos.forEach(({ expandedUrl, url, width, height, accessibilityLabel = '' }) => {
+			images.push(`<div><img class="tweet-media-img" src=${url} alt="${accessibilityLabel}" width="${width}" height="${height}" loading="lazy" /></div>`);
+			text = text.replace(expandedUrl, '');
+		});
+	}
+
+	if (tweet.video) {
+		// Remove interim video URL from text content.
+    tweet.entities.media.forEach(({ url }) => {
+      if (url) {
+        text = text.replace(url, '');
+      }
+    });
+		const aspect = tweet.video.aspectRatio.join(' / ');
+		video = `<video autoplay loop controls class="tweet-media-video" preload="none" poster="${tweet.video.poster}" style="aspect-ratio: ${aspect};">`;
+		tweet.video.variants.forEach(({ src, type }) => {
+			video += `<source src="${src}" type="${type}">`;
+		});
+		video += '</video>';
+	}
+
+	return { name, screen_name, profile_image_url_https, created_at, text, images: images.join(''), imageCount, video };
+}
+
+const tweetID = extractID(id);
+const tweet = await fetchTweet(tweetID);
+const { name, screen_name, profile_image_url_https, text, images, imageCount, video } = buildContent(tweet);
+const tweetLink = `https://twitter.com/${screen_name}/status/${tweetID}`;
 ---
-<blockquote class="astro__tweet">
-  {data.entities?.media?.length &&
-    <div class='astro__tweet-media'>
-      <img src={data.entities.media[0].media_url_https} alt="unknown tweet media content">
-    </div>
-  }
-
-    <div class="astro__tweet-header">
-      <img class="astro__tweet-header-profile-picture" src={data.user.profile_image_url_https} alt={`${data.user.name} profile image`} />
-      <div class="astro__tweet-header-names">
-        <div class="astro__tweet-header-names-full">
-          {data.user.name}
-        </div>
-        <div class="astro__tweet-header-names-username">
-          <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/${data.user.screen_name}`}>
-          @{data.user.screen_name}
-          </a>
-        </div>
-      </div>
-      <div class="astro__tweet-header-twitter-logo">
-        🦉
-      </div>
-    </div>
-    <div class="astro__tweet-body">
-      {full_text}
-    </div>
-    <div class="astro__tweet-date">
-      {data.created_at}
-    </div>
-
-    <div class="astro__tweet-actions">
-      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/tweet?in_reply_to=${data.id_str}`} class="astro__tweet-actions-button">
-        Reply
-      </a>
-      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/retweet?tweet_id=${data.id_str}`} class="astro__tweet-actions-button">
-        Retweet
-      </a>
-      <a rel="noreferrer noopener" target="_blank" href={`https://twitter.com/intent/like?tweet_id=${data.id_str}`} class="astro__tweet-actions-button">
-        Like
-      </a>
-    </div>
+{tweet &&
+<blockquote class="tweet-card">
+	<div class="tweet-header">
+		<a class="tweet-profile" href={`https://twitter.com/${screen_name}`}>
+			<img src={profile_image_url_https} alt={`Twitter avatar for ${screen_name}`} />
+		</a>
+		<div class="tweet-author">
+			<a class="tweet-author-name" href={`https://twitter.com/${screen_name}`}>{name}</a>
+			<a class="tweet-author-handle" href={`https://twitter.com/${screen_name}`}>@{screen_name}</a>
+		</div>
+	</div>
+	<p class="tweet-body" set:html={text}></p>
+	{images && <a href={tweetLink} class={`tweet-img-grid-${imageCount}`} set:html={images} />}
+	{video && <div class="tweet-video-wrapper" set:html={video} />}
+	<div class="tweet-footer">
+		<a href={tweetLink} class="tweet-link">Twitter</a>
+	</div>
 </blockquote>
-
-<style lang="scss">
-.astro__tweet {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  max-width: 500px;
-  font-size: 0.75em;
-  line-height: 1.35em;
-  border-radius: 5px;
-  margin: 0 auto;
-  min-height: 60px;
-  padding: 0px;
-  border: 1px solid #efefef;
-  &:hover {
-    border: 1px solid darken(#efefef, 3%);
-  }
-
-  &-media {
-    position: relative;
-    overflow: hidden;
-    img {
-      width: 100%;
-      left: 0;
-      right: 0;
-      margin: auto;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-  }
-
-  &-header {
-    padding: 1rem;
-    display: flex;
-
-    &-profile-picture {
-      height: 40px;
-      min-height: 40px;
-      width: 40px;
-      border-radius: 50px;
-      background-color: #ececec;
-      margin: 0;
-    }
-
-    &-names {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 0 1rem;
-      flex: 1 0 auto;
-
-      &-full {
-        color: #1c2022;
-        font-weight: bold;
-        font-size: 16px;
-      }
-      &-username {
-        color: #697882;
-        font-size: 14px;
-      }
-    }
-
-    &-twitter-logo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
-
-  &-body {
-    padding: 0 1rem 1rem;
-    color: #1c2022;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  &-date {
-    font-size: 14px;
-    color: #697882;
-    padding: 0 1rem;
-  }
-
-  &-actions {
-    display: flex;
-    color: #aab8c2;
-    font-size: 14px;
-    &-button {
-      padding: 1rem;
-    }
-  }
 }
-</style>

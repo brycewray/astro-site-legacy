@@ -125,3 +125,11 @@
     font-size: var.$legal;
   }*/
 }
+
+.tweet-video-wrapper,
+.tweet-media-video {
+  border-radius: 1em;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr)
+}
