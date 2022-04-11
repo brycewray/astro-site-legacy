@@ -1,4 +1,5 @@
 ---
+import { format } from "date-fns"
 export interface Props {
 	id: string;
 }
@@ -116,7 +117,7 @@ function buildContent(tweet) {
 
 const tweetID = extractID(id);
 const tweet = await fetchTweet(tweetID);
-const { name, screen_name, profile_image_url_https, text, images, imageCount, video } = buildContent(tweet);
+const { name, screen_name, profile_image_url_https, text, images, imageCount, video, created_at } = buildContent(tweet);
 const tweetLink = `https://twitter.com/${screen_name}/status/${tweetID}`;
 ---
 {tweet &&
@@ -133,8 +134,8 @@ const tweetLink = `https://twitter.com/${screen_name}/status/${tweetID}`;
 	<p class="tweet-body" set:html={text}></p>
 	{images && <a href={tweetLink} class={`tweet-img-grid-${imageCount}`} set:html={images} />}
 	{video && <div class="tweet-video-wrapper" set:html={video} />}
-	<div class="tweet-footer">
-		<a href={tweetLink} class="tweet-link">Twitter</a>
-	</div>
+  <div class="tweet-footer">
+    <a href=`https://twitter.com/${screen_name}/status/${id}` class="tweet-date" target="_blank" rel="noreferrer noopener">{format(new Date(created_at), "MMMM d, yyyy • h:mm aa")}</a>&nbsp;<span class="legal">(UTC)</span>
+  </div>
 </blockquote>
 }
