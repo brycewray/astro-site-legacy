@@ -6,7 +6,19 @@ import Footer from '@components/Footer.astro'
 import Billboard from '@components/Billboard.astro'
 import PostFeatImg from '@components/PostFeatImg.astro'
 
-const { content } = Astro.props
+export async function getStaticPaths({ paginate }) {
+  let allPosts = await Astro.glob('../pages/posts/**/*.md')
+  let sortedPosts = allPosts.sort((a, b) =>
+    new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+  )
+  // let postsNumber = allPosts.length
+  return paginate(sortedPosts, {
+    pageSize: 1
+  })
+}
+
+const { content, page } = Astro.props
+console.log(page)
 const { title, subtitle, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption } = content
 ---
 
@@ -43,6 +55,16 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 			<Post >
 				<slot />
 			</Post>
+      <p class="ctr"><strong>Test</strong>: Value of `page` = {page}</p>
+      <div class="bg-dark sansSerif">
+        <h3 class="ctr wht prevNextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
+        <p class="ctr prevNextP">
+          Next: <a class="next" href={'#'}>Title</a>
+        </p>
+        <p class="ctr prevNextP">
+          Previous: <a class="previous" href={'#'}>Title</a>
+        </p>
+      </div>
     <Footer />
 	</body>
 </html>
