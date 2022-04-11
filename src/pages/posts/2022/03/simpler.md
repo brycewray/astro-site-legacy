@@ -5,7 +5,8 @@ setup: |
   import YellowBox from '@components/YellowBox.astro'
   import STweet from '@components/STweet.astro'
 title: "Simpler"
-date: 2022-03-31T09:55:00-06:00
+date: 2022-03-31T09:55:00-05:00
+description: "Making static tweets work in Astro."
 ---
 
 ## Tweets
