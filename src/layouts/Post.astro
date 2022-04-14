@@ -18,8 +18,8 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { content, page } = Astro.props
-console.log(page)
 const { title, subtitle, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption } = content
+console.log(page)
 ---
 
 <html lang={content.lang || 'en'}>
@@ -55,7 +55,7 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 			<Post >
 				<slot />
 			</Post>
-      <p class="ctr"><strong>Test</strong>: Value of `page` = {page}</p>
+      <p class="ctr"><strong>Test</strong>: Value of variable = {}</p>
       <div class="bg-dark sansSerif">
         <h3 class="ctr wht prevNextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
         <p class="ctr prevNextP">
