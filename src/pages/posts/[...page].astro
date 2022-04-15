@@ -51,15 +51,15 @@ const { page } = Astro.props
               ? <><a href={page.url.next}>Next</a></>
               : <>Next</>
             }
-            {page.currentPage !== page.lastPage
-              ? <><a href={page.lastPage}>Last page</a></>
-              : <>Last page</>
+            {page.url.next == null
+              ? <>Last page</>
+              : <><a href=`/posts/${page.lastPage}/`>Last page</a></>
             }
           </p>
           <hr class="paginatorTop" />
           <div class="posts-ItemDiv">
             {page.data.map(post =>
-              <h2 class="posts-Title"><a href={post.url}>{post.frontmatter.title}</a></h2>
+              <h2 class="posts-Title"><a href=`${post.url}/`>{post.frontmatter.title}</a></h2>
               <p class="posts-Description">
                 {post.frontmatter.description}
               </p>
@@ -83,9 +83,9 @@ const { page } = Astro.props
               ? <><a href={page.url.next}>Next</a></>
               : <>Next</>
             }
-            {page.currentPage !== page.lastPage
-              ? <><a href={page.lastPage}>Last page</a></>
-              : <>Last page</>
+            {page.url.next == null
+              ? <>Last page</>
+              : <><a href=`/posts/${page.lastPage}/`>Last page</a></>
             }
           </p>
         </div>
