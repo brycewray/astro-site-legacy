@@ -15,17 +15,22 @@ const { content, page } = Astro.props
 const { title, subtitle, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption } = content
 // const thisReq = Astro.request
 const thisUrl = new URL(Astro.request.url)
-let nextUrl, nextTitle, prevUrl, prevTitle, x = ""
+let nextUrl, nextTitle, prevUrl, prevTitle, addSlash = ""
+let envMode = import.meta.env.MODE
+if (envMode == "development") {
+  addSlash = "/"
+}
 // console.log("page = ", page)
 
 // console.log(thisReq)
-console.log("  ")
-console.log("* * * * * * * *")
-console.log("thisUrl.pathname = " + thisUrl.pathname)
-for(x = 0; x < postsNumber; x++) {
-  console.log("===============")
-  console.log("Post " + x + " - URL object = " + allPosts[x].url + " - " + allPosts[x].frontmatter.title)
-  if(thisUrl.pathname === allPosts[x].url){
+// console.log("The mode = " + import.meta.env.MODE)
+// console.log("  ")
+// console.log("* * * * * * * *")
+// console.log("thisUrl.pathname = " + thisUrl.pathname)
+for(let x = 0; x < postsNumber; x++) {
+  // console.log("===============")
+  // console.log("Post " + x + " - URL object = " + allPosts[x].url + " - " + allPosts[x].frontmatter.title)
+  if(thisUrl.pathname === allPosts[x].url + addSlash){
     // console.log("** That's THIS post **")
     if (x > 0) {
       nextUrl = allPosts[x-1].url
@@ -49,12 +54,11 @@ for(x = 0; x < postsNumber; x++) {
 //     }
 //   }
 // }
-console.log("nextUrl = " + nextUrl)
-console.log("prevUrl = " + prevUrl)
-console.log(" ")
+// console.log("nextUrl = " + nextUrl)
+// console.log("prevUrl = " + prevUrl)
+// console.log(" ")
 // console.log("allPosts = ", allPosts)
-console.log("postsNumber = ", postsNumber)
-
+// console.log("postsNumber = ", postsNumber)
 ---
 
 <html lang={content.lang || 'en'}>
