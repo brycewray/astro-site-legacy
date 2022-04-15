@@ -16,7 +16,7 @@ export default defineConfig({
       "rehype-slug",
       ["rehype-autolink-headings", {
         behavior: "wrap",
-        test: [ 'article h1', 'article h2', 'article h3', 'article h4', 'article h5', 'article h6']
+        // test: [ 'article h1', 'article h2', 'article h3', 'article h4', 'article h5', 'article h6']
       }]
     ],
     syntaxHighlight: 'prism',
