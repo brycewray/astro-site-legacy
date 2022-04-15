@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.brycewray.com/',
+  trailingSlash: "always",
   markdown: {
     remarkPlugins: [
       ["remark-smartypants", {
