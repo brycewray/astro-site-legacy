@@ -1,7 +1,7 @@
 ---
 let allPosts = await Astro.glob('../pages/posts/**/*.md')
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
-let newestPost = allPosts[0].url
+let newestPost = allPosts[0].url + "/"
 ---
 <header>
   <nav class="nav">
