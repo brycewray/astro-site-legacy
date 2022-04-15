@@ -13,26 +13,33 @@ let postsNumber = allPosts.length
 
 const { content, page } = Astro.props
 const { title, subtitle, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption } = content
+// const thisReq = Astro.request
 const thisUrl = new URL(Astro.request.url)
+let nextUrl = ""; let nextTitle = ""; let prevUrl = ""; let prevTitle = "";
 // console.log("page = ", page)
 
-console.log(" ")
+// console.log(thisReq)
+// console.log("  ")
+// console.log("* * * * * * * *")
+// console.log("thisUrl.pathname = " + thisUrl.pathname)
 for(x = 0; x < postsNumber; x++) {
-  console.log("===============")
-  console.log("Post " + x + " - URL object = " + allPosts[x].url)
-  if (x > 0) {
-    console.log("The next post is post " + (x-1) + " - " + allPosts[x-1].url)
-  } else {
-    console.log("There is no next post")
-  }
-  if (x < postsNumber - 1) {
-    console.log("The previous post is post " + (x+1) + " - " + allPosts[x+1].url)
-    // console.log("This URL is " + thisUrl.pathname)
-  } else {
-    console.log("There is no previous post")
+  // console.log("===============")
+  // console.log("Post " + x + " - URL object = " + allPosts[x].url + " - " + allPosts[x].frontmatter.title)
+  if(thisUrl.pathname === allPosts[x].url + "/"){
+    // console.log("** That's THIS post **")
+    if (x > 0) {
+      nextUrl = allPosts[x-1].url
+      nextTitle = allPosts[x-1].frontmatter.title
+    }
+    if (x < postsNumber - 1) {
+      prevUrl = allPosts[x+1].url
+      prevTitle = allPosts[x+1].frontmatter.title
+    }
   }
 }
-console.log(" ")
+// console.log("nextUrl = " + nextUrl)
+// console.log("prevUrl = " + prevUrl)
+// console.log(" ")
 // console.log("allPosts = ", allPosts)
 // console.log("postsNumber = ", postsNumber)
 
@@ -71,15 +78,18 @@ console.log(" ")
 			<Post >
 				<slot />
 			</Post>
-      <p class="ctr"><strong>Test</strong>: Value of variable = {}</p>
       <div class="bg-dark sansSerif">
         <h3 class="ctr wht prevNextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
-        <p class="ctr prevNextP">
-          Next: <a class="next" href={'#'}>Title</a>
-        </p>
-        <p class="ctr prevNextP">
-          Previous: <a class="previous" href={'#'}>Title</a>
-        </p>
+        {nextUrl &&
+          <p class="ctr prevNextP">
+            Next: <a class="next" href=`${nextUrl}/`>{nextTitle}</a>
+          </p>
+        }
+        {prevUrl &&
+          <p class="ctr prevNextP">
+            Previous: <a class="previous" href=`${prevUrl}/`>{prevTitle}</a>
+          </p>
+        }
       </div>
     <Footer />
 	</body>
