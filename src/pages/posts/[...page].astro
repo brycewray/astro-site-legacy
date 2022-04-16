@@ -1,6 +1,5 @@
 ---
 import { format } from "date-fns"
-
 import Head from '@components/Head.astro'
 import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
@@ -37,25 +36,25 @@ const { page } = Astro.props
     <main>
       <div class="container ctr sansSerif">
         <h1 class="posts-Head">Posts</h1>
-
         <div class="posts-Container">
-          <p class="pagerThingP">
+          <div class="pagerThingP">
             {page.url.prev == null
-              ? <>First page</>
-              : <><a href="/posts/">First page</a></>
+              ? <div class="page1">&#9664;&#9664;</div>
+              : <div class="page1"><a href="/posts/">&#9664;&#9664;</a></div>
             }
             {page.url.prev
-              ? <><a href={page.url.prev}>Previous</a></> : <>Previous</>
+              ? <div class="pageP"><a href={page.url.prev}>&#9664;</a></div>
+              : <div class="pageP">&#9664;</div>
             }
             {page.url.next
-              ? <><a href={page.url.next}>Next</a></>
-              : <>Next</>
+              ? <div class="pageN"><a href={page.url.next}>&#9654;</a></div>
+              : <div class="pageN">&#9654;</div>
             }
             {page.url.next == null
-              ? <>Last page</>
-              : <><a href=`/posts/${page.lastPage}/`>Last page</a></>
+              ? <div class="pageL">&#9654;&#9654;</div>
+              : <div class="pageL"><a href=`/posts/${page.lastPage}/`>&#9654;&#9654;</a></div>
             }
-          </p>
+          </div>
           <hr class="paginatorTop" />
           <div class="posts-ItemDiv">
             {page.data.map(post =>
@@ -71,28 +70,27 @@ const { page } = Astro.props
             )}
           </div>
           <hr class="paginatorBottom" />
-          <p class="pagerThingP">
+          <div class="pagerThingP">
             {page.url.prev == null
-              ? <>First page</>
-              : <><a href="/posts/">First page</a></>
+              ? <div class="page1">&#9664;&#9664;</div>
+              : <div class="page1"><a href="/posts/">&#9664;&#9664;</a></div>
             }
             {page.url.prev
-              ? <><a href={page.url.prev}>Previous</a></> : <>Previous</>
+              ? <div class="pageP"><a href={page.url.prev}>&#9664;</a></div>
+              : <div class="pageP">&#9664;</div>
             }
             {page.url.next
-              ? <><a href={page.url.next}>Next</a></>
-              : <>Next</>
+              ? <div class="pageN"><a href={page.url.next}>&#9654;</a></div>
+              : <div class="pageN">&#9654;</div>
             }
             {page.url.next == null
-              ? <>Last page</>
-              : <><a href=`/posts/${page.lastPage}/`>Last page</a></>
+              ? <div class="pageL">&#9654;&#9654;</div>
+              : <div class="pageL"><a href=`/posts/${page.lastPage}/`>&#9654;&#9654;</a></div>
             }
-          </p>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
     <Footer />
   </body>
-
 </html>
 
