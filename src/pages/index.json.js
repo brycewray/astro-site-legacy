@@ -3,8 +3,13 @@
 // https://cdn.discordapp.com/attachments/830184175176122389/960357703807537183/unknown.png
 export async function get() {
   let allPosts = await import.meta.globEager('./posts/**/*.md')
+  let sortedPosts = Object.entries(allPosts).sort().reverse()
+  // function replacer(key, value) {
+  //   value = value.toString().replace('B', ' ')
+  //   return value
+  // }
   return {
-    body: JSON.stringify(allPosts, false, 2)
+    body: JSON.stringify(sortedPosts, false, 2)
   }
 }
 
