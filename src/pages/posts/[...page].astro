@@ -7,15 +7,28 @@ import Footer from '@components/Footer.astro'
 let title = 'Posts'
 let description = 'Posts on brycewray.com'
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate, rss }) {
   let allPosts = await Astro.glob('../posts/**/*.md')
   let sortedPosts = allPosts.sort((a, b) =>
     new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
   )
-  // let postsNumber = allPosts.length
-  return paginate(sortedPosts, {
-    pageSize: 5
+  rss({
+    title: "BryceWray.com",
+    description: "brycewray.com — Observations, opinions, geekery.",
+    customData: `<language>en-us</language>`,
+    items: sortedPosts.map(post => ({
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      link: post.url,
+      pubDate: post.frontmatter.date
+    })),
+    dest: "/index.xml",
   })
+  return [
+    paginate(sortedPosts, {
+      pageSize: 5
+    }),
+  ]
 }
 
 const { page } = Astro.props
