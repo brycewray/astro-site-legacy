@@ -41,7 +41,7 @@ And then there are creatures like Facebook, Instagram, and Twitter, which [for a
 
 Anyway, it seemed a lot of the fun had gone out of puttering around on the web and actually creating content. Then---first among the techno-cognoscenti and, more recently, among us ordinary folks---came websites powered by [static site generators (SSGs)](https://www.staticgen.com) and written in [Markdown](https://daringfireball.net/projects/markdown/). I found them a source of curiosity at first but gradually became more interested in the prospect, especially as I learned more about their [technical advantages](https://www.makeuseof.com/tag/reasons-ditch-cms-static-site-generator/); and, so, here we are.
 
-## As for me&nbsp;.&nbsp;.&nbsp;.
+## As for me . . .
 
 So, who am I, and what business do I have putting yet another site on this already overstuffed web?
 
