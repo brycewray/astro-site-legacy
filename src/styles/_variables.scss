@@ -33,12 +33,13 @@ $code-color-blueLight-dark-mode: hsl(197, 100%, 77%);
 $code-color-orange-dark-mode: hsl(40, 100%, 50%);
 
 // Typography
-$sans-serif: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-// $sans-serif: sans-serif;
-$serif: ui-serif, Georgia, Cambria, Times, "Times New Roman", serif;
-// $serif: serif;
-$monospaced: ui-monospace, SFMono-Regular, "SF Mono", "Roboto Mono", Menlo, Monaco, "Liberation Mono", "Cascadia Mono", "Segoe UI Mono", Consolas, "Ubuntu Mono", "Courier New", monospace;
-// $monospaced: monospace;
+$sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "Liberation Sans", Roboto, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$serif: Georgia, Cambria, Times, "Times New Roman", ui-serif, serif;
+$monospaced: ui-monospace, SFMono-Regular, "SF Mono", "Roboto Mono", Menlo, Monaco, "Liberation Mono", "Cascadia Mono", "Segoe UI Mono", Consolas, "Ubuntu Mono", monospace;
+/*
+Note from the relevant GitHub SCSS file:
+"SFMono-Regular needs to come before SF Mono to fix an older version of the font in Chrome"
+*/
 
 // rems
 $biggest: 2.5rem;
@@ -57,13 +58,31 @@ $eightyFive: 85%;
 $seventyFive: 75%;
 $sixtyFive: 65%;
 
+// like Tailwind **SIZES**
+// but not the concomitant `line-height,
+// which is in comments
+$text-xs: 0.75rem; // LH 1rem
+$text-sm: 0.875rem; // LH 1.25rem
+$text-base: 1rem; // LH 1.5rem
+$text-lg: 1.125rem; // LH 1.75rem
+$text-xl: 1.25rem; // LH 1.75 rem (also)
+$text-2xl: 1.5rem; // LH 2 rem
+$text-3xl: 1.875rem; // LH 2.25rem
+$text-4xl: 2.25rem; // LH 2.5rem
+$text-5xl: 3rem; // LH 1
+$text-6xl: 3.75rem; // LH 1 (also)
+$text-7xl: 4.5rem; // LH 1 (also)
+$text-8xl: 6rem; // LH 1 (also)
+$text-9xl: 8rem; // LH 1 (also)
+
 // alignment
 $bodyalign: left;
 $nav-height: 50px;
 
-// breakpoints (based on Tailwind CSS)
+// breakpoints (mostly based on Tailwind CSS)
 $bkpt_sm: 640px;
 $bkpt_md: 768px;
+$bkpt_ml: 960px; // additional
 $bkpt_lg: 1024px;
 $bkpt_xl: 1280px;
 $bkpt_2xl: 1536px;
