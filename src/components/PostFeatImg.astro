@@ -2,7 +2,7 @@
 import { format } from "date-fns"
 import Imgc from '@components/Imgc.astro'
 
-const { title, subtitle, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption, description, date, lastmod } = Astro.props;
+const { title, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption, description, date, lastmod } = Astro.props;
 ---
 
 <div class="background-hero-image-div">
@@ -18,8 +18,7 @@ const { title, subtitle, featured_image, featured_image_alt, featured_image_widt
   <div class="background-hero-wrapper-div">
     <div class="background-hero-title-block">
       <h1 class="background-hero-title-text">{title}</h1>
-      <h2 class="background-hero-subtitle-text">{subtitle}</h2>
-      <p class="background-hero-description-text"><em>{description}</em></p>
+      <p class="background-hero-description-text">{description}</p>
       <p class="background-hero-p-text">
         <strong>{format(new Date(date), "MMMM d, yyyy")}</strong><br />
         {lastmod && (

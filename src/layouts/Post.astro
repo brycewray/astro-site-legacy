@@ -69,6 +69,7 @@ for(let x = 0; x < postsNumber; x++) {
 
 	<body>
 		<Header />
+    <main>
       {featured_image && (
         <PostFeatImg
           featured_image={featured_image}
@@ -78,7 +79,6 @@ for(let x = 0; x < postsNumber; x++) {
           featured_image_caption={featured_image_caption}
           tmpl="posts"
           title={title}
-          subtitle={subtitle}
           description={description}
           date={date}
           lastmod={lastmod}
@@ -104,18 +104,19 @@ for(let x = 0; x < postsNumber; x++) {
         <Comments />
 			</Post>
       <div class="bg-dark sansSerif">
-        <h3 class="ctr wht prevNextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
+        <h3 class="ctr wht prevnextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
         {nextUrl &&
-          <p class="ctr prevNextP">
+          <p class="ctr prevnextP">
             Next: <a class="next" href=`${nextUrl}/`>{nextTitle}</a>
           </p>
         }
         {prevUrl &&
-          <p class="ctr prevNextP">
+          <p class="ctr prevnextP">
             Previous: <a class="previous" href=`${prevUrl}/`>{prevTitle}</a>
           </p>
         }
       </div>
+    </main>
     <Footer />
 	</body>
 </html>
