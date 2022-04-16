@@ -1,0 +1,47 @@
+---
+import { format } from "date-fns"
+
+import Head from '@components/Head.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+
+let title = 'BryceWray.com';
+let description = 'brycewray.com — Observations, opinions, geekery.';
+let permalink = 'https://www.brycewray.com/sitemap/';
+
+let allPosts = await Astro.glob('./posts/**/*.md')
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+---
+
+<html lang="en">
+  <head>
+    <Head {title} {description} {permalink} />
+  </head>
+
+  <body>
+    <Header />
+    <main class="content">
+      <div class="container-narrower sitemapDiv">
+        <h1>Sitemap</h1>
+        <h2>Main pages</h2>
+        <ul>
+          <li><a href="/">Home page</a></li>
+          <li><a href="/about/">About me</a></li>
+          <li><a href="/privacy/">Site&rsquo;s privacy policy</a></li>
+          <li><a href="/contact/">How to contact me</a></li>
+        </ul>
+        <h2>Posts</h2>
+        <ul>
+          <li><a href="/posts/"><strong>Complete list</strong></a> <em>(first page of paginated list; five posts per page)</em></li>
+          {allPosts.map((post) => (
+            <li><a href=`${post.url}/`><strong>{post.frontmatter.title}</strong></a>&nbsp;&bull;&nbsp;{format(new Date(post.frontmatter.date), "MMMM d, yyyy")}<br />
+            {post.frontmatter.description}</li>
+          ))}
+        </ul>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+
