@@ -3,6 +3,10 @@ import { defineConfig } from 'astro/config'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://www.brycewray.com/',
+  server: {
+    port: 3000,
+    host: "192.168.254.10",
+  },
   trailingSlash: "always",
   markdown: {
     remarkPlugins: [
