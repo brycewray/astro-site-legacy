@@ -27,7 +27,8 @@ export default defineConfig({
   vite: {
     ssr: {
       external: ['twitter-api-client']
-    }
+    },
+    logLevel: 'silent' // while I'm working on JSON files!
   },
   integrations: [sitemap()]
 });
