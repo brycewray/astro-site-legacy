@@ -8,7 +8,7 @@ export async function get() {
   //   value = value.toString().replace('B', ' ')
   //   return value
   // }
-  let key, value
+  // let key, value = ''
   let testTitle = ''
 
   // Object.keys(sortedPosts).forEach(function (key) {
