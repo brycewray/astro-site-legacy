@@ -3,7 +3,7 @@
 // https://cdn.discordapp.com/attachments/830184175176122389/960357703807537183/unknown.png
 export async function get() {
   let allPosts = await import.meta.globEager('./posts/**/*.md')
-  let sortedPosts = Object.entries(allPosts).sort().reverse()
+  // let sortedPosts = Object.entries(allPosts).sort().reverse()
   // function replacer(key, value) {
   //   value = value.toString().replace('B', ' ')
   //   return value
@@ -11,10 +11,10 @@ export async function get() {
   let key, value
   let testTitle = ''
 
-  Object.keys(sortedPosts).forEach(function (key) {
-    var value = sortedPosts[key][0]
-    testTitle = testTitle + " - " + value
-  })
+  // Object.keys(sortedPosts).forEach(function (key) {
+  //   var value = sortedPosts[key][0]
+  //   testTitle = testTitle + " - " + value
+  // })
 
   // sortedPosts.map((post) => {
   //   post && (testTitle = `A` + testTitle + post)
