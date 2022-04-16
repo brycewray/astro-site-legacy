@@ -8,6 +8,7 @@ export default defineConfig({
     remarkPlugins: [
       ["remark-smartypants", {
         dashes: "oldschool",
+        ellipses: false,
       }],
       "remark-footnotes",
     ],
