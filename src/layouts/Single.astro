@@ -17,6 +17,7 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 
 	<body>
 		<Header />
+    <main>
       <Billboard
         title={title}
         subtitle={subtitle}
@@ -27,6 +28,7 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 			<Single >
 				<slot />
 			</Single>
+    </main>
     <Footer />
 	</body>
 </html>

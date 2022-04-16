@@ -17,6 +17,7 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 
 	<body>
 		<Header />
+    <main>
       {featured_image && (
         <PostFeatImg
           featured_image={featured_image}
@@ -43,6 +44,7 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 			<About >
 				<slot />
 			</About>
+    </main>
     <Footer />
 	</body>
 </html>
