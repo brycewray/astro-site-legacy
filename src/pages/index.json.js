@@ -8,10 +8,94 @@ export async function get() {
   //   value = value.toString().replace('B', ' ')
   //   return value
   // }
+  let key, value
+  let testTitle = ''
+
+  Object.keys(sortedPosts).forEach(function (key) {
+    var value = sortedPosts[key][0]
+    testTitle = testTitle + " - " + value
+  })
+
+  // sortedPosts.map((post) => {
+  //   post && (testTitle = `A` + testTitle + post)
+  // })
+
   return {
-    body: JSON.stringify(sortedPosts, false, 2)
+    // body: JSON.stringify(sortedPosts, false, 2)
+    body: JSON.stringify({
+      version: "https://jsonfeed.org/version/1.1",
+      title: "BryceWray.com",
+      description: "brycewray.com — Observations, opinions, geekery",
+      home_page_url: "https://www.brycewray.com/",
+      feed_url: "https://www.brycewray.com/index.json",
+      language: "en",
+      icon: "https://www.brycewray.com/",
+      favicon: "https://www.brycewray.com/",
+      authors: [
+        {
+          name: "Bryce Wray",
+          url: "https://www.brycewray.com/about/",
+          avatar: "https://www.brycewray.com/",
+        }
+      ],
+      items: [
+        {
+          title: `${testTitle}`,
+          date_published: "date",
+          id: "post permalink",
+          url: "post permalink",
+          authors: [
+            {
+              name: "Bryce Wray",
+              url: "https://www.brycewray.com/about/",
+              avatar: "https://www.brycewray.com/",
+            }
+          ]
+        }
+      ]
+    }, false, 2)
   }
 }
+
+
+// export async function get() {
+//   return {
+//     body: JSON.stringify({
+//       version: "https://jsonfeed.org/version/1.1",
+//       title: "BryceWray.com",
+//       description: "brycewray.com — Observations, opinions, geekery",
+//       home_page_url: "https://www.brycewray.com/",
+//       feed_url: "https://www.brycewray.com/index.json",
+//       language: "en",
+//       icon: "https://www.brycewray.com/",
+//       favicon: "https://www.brycewray.com/",
+//       authors: [
+//         {
+//           name: "Bryce Wray",
+//           url: "https://www.brycewray.com/about/",
+//           avatar: "https://www.brycewray.com/",
+//         }
+//       ],
+//       items: [
+//         {
+//           title: "page title",
+//           date_published: "date",
+//           id: "post permalink",
+//           url: "post permalink",
+//           authors: [
+//             {
+//               name: "Bryce Wray",
+//               url: "https://www.brycewray.com/about/",
+//               avatar: "https://www.brycewray.com/",
+//             }
+//           ],
+//           content_html: "post HTML, jsonified"
+//         }
+//       ]
+//     })
+//   }
+// }
+
 
 /* resulting JSON as of 2022-04-16-1534CDT
 {
@@ -224,41 +308,3 @@ export async function get() {
 //   console.log(post)
 // }
 
-
-// export async function get() {
-//   return {
-//     body: JSON.stringify({
-//       version: "https://jsonfeed.org/version/1.1",
-//       title: "BryceWray.com",
-//       description: "brycewray.com — Observations, opinions, geekery",
-//       home_page_url: "https://www.brycewray.com/",
-//       feed_url: "https://www.brycewray.com/index.json",
-//       language: "en",
-//       icon: "https://www.brycewray.com/",
-//       favicon: "https://www.brycewray.com/",
-//       authors: [
-//         {
-//           name: "Bryce Wray",
-//           url: "https://www.brycewray.com/about/",
-//           avatar: "https://www.brycewray.com/",
-//         }
-//       ],
-//       items: [
-//         {
-//           title: "page title",
-//           date_published: "date",
-//           id: "post permalink",
-//           url: "post permalink",
-//           authors: [
-//             {
-//               name: "Bryce Wray",
-//               url: "https://www.brycewray.com/about/",
-//               avatar: "https://www.brycewray.com/",
-//             }
-//           ],
-//           content_html: "post HTML, jsonified"
-//         }
-//       ]
-//     })
-//   }
-// }
