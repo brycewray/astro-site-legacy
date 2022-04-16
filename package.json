@@ -17,6 +17,7 @@
     "date-fns": "^2.28.0",
     "feed": "^4.2.2",
     "md5": "^2.3.0",
+    "readdir-glob": "^1.1.1",
     "rehype-external-links": "^1.0.1",
     "remark-footnotes": "^4.0.1",
     "sass": "^1.50.0",
