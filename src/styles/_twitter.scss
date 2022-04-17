@@ -1,5 +1,10 @@
 @use 'variables' as var;
 
+// based partly on https://github.com/astro-community/astro-embed/tree/main/packages/astro-embed-twitter
+
+$tc-corner-radius: 1em;
+$tc-padding: 1em;
+
 .tweet-card {
   font-family: var.$sans-serif;
   margin: 1.5rem auto;
@@ -8,17 +13,17 @@
   border-radius: 12px;
   background: var.$white;
   width: 100%;
-  @media screen and (min-width: var.$bkpt_md) {
+  @media screen and (min-width: var.$bkpt_ml) {
     width: 80%;
   }
   @media screen and (min-width: var.$bkpt_lg) {
     width: 85%;
   }
-  @media screen and (min-width: var.$bkpt_2xl) {
-    width: 80%;
-  }
+  // @media screen and (min-width: var.$bkpt_2xl) {
+  //   width: 85%;
+  // }
   @media screen and (min-width: var.$bkpt_3xl) {
-    width: 70%;
+    max-width: 80ch;
   }
   @media screen and (prefers-color-scheme: dark) {
     background: transparent;
@@ -61,8 +66,12 @@
   }
 }
 // Hugo version
-.tweet-img {
-  border-radius: 12px;
+.tweet-media-img {
+  // border-radius: 12px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
 }
 // ==== END, rounded image "attachment"
 
@@ -119,17 +128,48 @@
     @media screen and (prefers-color-scheme: dark) {
       color: var.$grey-2-dark-mode;
     }
-  }/* === needed in Eleventy but not in Hugo
+  }
+  /* === needed in Eleventy but not in Hugo
   .tweet-date:after {
     content: " (UTC)";
     font-size: var.$legal;
-  }*/
+  }
+  */
 }
 
+[class^='tweet-img-grid'],
 .tweet-video-wrapper,
 .tweet-media-video {
-  border-radius: 1em;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr)
+	border-radius: $tc-corner-radius;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+  grid-gap: 2px;
+}
+
+.tweet-video-wrapper {
+	border-radius: $tc-corner-radius;
+  display: block;
+  // overriding previous
+}
+
+.tweet-img-grid-3 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.tweet-img-grid-3 .tweet-media-img {
+	aspect-ratio: 1.8;
+}
+
+.tweet-img-grid-3 :nth-child(1) {
+	grid-row: 1 / span 2;
+}
+
+.tweet-img-grid-3 :nth-child(1) .tweet-media-img {
+	aspect-ratio: 0.9;
+}
+
+.tweet-img-grid-2,
+.tweet-img-grid-4 {
+	grid-template-columns: repeat(2, 1fr);
 }
