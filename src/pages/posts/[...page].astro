@@ -18,6 +18,7 @@ export async function getStaticPaths({ paginate, rss }) {
     customData: `<language>en-us</language>`,
     items: sortedPosts.map(post => ({
       title: post.frontmatter.title,
+      stylesheet: true,
       description: post.frontmatter.description,
       link: post.url,
       pubDate: post.frontmatter.date
