@@ -30,5 +30,5 @@ export default defineConfig({
     },
     logLevel: 'silent' // while I'm working on JSON files!
   },
-  integrations: [sitemap()]
+  // integrations: [sitemap()]
 });
