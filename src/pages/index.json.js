@@ -28,14 +28,14 @@ export async function get() {
     }
   })
   let allPosts = await import.meta.globEager('./posts/**/*.md')
-  // console.log(allPosts)
+  console.log(allPosts)
   Object.entries(allPosts).forEach(post => {
-    // console.log(post[1].content)
+    console.log(post[1].Content)
     feed.addItem({
-      title: post[1].frontmatter.title,
+      title: (post[1].frontmatter.title).replace(/\u00A0/g, " ").replace(/\u2014/g, "---"),
       id: `https://www.brycewray.com/${post[1].url}/`,
       link: `https://www.brycewray.com/${post[1].url}/`,
-      description: post[1].frontmatter.description,
+      description: (post[1].frontmatter.description).replace(/\u00A0/g, " ").replace(/[\u2018\u2019]/g, "'").replace(/\u2014/g, "---"),
       // content: post[1].Content,
       author: [
         {
