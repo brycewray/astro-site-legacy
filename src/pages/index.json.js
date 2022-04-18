@@ -1,8 +1,8 @@
-// attempt at JSON feed
+// generate feed (JSON or XML)
+
+let feedExt = 'json' // 'json' or 'xml'
 
 import { Feed } from "feed"
-
-let testTitle = ''
 
 let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
 
@@ -12,7 +12,7 @@ export async function get() {
     title: "BryceWray.com",
     description: "brycewray.com - Observations, opinions, geekery",
     id: "https://www.brycewray.com/",
-    link: "https://www.brycewray.com/index.json",
+    link: `https://www.brycewray.com/index.${feedExt}`,
     language: "en",
     image: "https://www.brycewray.com/assets/icons/apple-icon-120x120.png",
     favicon: "https://www.brycewray.com/assets/icons/apple-icon-120x120.png",
@@ -48,5 +48,9 @@ export async function get() {
       image: `${socialImg + post[1].frontmatter.featured_image}`
     })
   })
-  return { body: feed.json1()}
+  if(feedExt == 'xml') {
+    return { body: feed.rss2() }
+  } else {
+    return { body: feed.json1() }
+  }
 }

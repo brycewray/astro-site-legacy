@@ -1,8 +1,8 @@
-// attempt at JSON feed
+// generate feed (JSON or XML)
+
+let feedExt = 'xml' // 'json' or 'xml'
 
 import { Feed } from "feed"
-
-let testTitle = ''
 
 let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
 
@@ -12,7 +12,7 @@ export async function get() {
     title: "BryceWray.com",
     description: "brycewray.com - Observations, opinions, geekery",
     id: "https://www.brycewray.com/",
-    link: "https://www.brycewray.com/index.json",
+    link: `https://www.brycewray.com/index.${feedExt}`,
     language: "en",
     image: "https://www.brycewray.com/assets/icons/apple-icon-120x120.png",
     favicon: "https://www.brycewray.com/assets/icons/apple-icon-120x120.png",
@@ -28,14 +28,14 @@ export async function get() {
     }
   })
   let allPosts = await import.meta.globEager('./posts/**/*.md')
-  // console.log(allPosts)
+  console.log(allPosts)
   Object.entries(allPosts).forEach(post => {
-    // console.log(post[1].content)
+    console.log(post[1].Content)
     feed.addItem({
-      title: post[1].frontmatter.title,
+      title: (post[1].frontmatter.title).replace(/\u00A0/g, " ").replace(/\u2014/g, "---"),
       id: `https://www.brycewray.com/${post[1].url}/`,
       link: `https://www.brycewray.com/${post[1].url}/`,
-      description: post[1].frontmatter.description,
+      description: (post[1].frontmatter.description).replace(/\u00A0/g, " ").replace(/[\u2018\u2019]/g, "'").replace(/\u2014/g, "---"),
       // content: post[1].Content,
       author: [
         {
@@ -48,5 +48,9 @@ export async function get() {
       image: `${socialImg + post[1].frontmatter.featured_image}`
     })
   })
-  return { body: feed.rss2()}
+  if(feedExt == 'xml') {
+    return { body: feed.rss2()}
+  } else {
+    return { body: feed.json1()}
+  }
 }
