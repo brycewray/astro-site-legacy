@@ -1,4 +1,4 @@
-// generate feed (JSON or XML)
+// generate feed (JSON or RSS)
 
 let feedExt = 'xml' // 'json' or 'xml'
 
@@ -28,15 +28,32 @@ export async function get() {
     }
   })
   let allPosts = await import.meta.globEager('./posts/**/*.md')
-  console.log(allPosts)
+
+  // https://stackoverflow.com/questions/31649362/json-stringify-and-unicode-characters
+  // https://www.dropbox.com/developers/reference/json-encoding
+  var charsToEncode = /[\u007f-\uffff]/g;
+  function jsonSafe (v) {
+    return JSON.stringify(v).replace(charsToEncode,
+      function (c) {
+        return '\\u'+('000'+c.charCodeAt(0).toString(16)).slice(-4)
+      }
+    )
+  }
+
   Object.entries(allPosts).forEach(post => {
-    console.log(post[1].Content)
+    let sanitizedDate = new Date(post[1].frontmatter.date)
+    let contentType = "<p>This is a <em>simulation</em> of the stuff we might see in real, typographically “nasty” HTML."
+    let featImg = ''
+    if (post[1].frontmatter.featured_image) {
+      featImg = `${socialImg + post[1].frontmatter.featured_image}`
+    }
+    contentType = jsonSafe(contentType)
     feed.addItem({
-      title: (post[1].frontmatter.title).replace(/\u00A0/g, " ").replace(/\u2014/g, "---"),
+      title: jsonSafe(post[1].frontmatter.title),
       id: `https://www.brycewray.com/${post[1].url}/`,
       link: `https://www.brycewray.com/${post[1].url}/`,
-      description: (post[1].frontmatter.description).replace(/\u00A0/g, " ").replace(/[\u2018\u2019]/g, "'").replace(/\u2014/g, "---"),
-      // content: post[1].Content,
+      description: jsonSafe(post[1].frontmatter.description),
+      content: contentType,
       author: [
         {
           name: "Bryce Wray",
@@ -44,13 +61,14 @@ export async function get() {
           link: "https://www.brycewray.com/about/"
         }
       ],
-      date: post[1].date,
-      image: `${socialImg + post[1].frontmatter.featured_image}`
+      date: sanitizedDate,
+      image: featImg
     })
   })
+  feed.items.sort((a,b) => b.date - a.date)
   if(feedExt == 'xml') {
-    return { body: feed.rss2()}
+    return { body: feed.rss2() }
   } else {
-    return { body: feed.json1()}
+    return { body: feed.json1() }
   }
 }
