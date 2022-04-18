@@ -148,9 +148,13 @@ $tc-padding: 1em;
 }
 
 .tweet-video-wrapper {
-	border-radius: $tc-corner-radius;
   display: block;
-  // overriding previous
+}
+
+.tweet-media-video {
+  // text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 .tweet-img-grid-3 {
