@@ -48,5 +48,5 @@ export async function get() {
       image: `${socialImg + post[1].frontmatter.featured_image}`
     })
   })
-  return { body: feed.json1()}
+  return { body: feed.rss2()}
 }
