@@ -1,6 +1,8 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
+import replace from '@rollup/plugin-replace'
+// https://discord.com/channels/830184174198718474/963161998932209704/963162924862570508
 
-import sitemap from "@astrojs/sitemap";
+import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +27,13 @@ export default defineConfig({
     }
   },
   vite: {
+    plugins: [
+      replace(
+        {
+          'rel="stylesheet': 'nonce="DhcnhD3khTMePgXw" rel="stylesheet"'
+        }
+      )
+    ],
     ssr: {
       external: ['twitter-api-client']
     },
