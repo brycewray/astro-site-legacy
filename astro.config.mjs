@@ -21,9 +21,10 @@ export default defineConfig({
       behavior: "wrap" // test: [ 'article h1', 'article h2', 'article h3', 'article h4', 'article h5', 'article h6']
 
     }]],
-    syntaxHighlight: 'prism',
+    // syntaxHighlight: 'prism',
     shikiConfig: {
-      wrap: true
+      theme: 'github-dark',
+      // wrap: true,
     }
   },
   vite: {
