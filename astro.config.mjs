@@ -28,11 +28,9 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      replace(
-        {
-          'rel="stylesheet': 'nonce="DhcnhD3khTMePgXw" rel="stylesheet"'
-        }
-      )
+      replace({
+        'rel="stylesheet"': 'nonce="DhcnhD3khTMePgXw" rel="stylesheet"'
+      })
     ],
     ssr: {
       external: ['twitter-api-client']
