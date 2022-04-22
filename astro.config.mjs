@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 
-// import sitemap from "@astrojs/sitemap"
+import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
@@ -34,5 +34,5 @@ export default defineConfig({
     ssr: {},
     // logLevel: 'silent' // while I'm working on JSON files!
   },
-  // integrations: [sitemap()]
+  integrations: [sitemap()]
 });
