@@ -8,7 +8,7 @@
       "@pages/*": ["src/pages/*"],
       "@styles/*": ["src/styles/*"],
       "@public/*": ["public/*"],
-      "@svg/*": ["src/assets/svg/*"]
+      "@svg/*": ["public/images/svgs/*"]
     }
   }
 }
