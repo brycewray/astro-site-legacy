@@ -61,7 +61,7 @@ async function getBase64(urlFor64) {
 }
 
 let LQIP_b64 = await getBase64(cloudiBase + LQIPholder + url)
-let imgBkgd = "url(data:image/jpeg;base64," + LQIP_b64 + ")"
+let imgBkgd = `url(data:image/jpeg;base64,${LQIP_b64})`
 
 /*
 ================================================================
@@ -70,7 +70,7 @@ End, LQIP-to-Base64
 */
 ---
 
-<style define:vars={{imgBkgd}}>
+<style define:vars={{ imgBkgd }}>
   .bkgdHandler {
     background: var(--imgBkgd);
     background-repeat: no-repeat;
