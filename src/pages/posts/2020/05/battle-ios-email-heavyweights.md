@@ -1,12 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Battle of the iOS email heavyweights"
 description: "AltaMail vs. Preside: there’s no MailMate for iOS, but these try to play in the same ballpark."
 author: Bryce Wray

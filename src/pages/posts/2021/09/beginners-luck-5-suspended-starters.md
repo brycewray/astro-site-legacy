@@ -1,10 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Beginner’s luck #5: suspended starters"
 description: "That’s a wrap on further development of my SSG starter sets."
 author: Bryce Wray
@@ -40,8 +37,8 @@ As for why I'm pulling the plug on working with these, call it an after-effect o
 
 I'll keep the starters’ repos alive for the time being, in case anybody is curious about the code for some bizarre reason, but in any event there are (and always have been) much better places to look:
 
-- Eleventy --- ["Starter Projects" page](https://www.11ty.dev/docs/starter/).
-- Hugo --- ["Starter Kits" page](https://gohugo.io/tools/starter-kits/) and ["Themes" mini-site](https://themes.gohugo.io/).
-- Zola --- ["Themes" page](https://www.getzola.org/themes/).
+- Eleventy---["Starter Projects" page](https://www.11ty.dev/docs/starter/).
+- Hugo---["Starter Kits" page](https://gohugo.io/tools/starter-kits/) and ["Themes" mini-site](https://themes.gohugo.io/).
+- Zola---["Themes" page](https://www.getzola.org/themes/).
 
 To all who've already forked the starters for your own experimentation and use, thanks for giving them your time and attention. I hope they helped.

@@ -1,10 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
 title: "“New Outlook” ends an old aggravation for Mac users"
 description: "For Mac users who must use Outlook, its Electron-based version brings some long-overdue feature parity."

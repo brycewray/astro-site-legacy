@@ -1,10 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
   import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Two paths to password management"
@@ -111,7 +107,7 @@ These services’ pricing is all over the map, although there are free versions 
 
 The non-KeePass way, while technically not *quite* as secure as the KeePass method (mainly because you're putting more trust in a single provider than is necessary for the KeePass way even when cloud sync is involved), is far more convenient and requires a lot less up-front thinking. I found myself agreeing with two commenters I observed in a discussion of the two methods following a [Ghacks article from a few months back](https://www.ghacks.net/2021/02/20/migrating-from-lastpass-to-an-alternative-password-manager-keepass-vs-bitwarden-which-one-will-you-choose/):
 
-> **ShintoPlasm**: When you need to share access with other family members, [the non-KeePass method] is the preferred option. KeePass is for loners[.] <span class="nobrk">:-)</span>
+> **ShintoPlasm**: When you need to share access with other family members, [the non-KeePass method] is the preferred option. KeePass is for loners[.] :-)
 
 > **owl**: @ShintoPlasm, [y]ou may be right. I, too, have found [the non-KeePass method] to be the better for shared use with family. In an environment where there is no one to share, KeePass is the best.
 

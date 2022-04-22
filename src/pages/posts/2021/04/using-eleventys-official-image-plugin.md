@@ -1,9 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
   import ImgcCaption from '@components/ImgcCaption.astro'
@@ -43,7 +41,7 @@ Then, last night, I finally decided to give it a try and, shortly before midnigh
 
 Now that I've gone through that, I offer this post in the hope of making it simpler for even new Eleventy users to understand Eleventy Image. After all, if **this** old fart can, so can you.
 
-Let's break it down to three simple questions:<br />
+Let's break it down to three simple questions:\
 "What?" "Why?" "How?"
 
 ## What is Eleventy Image?

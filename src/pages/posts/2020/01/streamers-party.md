@@ -1,12 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Streamers’ party"
 description: "I finally jump off the sinking ship that is cable television—while also regaling you with tales of yesteryear."
 author: Bryce Wray

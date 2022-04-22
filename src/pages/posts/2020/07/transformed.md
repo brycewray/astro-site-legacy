@@ -1,13 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
-tags: post
 title: "Transformed"
 description: "The move to Cloudinary."
 author: Bryce Wray

@@ -1,10 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Go big or Go home? The sequel"
 description: "After a “D’oh!” moment, I refine a bespoke Hugo shortcode."
 author: Bryce Wray

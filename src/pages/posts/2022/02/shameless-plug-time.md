@@ -1,10 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Shameless plug time"
 description: "A few words about my new Hugo-related article for the CloudCannon blog."
 author: Bryce Wray

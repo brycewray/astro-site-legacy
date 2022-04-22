@@ -1,12 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Gems in the rough"
 description: "I learned these the hard way; perhaps you won’t have to do the same."
 author: Bryce Wray

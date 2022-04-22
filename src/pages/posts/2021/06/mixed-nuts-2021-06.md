@@ -1,12 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Mixed nuts • June, 2021"
 description: "The latest set of “takes” that don’t all fit in any one category."
 author: Bryce Wray

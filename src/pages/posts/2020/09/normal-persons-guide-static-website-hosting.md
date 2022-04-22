@@ -1,12 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "A normal person’s guide to static website hosting"
 description: "After suggesting how a non-geek could most easily have a website, I now offer thoughts on the site’s hosting."
 author: Bryce Wray

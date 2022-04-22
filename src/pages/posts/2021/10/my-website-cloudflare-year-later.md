@@ -1,10 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "My website and Cloudflare, a year later"
 description: "It’s perhaps not so much “love/hate” as it is geeky curiosity combined with an old guy’s impatience."
 author: Bryce Wray

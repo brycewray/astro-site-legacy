@@ -1,12 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "HardyPress: WP + SSG with a twist"
 description: Here’s a brief look at an interesting way to have your WordPress cake and eat your SSG site, too—or something like that.
 author: Bryce Wray

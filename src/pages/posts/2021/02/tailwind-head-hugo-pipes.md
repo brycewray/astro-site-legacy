@@ -1,12 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Tailwind-to-head with Hugo Pipes"
 description: "If your website draws that “render-blocking resource” gripe during tests, here’s one method for fighting it."
 author: Bryce Wray

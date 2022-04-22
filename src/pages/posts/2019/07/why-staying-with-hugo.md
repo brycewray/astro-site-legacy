@@ -1,12 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
   import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Why I’m staying with Hugo"
 description: "After experimenting for a few weeks with Gatsby and a few other trendy SSGs, I realize just how good I have it with Hugo."
 author: Bryce Wray

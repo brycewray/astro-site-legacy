@@ -1,17 +1,12 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "A thousand words, indeed"
 description: "Feelings about look-and-feel: how and why “hero images” have returned to this site."
 author: Bryce Wray
 date: 2020-05-22T18:00:00-05:00
-lastmod: 2022-04-03T21:19:00-05:00
+lastmod: 2022-04-22T12:10:00-05:00
 discussionId: "2020-05-thousand-words-indeed"
 featured_image: colorful-flower-field-250016_4984x3607.jpg
 featured_image_width: 4984
@@ -61,7 +56,7 @@ So here's what happened.
 
 ## Nothing more than feelings?
 
-From the earliest days of this site, I've said the following on the [home page](/):
+From the earliest days of this site, I've [said the following](/about/):
 
 > I hope you find this site a source of various little nuggets of helpful info, and occasionally a laugh or two---even if I hadn't intended it, but especially if I had.
 

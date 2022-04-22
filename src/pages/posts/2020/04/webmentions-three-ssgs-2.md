@@ -1,12 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Webmentions in three SSGs: Part 2"
 description: "Part 2 of a five-part series about incorporating the IndieWeb into three different static site generators (SSGs)—in this case, Eleventy."
 author: Bryce Wray

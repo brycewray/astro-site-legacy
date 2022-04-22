@@ -1,12 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
   import LiteYT from '@components/Lite-YouTube.astro'
 title: "1Password hits the fan"
 description: "An Electron-ic firestorm: a follow-up to my earlier article about password management."

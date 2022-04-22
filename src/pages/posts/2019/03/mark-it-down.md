@@ -1,12 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Mark it down"
 description: "Markdown: how to have that plain-text cake and still eat it with formatting intact."
 author: Bryce Wray
@@ -120,15 +114,15 @@ This would give you a paragraph with **bold text here** and *italicized text her
 
 Again, it's a simple example, but you can see how much less typing that would involve, especially for people writing tech docs that would become web pages. Although Markdown took its sweet time catching on, it's become a lifeline for such writers.
 
-That would be sufficiently important in and of itself; but, in recent years, Markdown has become a mainstay of a broader set of writers, even those such as I who are perfectly happy using HTML (hey, I've been coding web pages since early 1996, back in the era when [<code style="color: inherit;">\<blink\></code> was still a thing](https://developer.mozilla.org/en-US/docs/web/HTML/Element/blink))---as apps like [Ulysses](https://ulyssesapp.com), [iA Writer](https://www.ia.net/writer), [Bear](https://bear.app), [Byword](https://bywordapp.com), [Drafts](https://getdrafts.com), and more have come into their own as go-to writing tools for those who've long since realized there was a better world beyond the confining quarters of Microsoft Word, Google Docs, and others of that ilk.
+That would be sufficiently important in and of itself; but, in recent years, Markdown has become a mainstay of a broader set of writers, even those such as I who are perfectly happy using HTML (hey, I've been coding web pages since early 1996, back in the era when ```blink``` was still a thing](https://developer.mozilla.org/en-US/docs/web/HTML/Element/blink))---as apps like [Ulysses](https://ulyssesapp.com), [iA Writer](https://www.ia.net/writer), [Bear](https://bear.app), [Byword](https://bywordapp.com), [Drafts](https://getdrafts.com), and more have come into their own as go-to writing tools for those who've long since realized there was a better world beyond the confining quarters of Microsoft Word, Google Docs, and others of that ilk.
 
 In fact, one very cool thing about Markdown is that, if you're *not* averse to using HTML and CSS here and there, you can **mix it seamlessly with those languages** to get things an app may not give you otherwise.
 
-For example, when I [moved from Scrivener to Ulysses last year](/posts/2018/09/why-finally-settled-ulysses/), one of the Scrivener features I missed was creating little on-screen "cards" for chapters so I could shuffle them around and know which was which because each card showed a little synopsis. I fixed this in Ulysses by beginning each chapter with Ulysses's proprietary[^MXL] commenting markup (using <code>+++text like this+++</code>) that, although it wouldn't get included in the export from the chapter, would show up in the first few lines of the Ulysses version of the preview. Then, this year, as I began to use iA Writer more, I found that it has no such commenting feature of its own---but, no problem, since I simply used the built-in commenting feature in HTML. ```<!-- Just like this. Pretty cool, eh? -->```[^commenting]
+For example, when I [moved from Scrivener to Ulysses last year](/posts/2018/09/why-finally-settled-ulysses/), one of the Scrivener features I missed was creating little on-screen "cards" for chapters so I could shuffle them around and know which was which because each card showed a little synopsis. I fixed this in Ulysses by beginning each chapter with Ulysses's proprietary[^MXL] commenting markup (using ```+++text like this+++```) that, although it wouldn't get included in the export from the chapter, would show up in the first few lines of the Ulysses version of the preview. Then, this year, as I began to use iA Writer more, I found that it has no such commenting feature of its own---but, no problem, since I simply used the built-in commenting feature in HTML. ```<!-- Just like this. Pretty cool, eh? -->```[^commenting]
 
 [^MXL]: Ulysses uses its own variant of Markdown, called Markdown XL, to allow for some additional capabilities, although there are [concerns here and there](https://talk.macpowerusers.com/t/markdown-the-advantage-and-afterall-why/7134/38) that it's not sufficiently compatible. That's one of the reasons Ulysses allows you to use multiple flavors of Markdown, although [you're encouraged](https://ulysses.app/blog/2014/09/tips-ulysses-markup/) to stick with the default Markdown XL.
 
-[^commenting]: However, I must note that HTML comments don't appear in iA Writer's file preview functionality, so I can't use them for up-front synopses the same way as I do the <code>+++</code> stuff in Ulysses. Yes, the comments are in the file, but they don't appear in the text previews in the files list. Meh. You win a few, you lose a few.
+[^commenting]: However, I must note that HTML comments don't appear in iA Writer's file preview functionality, so I can't use them for up-front synopses the same way as I do the ```+++``` stuff in Ulysses. Yes, the comments are in the file, but they don't appear in the text previews in the files list. Meh. You win a few, you lose a few.
 
 There are a number of variations of Markdown, perhaps most notably [Fletcher Penney](https://fletcherpenney.net)'s [MultiMarkdown](https://fletcherpenney.net/multimarkdown) (MMD). Penney even created a nifty MMD editor for the Mac, called [MultiMarkdown Composer](https://multimarkdown.com). In fact, I used it to write some of this post, as part of my getting better acquainted with it. Mind you, my personal preference for MMD writing these days runs more along the lines of iA Writer, and I prefer apps with both iOS and Mac versions so I can write on whichever device is closest at the time; but Penney's app has some serious advantages for technical documentation, in particular. If that kind of writing is where you spend most of your keyboard time, you could do a whole lot worse than Composer.
 

@@ -4,7 +4,6 @@ setup: |
   import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
   import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Gems in the rough #13"
 description: "Why I’ve recently backtracked on configurations for CSS and image-handling."
 author: Bryce Wray

@@ -1,9 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweetV2 from '@components/STweetV2.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "O say can you CI/CD?"
 description: "A way around the Netlify free-tier build limit."

@@ -1,7 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
 title: "Simplify, simplify (again)"
 subtitle: "Back to basics, to coin a phrase"

@@ -1,10 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
   import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Static tweets in Eleventy and Hugo • Part 2"
 description: "Using Twitter’s preferred API to embed static tweets."
 author: Bryce Wray

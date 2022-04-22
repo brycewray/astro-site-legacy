@@ -1,10 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
   import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Fetching remote stuff with Hugo 0.90+"
 description: "It’s a marriage made in heaven: the Cloudinary free tier and Hugo Pipes’ new ability to grab remote items."
 author: Bryce Wray

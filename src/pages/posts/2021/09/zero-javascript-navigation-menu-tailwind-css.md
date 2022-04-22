@@ -1,9 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "A zero-JavaScript navigation menu for Tailwind CSS"
 description: "Seeking a non-JS nav menu for use with Tailwind? So was I. Here’s the resulting code."

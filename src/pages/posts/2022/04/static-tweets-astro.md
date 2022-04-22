@@ -1,10 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
   import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 tags: post
 title: "Static tweets in Astro"
 description: "A component which properly embeds tweets when you’re using today’s hottest SSG."

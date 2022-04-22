@@ -1,12 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Simplify, simplify"
 description: "A Thoreau-ly fine website, or the result of choosing between simplicity and FOMO."
 author: Bryce Wray
@@ -24,7 +20,7 @@ featured_image_caption: |
 
 <Disclaimer />
 
-> Our life is frittered away by detail. Simplify, simplify.<br />
+> Our life is frittered away by detail. Simplify, simplify.\
 > ---[Henry David Thoreau](https://simple.wikiquote.org/wiki/Henry_David_Thoreau).
 
 A few days ago, I [explained](/posts/2021/01/leaner-cleaner/) that I was simplifying the site's look-and-feel. That seemed plain enough, I'm sure.
@@ -117,7 +113,7 @@ At least until I decide that last item, I am maintaining two different themes in
 
 ## Time to let others run
 
-> Just when I thought I was out, they pull me back in.<br />
+> Just when I thought I was out, they pull me back in.\
 > ---[Michael Corleone, *The Godfather: Part III*](https://www.imdb.com/title/tt0099674/quotes?item=qt0360565).
 
 Indeed.

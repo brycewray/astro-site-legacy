@@ -1,12 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Thinking dark thoughts"
 description: "As Dark Mode grows in use, it’s easy to make your site dark-friendly."
 date: 2019-09-29T10:08:00-05:00
@@ -93,6 +89,7 @@ Yes, that can be tedious, particularly if you haven't yet done code blocks with 
 
 And then there are those third-party [iframes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) you can't control, at least not all that well.
 
+<YellowBox>
 **Note, 2020-08-08**: The following explanation was from before I stopped embedding third-party content, such as from Twitter, as a result of this site's belatedly adopted [privacy policy](/privacy).
 </YellowBox>
 

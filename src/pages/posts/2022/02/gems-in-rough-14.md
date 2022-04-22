@@ -4,7 +4,6 @@ setup: |
   import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
   import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Gems in the rough #14"
 description: "Full-time Eleventy, variables in Hugo, learning from a nice tweet, using web fonts with internal CSS."
 author: Bryce Wray

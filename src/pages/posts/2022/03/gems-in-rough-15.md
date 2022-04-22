@@ -2,9 +2,6 @@
 setup: |
   import Layout from '@layouts/Post.astro'
   import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Gems in the rough #15"
 description: "CFP Fast Builds update, Hugo/goldmark typography, another Tailwind-on-Hugo solution."
 author: Bryce Wray

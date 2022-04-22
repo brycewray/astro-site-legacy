@@ -1,12 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
   import IndentAfterLI from '@components/IndentAfterLI.astro'
 title: "Better notifications in the Preside email app"
 description: "How to use MailMate with Preside for quick and audible email notifications on your iOS devices."

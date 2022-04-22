@@ -3,8 +3,6 @@ setup: |
   import Layout from '@layouts/Post.astro'
   import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
 title: "Gems in the rough #10"
 description: "A (perhaps) surprising requirement for native lazy-loading, the Slinkity project, problems with Cloudflare Pages."
 author: Bryce Wray

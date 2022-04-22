@@ -1,12 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
-  import STweet from '@components/STweet.astro'
-  import Disclaimer from '@components/Disclaimer.astro'
-  import Imgc from '@components/Imgc.astro'
-  import ImgcCaption from '@components/ImgcCaption.astro'
   import LiteYT from '@components/Lite-YouTube.astro'
 title: "Coherence and COVID–19" #Non-breaking hyphen there, copied/pasted from https://alignedonline.com/non%E2%80%91breaking-spaces/ since it can't be entered otherwise in text string
 description: "What one thinks when “Well, that escalated quickly” becomes a gross understatement."
