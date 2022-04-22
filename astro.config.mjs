@@ -1,8 +1,6 @@
 import { defineConfig } from 'astro/config'
-import replace from '@rollup/plugin-replace'
-// https://discord.com/channels/830184174198718474/963161998932209704/963162924862570508
 
-import sitemap from "@astrojs/sitemap"
+// import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,10 +11,14 @@ export default defineConfig({
   },
   trailingSlash: "always",
   markdown: {
-    remarkPlugins: [["remark-smartypants", {
-      dashes: "oldschool",
-      ellipses: false
-    }], "remark-footnotes"],
+    remarkPlugins: [
+      ["remark-smartypants", {
+        dashes: "oldschool",
+        ellipses: false
+      }],
+      "remark-footnotes",
+      "remark-gfm"
+    ],
     rehypePlugins: ["rehype-external-links", "rehype-slug", ["rehype-autolink-headings", {
       behavior: "wrap" // test: [ 'article h1', 'article h2', 'article h3', 'article h4', 'article h5', 'article h6']
 
@@ -28,15 +30,9 @@ export default defineConfig({
     }
   },
   vite: {
-    plugins: [
-      replace({
-        'rel="stylesheet"': 'nonce="DhcnhD3khTMePgXw" rel="stylesheet"'
-      })
-    ],
-    ssr: {
-      external: ['twitter-api-client']
-    },
-    logLevel: 'silent' // while I'm working on JSON files!
+    plugins: [],
+    ssr: {},
+    // logLevel: 'silent' // while I'm working on JSON files!
   },
   // integrations: [sitemap()]
 });
