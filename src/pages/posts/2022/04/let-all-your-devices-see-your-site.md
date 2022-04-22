@@ -3,7 +3,7 @@ setup: |
   import Layout from '@layouts/Post.astro'
   import BlueBox from '@components/BlueBox.astro'
   import YellowBox from '@components/YellowBox.astro'
-  import STweetV2 from '@components/STweetV2.astro'
+  import STweet from '@components/STweet.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Let all your devices see your site"
 description: "How to make “localhost” slightly less local."

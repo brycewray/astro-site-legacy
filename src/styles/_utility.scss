@@ -183,7 +183,7 @@ img.containedImage {
   }
 }
 
-.imgcCaption, .imgCaption, .lazypicturecaption {
+.imgcCaption p, .imgCaption p, .lazypicturecaption p {
   font-family: var.$sans-serif;
   padding: 0;
   margin-block-start: 0.5em;
