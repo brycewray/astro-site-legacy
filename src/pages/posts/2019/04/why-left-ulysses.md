@@ -7,6 +7,7 @@ setup: |
   import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
   import ImgcCaption from '@components/ImgcCaption.astro'
+title: "Why I left Ulysses"
 description: "Just months after proclaiming my allegiance to the Ulysses writing app, I’ve chosen to abandon it in favor of iA Writer."
 author: Bryce Wray
 date: 2019-04-20T11:17:00-05:00
