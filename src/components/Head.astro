@@ -22,8 +22,7 @@ if (featured_image == null) {
 } else {
   imageToUse = socialImg + featured_image
 }
-
-// import SiteParams from "@data/siteparams.json"
+let envMode = import.meta.env.MODE // "production" or "development"
 ---
 
 <!-- Global Metadata -->
@@ -87,5 +86,11 @@ if (featured_image == null) {
 <link rel="preload" href="/assets/fonts/PublicSans-Italic-VF-2-000_2021-11-01_subset.woff2" crossorigin="anonymous" as="font" type="font/woff2" />
 -->
 <!-- style imported above -->
+
+{envMode == "production" && (
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://unwavering-reward.brycewray.com/script.js" data-site="CSERHYIA" defer></script>
+  )
+}
 
 
