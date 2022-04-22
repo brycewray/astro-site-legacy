@@ -11,7 +11,7 @@ lastmod: 2021-07-02T10:35:00-05:00
 
 ## Send me an email
 
-bw@brycewray.com<br />
+bw@brycewray.com\
 *(Spammers, you and your bots will never get past my **Junk** folder, so don't bother.)*
 
 <YellowBox>
