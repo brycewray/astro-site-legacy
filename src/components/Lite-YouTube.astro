@@ -1,0 +1,18 @@
+---
+let { videoId, params, videoTitle } = Astro.props
+
+---
+
+<script src="/assets/scripts/lite-yt-embed_0-2-0.js" is:inline></script>
+
+<lite-youtube
+  videoid={videoId}
+  data-bg=`url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`
+  params={params}
+>
+  <button type="button" class="lty-playbtn">
+    <span class="lyt-visually-hidden">Play video: {videoTitle}</span>
+  </button>
+</lite-youtube>
+<noscript><p class="ctr legal tightLead"><em>[Video playback capability requires JavaScript to be&nbsp;enabled.]</em></p></noscript>
+<p class="ctr legal tightLead"><strong class="red">Note</strong>: Clicking&nbsp;the&nbsp;video constitutes your consent to view&nbsp;it via&nbsp;YouTube (including&nbsp;cookies). To&nbsp;view&nbsp;it on the YouTube&nbsp;site instead, please&nbsp;use&nbsp;<a href=`https://www.youtube.com/watch?v=${videoId}` target="_blank" rel="noopener">this&nbsp;link</a>, which&nbsp;opens in&nbsp;a different browser&nbsp;window/tab.</p>
