@@ -1,5 +1,3 @@
-# Experimentation with Astro
+# Repo for brycewray.com
 
-Some is based on my [current site](https://www.brycewray.com), and some is just a lark. You can find far better [Astro](https://astro.build) repos to watch. &#128522;
-
-(Original structure was taken from the Astro blog example.)
+This is the repository from which the [Astro](https://astro.build)-generated version of [brycewray.com](https://brycewray.com) is built.
