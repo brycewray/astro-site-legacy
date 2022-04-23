@@ -4,12 +4,13 @@ import '@styles/index.scss';
 export interface Props {
 	title: string;
 	description: string;
-	permalink: string;
+	// permalink: string;
+  featured_image?: string;
 }
-const { title, description, permalink, featured_image } = Astro.props;
+const { title, description, featured_image } = Astro.props as Props;
 
 const currentUrl = Astro.request.url
-const canonicalUrl = Astro.canonicalURL
+// const canonicalUrl = Astro.canonicalURL
 
 let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
 
@@ -22,6 +23,10 @@ if (featured_image == null) {
 } else {
   imageToUse = socialImg + featured_image
 }
+
+// console.log("featured_image = " + featured_image)
+// console.log("imageToUse = " + imageToUse)
+
 let envMode = import.meta.env.MODE // "production" or "development"
 ---
 
@@ -31,20 +36,22 @@ let envMode = import.meta.env.MODE // "production" or "development"
 <meta name="generator" content="Astro" />
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
-<meta name="title" content={title} />
+<title>{title + " | BryceWray.com"}</title>
+<meta name="title" content={title + " | BryceWray.com"} />
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={permalink} />
-<meta property="og:title" content={title} />
+<meta property="og:url" content={currentUrl} />
+<meta property="og:title" content={title + " | BryceWray.com"} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={imageToUse} />
 
+<link rel="canonical" href={currentUrl} />
+
 <!-- Twitter -->
 <meta property="twitter:card" content={imageToUse} />
-<meta property="twitter:url" content={permalink} />
+<meta property="twitter:url" content={currentUrl} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={imageToUse} />
