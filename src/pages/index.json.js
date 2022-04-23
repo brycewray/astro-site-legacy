@@ -53,7 +53,7 @@ export async function get() {
       id: `https://www.brycewray.com/${post[1].url}/`,
       link: `https://www.brycewray.com/${post[1].url}/`,
       description: jsonSafe(post[1].frontmatter.description),
-      content: contentType,
+      content: jsonSafe(post[1].frontmatter.description),
       author: [
         {
           name: "Bryce Wray",
