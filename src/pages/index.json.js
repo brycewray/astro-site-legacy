@@ -42,18 +42,21 @@ export async function get() {
 
   Object.entries(allPosts).forEach(post => {
     let sanitizedDate = new Date(post[1].frontmatter.date)
-    let contentType = "<p>This is a <em>simulation</em> of the stuff we might see in real, typographically “nasty” HTML."
+    // let contentType = "<p>This is a <em>simulation</em> of the stuff we might see in real, typographically “nasty” HTML."
     let featImg = ''
     if (post[1].frontmatter.featured_image) {
       featImg = `${socialImg + post[1].frontmatter.featured_image}`
     }
-    contentType = jsonSafe(contentType)
+    // contentType = jsonSafe(contentType)
     feed.addItem({
-      title: jsonSafe(post[1].frontmatter.title),
+      // title: jsonSafe(post[1].frontmatter.title),
+      title:post[1].frontmatter.title,
       id: `https://www.brycewray.com/${post[1].url}/`,
       link: `https://www.brycewray.com/${post[1].url}/`,
-      description: jsonSafe(post[1].frontmatter.description),
-      content: jsonSafe(post[1].frontmatter.description),
+      // description: jsonSafe(post[1].frontmatter.description),
+      // content: jsonSafe(post[1].frontmatter.description),
+      description: post[1].frontmatter.description,
+      content: post[1].frontmatter.description,
       author: [
         {
           name: "Bryce Wray",
