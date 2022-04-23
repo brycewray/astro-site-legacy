@@ -5,18 +5,18 @@ import Single from '@components/Single.astro'
 import Footer from '@components/Footer.astro'
 import Billboard from '@components/Billboard.astro'
 
-const { content, page } = Astro.props
-const { title, subtitle, description, date, lastmod, permalink, featured_image, featured_image_alt, featured_image_width, featured_image_height, featured_image_caption } = content
+const { content } = Astro.props
+const { title, subtitle, description, date, lastmod, permalink } = content
 
 ---
 
 <html lang={content.lang || 'en'}>
-	<head>
-		<Head {title} {description} {permalink} />
-	</head>
+  <head>
+    <Head {title} {description} {permalink} />
+  </head>
 
-	<body>
-		<Header />
+  <body>
+    <Header />
     <main>
       <Billboard
         title={title}
@@ -25,10 +25,10 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
         date={date}
         lastmod={lastmod}
       />
-			<Single >
-				<slot />
-			</Single>
+      <Single >
+        <slot />
+      </Single>
     </main>
     <Footer />
-	</body>
+  </body>
 </html>
