@@ -45,7 +45,7 @@ let latestThree = allPosts.slice(0, 3)
                     {post.frontmatter.subtitle}
                   </p>
                   <p class="homePost-Description">
-                    <em>{post.frontmatter.description}</em>
+                    {post.frontmatter.description}
                   </p>
                   <p class="homePost-Dates">
                     <strong>{format(new Date(post.frontmatter.date), "MMMM d, yyyy")}</strong>
