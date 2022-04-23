@@ -6,6 +6,46 @@ td {
 }
 */
 
+table { // for GFM default
+  width: 100%;
+  margin: 1.5rem auto 1rem auto;
+  border-collapse: collapse;
+  tr {
+    @media (prefers-color-scheme: dark) {
+      // background-color: var.$default-color-dark-mode;
+      color: var.$default-color;
+    }
+  }
+  thead tr {
+    background-color: var.$greyArrow;
+    color: white;
+    @media(prefers-color-scheme: dark) {
+      background-color: var.$code-bkgd-dark-mode;
+    }
+  }
+  tr:nth-child(even) {
+    background-color: hsl(210, 100%, 94%);
+    @media (prefers-color-scheme: dark) {
+      background-color: var.$default-shade;
+    }
+  }
+  th, td {
+    border: 1px solid #000;
+    @media (prefers-color-scheme: dark) {
+      border: 1px solid #fff;
+      color: white;
+    }
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.25rem 0 0.25rem 0.5rem;
+    // img {
+    //   display: inline-block;
+    //   vertical-align: middle;
+    //   margin: 0;
+    // }
+  }
+}
+
 // === table for web typography article, part II
 table.noborders {
   width: 100%;
