@@ -4,6 +4,7 @@ setup: |
   import YellowBox from '@components/YellowBox.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Simplify, simplify (again)"
+subtitle: "Back to basics, to coin a phrase"
 description: "As I was saying over a year ago before I was so rudely interrupted by life . . ."
 author: Bryce Wray
 date: 2022-03-22T13:24:00-05:00
