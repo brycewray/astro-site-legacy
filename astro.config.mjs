@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
 
-import astro from "astro-critters";
+import critters from "astro-critters";
 
 // https://astro.build/config
 export default defineConfig({
@@ -32,5 +32,11 @@ export default defineConfig({
     ssr: {} // logLevel: 'silent' // while I'm working on JSON files!
 
   },
-  integrations: [sitemap(), astro()]
+  integrations: [
+    sitemap(),
+    critters({
+      pruneSource: true,
+      fonts: true,
+    })
+  ]
 });
