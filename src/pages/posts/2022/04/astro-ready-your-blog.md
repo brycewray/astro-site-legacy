@@ -1,12 +1,13 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
+  import YellowBox from '@components/YellowBox.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Is Astro ready for your blog?"
 description: "Some points to consider if you’re thinking about switching your site to the Astro platform."
 author: Bryce Wray
 date: 2022-04-24T10:50:00-05:00
-#lastmod: 2022-04-24T11:35:00-05:00
+#lastmod: 2022-04-24T12:29:00-05:00
 #initTextEditor: iA Writer
 discussionId: "2022-04-astro-ready-your-blog"
 featured_image: "blog-concept-kaitlyn-baker-vZJdYl5JVXY-unsplash_5472x3648.jpg"
@@ -16,6 +17,10 @@ featured_image_alt: "Blog concept - closeup of hands typing on a laptop computer
 featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@kaitlynbaker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kaitlyn Baker</a>; <a href="https://unsplash.com/s/photos/blog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
+
+<YellowBox>
+**Note**: This post also appears on [dev.to](https://dev.to/brycewray/is-astro-ready-for-your-blog-63m).
+</YellowBox>
 
 <Disclaimer />
 
