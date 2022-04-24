@@ -6,7 +6,7 @@ title: "Is Astro ready for your blog?"
 description: "Some points to consider if you’re thinking about switching your site to the Astro platform."
 author: Bryce Wray
 date: 2022-04-24T10:50:00-05:00
-#lastmod:
+#lastmod: 2022-04-24T11:23:00-05:00
 #initTextEditor: iA Writer
 discussionId: "2022-04-astro-ready-your-blog"
 featured_image: "blog-concept-kaitlyn-baker-vZJdYl5JVXY-unsplash_5472x3648.jpg"
@@ -151,7 +151,7 @@ There is no official Astro solution for working with images, but [Astro ImageToo
 
 ## Data-handling
 
-Astro's [built-in data-fetching abilities](https://docs.astro.build/en/guides/data-fetching/) make it relatively trivial to pull data from either remote locations or just your own site. In fact, that's how you populate many commonly used variables, such as other pages' URLs and titles. If you've used the Node.js `fetch` command, you'll likely will find Astro's technique pleasantly familiar.
+Astro's [built-in data-fetching abilities](https://docs.astro.build/en/guides/data-fetching/) make it relatively trivial to pull data from either remote locations or just your own site. In fact, that's how you populate many commonly used variables, such as other pages' URLs and titles. If you've used the Node.js `fetch` command, you likely will find Astro's technique pleasantly familiar.
 
 **Comparison**: There are similar ways to do this with Eleventy, Gatsby, Hugo, and Next.js. While I would argue that it's somewhat easier with Astro than with the others (Next.js's data-fetching methods and related code are the most similar to Astro's), that's really subjective---with one notable exception. Gatsby's use of [GraphQL](https://graphql.org) makes its data-fetching powers impressive but overly complex to use, and its *dependence* on GraphQL for so many capabilities reminds me of the [old saw](https://en.wikipedia.org/wiki/Law_of_the_instrument) that "if all you have is a hammer, everything looks like a nail."
 
