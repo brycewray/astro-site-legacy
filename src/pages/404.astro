@@ -1,0 +1,28 @@
+---
+import Head from '@components/Head.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+
+let title = 'Page not found | BryceWray.com'
+let description = 'Page not found.'
+---
+
+<html lang="en">
+	<head>
+		<Head {title} {description} />
+	</head>
+
+	<body>
+		<Header />
+		<div class="wrapper">
+			<main class="content">
+        <div class="FourOhFour">
+          <h1>Page not found</h1>
+          <p>Sorry, that page isn&rsquo;t on this&nbsp;site.</p>
+          <p class="bottom">Please use the navigation menu or the&nbsp;<a href="/sitemap/">sitemap</a> to&nbsp;find another&nbsp;page.</p>
+        </div>
+			</main>
+		</div>
+    <Footer />
+	</body>
+</html>
