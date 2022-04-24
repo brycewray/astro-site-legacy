@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
 
-import critters from "astro-critters";
+// import critters from "astro-critters";
 
 // https://astro.build/config
 export default defineConfig({
@@ -34,9 +34,9 @@ export default defineConfig({
   },
   integrations: [
     sitemap(),
-    critters({
-      pruneSource: true,
-      fonts: true,
-    })
+    // critters({
+    //   pruneSource: true,
+    //   fonts: true,
+    // })
   ]
 });
