@@ -3,6 +3,7 @@ setup: |
   import Layout from '@layouts/Post.astro'
   import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
+  import '@styles/Tables.scss'
 title: "A stacked deck"
 description: "Part 2 of a two-part series on web typography."
 author: Bryce Wray
