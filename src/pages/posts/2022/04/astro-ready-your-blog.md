@@ -6,7 +6,7 @@ title: "Is Astro ready for your blog?"
 description: "Some points to consider if you’re thinking about switching your site to the Astro platform."
 author: Bryce Wray
 date: 2022-04-24T10:50:00-05:00
-#lastmod: 2022-04-24T11:23:00-05:00
+#lastmod: 2022-04-24T11:35:00-05:00
 #initTextEditor: iA Writer
 discussionId: "2022-04-astro-ready-your-blog"
 featured_image: "blog-concept-kaitlyn-baker-vZJdYl5JVXY-unsplash_5472x3648.jpg"
@@ -183,6 +183,6 @@ So what's the bottom line? How do all the checkboxes line up? In my admittedly s
 
 - Astro definitely is ready to take on your site. I wouldn't have migrated my site to it had I thought otherwise. It's already quite capable; and, especially given some of the ideas and conversations I've seen floating around the Astro Discord, I think not only that Astro will gain even more features, soon, but also that its dev team will address the relatively few nits I raised herein concerning DX (and, perhaps less important, feeds).\
 As for the others in the mix . . .
-- If you'd rather stick with, or start with, platforms that are more mature than the nascent Astro, my judgments from my [2020 piece comparing/constrasting Eleventy and Hugo](/posts/2020/12/eleventy-hugo-comparing-contrasting/) still stand. Either will serve you well. Just decide which you prefer: a better OoTB experience (Hugo, especially with a good [theme](https://themes.gohugo.io) that helps you avoid getting under the hood until you're ready to wrangle Go), or a more open and customizable experience (Eleventy with its category-leading templating flexibility).
+- If you'd rather stick with, or start with, platforms that are more mature than the nascent Astro, my judgments from my [2020 piece comparing/contrasting Eleventy and Hugo](/posts/2020/12/eleventy-hugo-comparing-contrasting/) still stand. Either will serve you well. Just decide which you prefer: a better OoTB experience (Hugo, especially with a good [theme](https://themes.gohugo.io) that helps you avoid getting under the hood until you're ready to wrangle Go), or a more open and customizable experience (Eleventy with its category-leading templating flexibility).
 - With the exception of its current slow refresh rate in dev mode, Astro already offers a great deal of the [pleasant DX](/posts/2021/03/next-steps/) that originally made Next.js so compelling; yet, thanks to partial hydration, Astro has none of Next.js's built-in tendencies toward code bloat. Next.js may be perfect for corporate sites built by IT departments with React "shops," but it falls short for a personal site.
 - And, frankly, my dear, Gatsby lately has been [falling off many developers' radars](https://2021.stateofjs.com/en-US/libraries/back-end-frameworks) to the extent that, I think, its time in the sun has come and gone. You can do better with any of these other platforms.
