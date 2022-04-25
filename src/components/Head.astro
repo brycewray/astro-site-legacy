@@ -1,13 +1,14 @@
 ---
-import '@styles/index.scss';
+import '@styles/index.scss'
+import * as info from '../info.js'
 
 export interface Props {
-	title: string;
-	description: string;
-	// permalink: string;
-  featured_image?: string;
+	title: string
+	description: string
+	// permalink: string
+  featured_image?: string
 }
-const { title, description, featured_image } = Astro.props as Props;
+const { title, description, featured_image } = Astro.props as Props
 
 const currentUrl = Astro.request.url
 // const canonicalUrl = Astro.canonicalURL
@@ -33,7 +34,7 @@ let envMode = import.meta.env.MODE // "production" or "development"
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Astro" />
+<meta name="generator" content={info.generator}>
 
 <!-- Primary Meta Tags -->
 <title>{title + " | BryceWray.com"}</title>
