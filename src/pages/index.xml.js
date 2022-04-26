@@ -5,6 +5,7 @@
 let feedExt = 'xml' // 'json' or 'xml'
 
 import { Feed } from "feed"
+import {micromark} from "micromark"
 
 let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
 
@@ -51,22 +52,26 @@ export async function get() {
       let awaitedPost = await post.default()
       let featImg = ''
       sanitizedDate = new Date(post.frontmatter.date)
-      let theContent = ''
+      let theTitle, theContent, theDescription = ''
       if (post.frontmatter.featured_image) {
         featImg = socialImg + post.frontmatter.featured_image
       }
+      theTitle = post.frontmatter.title
       theContent = awaitedPost.metadata.source
+      theDescription = post.frontmatter.description
+      theContent = micromark(theContent, {})
       if (feedExt == 'json') {
+        theTitle = jsonSafe(theTitle)
         theContent = jsonSafe(theContent)
+        theDescription = jsonSafe(theDescription)
       }
       feed.addItem({
-        // title: jsonSafe(post[1].frontmatter.title),
-        title:post.frontmatter.title,
+        title: theTitle,
         id: `https://www.brycewray.com/${post.url}/`,
         link: `https://www.brycewray.com/${post.url}/`,
-        description: post.frontmatter.description,
-        // content: theContent,
-        content: post.frontmatter.description,
+        description: theDescription,
+        // content: theDescription,
+        content: theContent,
         author: [
           {
             name: "Bryce Wray",
