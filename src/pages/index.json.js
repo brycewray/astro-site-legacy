@@ -60,18 +60,18 @@ export async function get() {
       theContent = awaitedPost.metadata.source
       theDescription = post.frontmatter.description
       theContent = micromark(theContent, {})
-      // if (feedExt == 'json') {
-      //   theTitle = jsonSafe(theTitle)
-      //   theContent = jsonSafe(theContent)
-      //   theDescription = jsonSafe(theDescription)
-      // }
+      if (feedExt == 'json') {
+        theTitle = jsonSafe(theTitle)
+        theContent = jsonSafe(theContent)
+        theDescription = jsonSafe(theDescription)
+      }
       feed.addItem({
         title: theTitle,
         id: `https://www.brycewray.com/${post.url}/`,
         link: `https://www.brycewray.com/${post.url}/`,
         description: theDescription,
-        content: theDescription,
-        // content: theContent,
+        // content: theDescription,
+        content: theContent,
         author: [
           {
             name: "Bryce Wray",
