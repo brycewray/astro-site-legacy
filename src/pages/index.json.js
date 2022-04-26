@@ -5,11 +5,12 @@
 let feedExt = 'json' // 'json' or 'xml'
 
 import { Feed } from "feed"
-import {micromark} from "micromark"
-import {gfm, gfmHtml} from "micromark-extension-gfm"
-import {gfmFootnote, gfmFootnoteHtml} from "micromark-extension-gfm-footnote"
-import {gfmStrikethrough, gfmStrikethroughHtml} from "micromark-extension-gfm-strikethrough"
-import {gfmTable, gfmTableHtml} from "micromark-extension-gfm-table"
+// import {micromark} from "micromark"
+// import {gfm, gfmHtml} from "micromark-extension-gfm"
+// import {gfmFootnote, gfmFootnoteHtml} from "micromark-extension-gfm-footnote"
+// import {gfmStrikethrough, gfmStrikethroughHtml} from "micromark-extension-gfm-strikethrough"
+// import {gfmTable, gfmTableHtml} from "micromark-extension-gfm-table"
+// import {mdx} from "micromark-extension-mdx"
 
 let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
 
@@ -36,19 +37,18 @@ export async function get() {
   })
 
   let allPosts = await import.meta.globEager('./posts/**/*.md')
-  // let postsArray = []
   let sanitizedDate = ''
 
   // https://stackoverflow.com/questions/31649362/json-stringify-and-unicode-characters
   // https://www.dropbox.com/developers/reference/json-encoding
-  var charsToEncode = /[\u007f-\uffff]/g;
-  function jsonSafe (v) {
-    return v.replace(charsToEncode,
-      function (c) {
-        return '\\u'+('000'+c.charCodeAt(0).toString(16)).slice(-4)
-      }
-    )
-  }
+  // var charsToEncode = /[\u007f-\uffff]/g;
+  // function jsonSafe (v) {
+  //   return v.replace(charsToEncode,
+  //     function (c) {
+  //       return '\\u'+('000'+c.charCodeAt(0).toString(16)).slice(-4)
+  //     }
+  //   )
+  // }
 
   for (let postkey in allPosts) {
     if (allPosts[postkey].frontmatter.date && allPosts[postkey].frontmatter.title) {
@@ -60,35 +60,40 @@ export async function get() {
       if (post.frontmatter.featured_image) {
         featImg = socialImg + post.frontmatter.featured_image
       }
+      // Object.entries(awaitedPost.metadata).forEach(item => {
+      //   console.log(item)
+      // })
+      // console.log("Metadata = " + awaitedPost.metadata)
       theTitle = post.frontmatter.title
-      theContent = awaitedPost.metadata.source
+      // theContent = awaitedPost.metadata.source
+      theContent = awaitedPost.metadata.html
       theDescription = post.frontmatter.description
-      theContent = micromark(theContent, {
-        extensions: [
-          gfm(),
-          gfmFootnote(),
-          gfmStrikethrough(),
-          gfmTable,
-        ],
-        htmlExtensions: [
-          gfmHtml(),
-          gfmFootnoteHtml(),
-          gfmStrikethroughHtml,
-          gfmTableHtml
-        ]
-      })
-      if (feedExt == 'json') {
-        theTitle = jsonSafe(theTitle)
-        theContent = jsonSafe(theContent)
-        theDescription = jsonSafe(theDescription)
-      }
+      // theContent = micromark(theContent, {
+      //   extensions: [
+      //     gfm(),
+      //     gfmFootnote(),
+      //     gfmStrikethrough(),
+      //     gfmTable
+      //   ],
+      //   htmlExtensions: [
+      //     gfmHtml(),
+      //     gfmFootnoteHtml(),
+      //     gfmStrikethroughHtml,
+      //     gfmTableHtml
+      //   ]
+      // })
+      // if (feedExt == 'json') {
+      //   theTitle = jsonSafe(theTitle)
+      //   theContent = jsonSafe(theContent)
+      //   theDescription = jsonSafe(theDescription)
+      // }
       feed.addItem({
         title: theTitle,
         id: `https://www.brycewray.com/${post.url}/`,
         link: `https://www.brycewray.com/${post.url}/`,
-        description: theDescription,
-        // content: theDescription,
-        content: theContent,
+        // description: theDescription,
+        content: theDescription,
+        // content: theContent,
         author: [
           {
             name: "Bryce Wray",
