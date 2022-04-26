@@ -1,4 +1,6 @@
 // generate feed (JSON or RSS)
+// https://www.readonlychild.com/blog/astro-md-content/ (2022-04-26)
+// h/t Ernesto Lopez
 
 let feedExt = 'xml' // 'json' or 'xml'
 
@@ -27,7 +29,10 @@ export async function get() {
       link: "https://www.brycewray.com/about/",
     }
   })
+
   let allPosts = await import.meta.globEager('./posts/**/*.md')
+  // let postsArray = []
+  let sanitizedDate = ''
 
   // https://stackoverflow.com/questions/31649362/json-stringify-and-unicode-characters
   // https://www.dropbox.com/developers/reference/json-encoding
@@ -40,38 +45,43 @@ export async function get() {
     )
   }
 
-  Object.entries(allPosts).forEach(post => {
-    let sanitizedDate = new Date(post[1].frontmatter.date)
-    // let contentType = "<p>This is a <em>simulation</em> of the stuff we might see in real, typographically “nasty” HTML."
-    let featImg = ''
-    if (post[1].frontmatter.featured_image) {
-      featImg = `${socialImg + post[1].frontmatter.featured_image}`
+  for (let postkey in allPosts) {
+    if (allPosts[postkey].frontmatter.date && allPosts[postkey].frontmatter.title) {
+      let post = allPosts[postkey]
+      let awaitedPost = await post.default()
+      let featImg = ''
+      sanitizedDate = new Date(post.frontmatter.date)
+      let theContent = ''
+      if (post.frontmatter.featured_image) {
+        featImg = socialImg + post.frontmatter.featured_image
+      }
+      theContent = awaitedPost.metadata.source
+      if (feedExt == 'json') {
+        theContent = jsonSafe(theContent)
+      }
+      feed.addItem({
+        // title: jsonSafe(post[1].frontmatter.title),
+        title:post.frontmatter.title,
+        id: `https://www.brycewray.com/${post.url}/`,
+        link: `https://www.brycewray.com/${post.url}/`,
+        description: post.frontmatter.description,
+        content: theContent,
+        author: [
+          {
+            name: "Bryce Wray",
+            email: "bw@brycewray.com",
+            link: "https://www.brycewray.com/about/"
+          }
+        ],
+        date: sanitizedDate,
+        image: featImg
+      })
     }
-    // contentType = jsonSafe(contentType)
-    feed.addItem({
-      // title: jsonSafe(post[1].frontmatter.title),
-      title:post[1].frontmatter.title,
-      id: `https://www.brycewray.com/${post[1].url}/`,
-      link: `https://www.brycewray.com/${post[1].url}/`,
-      // description: jsonSafe(post[1].frontmatter.description),
-      // content: jsonSafe(post[1].frontmatter.description),
-      description: post[1].frontmatter.description,
-      content: post[1].frontmatter.description,
-      author: [
-        {
-          name: "Bryce Wray",
-          email: "bw@brycewray.com",
-          link: "https://www.brycewray.com/about/"
-        }
-      ],
-      date: sanitizedDate,
-      image: featImg
-    })
-  })
+  }
   feed.items.sort((a,b) => b.date - a.date)
-  if(feedExt == 'xml') {
-    return { body: feed.rss2() }
-  } else {
+  if(feedExt == 'json') {
     return { body: feed.json1() }
+  } else {
+    return { body: feed.rss2() }
   }
 }
