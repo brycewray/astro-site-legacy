@@ -6,6 +6,10 @@ let feedExt = 'json' // 'json' or 'xml'
 
 import { Feed } from "feed"
 import {micromark} from "micromark"
+import {gfm, gfmHtml} from "micromark-extension-gfm"
+import {gfmFootnote, gfmFootnoteHtml} from "micromark-extension-gfm-footnote"
+import {gfmStrikethrough, gfmStrikethroughHtml} from "micromark-extension-gfm-strikethrough"
+import {gfmTable, gfmTableHtml} from "micromark-extension-gfm-table"
 
 let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
 
@@ -59,12 +63,25 @@ export async function get() {
       theTitle = post.frontmatter.title
       theContent = awaitedPost.metadata.source
       theDescription = post.frontmatter.description
-      theContent = micromark(theContent, {})
-      // if (feedExt == 'json') {
-      //   theTitle = jsonSafe(theTitle)
-      //   theContent = jsonSafe(theContent)
-      //   theDescription = jsonSafe(theDescription)
-      // }
+      theContent = micromark(theContent, {
+        extensions: [
+          gfm(),
+          gfmFootnote(),
+          gfmStrikethrough(),
+          gfmTable,
+        ],
+        htmlExtensions: [
+          gfmHtml(),
+          gfmFootnoteHtml(),
+          gfmStrikethroughHtml,
+          gfmTableHtml
+        ]
+      })
+      if (feedExt == 'json') {
+        theTitle = jsonSafe(theTitle)
+        theContent = jsonSafe(theContent)
+        theDescription = jsonSafe(theDescription)
+      }
       feed.addItem({
         title: theTitle,
         id: `https://www.brycewray.com/${post.url}/`,
