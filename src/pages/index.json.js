@@ -38,7 +38,7 @@ export async function get() {
   // https://www.dropbox.com/developers/reference/json-encoding
   var charsToEncode = /[\u007f-\uffff]/g;
   function jsonSafe (v) {
-    return JSON.stringify(v).replace(charsToEncode,
+    return v.replace(charsToEncode,
       function (c) {
         return '\\u'+('000'+c.charCodeAt(0).toString(16)).slice(-4)
       }
