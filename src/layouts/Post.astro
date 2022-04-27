@@ -19,6 +19,11 @@ let envMode = import.meta.env.MODE
 if (envMode == "production") {
   addSlash = "/"
 }
+// changes in 1.0.0-beta.18 forced some adjustments here -
+// addSlash is "/" in PRODUCTION and
+// we add addSlash to thisUrl.pathname, NOT allPosts[x].url (below)
+// === otherwise, no match and no prev/next display at bottom
+// - 2022-04-27-1442CDT
 
 console.log("thisUrl.pathname = " + thisUrl.pathname)
 
