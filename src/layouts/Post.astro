@@ -27,7 +27,9 @@ let envMode = import.meta.env.MODE
 // console.log("The mode = " + import.meta.env.MODE)
 // console.log("  ")
 // console.log("* * * * * * * *")
-console.log("thisUrl.pathname = " + thisUrl.pathname)
+// console.log("thisUrl.pathname = " + thisUrl.pathname)
+
+let testText1, testText2 = ''
 for(let x = 0; x < postsNumber; x++) {
   // console.log("===============")
   // console.log("Post " + x + " - URL object = " + allPosts[x].url + " - " + allPosts[x].frontmatter.title)
@@ -36,25 +38,15 @@ for(let x = 0; x < postsNumber; x++) {
     if (x > 0) {
       nextUrl = allPosts[x-1].url
       nextTitle = allPosts[x-1].frontmatter.title
+      testText1 = `thisUrl.pathname = ${thisUrl.pathname} - must match ${allPosts[x].url + addSlash}`
     }
     if (x < postsNumber - 1) {
       prevUrl = allPosts[x+1].url
       prevTitle = allPosts[x+1].frontmatter.title
+      testText1 = `thisUrl.pathname = ${thisUrl.pathname} - must match ${allPosts[x].url + addSlash}`
     }
   }
   // console.log("Next is " + nextTitle + " and previous is " + prevTitle)
-}
-
-let testText1, testText2 = ''
-if (nextTitle !== "") {
-  testText1 = `nextTitle is ${nextTitle} and thisUrl.pathname = ${thisUrl.pathname}`
-} else {
-  testText1 = `There is no nextTitle and thisUrl.pathname = ${thisUrl.pathname}`
-}
-if (prevTitle !== "") {
-  testText2 = `prevTitle is ${prevTitle} and thisUrl.pathname = ${thisUrl.pathname}`
-} else {
-  testText2 = `There is no prevTitle and thisUrl.pathname = ${thisUrl.pathname}`
 }
 
 // for(let x = 0; x < allPosts.length; x++) {
@@ -118,10 +110,7 @@ if (prevTitle !== "") {
         </div>
         <Comments />
 			</Post>
-      <p class="hidTest">
-        {testText1}<br />
-        {testText2}
-      </p>
+      <p class="hidTest">{testText1}</p>
       <div class="bg-dark sansSerif">
         <h3 class="ctr wht prevnextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
         {nextTitle &&
