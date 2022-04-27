@@ -369,4 +369,18 @@ img.containedImage {
 // ===============================
 // end, text/LH classes from TWCSS
 
+// for testing
+
+.hidTest {
+  color: white;
+  text-align: center;
+  @media screen and (prefers-color-scheme: dark) {
+    color: black;
+  }
+  line-height: 0.1;
+  font-size: 0.1em;
+  margin: 0;
+  padding: 0;
+}
+
 // === end, utility classes
