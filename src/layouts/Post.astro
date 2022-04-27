@@ -22,14 +22,9 @@ if (envMode == "production") {
 
 console.log("thisUrl.pathname = " + thisUrl.pathname)
 
-let testText1, testText2 = ''
-testText1 = `thisUrl.pathname = ${thisUrl.pathname}
-===================================`
 
 for(let x = 0; x < postsNumber; x++) {
-  testText1 += `
-  allPosts[${x}].url = ${allPosts[x].url}`
-  if(thisUrl.pathname === allPosts[x].url){
+  if(thisUrl.pathname + addSlash === allPosts[x].url){
     console.log(allPosts[x].url)
     if (x > 0) {
       nextUrl = allPosts[x-1].url
@@ -103,7 +98,6 @@ for(let x = 0; x < postsNumber; x++) {
         </div>
         <Comments />
 			</Post>
-      <p class="hidTest">{testText1}</p>
       <div class="bg-dark sansSerif">
         <h3 class="ctr wht prevnextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
         {nextTitle &&
