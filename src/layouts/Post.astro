@@ -38,13 +38,12 @@ for(let x = 0; x < postsNumber; x++) {
     if (x > 0) {
       nextUrl = allPosts[x-1].url
       nextTitle = allPosts[x-1].frontmatter.title
-      testText1 = `thisUrl.pathname = ${thisUrl.pathname} - must match ${allPosts[x].url + addSlash}`
     }
     if (x < postsNumber - 1) {
       prevUrl = allPosts[x+1].url
       prevTitle = allPosts[x+1].frontmatter.title
-      testText1 = `thisUrl.pathname = ${thisUrl.pathname} - must match ${allPosts[x].url + addSlash}`
     }
+    testText1 = `thisUrl.pathname = ${thisUrl.pathname} - must match ${allPosts[x].url + addSlash}`
   }
   // console.log("Next is " + nextTitle + " and previous is " + prevTitle)
 }
