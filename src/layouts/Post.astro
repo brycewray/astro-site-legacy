@@ -18,7 +18,7 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 const thisUrl = new URL(Astro.request.url)
 let nextUrl, nextTitle, prevUrl, prevTitle, addSlash = ""
 let envMode = import.meta.env.MODE
-if (envMode == "development") {
+if (envMode == "production") {
   addSlash = "/"
 }
 // console.log("page = ", page)
@@ -31,7 +31,7 @@ if (envMode == "development") {
 for(let x = 0; x < postsNumber; x++) {
   // console.log("===============")
   // console.log("Post " + x + " - URL object = " + allPosts[x].url + " - " + allPosts[x].frontmatter.title)
-  if(thisUrl.pathname === allPosts[x].url){
+  if(thisUrl.pathname === allPosts[x].url + addSlash){
     // console.log("** That's THIS post **")
     if (x > 0) {
       nextUrl = allPosts[x-1].url
