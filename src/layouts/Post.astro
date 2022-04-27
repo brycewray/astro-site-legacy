@@ -18,9 +18,9 @@ const { title, subtitle, description, date, lastmod, permalink, featured_image, 
 const thisUrl = new URL(Astro.request.url)
 let nextUrl, nextTitle, prevUrl, prevTitle, addSlash = ""
 let envMode = import.meta.env.MODE
-// if (envMode == "production") {
-//   addSlash = "/"
-// }
+if (envMode == "production") {
+  addSlash = "/"
+}
 // console.log("page = ", page)
 
 // console.log(thisReq)
