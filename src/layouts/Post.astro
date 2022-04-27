@@ -31,7 +31,7 @@ if (envMode == "development") {
 for(let x = 0; x < postsNumber; x++) {
   // console.log("===============")
   // console.log("Post " + x + " - URL object = " + allPosts[x].url + " - " + allPosts[x].frontmatter.title)
-  if(thisUrl.pathname === allPosts[x].url + addSlash){
+  if(thisUrl.pathname === allPosts[x].url){
     // console.log("** That's THIS post **")
     if (x > 0) {
       nextUrl = allPosts[x-1].url
@@ -109,12 +109,12 @@ for(let x = 0; x < postsNumber; x++) {
         <h3 class="ctr wht prevnextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
         {nextTitle &&
           <p class="ctr prevnextP">
-            Next: <a class="next" href=`${nextUrl}/`>{nextTitle}</a>
+            Next: <a class="next" href={nextUrl}>{nextTitle}</a>
           </p>
         }
         {prevTitle &&
           <p class="ctr prevnextP">
-            Previous: <a class="previous" href=`${prevUrl}/`>{prevTitle}</a>
+            Previous: <a class="previous" href={prevUrl}>{prevTitle}</a>
           </p>
         }
       </div>
