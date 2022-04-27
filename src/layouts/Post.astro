@@ -44,6 +44,19 @@ for(let x = 0; x < postsNumber; x++) {
   }
   // console.log("Next is " + nextTitle + " and previous is " + prevTitle)
 }
+
+let testText1, testText2 = ''
+if (nextTitle !== "") {
+  testText1 = `nextTitle is ${nextTitle}`
+} else {
+  testText1 = `There is no nextTitle`
+}
+if (prevTitle !== "") {
+  testText2 = `prevTitle is ${prevTitle}`
+} else {
+  testText2 = `There is no prevTitle`
+}
+
 // for(let x = 0; x < allPosts.length; x++) {
 //   if(thisUrl.pathname === allPosts[x].url){
 //     if (x > 0) {
@@ -105,8 +118,10 @@ for(let x = 0; x < postsNumber; x++) {
         </div>
         <Comments />
 			</Post>
-      {nextTitle && <p class="hidTest">Next is {nextTitle} and previous is {prevTitle}</p>}
-      {prevTitle && <p class="hidTest">Next is {nextTitle} and previous is {prevTitle}</p>}
+      <p class="hidTest">
+        {testText1}<br />
+        {testText2}
+      </p>
       <div class="bg-dark sansSerif">
         <h3 class="ctr wht prevnextH3"><a href="/posts/" class="border-transparent text-blue-100 hover:text-white">Other posts</a></h3>
         {nextTitle &&
