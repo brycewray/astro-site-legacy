@@ -7,7 +7,7 @@ title: "Is Astro ready for your blog?"
 description: "Some points to consider if you’re thinking about switching your site to the Astro platform."
 author: Bryce Wray
 date: 2022-04-24T10:50:00-05:00
-#lastmod: 2022-04-24T22:35:00-05:00
+lastmod: 2022-04-28T15:28:00-05:00
 #initTextEditor: iA Writer
 discussionId: "2022-04-astro-ready-your-blog"
 featured_image: "blog-concept-kaitlyn-baker-vZJdYl5JVXY-unsplash_5472x3648.jpg"
@@ -156,7 +156,7 @@ There is no official Astro solution for working with images, but [Astro ImageToo
 
 [^ownIH]: Also, for that matter: if you prefer, you can always write your own component for these purposes. In converting this site, that's what I've done, using my existing Eleventy and Hugo image-handling shortcodes to build an Astro component. I did so chiefly because I use [Cloudinary](https://cloudinary.com) to [manage my images](/posts/2020/07/transformed/) and, frankly, I liked the way I was already doing so in those other SSGs. Cloudinary does all the image-processing, so all I need to do is provide the appropriate special transformation URLs in the site's HTML.
 
-**Comparison**: Eleventy, Gatsby, Hugo, and Next.js each have either built-in functionality or official plugins for working with images. This was once a huge point of differentiation for Gatsby, but the others have pretty much caught up with it for all intents and purposes.
+**Comparison**: Among Eleventy, Gatsby, Hugo, and Next.js, each has either built-in functionality or official plugins for working with images. This was once a huge point of differentiation for Gatsby, but the others have pretty much caught up with it for all intents and purposes.
 
 ## Data-handling
 
