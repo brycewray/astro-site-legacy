@@ -32,7 +32,7 @@ if (envMode == "production") {
 
 for(let x = 0; x < postsNumber; x++) {
   if(thisUrl.pathname + addSlash === allPosts[x].url){
-    console.log(allPosts[x].url)
+    // console.log(allPosts[x].url)
     if (x > 0) {
       nextUrl = allPosts[x-1].url
       nextTitle = allPosts[x-1].frontmatter.title
