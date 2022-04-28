@@ -9,7 +9,7 @@ subtitle: "Or, what else has been going on?"
 description: "Eleventy 2.x (yes, already), trying giscus, another shameless plug."
 author: Bryce Wray
 date: 2022-03-11T09:55:00-06:00
-lastmod: 2022-04-26T15:37:00-05:00
+lastmod: 2022-04-28T12:27:00-05:00
 #initTextEditor: Ulysses
 discussionId: "2022-03-gems-in-rough-16"
 featured_image: "gemstones-sung-jin-cho-0d3qxUozE-0-unsplash_7315x4881.jpg"
@@ -50,10 +50,6 @@ To be sure, I’m *not* taking away the reply-by-email button/link, which will s
 
 <YellowBox>
 **Note**: Because of giscus’s reliance on the existing GitHub Discussions feature set, there currently is only one level of nesting; so, if a thread gets “heavy,” it may not be readily obvious who’s replying to whom.
-</YellowBox>
-
-<YellowBox>
-**Update, 2022-04-26**: As a result of my [migrating this site from one repository to another](/posts/2022/04/winds-change/) a few days ago, I've learned of another, considerably more troublesome aspect of that linkage with GitHub Discussions. While you're **supposed** to be able to transfer those Discussions from one public repo to another, I haven't yet gotten it to work, thus blocking me from showing previously posted comments on the site. Moreover, it's a [known issue](https://github.com/github/feedback/discussions/3381) to which GitHub is, to my increasing frustration, seemingly oblivious.
 </YellowBox>
 
 ## Another shameless plug
