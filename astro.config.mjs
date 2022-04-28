@@ -29,8 +29,19 @@ export default defineConfig({
   },
   vite: {
     plugins: [],
-    ssr: {} // logLevel: 'silent' // while I'm working on JSON files!
-
+    ssr: {}, // logLevel: 'silent' // while I'm working on JSON files!
+    server: {
+      proxy: {
+        // from https://vitejs.dev/config/#server-proxy
+        // trying to fix issue with FastComments
+        '/fastcomments': {
+          target: 'https://cdn.fastcomments.com',
+          changeOrigin: true,
+          secure: false,
+          rewrite: (path) => path.replace(/^\/fastcomments/, ""),
+        },
+      },
+    },
   },
   integrations: [
     sitemap(),

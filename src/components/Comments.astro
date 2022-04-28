@@ -1,12 +1,14 @@
 ---
-// Nothing here yet
+// config below based on astro.config.mjs
+// to get around local CORS issue
+// normal URL for script src would be
+// https://cdn.fastcomments.com
 ---
-
-<script src="https://cdn.fastcomments.com/js/embed.min.js"></script>
+<script is:inline src="/fastcomments/js/embed.min.js"></script>
 <div id="fastcomments-widget"></div>
 <script>
-    FastCommentsUI(document.getElementById('fastcomments-widget'), {
-        tenantId: 'V9knlcOKk'
-    });
+  FastCommentsUI(document.getElementById('fastcomments-widget'), {
+    tenantId: 'V9knlcOKk'
+  })
 </script>
 <p class="ctr pokey sansSerif">Commenting by <strong><a href="https://fastcomments.com" target="_blank" rel="nofollow">FastComments</a></strong>.</p>
