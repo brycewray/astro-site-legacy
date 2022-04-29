@@ -6,7 +6,7 @@ import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
 
 import '@styles/Shiki.scss'
-import '@styles/SitemapHTML.scss'
+// import '@styles/SitemapHTML.scss'
 
 let title = 'BryceWray.com';
 let description = 'brycewray.com — Observations, opinions, geekery.';
@@ -16,6 +16,29 @@ let allPosts = await Astro.glob('./posts/**/*.md')
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
 ---
 
+<style lang="scss">
+  @use '../styles/variables' as var; // SCSS partial
+  .sitemapDiv {
+    font-family: var.$sans-serif;
+    h1 {
+      text-align: center;
+      font-size: 2.25rem;
+      padding-top: 0.75em;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    ul li {
+      font-size: var.$pokey;
+      margin-bottom: 0.75em;
+      line-height: 1.5em;
+    }
+  }
+
+</style>
 <html lang="en">
   <head>
     <Head {title} {description} {permalink} />

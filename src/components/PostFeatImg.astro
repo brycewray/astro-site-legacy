@@ -155,13 +155,6 @@ const { title, featured_image, featured_image_alt, featured_image_width, feature
       }
     }
   }
-/*
-== The styling for the image caption has to be with the post's styling,
-**not** with the PostFeatImg.astro styling, because it styles HTML that
-is fed directly from the post's front matter.
-(At least, that's what I think as of now.)
----2022-04-29-0942CDT
-*/
 
 </style>
 
@@ -187,13 +180,13 @@ is fed directly from the post's front matter.
           <span class="pokey">&nbsp;</span>
         )}
       </p>
-      <p class="featured-image-caption">
+      <p class="featured-image-caption caption">
         {featured_image_caption && (
-          <span>
-            <Fragment set:html={featured_image_caption} />
-          </span>
+          <Fragment set:html={featured_image_caption} />
         ) || (
-          <span>&nbsp;</span>
+          <>
+            &nbsp;
+          </>
         )}
       </p>
     </div>

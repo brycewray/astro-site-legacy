@@ -7,6 +7,16 @@ import { Markdown } from 'astro/components';
 
 ---
 
+<style lang="scss">
+  @use '../styles/variables' as var; // SCSS partial
+  .indentAfterLI {
+    margin-left: 2.25em; // 2em with Public Sans, 2.25em with Inter
+    @media screen and (min-width: var.$bkpt_2xl) {
+      margin-left: 2.25em;
+    }
+  }
+</style>
+
 <div class="indentAfterLI">
 	<Markdown>
     <slot />

@@ -71,13 +71,43 @@ End, LQIP-to-Base64
 ---
 
 <style lang="scss" define:vars={{ imgBkgd }}>
+  @use '../styles/variables' as var; // SCSS partial
+
   .bkgdHandler {
     background: var(--imgBkgd);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
+  .imgc {
+    &-div {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  img.containedImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade {
+    animation: fadeIn 750ms ease-in-out;
+  }
+
 </style>
+
 <div class={divClass + " bkgdHandler" }>
   <noscript>
     <img class={nscClass} src={cloudiBase + xFmPart1 + "600" + xFmPart2 + url} alt={alt} />

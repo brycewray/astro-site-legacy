@@ -7,6 +7,33 @@ let title = 'Page not found | BryceWray.com'
 let description = 'Page not found.'
 ---
 
+<style lang="scss">
+  @use '../styles/variables' as var; // SCSS partial
+  .FourOhFour {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    h1 {
+      font-size: var.$biggest;
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+      @media screen and (min-width: var.$bkpt_lg) {
+        font-size: 3.25rem;
+      }
+      @media screen and (min-width: var.$bkpt_xl) {
+        font-size: 3.5rem;
+      }
+    }
+    p {
+      font-size: var.$slightlybig;
+    }
+    .bottom {
+      margin-bottom: 10em;
+    }
+  }
+
+</style>
+
 <html lang="en">
 	<head>
 		<Head {title} {description} />

@@ -6,6 +6,31 @@ export interface Props {
 import { Markdown } from 'astro/components';
 
 ---
+<style lang="scss">
+  @use '../styles/variables' as var; // SCSS partial
+  .imgcCaption, .imgCaption, .lazypicturecaption {
+    // color: red;
+    p {
+      font-family: var.$sans-serif;
+      padding: 0;
+      margin-block-start: 0.5em;
+      line-height: 1.375;
+      font-size: var.$pokey;
+      text-align: center;
+    }
+  }
+  // .FeatImgCaption {
+  //   font-family: var.$sans-serif;
+  //   font-size: var.$legal;
+  //   text-align: center;
+  //   padding-top: 0.5em;
+  //   margin-bottom: 0;
+  // }
+  .EICapt { // for use with images used with Eleventy Image which have captions
+    margin-bottom: -0.5em;
+  }
+</style>
+
 
 <div class="imgcCaption">
 	<Markdown>
