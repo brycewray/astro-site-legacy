@@ -2,6 +2,29 @@
 const { page } = Astro.props
 ---
 
+<style lang="scss">
+  @use '../styles/variables' as var; // SCSS partial
+  .pagerThingP {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 4rem;
+    grid-auto-flow: column;
+    font-size: 1.25em;
+    // margin: 0.5 auto;
+    .page1, .pageP, .pageN, .pageL {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      // sep. in case we want more control of x-axis margins and such
+    }
+    a {
+      border: none;
+    }
+  }
+
+</style>
+
           <div class="pagerThingP">
             {page.url.prev == null
               ? <div class="page1">&#9664;&#9664;</div>

@@ -223,39 +223,6 @@ audio, canvas, embed, iframe, img, object, svg, video {
   vertical-align: middle;
 }
 
-footer {
-  font-family: var.$sans-serif;
-  text-align: center;
-  font-size: var.$legal;
-  margin: 4rem auto 0 auto;
-  width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  p {
-    line-height: 1.5em; // definitely em, not rem, here
-  }
-  div.footerWrapper {
-    margin: 0 auto;
-    width: 80%;
-    p {
-      margin: 1rem 0;
-    }
-    div.icons-box {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 1rem;
-    }
-  }
-  @media (min-width: var.$bkpt_lg) {
-    margin: 2rem auto 0 auto;
-    // padding-bottom: 1rem;
-    div.footerWrapper {
-      width: 65%;
-      height: 100%;
-    }
-  }
-}
 
 .imgCover {
   object-fit: cover;
