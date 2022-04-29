@@ -36,6 +36,45 @@ export async function getStaticPaths({ paginate, rss }) {
 const { page } = Astro.props
 
 ---
+<html lang="en">
+
+  <head>
+    <Head
+      client:load
+      {title}
+      {description}
+    />
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <div class="container ctr sansSerif">
+        <h1 class="posts-Head">Posts</h1>
+        <div class="posts-Container">
+          <PagerThing {page} />
+          <hr class="paginatorTop" />
+          <div class="posts-ItemDiv">
+            {page.data.map(post =>
+              <h2 class="posts-Title"><a href={post.url}>{post.frontmatter.title}</a></h2>
+              <p class="posts-Description">
+                {post.frontmatter.description}
+              </p>
+              <p class="posts-Dates"><strong>{format(new Date(post.frontmatter.date), "MMMM d, yyyy")}</strong>
+                {post.frontmatter.lastmod && (
+                  <br /><span class="eightyFive">Last modified {format(new Date(post.frontmatter.lastmod), "MMMM d, yyyy")}</span>
+                )}
+              </p>
+            )}
+          </div>
+          <hr class="paginatorBottom" />
+          <PagerThing {page} />
+        </div>
+      </main>
+    <Footer />
+  </body>
+</html>
+
 <style lang="scss">
   @use '../../styles/variables' as var; // SCSS partial
   .posts {
@@ -148,42 +187,3 @@ const { page } = Astro.props
   }
 
 </style>
-
-<html lang="en">
-
-  <head>
-    <Head
-      {title}
-      {description}
-    />
-  </head>
-
-  <body>
-    <Header />
-    <main>
-      <div class="container ctr sansSerif">
-        <h1 class="posts-Head">Posts</h1>
-        <div class="posts-Container">
-          <PagerThing {page} />
-          <hr class="paginatorTop" />
-          <div class="posts-ItemDiv">
-            {page.data.map(post =>
-              <h2 class="posts-Title"><a href={post.url}>{post.frontmatter.title}</a></h2>
-              <p class="posts-Description">
-                {post.frontmatter.description}
-              </p>
-              <p class="posts-Dates"><strong>{format(new Date(post.frontmatter.date), "MMMM d, yyyy")}</strong>
-                {post.frontmatter.lastmod && (
-                  <br /><span class="eightyFive">Last modified {format(new Date(post.frontmatter.lastmod), "MMMM d, yyyy")}</span>
-                )}
-              </p>
-            )}
-          </div>
-          <hr class="paginatorBottom" />
-          <PagerThing {page} />
-        </div>
-      </main>
-    <Footer />
-  </body>
-</html>
-
