@@ -36,11 +36,11 @@ export async function getStaticPaths({ paginate, rss }) {
 const { page } = Astro.props
 
 ---
+
 <html lang="en">
 
   <head>
     <Head
-      client:load
       {title}
       {description}
     />

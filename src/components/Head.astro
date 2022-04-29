@@ -31,6 +31,10 @@ if (featured_image == null) {
 let envMode = import.meta.env.MODE // "production" or "development"
 ---
 
+<!-- CSS/SCSS -->
+<link rel="preload" href="/assets/fonts/Inter-3-19_subset_2021-06-18.woff2" crossorigin="anonymous" as="font" type="font/woff2" />
+<!-- other styling handled by Vite -->
+
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -88,10 +92,6 @@ let envMode = import.meta.env.MODE // "production" or "development"
 <meta name="msapplication-config" content="/browserconfig.xml" />
 
 <!-- **** CONCLUSION, favicons **** -->
-
-<!-- CSS/SCSS -->
-<link rel="preload" href="/assets/fonts/Inter-3-19_subset_2021-06-18.woff2" crossorigin="anonymous" as="font" type="font/woff2" />
-<!-- style imported above -->
 
 {envMode == "production" && (
     <!-- Fathom - beautiful, simple website analytics -->
