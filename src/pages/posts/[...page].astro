@@ -36,6 +36,118 @@ export async function getStaticPaths({ paginate, rss }) {
 const { page } = Astro.props
 
 ---
+<style lang="scss">
+  @use '../../styles/variables' as var; // SCSS partial
+  .posts {
+    &-pagerGray {
+      color: var.$grey-2;
+    }
+    &-Container {
+      margin: 0 auto;
+      width: 85%;
+      @media screen and (min-width: var.$bkpt_lg) {
+        width: 75%;
+      }
+      @media screen and (min-width: var.$bkpt_2xl) {
+        width: 62.5%
+      }
+    }
+    &-ItemDiv {
+      margin: 0;
+      padding: 0;
+    }
+    &-Head {
+      padding-top: 1.75rem;
+      font-size: 2.5rem;
+      // font-weight: bold;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.25em;
+      @media screen and (min-width: var.$bkpt_md) {
+        padding-top: 2rem;
+        font-size: 2.75rem;
+      }
+      @media screen and (min-width: var.$bkpt_lg) {
+        padding-top: 2.5rem;
+        font-size: 3rem;
+      }
+      @media screen and (min-width: var.$bkpt_2xl) {
+        padding-top: 3rem;
+        font-size: 3.5rem;
+      }
+    }
+    &-Title {
+      padding: 0;
+      font-size: 1.25rem;
+      line-height: 1.25em;
+      letter-spacing: -0.025em;
+      @media screen and (min-width: var.$bkpt_lg) {
+        font-size: 2rem;
+      }
+      @media screen and (min-width: var.$bkpt_2xl) {
+        font-size: 2.25rem;
+      }
+    }
+    &-Dates {
+      font-size: 0.825rem;
+      line-height: 1.33;
+      margin-bottom: 1.5em;
+      @media screen and (min-width: var.$bkpt_lg) {
+        font-size: 1rem;
+      }
+      @media screen and (min-width: var.$bkpt_2xl) {
+        font-size: 1.15rem;
+      }
+      time {
+        display: inline;
+      }
+    }
+    &-Description {
+      // font-family: var.$serif;
+      font-size: 1.1rem;
+      margin-top: 0.5em;
+      // line-height: 1.25em;
+      margin-bottom: 0.5em;
+      @media screen and (min-width: var.$bkpt_lg) {
+        font-size: 1.2rem;
+      }
+      @media screen and (min-width: var.$bkpt_2xl) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  hr.paginatorTop, hr.paginatorBottom {
+    border: none;
+    height: 1px;
+    background-color: var.$black;
+    @media (prefers-color-scheme: dark) {
+      background-color: var.$white;
+    }
+    width: 75%;
+    @media screen and (min-width: var.$bkpt_lg) {
+      width: 65%;
+    }
+    @media screen and (min-width: var.$bkpt_2xl) {
+      width: 55%;
+    }
+  }
+
+  hr.paginatorTop {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+
+  hr.paginatorBottom {
+    margin-top: 0em;
+    padding: 0;
+  }
+
+
+  .arrowStop {
+    color: var.$greyArrow;
+  }
+
+</style>
 
 <html lang="en">
 
