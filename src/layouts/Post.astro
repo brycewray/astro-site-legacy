@@ -4,8 +4,8 @@ import Header from '@components/Header.astro'
 import Post from '@components/Post.astro'
 import Footer from '@components/Footer.astro'
 import Billboard from '@components/Billboard.astro'
-import PostFeatImg from '@components/PostFeatImg.astro'
 import Comments from '@components/Comments.astro'
+import PostFeatImg from '@components/PostFeatImg.astro'
 
 let allPosts = await Astro.glob('../pages/posts/**/*.md')
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
