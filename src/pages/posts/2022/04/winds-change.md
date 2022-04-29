@@ -32,7 +32,7 @@ Thus, I really, truly thought I’d be content to let Hugo be the mainstay behin
 > I still need to stay current with What’s Kewl Among Web Developers. . . . Thus, I will continue to *experiment* with New Kewlness in other SSGs via, at least for now:
 > - A new, smaller, sparer version of the site’s former Eleventy repo, likely equipped with the [Slinkity](https://slinkity.dev) plugin.
 > - An [Astro](https://astro.build) repo. While Astro still is very much an early-stage project, it seems to have stabilized sufficiently that even this old fart can work with it without too much frustration.
-> 
+>
 > With any luck at all, this approach will enable me to maintain this site efficiently, yet still keep my eyes on what else is happening in WebDevLand. I’m crossing my fingers.
 
 I’d tried Astro, briefly, last year but then [abandoned it](/posts/2021/09/gems-in-rough-09/#passtro-on-astro-for-now) because, in its earliest days, it was going through more breaking changes than my easily jostled marbles could handle. Still, I’d kept up with what was going on in the Astro project and, in the weeks leading up to “Simplify, simplify (again),” I’d resumed tinkering with it.
