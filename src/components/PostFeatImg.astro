@@ -155,6 +155,24 @@ const { title, featured_image, featured_image_alt, featured_image_width, feature
       }
     }
   }
+.featured-image-caption {
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: var.$sans-serif;
+  font-size: var.$legal;
+  color: var.$white;
+}
+.scopeBuster :global(.caption a) {
+    color: var.$blueLight;
+    border-bottom: 1px solid var.$blueLight;
+}
+// h/t to Chris on the Discord...
+// https://discord.com/channels/830184174198718474/969658962028953670
+
 
 </style>
 
@@ -180,9 +198,9 @@ const { title, featured_image, featured_image_alt, featured_image_width, feature
           <span class="pokey">&nbsp;</span>
         )}
       </p>
-      <p class="featured-image-caption caption">
+      <p class="featured-image-caption">
         {featured_image_caption && (
-          <Fragment set:html={featured_image_caption} />
+          <span class="scopeBuster" set:html={featured_image_caption} />
         ) || (
           <>
             &nbsp;

@@ -8,7 +8,7 @@ import { Markdown } from 'astro/components';
 ---
 <style lang="scss">
   @use '../styles/variables' as var; // SCSS partial
-  .yellowBox, .blueBox {
+  .yellowBox {
     font-family: var.$sans-serif;
     display: block;
     box-sizing: border-box;
@@ -16,39 +16,17 @@ import { Markdown } from 'astro/components';
     margin: 0.5em auto;
     width: 100%;
     padding: 1em 1.25em;
+    background: hsl(52, 100%, 85%);
     @media (prefers-color-scheme: dark) {
+      background: hsl(40, 100%, 10%);
       border: 1px solid var.$grey-1;
     }
     p {
       padding: 0;
       margin: 0;
-    }
-  }
-
-  .yellowBox + hr, .blueBox + hr { // for situations like in "Gems in the rough #4" as of 2021-04-15
-    margin-top: 1.75em;
-  }
-
-  .yellowBox {
-    background: hsl(52, 100%, 85%);
-    @media (prefers-color-scheme: dark) {
-      background: hsl(40, 100%, 10%);
-    }
-    p {
       font-size: 85%;
     }
   }
-
-  .blueBox {
-    background: hsl(200, 100%, 95%);
-    @media (prefers-color-scheme: dark) {
-      background: hsl(200, 100%, 20%);
-    }
-    p {
-      font-size: 85%;
-    }
-  }
-
 </style>
 
 <div class="yellowBox">
