@@ -1,8 +1,8 @@
 ---
-import { format } from "date-fns"
-// import '@styles/Twitter.scss'
+import { format } from "date-fns";
+// import '@styles/Twitter.scss';
 export interface Props {
-	id: string
+	id: string;
 }
 
 /*
@@ -14,16 +14,16 @@ Based on...
 - https://www.brycewray.com/posts/2022/04/static-tweets-astro/
 */
 
-let aspect = "1 / 1" // avoids issues later
+let aspect = "1 / 1" // avoids issues later;
 
-const { id } = Astro.props as Props
+const { id } = Astro.props as Props;
 
-const formatError = (...lines) => lines.join('\n         ')
+const formatError = (...lines) => lines.join('\n         ');
 
 // Thanks to eleventy-plugin-embed-twitter
 // https://github.com/gfscott/eleventy-plugin-embed-twitter/blob/main/lib/extractMatch.js
-const urlPattern = /(?=(\s*))\1(?:<a [^>]*?>)??(?=(\s*))\2(?:https?:)??(?:\/\/)??(?:w{3}\.)??(?:twitter\.com)\/([a-zA-Z0-9_]{1,15})?(?:\/(?:status)\/)(\d+)?(?:[^\s<>]*)(?=(\s*))\5(?:<\/a>)??(?=(\s*))\6/
-const idRegExp = /^\d+$/
+const urlPattern = /(?=(\s*))\1(?:<a [^>]*?>)??(?=(\s*))\2(?:https?:)??(?:\/\/)??(?:w{3}\.)??(?:twitter\.com)\/([a-zA-Z0-9_]{1,15})?(?:\/(?:status)\/)(\d+)?(?:[^\s<>]*)(?=(\s*))\5(?:<\/a>)??(?=(\s*))\6/;
+const idRegExp = /^\d+$/;
 
 function extractID(idOrUrl: string) {
 	if (idRegExp.test(idOrUrl)) return idOrUrl;
@@ -34,33 +34,33 @@ function extractID(idOrUrl: string) {
 /** Fetch a URL and parse it as JSON, but catch errors to stop builds erroring. */
 async function safeGet(url: string) {
 	try {
-		const res = await fetch(url)
-		if (!res.ok) throw new Error(formatError(`Failed to fetch ${url}`, `Error ${res.status}: ${res.statusText}`))
-		return await res.json()
+		const res = await fetch(url);
+		if (!res.ok) throw new Error(formatError(`Failed to fetch ${url}`, `Error ${res.status}: ${res.statusText}`));
+		return await res.json();
 	} catch (e) {
-		console.error(formatError(`[error]  Tweet.astro`, e?.message ?? e))
+		console.error(formatError(`[error]  Tweet.astro`, e?.message ?? e));
 	}
 }
 
 async function fetchTweet(id) {
-	return await safeGet(`https://cdn.syndication.twimg.com/tweet?id=${id}`)
+	return await safeGet(`https://cdn.syndication.twimg.com/tweet?id=${id}`);
 }
 
 function buildContent(tweet) {
 	if (!tweet) return {}
 
-	const { name = '', screen_name = '', profile_image_url_https = '' } = tweet.user
-	let { created_at = '', text = '' } = tweet
-	let images = []
-	let video
-	let imageCount = 0
+	const { name = '', screen_name = '', profile_image_url_https = '' } = tweet.user;
+	let { created_at = '', text = '' } = tweet;
+	let images = [];
+	let video;
+	let imageCount = 0;
 
 	if (tweet.entities.urls) {
 		tweet.entities.urls.forEach(({ url, display_url, expanded_url }) => {
 			text = text.replace(
 				url,
 				`<a href=${expanded_url}>${display_url}</a>`
-			)
+			);
 		})
 	}
 
@@ -69,7 +69,7 @@ function buildContent(tweet) {
 			text = text.replace(
 				`@${screen_name}`,
 				`<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/${screen_name}">@${screen_name}</a>`
-			)
+			);
 		})
 	}
 
@@ -78,22 +78,22 @@ function buildContent(tweet) {
 			text = text.replace(
 				`#${tag.text}`,
 				`<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/hashtag/${tag.text}?src=hash&ref_src=twsrc">#${tag.text}</a>`
-			)
+			);
 		})
 	}
 
-	text = text.replace(/(?:\r\n|\r|\n)/g, '<br/>')
+	text = text.replace(/(?:\r\n|\r|\n)/g, '<br/>');
 
 	if (tweet.entities.media && !tweet.video) {
 		tweet.entities.media.forEach(({ url, expanded_url }) => {
 			if (url) {
-				text = text.replace(url, expanded_url)
+				text = text.replace(url, expanded_url);
 			}
 		})
 	}
 
 	if (tweet.photos) {
-		imageCount = tweet.photos.length
+		imageCount = tweet.photos.length;
 		tweet.photos.forEach(({ expandedUrl, url, width, height, accessibilityLabel = '' }) => {
 			images.push(`<div><img class="tweet-media-img" src=${url} alt="${accessibilityLabel}" width="${width}" height="${height}" loading="lazy" /></div>`);
 			text = text.replace(expandedUrl, '');
@@ -104,24 +104,24 @@ function buildContent(tweet) {
 		// Remove interim video URL from text content.
     tweet.entities.media.forEach(({ url }) => {
       if (url) {
-        text = text.replace(url, '')
+        text = text.replace(url, '');
       }
     })
-		aspect = tweet.video.aspectRatio.join(' / ')
-		video = `<video autoplay loop controls class="tweet-media-video" preload="none" poster="${tweet.video.poster}">`
+		aspect = tweet.video.aspectRatio.join(' / ');
+		video = `<video autoplay loop controls class="tweet-media-video" preload="none" poster="${tweet.video.poster}">`;
 		tweet.video.variants.forEach(({ src, type }) => {
-			video += `<source src="${src}" type="${type}">`
+			video += `<source src="${src}" type="${type}">`;
 		})
-		video += '</video>'
+		video += '</video>';
   }
 
-	return { name, screen_name, profile_image_url_https, created_at, text, images: images.join(''), imageCount, video }
+	return { name, screen_name, profile_image_url_https, created_at, text, images: images.join(''), imageCount, video };
 }
 
-const tweetID = extractID(id)
-const tweet = await fetchTweet(tweetID)
-const { name, screen_name, profile_image_url_https, text, images, imageCount, video, created_at } = buildContent(tweet)
-const tweetLink = `https://twitter.com/${screen_name}/status/${tweetID}`
+const tweetID = extractID(id);
+const tweet = await fetchTweet(tweetID);
+const { name, screen_name, profile_image_url_https, text, images, imageCount, video, created_at } = buildContent(tweet);
+const tweetLink = `https://twitter.com/${screen_name}/status/${tweetID}`;
 ---
 
 <style lang="scss" define:vars={{aspect}}>

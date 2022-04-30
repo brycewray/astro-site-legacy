@@ -1,11 +1,11 @@
 ---
 import Head from '@components/Head.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
-import { format } from "date-fns"
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import { format } from "date-fns";
 
-// import '@styles/Shiki.scss'
-// import '@styles/Home.scss'
+// import '@styles/Shiki.scss';
+// import '@styles/Home.scss';
 
 // interface MarkdownFrontmatter {
 // 	publishDate: number;
@@ -15,11 +15,11 @@ let title = 'BryceWray.com';
 let description = 'brycewray.com — Observations, opinions, geekery.';
 let permalink = 'https://www.brycewray.com/';
 
-let allPosts = await Astro.glob('./posts/**/*.md')
-allPosts = allPosts.filter(post => !post.frontmatter.draft)
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
-let postsNumber = allPosts.length
-let latestThree = allPosts.slice(0, 3)
+let allPosts = await Astro.glob('./posts/**/*.md');
+allPosts = allPosts.filter(post => !post.frontmatter.draft);
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+let postsNumber = allPosts.length;
+let latestThree = allPosts.slice(0, 3);
 ---
 
 <style lang="scss">

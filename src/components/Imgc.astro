@@ -1,46 +1,46 @@
 ---
-import axios from "axios"
+import axios from "axios";
 
-const respSizes = [ 300, 450, 600, 750, 900, 1050, 1200, 1350, 1500 ]
-let cloudiBase = 'https://res.cloudinary.com/brycewray-com/image/upload/'
-let LQIPholder = 'f_jpg,q_1,w_20/' // note ending slash
-let xFmPart1 = 'f_auto,q_auto:eco,w_'
-let xFmPart2 = ',x_0,z_1/' // note ending slash
+const respSizes = [ 300, 450, 600, 750, 900, 1050, 1200, 1350, 1500 ];
+let cloudiBase = 'https://res.cloudinary.com/brycewray-com/image/upload/';
+let LQIPholder = 'f_jpg,q_1,w_20/'; // note ending slash
+let xFmPart1 = 'f_auto,q_auto:eco,w_';
+let xFmPart2 = ',x_0,z_1/'; // note ending slash
 
 const { url, alt, width, height, tmpl } = Astro.props;
 
 const Srcset =
   respSizes.map(size => {
     if (size <= width) {
-      return `${cloudiBase + xFmPart1 + size + xFmPart2 + url} ${size}w`
+      return `${cloudiBase + xFmPart1 + size + xFmPart2 + url} ${size}w`;
     }
-  }).join(', ')
+  }).join(', ');
 
-let divClass = ''; let imgClass = ''; let nscClass = ''; let dataSzes = ''; let lazyYorN = ''
+let divClass, imgClass, nscClass, dataSzes, lazyYorN = ''
 
 switch(tmpl) {
   /* === 'index'case used with home page when it had a hero image (pre-Jan. 2021)
   case 'index':
-    divClass = `h-full`
-    imgClass = `nScrHidden object-cover object-center h-full w-full containedImage animate-fade`
-    nscClass = `imgCover hero`
-    dataSzes = `100vw`
-    lazyYorN = `eager`
-    break
+    divClass = `h-full`;
+    imgClass = `nScrHidden object-cover object-center h-full w-full containedImage animate-fade`;
+    nscClass = `imgCover hero`;
+    dataSzes = `100vw`;
+    lazyYorN = `eager`;
+    break;
   */
   case 'posts':
-    divClass = `h-full`
-    imgClass = `nScrHidden imgCover hero animate-fade`
-    nscClass = `imgCover aspect-[${width}/${height}]`
-    dataSzes = `(min-width: 1024px) 100vw, 50vw`
-    lazyYorN = `eager`
+    divClass = `h-full`;
+    imgClass = `nScrHidden imgCover hero animate-fade`;
+    nscClass = `imgCover`;
+    dataSzes = `(min-width: 1024px) 100vw, 50vw`;
+    lazyYorN = `eager`;
     break
   default:
-    divClass = `relative`
-    imgClass = `w-full h-auto aspect-[${width}/${height}] animate-fade`
-    nscClass = `w-full h-auto aspect-[${width}/${height}]`
-    dataSzes = `(min-width: 1024px) 100vw, 50vw`
-    lazyYorN = `lazy`
+    divClass = `relative`;
+    imgClass = `w-full h-auto animate-fade`;
+    nscClass = `w-full h-auto`;
+    dataSzes = `(min-width: 1024px) 100vw, 50vw`;
+    lazyYorN = `lazy`;
 }
 
 /*
@@ -57,11 +57,11 @@ async function getBase64(urlFor64) {
     .get(urlFor64, {
       responseType: 'arraybuffer'
     })
-  return Buffer.from(response.data, 'binary').toString('base64')
+  return Buffer.from(response.data, 'binary').toString('base64');
 }
 
-let LQIP_b64 = await getBase64(cloudiBase + LQIPholder + url)
-let imgBkgd = `url(data:image/jpeg;base64,${LQIP_b64})`
+let LQIP_b64 = await getBase64(cloudiBase + LQIPholder + url);
+let imgBkgd = `url(data:image/jpeg;base64,${LQIP_b64})`;
 
 /*
 ================================================================

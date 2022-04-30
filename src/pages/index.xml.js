@@ -2,17 +2,17 @@
 // https://www.readonlychild.com/blog/astro-md-content/ (2022-04-26)
 // h/t Ernesto Lopez
 
-let feedExt = 'xml' // 'json' or 'xml'
+let feedExt = 'xml' // 'json' or 'xml';
 
-import { Feed } from "feed"
-// import {micromark} from "micromark"
-// import {gfm, gfmHtml} from "micromark-extension-gfm"
-// import {gfmFootnote, gfmFootnoteHtml} from "micromark-extension-gfm-footnote"
-// import {gfmStrikethrough, gfmStrikethroughHtml} from "micromark-extension-gfm-strikethrough"
-// import {gfmTable, gfmTableHtml} from "micromark-extension-gfm-table"
-// import {mdx} from "micromark-extension-mdx"
+import { Feed } from "feed";
+// import {micromark} from "micromark";
+// import {gfm, gfmHtml} from "micromark-extension-gfm";
+// import {gfmFootnote, gfmFootnoteHtml} from "micromark-extension-gfm-footnote";
+// import {gfmStrikethrough, gfmStrikethroughHtml} from "micromark-extension-gfm-strikethrough";
+// import {gfmTable, gfmTableHtml} from "micromark-extension-gfm-table";
+// import {mdx} from "micromark-extension-mdx";
 
-let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/"
+let socialImg = "https://res.cloudinary.com/brycewray-com/image/upload/c_fill,w_1024,h_512,q_auto,f_auto,x_0,z_1/";
 
 // https://cdn.discordapp.com/attachments/830184175176122389/960357703807537183/unknown.png
 export async function get() {
@@ -34,10 +34,10 @@ export async function get() {
       email: "bw@brycewray.com",
       link: "https://www.brycewray.com/about/",
     }
-  })
+  });
 
-  let allPosts = await import.meta.globEager('./posts/**/*.md')
-  let sanitizedDate = ''
+  let allPosts = await import.meta.globEager('./posts/**/*.md');
+  let sanitizedDate = '';
 
   // https://stackoverflow.com/questions/31649362/json-stringify-and-unicode-characters
   // https://www.dropbox.com/developers/reference/json-encoding
@@ -45,29 +45,29 @@ export async function get() {
   // function jsonSafe (v) {
   //   return v.replace(charsToEncode,
   //     function (c) {
-  //       return '\\u'+('000'+c.charCodeAt(0).toString(16)).slice(-4)
-  //     }
+  //       return '\\u'+('000'+c.charCodeAt(0).toString(16)).slice(-4);
+  //     };
   //   )
   // }
 
   for (let postkey in allPosts) {
     if (allPosts[postkey].frontmatter.date && allPosts[postkey].frontmatter.title) {
-      let post = allPosts[postkey]
-      let awaitedPost = await post.default()
-      let featImg = ''
-      sanitizedDate = new Date(post.frontmatter.date)
-      let theTitle, theContent, theDescription = ''
+      let post = allPosts[postkey];
+      let awaitedPost = await post.default();
+      let featImg = '';
+      sanitizedDate = new Date(post.frontmatter.date);
+      let theTitle, theContent, theDescription = '';
       if (post.frontmatter.featured_image) {
-        featImg = socialImg + post.frontmatter.featured_image
+        featImg = socialImg + post.frontmatter.featured_image;
       }
       // Object.entries(awaitedPost.metadata).forEach(item => {
-      //   console.log(item)
+      //   console.log(item);
       // })
-      // console.log("Metadata = " + awaitedPost.metadata)
-      theTitle = post.frontmatter.title
-      // theContent = awaitedPost.metadata.source
-      theContent = awaitedPost.metadata.html
-      theDescription = post.frontmatter.description
+      // console.log("Metadata = " + awaitedPost.metadata);
+      theTitle = post.frontmatter.title;
+      // theContent = awaitedPost.metadata.source;
+      theContent = awaitedPost.metadata.html;
+      theDescription = post.frontmatter.description;
       // theContent = micromark(theContent, {
       //   extensions: [
       //     gfm(),
@@ -81,11 +81,11 @@ export async function get() {
       //     gfmStrikethroughHtml,
       //     gfmTableHtml
       //   ]
-      // })
+      // });
       // if (feedExt == 'json') {
-      //   theTitle = jsonSafe(theTitle)
-      //   theContent = jsonSafe(theContent)
-      //   theDescription = jsonSafe(theDescription)
+      //   theTitle = jsonSafe(theTitle);
+      //   theContent = jsonSafe(theContent);
+      //   theDescription = jsonSafe(theDescription);
       // }
       feed.addItem({
         title: theTitle,
@@ -103,13 +103,13 @@ export async function get() {
         ],
         date: sanitizedDate,
         image: featImg
-      })
+      });
     }
   }
-  feed.items.sort((a,b) => b.date - a.date)
+  feed.items.sort((a,b) => b.date - a.date);
   if(feedExt == 'json') {
-    return { body: feed.json1() }
+    return { body: feed.json1() };
   } else {
-    return { body: feed.rss2() }
+    return { body: feed.rss2() };
   }
 }

@@ -1,20 +1,20 @@
 ---
-import { format } from "date-fns"
+import { format } from "date-fns";
 
-import Head from '@components/Head.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
+import Head from '@components/Head.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
 
-import '@styles/Shiki.scss'
-// import '@styles/SitemapHTML.scss'
+import '@styles/Shiki.scss';
+// import '@styles/SitemapHTML.scss';
 
 let title = 'BryceWray.com';
 let description = 'brycewray.com — Observations, opinions, geekery.';
 let permalink = 'https://www.brycewray.com/sitemap/';
 
-let allPosts = await Astro.glob('./posts/**/*.md')
-allPosts = allPosts.filter(post => !post.frontmatter.draft)
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+let allPosts = await Astro.glob('./posts/**/*.md');
+allPosts = allPosts.filter(post => !post.frontmatter.draft);
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
 <style lang="scss">

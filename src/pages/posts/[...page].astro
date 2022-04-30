@@ -1,19 +1,18 @@
 ---
-import Head from '@components/Head.astro'
-import Header from '@components/Header.astro'
-import Footer from '@components/Footer.astro'
-import { format } from "date-fns"
-import PagerThing from '@components/PagerThing.astro'
+import Head from '@components/Head.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import { format } from "date-fns";
+import PagerThing from '@components/PagerThing.astro';
 
-let title = 'Posts'
-let description = 'Posts on brycewray.com'
+let title = 'Posts';
+let description = 'Posts on brycewray.com';
 
 export async function getStaticPaths({ paginate, rss }) {
-  let allPosts = await Astro.glob('../posts/**/*.md')
-  allPosts = allPosts.filter(post => !post.frontmatter.draft)
+  let allPosts = await Astro.glob('../posts/**/*.md');
   let sortedPosts = allPosts.sort((a, b) =>
     new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
-  )
+  );
   rss({
     title: "BryceWray.com",
     description: "brycewray.com — Observations, opinions, geekery.",
@@ -26,16 +25,15 @@ export async function getStaticPaths({ paginate, rss }) {
       pubDate: post.frontmatter.date
     })),
     dest: "/index.xml",
-  })
+  });
   return [
     paginate(sortedPosts, {
       pageSize: 5
     }),
-  ]
+  ];
 }
 
-const { page } = Astro.props
-
+const { page } = Astro.props;
 ---
 
 <html lang="en">
