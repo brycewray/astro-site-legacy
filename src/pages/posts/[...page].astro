@@ -10,6 +10,7 @@ let description = 'Posts on brycewray.com'
 
 export async function getStaticPaths({ paginate, rss }) {
   let allPosts = await Astro.glob('../posts/**/*.md')
+  allPosts = allPosts.filter(post => !post.frontmatter.draft)
   let sortedPosts = allPosts.sort((a, b) =>
     new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
   )
