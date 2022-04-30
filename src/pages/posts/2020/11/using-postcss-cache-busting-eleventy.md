@@ -6,7 +6,7 @@ title: "Using PostCSS for cache-busting in Eleventy"
 description: "Optimizing how browsers handle your site’s CSS, and why you should care about that."
 author: Bryce Wray
 date: 2020-11-10T16:30:00-06:00
-lastmod: 2021-05-29T12:21:00-05:00
+lastmod: 2022-04-30T17:07:00-05:00
 draft: false
 discussionId: "2020-11-using-postcss-cache-busting-eleventy"
 featured_image: "jilbert-ebrahimi-pVEcNabAg9o-unsplash_4608x3072.jpg"
@@ -98,7 +98,7 @@ First, access your chosen command line interface (such as the macOS Terminal app
 Then, add the plugin to your `postcss.config.js` file. If you're happy to go with the defaults, that's as simple as adding `require('postcss-hash')` within your `plugins` object---**but**, for an Eleventy site, you **must** specify the location of the *[manifest](https://en.wikipedia.org/wiki/Manifest_file)* that it produces. I'll explain why in a moment.[^5] In addition, there are other available options. For example, here's my entire `postcss.config.js` file as of this writing:
 
 ```js
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   plugins: [
@@ -113,7 +113,7 @@ module.exports = {
     require('postcss-preset-env')({ stage: 1 }),
     require('postcss-clean'),
   ],
-}
+};
 ```
 
 Before I get to the `manifest`  option of the `postcss-hash` part, I'll note that:

@@ -7,7 +7,7 @@ title: "Next steps?"
 description: "Some things I’ve learned while tinkering with Next.js."
 author: Bryce Wray
 date: 2021-03-11T16:30:00-06:00
-lastmod: 2022-03-28T13:55:00-05:00
+lastmod: 2022-04-30T17:35:00-05:00
 #draft: false
 discussionId: "2021-03-next-steps"
 featured_image: "crystal-ball-drew-beamer-xU5Mqq0Chck-unsplash_5284x3522.jpg"
@@ -37,7 +37,7 @@ Considering how much I've [lately tried to limit my dealings with dependency-hea
 To be fair, though, I should also note that I'd have been lost React-wise had I not spent the earlier time working with Gatsby and React's [JSX](https://reactjs.org/docs/introducing-jsx.html)---*e.g.*, here's an extremely simple footer component in JSX:
 
 ``` jsx
-let copyrightYr = new Date().getFullYear()
+let copyrightYr = new Date().getFullYear();
 
 export default function Footer() {
   return (
@@ -78,7 +78,7 @@ Those settings cover nearly every browser in use---even the justifiably despised
 One thing you'll do a lot in this sort of platform is to `import` components, styling files, and the like; and those `import` references are **relative** rather than **absolute**. So, depending on how nested your stuff is, you might end up with lines like this:
 
 ```jsx
-import '../../../assets/scss/global.scss'
+import '../../../assets/scss/global.scss';
 ```
 
 And, yeah, you have to count up all those `../` items manually and keep doing so until the Next.js dev server stops throwing error messages.
@@ -107,7 +107,7 @@ Fortunately, there's no need to futz with all that **if** you add some [Babel](h
 As long as your relative references in *that* file are correct---which is easy to determine, especially since you're coming from the top level---you then can use those aliases throughout the project. Here's an alias-friendly version of the previous example:
 
 ```jsx
-import '@scss/global.scss'
+import '@scss/global.scss';
 ```
 
 .&nbsp;.&nbsp;. so much easier.
@@ -129,7 +129,7 @@ I decided to opt for something which would be less limiting than a one-styleshee
 Here's an example of how that helps you. I created `/pages/careers/index.js` (which Next automatically turns into `[site URL]/careers/` ) and then imported its specific scoped SCSS file:
 
 ```jsx
-import careers from '@scss/Careers.modules.scss'
+import careers from '@scss/Careers.modules.scss';
 ```
 
 With `careers` set as the *namespace* for styles from that SCSS file, I then could implement the styles like this:
@@ -168,9 +168,9 @@ As I said earlier, part of the work I'm doing for this learning experience invol
 Fortunately, FontAwesome has an "[official React component](https://fontawesome.com/docs/web/use-with/react/)," which makes that a breeze:
 
 ```jsx
-import nav from '@scss/Nav.module.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCaretRight, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import nav from '@scss/Nav.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faCaretRight, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 const hamburgerBars = <FontAwesomeIcon icon={faBars} style={{ width: '24px', height: 'auto'  }} />
 const caretRight = <FontAwesomeIcon icon={faCaretRight} />

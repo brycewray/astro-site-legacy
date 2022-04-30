@@ -8,7 +8,7 @@ title: "Static tweets in Astro"
 description: "A component which properly embeds tweets when you’re using today’s hottest SSG."
 author: Bryce Wray
 date: 2022-04-06T20:18:00-05:00
-lastmod: 2022-04-21T14:52:00-05:00
+lastmod: 2022-04-30T17:49:00-05:00
 #initTextEditor: iA Writer
 discussionId: "2022-04-static-tweets-astro"
 featured_image: twitter-icon--alexander-shatov-k1xf2D7jWUs-unsplash_2400x1800.jpg
@@ -62,7 +62,7 @@ The following is my `STweetV2.astro` component, based on the logic and styling o
 
 ```astro
 ---
-import { format } from "date-fns"
+import { format } from "date-fns";
 
 /*
   =======
@@ -74,30 +74,30 @@ import { format } from "date-fns"
   =======
 */
 
-const { TweetID } = Astro.props
+const { TweetID } = Astro.props;
 
-const BearerToken = import.meta.env.PUBLIC_BEARER_TOKEN
-const jsonURL1 = "https://api.twitter.com/2/tweets?ids="
-const jsonURL2 = "&expansions=author_id,attachments.media_keys&tweet.fields=created_at,text,attachments,entities,source&user.fields=name,username,profile_image_url&media.fields=preview_image_url,type,url,alt_text"
+const BearerToken = import.meta.env.PUBLIC_BEARER_TOKEN;
+const jsonURL1 = "https://api.twitter.com/2/tweets?ids=";
+const jsonURL2 = "&expansions=author_id,attachments.media_keys&tweet.fields=created_at,text,attachments,entities,source&user.fields=name,username,profile_image_url&media.fields=preview_image_url,type,url,alt_text";
 
 const response = await fetch(jsonURL1 + TweetID + jsonURL2, {
   method: "get",
   headers: {
     "Authorization": `Bearer ${BearerToken}`
   }
-})
-const Json = await response.json()
-const JsonData = Json.data[0]
-const JsonIncludes = Json.includes
+});
+const Json = await response.json();
+const JsonData = Json.data[0];
+const JsonIncludes = Json.includes;
 
-let text = ''; let created_at = ''; let profile_image_url = ''; let name = ''; let username = ''
+let text, created_at, profile_image_url, name, username = '';
 
-name = JsonIncludes.users[0].name
-username = JsonIncludes.users[0].username
-profile_image_url = JsonIncludes.users[0].profile_image_url
-created_at = JsonData.created_at
+name = JsonIncludes.users[0].name;
+username = JsonIncludes.users[0].username;
+profile_image_url = JsonIncludes.users[0].profile_image_url;
+created_at = JsonData.created_at;
 
-text = JsonData.text
+text = JsonData.text;
 
 if (JsonData.entities.urls) {
   JsonData.entities.urls.forEach((url) => {
@@ -107,23 +107,24 @@ if (JsonData.entities.urls) {
           text = text.replace(
             url.url,
             `<a href=${url.url} target="_blank" rel="noreferrer noopener">${url.display_url}</a>`
-          )
+          );
         } else {
           text = text.replace(
             url.url,
             ``
-          )
+          );
         }
       } else {
         text = text.replace(
           url.url,
           `<a href=${url.url} target="_blank" rel="noreferrer noopener">${url.display_url}</a>`
-        )
+        );
       }
     } else {
       text = text.replace(
         url.url,
-        `<a href=${url.url} target="_blank" rel="noreferrer noopener">${url.display_url}</a>`)
+        `<a href=${url.url} target="_blank" rel="noreferrer noopener">${url.display_url}</a>`
+      );
     }
   })
 }
@@ -133,7 +134,7 @@ if (JsonData.entities.mentions) {
     text = text.replace(
       `@${mention.username}`,
       `<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/${mention.username}">@${mention.username}</a>`
-    )
+    );
   })
 }
 
@@ -142,18 +143,18 @@ if (JsonData.entities.hashtags) {
     text = text.replace(
       `#${hashtag.tag}`,
       `<a target="_blank" rel="noreferrer noopener" href="https://twitter.com/hashtag/${hashtag.tag}?src=hash&ref_src=twsrc">#${hashtag.tag}</a>`
-    )
+    );
   })
 }
 
-text = text.replace(/(?:\r\n|\r|\n)/g, '<br/>')
+text = text.replace(/(?:\r\n|\r|\n)/g, '<br/>');
 
-let imageItems = ''
+let imageItems = '';
 
 if (JsonIncludes.media) {
   JsonIncludes.media.forEach((item) => {
     if (item.url) {
-      imageItems = imageItems + `<img class="tweet-img" src=${item.url} alt="" /><br />`
+      imageItems = imageItems + `<img class="tweet-img" src=${item.url} alt="" /><br />`;
     }
   })
 }

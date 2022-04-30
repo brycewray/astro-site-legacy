@@ -6,7 +6,7 @@ title: "Beginner’s luck #4: the Vite edition"
 description: "Now I have an Eleventy/Vite starter, and here’s some of the code that makes it go."
 author: Bryce Wray
 date: 2021-07-25T16:46:00-05:00
-lastmod: 2022-02-12T11:08:00-06:00
+lastmod: 2022-04-30T17:43:00-05:00
 discussionId: "2021-07-beginners-luck-4-vite-edition"
 featured_image: susan-holt-simpson-H7SCRwU1aiM-unsplash_4608x3072.jpg
 featured_image_width: 4608
@@ -73,14 +73,14 @@ In the Eleventy [site-wide data directory](https://www.11ty.dev/docs/data-global
 ```js
 module.exports = {
   env: process.env.NODE_ENV,
-}
+};
 ```
 
 Then I added `src/client/main.js` with:
 
 ```js
-import "vite/dynamic-import-polyfill"
-import "../assets/css/index.css"
+import "vite/dynamic-import-polyfill";
+import "../assets/css/index.css";
 // if you add any JS scripts or other files Vite can bundle, import them here
 ```
 
@@ -95,7 +95,7 @@ Then came the tricky part: making critical edits to files the repo already had.
 First came the Eleventy config file, `.eleventy.js`. At its top, **before** the `module.exports = function(eleventyConfig) {` part, I added:
 
 ```js
-const fs = require("fs/promises")
+const fs = require("fs/promises");
 ```
 
 . . . which, of course, would have **required** replacing an existing `const fs` statement had there been one (noting for those of you who may, again, want only to convert a repo of your own).
@@ -103,9 +103,9 @@ const fs = require("fs/promises")
 Still at the top, I added:
 
 ```js
-const INPUT_DIR = "src"
-const OUTPUT_DIR = "_site"
-const PATH_PREFIX = "/"
+const INPUT_DIR = "src";
+const OUTPUT_DIR = "_site";
+const PATH_PREFIX = "/";
 ```
 
 Then, at the end of `.eleventy.js`, I replaced the final `return {templateFormats}` section with the following, which includes [shortcodes](https://www.11ty.dev/docs/shortcodes/) required for the repo's Nunjucks templates to call Vite properly:

@@ -9,7 +9,7 @@ title: "Using Eleventy’s official image plugin"
 description: "The what, why, and how of Eleventy Image."
 author: Bryce Wray
 date: 2021-04-17T13:41:00-05:00
-lastmod: 2022-02-04T21:08:00-06:00
+lastmod: 2022-04-30T17:38:00-05:00
 discussionId: "2021-04-using-eleventys-official-image-plugin"
 featured_image: "camera-lens-color-bkgd-theregisti-TduXmZMD2uQ-unsplash_6000x4000.jpg"
 featured_image_width: 6000
@@ -77,7 +77,7 @@ First, let's install Eleventy Image in your Eleventy project.
 **Configure Eleventy to use Eleventy Image**. Now that the plugin package is installed, you'll tell Eleventy that it's there by going into the project's `.eleventy.js` configuration file---preferably at the top, **before** you get into the file's `module.exports` statement (about which we'll talk soon)---and adding the line:
 
 ```js
-const Image = require("@11ty/eleventy-img")
+const Image = require("@11ty/eleventy-img");
 ```
 
 That tells Eleventy that, when we refer to `Image` (note the capital "I”) from here on, we're talking about the Eleventy Image plugin package.
@@ -95,7 +95,7 @@ module.exports = function (eleventyConfig) {
   // Typical configuration fits
   // in this area and can go on
   // for as long as necessary
-}
+};
 ```
 
 .&nbsp;.&nbsp;. so let's go into that in-between area where I put those comments, above, and create an `image` shortcode (note the lower-case "i”) by adding the code shown below.
@@ -107,33 +107,33 @@ module.exports = function (eleventyConfig) {
 ```js
   // --- START, eleventy-img
   function imageShortcode(src, alt, sizes="(min-width: 1024px) 100vw, 50vw") {
-    console.log(`Generating image(s) from:  ${src}`)
+    console.log(`Generating image(s) from:  ${src}`);
     let options = {
       widths: [600, 900, 1500],
       formats: ["webp", "jpeg"],
       urlPath: "/images/",
       outputDir: "./_site/images/",
       filenameFormat: function (id, src, width, format, options) {
-        const extension = path.extname(src)
-        const name = path.basename(src, extension)
-        return `${name}-${width}w.${format}`
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}-${width}w.${format}`;
       }
-    }
+    };
 
     // generate images
-    Image(src, options)
+    Image(src, options);
 
     let imageAttributes = {
       alt,
       sizes,
       loading: "lazy",
       decoding: "async",
-    }
+    };
     // get metadata
-    metadata = Image.statsSync(src, options)
-    return Image.generateHTML(metadata, imageAttributes)
-  }
-  eleventyConfig.addShortcode("image", imageShortcode)
+    metadata = Image.statsSync(src, options);
+    return Image.generateHTML(metadata, imageAttributes);
+  };
+  eleventyConfig.addShortcode("image", imageShortcode);
   // --- END, eleventy-img
 ```
 

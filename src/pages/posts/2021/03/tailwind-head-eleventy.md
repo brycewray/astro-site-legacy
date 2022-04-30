@@ -6,7 +6,7 @@ title: "Tailwind-to-head with Eleventy"
 description: "This follow-up to an earlier article about Hugo Pipes shows how to get internal CSS in an Eleventy site—and with no build tools required."
 author: Bryce Wray
 date: 2021-03-20T17:07:00-05:00
-lastmod: 2021-07-04T21:56:00-05:00
+lastmod: 2022-04-30T17:36:00-05:00
 #draft: false
 discussionId: "2021-03-tailwind-head-eleventy"
 featured_image: "code-html-head-5421210_5103x3403.jpg"
@@ -87,7 +87,7 @@ So Nunjucks can detect the environment, you first must create a file in the Elev
 ```js
 module.exports = {
   environment: process.env.ELEVENTY_ENV
-}
+};
 ```
 
 (You may want to read in the Eleventy documentation about [how to expose environment variables](https://www.11ty.dev/docs/data-js/#example-exposing-environment-variables).)
@@ -119,9 +119,9 @@ Unlike what we did in the Nunjucks templating, there's no need for specially exp
 [^envDiff]: It's worth noting that Nunjucks will detect the *Eleventy* environment while this JavaScript will detect the *Node.js* environment. However, we specify both environments in the `package.json` scripts, so we get the desired results either way.
 
 ```js
-const fs = require('fs')
-var internalCSS = ''
-var internalCSSPath = 'src/_includes/css/index.css'
+const fs = require('fs');
+var internalCSS = '';
+var internalCSSPath = 'src/_includes/css/index.css';
 if (process.env.NODE_ENV === 'production') {
   if(fs.existsSync(internalCSSPath)) {
     internalCSS = fs.readFileSync(internalCSSPath)

@@ -5,7 +5,7 @@ title: "Bundling JavaScript with Hugo and esbuild"
 description: "An example of how you could use Hugo’s phenomenally fast, built-in bundling capabilities."
 author: Bryce Wray
 date: 2021-12-01T08:34:00-06:00
-#lastmod: 2021-12-01T09:28:00-06:00 #forgot to remove "md5" from example code
+lastmod: 2022-04-30T17:47:00-05:00
 #initTextEditor: Ulysses
 discussionId: "2021-12-bundling-javascript-hugo-esbuild"
 featured_image: matryoshka-dolls-ornament-3131097_4630x3126.jpg
@@ -39,8 +39,8 @@ The file from which we’ll be bundling is `/assets/js/index.js` (Hugo Pipes pro
 	package exports a module, `LazyLoad`,
 	so we import it directly.
 */
-import LazyLoad from './assets/js/lazyload_17-5-0.esm.js'
-import './assets/js/instantpage_5-1-0.js'
+import LazyLoad from './assets/js/lazyload_17-5-0.esm.js';
+import './assets/js/instantpage_5-1-0.js';
 // The latter runs Instant.Page directly.
 
 /*
@@ -50,7 +50,7 @@ import './assets/js/instantpage_5-1-0.js'
 */
 var lazyLoadInstance = new LazyLoad({
   threshold: 150,
-})
+});
 ```
 
 Then, in the [`baseof.html` template](https://gohugo.io/templates/base/#define-the-base-template) on which Hugo will build the site, we’ll instruct `js.Build` to:

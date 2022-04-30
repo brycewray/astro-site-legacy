@@ -7,7 +7,7 @@ title: "Gems in the rough #2"
 description: "More geeky hints for SSG fans."
 author: Bryce Wray
 date: 2021-01-16T13:45:00-06:00
-lastmod: 2022-03-28T13:51:00-05:00
+lastmod: 2022-04-30T17:32:00-05:00
 #draft: false
 discussionId: "2021-01-gems-in-rough-2021-01"
 featured_image: "gemstones-sung-jin-cho-0d3qxUozE-0-unsplash_7315x4881.jpg"
@@ -88,9 +88,7 @@ markdownLibrary.renderer.rules.footnote_caption = (tokens, idx) => {
 };
 ```
 
-After a brief and successful test on a repo branch, I gleefully incorporated his fix[^semiColons] on each of my Eleventy repos (the [one for this site](https://github.com/brycewray/eleventy_solo) and my two Eleventy-based [starter](https://github.com/brycewray/eleventy_solo_starter) [repos](https://github.com/brycewray/eleventy_solo_starter_njk)); and, now, that earlier paragraph looks like this, **as it should**:
-
-[^semiColons]: Well, all but the semicolons at lines’ ends. I'm one of those who [choose to avoid them in their JS](https://flaviocopes.com/javascript-automatic-semicolon-insertion/). Sorry, [pro-semicolon partisans](https://medium.com/better-programming/you-might-need-those-semicolons-in-your-javascript-after-all-b28154f93ea8).
+After a brief and successful test on a repo branch, I gleefully incorporated his fix on each of my Eleventy repos (the [one for this site](https://github.com/brycewray/eleventy_solo) and my two Eleventy-based [starter](https://github.com/brycewray/eleventy_solo_starter) [repos](https://github.com/brycewray/eleventy_solo_starter_njk)); and, now, that earlier paragraph looks like this, **as it should**:
 
 <Imgc url="Eleventy-non-bracketed-footnotes_2510x840.png" alt="Paragraph ending in a footnote whose number is not bracketed" width="2510" height="840" />
 
