@@ -2,11 +2,12 @@
 setup: |
   import Layout from '@layouts/Post.astro'
   import BlueBox from '@components/BlueBox.astro'
+  import YellowBox from '@components/YellowBox.astro'
 title: "Gems in the rough #11"
 description: "Dueling announcements, CSP-allowed CSS, fun with LQIPs."
 author: Bryce Wray
 date: 2021-11-19T11:27:00-06:00
-lastmod: 2022-03-28T14:04:00-05:00
+lastmod: 2022-04-30T05:59:00-05:00
 discussionId: "2021-11-gems-in-rough-11"
 featured_image: "gemstones-sung-jin-cho-0d3qxUozE-0-unsplash_7315x4881.jpg"
 featured_image_width: 7315
@@ -61,3 +62,7 @@ That's easily done by having the full image housed within a `div` whose backgrou
 If you want to see the resulting HTML from how `imgc` works, use your browser's **View Source** capability[^notInsp] and see the code for this post's featured image. Refresh the page and you'll see that the `imgB-` rule's nonce value changes each time. That's the whole point, and it thus makes everything fine where the CSP's `style-src` portion is concerned.
 
 [^notInsp]: I say to use **View Source** rather than the Inspector because, on some browsers, using the Inspector won't show you the nonce value.
+
+<YellowBox>
+**Note, 2022-04-30**: The site's [migration](/posts/2022/04/winds-change/) to the [Astro](https://astro.build) SSG has rendered this now irrelevant, since the `Imgc.astro` component which then took the place of the former repo's `imgc` shortcode incorporates [scoped styling](https://docs.astro.build/en/guides/styling/#scoped-styles) that Astro's integration with [Vite](https://vitejs.dev) handles at build time.
+</YellowBox>
