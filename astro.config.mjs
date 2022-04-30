@@ -16,7 +16,9 @@ export default defineConfig({
     // drafts: true,
     /*
     For the "drafts" config setting, the default is "false" ---
-    **BUT**, as of 2022-04-30, `Astro.glob() **will** include it.
+    **BUT**, as of 2022-04-30 ("currently"), `Astro.glob() **will** include it,
+    so pre-publication commits of drafts would be problematic unless
+    every `Astro.glob()` function filters it out.
     https://docs.astro.build/en/guides/markdown-content/#markdown-drafts
     */
     remarkPlugins: [["remark-smartypants", {
