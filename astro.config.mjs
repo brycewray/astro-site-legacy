@@ -13,6 +13,12 @@ export default defineConfig({
   },
   trailingSlash: "always",
   markdown: {
+    // drafts: true,
+    /*
+    For the "drafts" config setting, the default is "false" ---
+    **BUT**, as of 2022-04-30, `Astro.glob() **will** include it.
+    https://docs.astro.build/en/guides/markdown-content/#markdown-drafts
+    */
     remarkPlugins: [["remark-smartypants", {
       dashes: "oldschool",
       ellipses: false
