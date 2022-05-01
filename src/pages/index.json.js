@@ -22,8 +22,8 @@ export async function get() {
     id: "https://www.brycewray.com/",
     link: `https://www.brycewray.com/index.${feedExt}`,
     language: "en",
-    image: "https://www.brycewray.com/assets/icons/apple-icon-120x120.png",
-    favicon: "https://www.brycewray.com/assets/icons/apple-icon-120x120.png",
+    image: "https://www.brycewray.com/assets/images/icons/apple-icon-120x120.png",
+    favicon: "https://www.brycewray.com/assets/images/icons/apple-icon-120x120.png",
     copyright: "Textual content copyright 2018-2022 Bryce Wray except where otherwise noted",
     feedLinks: {
       json: "https://www.brycewray.com/index.json",
