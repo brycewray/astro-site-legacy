@@ -7,7 +7,7 @@ title: "Is Astro ready for your blog?"
 description: "Some points to consider if you’re thinking about switching your site to the Astro platform."
 author: Bryce Wray
 date: 2022-04-24T10:50:00-05:00
-lastmod: 2022-05-01T05:37:00-05:00
+lastmod: 2022-05-01T05:39:00-05:00
 #initTextEditor: iA Writer
 discussionId: "2022-04-astro-ready-your-blog"
 featured_image: "blog-concept-kaitlyn-baker-vZJdYl5JVXY-unsplash_5472x3648.jpg"
@@ -103,7 +103,7 @@ Astro began life with [Snowpack](https://www.snowpack.dev) as its asset pipeline
 
 Building in Astro can be both pleasant and, occasionally, a little frustrating, so it's a mixed bag where DX is concerned. The "pleasant" part is the relative straightforwardness of the code, especially if you've ever dealt with Next.js, although you will have to get used to those code fences in `.astro` files. As for the "a little frustrating" part, larger sites don't refresh all that quickly when you edit either Markdown or an `.astro` file, although styling changes seem to show up pretty quickly. I think this is because, at this early point in Astro's life, its team is still working out the kinks on Astro's interaction with both Markdown and Vite.
 
-**Comparison**: Where pleasantness of the coding experience is concerned, Astro and Eleventy probably tie for first, Gatsby and Next.js are in the middle of the pack, and Hugo and its newbie-unfriendly Go-based templating comes in last. (I doubt seriously that newbies are going to be familiar with Go.) However, where refresh-in-dev-mode speed is concerned, it's a different story altogether: all the other competitors currently have an edge on Astro for this item, with the stunningly fast Hugo obviously leading the pack.
+**Comparison**: Where pleasantness of the coding experience is concerned: Astro and Eleventy probably tie for first; Gatsby and Next.js are in the middle of the pack; and Hugo, with its newbie-unfriendly Go-based templating, comes in last. (I doubt seriously that newbies are going to be familiar with Go.) However, where refresh-in-dev-mode speed is concerned, it's a different story altogether: all the other competitors currently have an edge on Astro for this item, with the stunningly fast Hugo obviously leading the pack.
 
 ## Documentation
 
