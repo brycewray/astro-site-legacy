@@ -7,7 +7,7 @@ title: "Is Astro ready for your blog?"
 description: "Some points to consider if you’re thinking about switching your site to the Astro platform."
 author: Bryce Wray
 date: 2022-04-24T10:50:00-05:00
-lastmod: 2022-04-28T15:28:00-05:00
+lastmod: 2022-05-01T05:37:00-05:00
 #initTextEditor: iA Writer
 discussionId: "2022-04-astro-ready-your-blog"
 featured_image: "blog-concept-kaitlyn-baker-vZJdYl5JVXY-unsplash_5472x3648.jpg"
@@ -38,14 +38,14 @@ Every SSG uses templating to render web pages. Astro templates are `.astro` file
 
 ```astro
 ---
-import Head from '@components/Head.astro'
-import Header from '@components/Header.astro'
-import Single from '@components/Single.astro'
-import Footer from '@components/Footer.astro'
-import Billboard from '@components/Billboard.astro'
+import Head from '@components/Head.astro';
+import Header from '@components/Header.astro';
+import Single from '@components/Single.astro';
+import Footer from '@components/Footer.astro';
+import Billboard from '@components/Billboard.astro';
 
-const { content } = Astro.props
-const { title, subtitle, description, date, lastmod, permalink } = content
+const { content } = Astro.props;
+const { title, subtitle, description, date, lastmod, permalink } = content;
 
 ---
 
