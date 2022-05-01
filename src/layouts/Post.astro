@@ -8,8 +8,11 @@ import Comments from '@components/Comments.astro';
 import PostFeatImg from '@components/PostFeatImg.astro';
 
 let allPosts = await Astro.glob('../pages/posts/**/*.md');
-allPosts = allPosts.filter(post => !post.frontmatter.draft);
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+allPosts = allPosts
+  .filter(post => !post.frontmatter.draft)
+  .sort((a, b) =>
+    new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+);
 let postsNumber = allPosts.length;
 
 const { content, page } = Astro.props;
