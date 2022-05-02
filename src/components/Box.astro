@@ -12,12 +12,15 @@ marked.setOptions({
 let htmlOut = '';
 htmlOut = await Astro.slots.render('default');
 htmlOut = marked.parse(htmlOut);
-htmlOut = sanitizeHtml(htmlOut);
 htmlOut = htmlOut
-  .replace(
+  .replaceAll(
     `<a href="http`,
     `<a target="_blank" rel="nofollow" href="http`
   );
+htmlOut = sanitizeHtml(htmlOut, {
+  allowedTags: false,
+  allowedAttributes: false,
+});
 
 let { cssClass } = Astro.props;
 cssClass += " scopeBuster";
