@@ -68,7 +68,7 @@ module.exports = function(eleventyConfig) {
 
 This creates a [shortcode](https://11ty.dev/docs/shortcodes/) called `tweet` that you can put anywhere within your site’s [Markdown](https://daringfireball.net/projects/markdown/) content. Twitter knows each tweet by its **ID number**, and that’s how `tweet` will embed it.[^4] The ID number for that tweet I embedded above is **1487140202141425673**, so the following use of `tweet` would show it:
 
-```twig
+```jinja-html
 {% tweet "1487140202141425673" %}
 ```
 
