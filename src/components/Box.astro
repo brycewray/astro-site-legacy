@@ -1,0 +1,59 @@
+---
+// import {micromark} from 'micromark';
+// import {gfm, gfmHtml} from 'micromark-extension-gfm';
+import { marked } from 'marked';
+
+marked.setOptions({
+  gfm: true,
+  smartypants: true,
+})
+
+let htmlOut = '';
+htmlOut = await Astro.slots.render('default');
+htmlOut = marked.parse(htmlOut);
+
+htmlOut = htmlOut
+  .replace(
+    `<a href="http`,
+    `<a target="_blank" rel="nofollow" href="http`
+  );
+
+let { cssClass } = Astro.props;
+cssClass += " scopeBuster";
+---
+
+<style lang="scss">
+  @use '../styles/variables' as var; // SCSS partial
+  .yellowBox, .blueBox {
+    font-family: var.$sans-serif;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid hsl(0, 0%, 20%);
+    margin: 0.5em auto;
+    width: 100%;
+    padding: 1em 1.25em;
+  }
+  .yellowBox {
+    background: hsl(52, 100%, 85%);
+    @media (prefers-color-scheme: dark) {
+      background: hsl(40, 100%, 10%);
+    }
+  }
+  .blueBox {
+    background: hsl(200, 100%, 95%);
+    @media (prefers-color-scheme: dark) {
+      background: hsl(200, 100%, 20%);
+    }
+  }
+  .scopeBusterBox :global(p) {
+      padding: 0;
+      margin: 0;
+      font-size: 85%;
+  }
+  // h/t to Chris on the Discord...
+  // https://discord.com/channels/830184174198718474/969658962028953670
+</style>
+
+<div class={cssClass}>
+  <span class="scopeBusterBox" set:html={htmlOut} />
+</div>
