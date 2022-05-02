@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Some Sirius(XM) thoughts"
 description: "Radio, and more, from on high."
 author: Bryce Wray
@@ -96,9 +96,9 @@ If I could have my druthers, I'd just get the first person on the phone and say,
 
 [^Sorry]: Sorry if that sounds callous where the next person is concerned, but facts are stubborn things and all that.
 
-<YellowBox>
-<strong>Note</strong>: Please see the update at the end.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: Please see the update at the end.
+</Box>
 
 But that is, as I said, "if I could have my druthers." In real life, I'm sure it would be nowhere near that easy.
 
@@ -112,6 +112,6 @@ As for me, I have a few more weeks[^Kaching] to decide whether I like the servic
 
 [^Kaching]: My three-month freebie ends in early May, and I then could get another three "free" months---*by signing up*. Can you say, "Ka-ching"?
 
-<YellowBox>
-<strong>Update, 2020-05-22</strong>: Today, I saw an offer on the SiriusXM site for <em>precisely</em> the new-subscriber deal I wanted: one year of the All-Access package for $99 (not counting the music royalty fee and other stuff, of course, but I always knew that would be part of it, no matter what); so, two weeks after my freebie ended, I did go ahead and subscribe, after all. And I’ve already set a calendar reminder for May 15 of <em>next</em> year so I’ll have plenty time to go back and cancel in time to avoid auto-renewal at $22 a month (or whatever the rate is by then)—or, if I can, negotiate a fair renewal price.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2020-05-22**: Today, I saw an offer on the SiriusXM site for *precisely* the new-subscriber deal I wanted: one year of the All-Access package for $99 (not counting the music royalty fee and other stuff, of course, but I always knew that would be part of it, no matter what); so, two weeks after my freebie ended, I did go ahead and subscribe, after all. And I've already set a calendar reminder for May 15 of *next* year so I'll have plenty time to go back and cancel in time to avoid auto-renewal at $22 a month (or whatever the rate is by then)---or, if I can, negotiate a fair renewal price.
+</Box>

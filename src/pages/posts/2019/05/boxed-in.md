@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Boxed in?"
 description: "A revisiting of the whole Ulysses matter—after I learned some more about “shoebox” apps in general."
 author: Bryce Wray
@@ -100,9 +100,9 @@ I wondered about that aspect, too, as I did my post-cancellation research in rec
 
 Bottom line: armed with my newly gained knowledge, I've started using Ulysses again over the last couple of days---once again "stress-testing" it, and so far, so good---and, this morning, I renewed my Ulysses subscription for another year.
 
-<YellowBox>
-<strong>Note, 2020-07-17</strong>: I originally neglected to mention, here at least (although <a href="https://twitter.com/BryceWrayTX/status/1125567578376683525" target="_blank" rel="nofollow">I <em>did</em> mention it a couple of days later on Twitter</a>, one critical aspect of my regaining trust in Ulysses: some great help I received from the nice folks at Ulysses Support. They had me send various iCloud-related logs from all my Ulysses-using devices (Mac, iPhone, and iPad). Their analysis concluded that my iCloud setup (mainly on the Mac) “might be corrupted in general since several programs utilizing iCloud Drive have trouble synchronizing.” They suggested I completely log off, then log back into, iCloud on all the devices. That was over a year ago, and I haven’t had a whit of trouble with Ulysses ever since on any of the devices. Thanks to <a href="https://gordonansell.com/ulysses-icloud-sync-problem-further-information" target="_blank" rel="nofollow"><strong>Gordy Ansell</strong>&#32;for very nicely raising the question</a>, and I apologize for leaving you folks hanging all this intervening time.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note, 2020-07-17**: I originally neglected to mention, here at least (although [I *did* mention it a couple of days later on Twitter](https://twitter.com/BryceWrayTX/status/1125567578376683525)), one critical aspect of my regaining trust in Ulysses: some great help I received from the nice folks at Ulysses Support. They had me send various iCloud-related logs from all my Ulysses-using devices (Mac, iPhone, and iPad). Their analysis concluded that my iCloud setup (mainly on the Mac) "might be corrupted in general since several programs utilizing iCloud Drive have trouble synchronizing." They suggested I completely log off, then log back into, iCloud on all the devices. That was over a year ago, and I haven't had a whit of trouble with Ulysses ever since on any of the devices. **Thanks to** [**Gordy Ansell** for very nicely raising the question](https://gordonansell.com/ulysses-icloud-sync-problem-further-information), and I apologize for leaving you folks hanging all this intervening time.
+</Box>
 
 And, no, I actually do *not* like the taste of crow, since you ask. But I very much am glad to have Ulysses back in the fold.
 

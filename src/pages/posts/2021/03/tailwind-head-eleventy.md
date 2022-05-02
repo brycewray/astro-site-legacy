@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Tailwind-to-head with Eleventy"
 description: "This follow-up to an earlier article about Hugo Pipes shows how to get internal CSS in an Eleventy site—and with no build tools required."
 author: Bryce Wray
@@ -48,9 +48,9 @@ First of all, let's cover the `package.json` scripting (I'll save space by not i
   },
 ```
 
-<YellowBox>
-<strong>Update, 2021-03-24</strong>: I corrected the script <code>dev:eleventy</code>, above, so that it includes the <code>--serve</code> parameter rather than the <code>--watch</code> parameter; as I was <a href="https://twitter.com/marcfilleul/status/1374840637112131589" target="_blank" rel="nofollow">reminded on Twitter</a> and is <a href="https://www.11ty.dev/docs/usage/#re-run-eleventy-when-you-save" target="_blank" rel="nofollow">explained in the Eleventy documentation</a>, <code>serve</code> includes the “watching” process, so it’s unnecessary to have <strong>both</strong> <code>--watch</code> and <code>serve</code>. Sorry that I missed this earlier, which probably happened because I previously was using a separate BrowserSync instance and, thus, the code from which I was copying at the time didn’t have (or need) the <code>--serve</code> parameter for Eleventy.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-03-24**: I corrected the script `dev:eleventy`, above, so that it includes the `--serve` parameter rather than the `--watch` parameter; as I was [reminded on Twitter](https://twitter.com/marcfilleul/status/1374840637112131589) and is [explained in the Eleventy documentation](https://www.11ty.dev/docs/usage/#re-run-eleventy-when-you-save), `serve` includes the "watching" process, so it's unnecessary to have **both** `--watch` and `serve`. Sorry that I missed this earlier, which probably happened because I previously was using a separate BrowserSync instance and, thus, the code from which I was copying at the time didn't have (or need) the `--serve` parameter for Eleventy.
+</Box>
 
 Now let's see what all those scripts do when you invoke either development mode (`npm run start`) or production mode (`npm run build`). Here's the resulting sequence of actions; they're more alike than not alike, so I'll combine them into one list:
 

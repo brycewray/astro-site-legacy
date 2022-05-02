@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Beginner’s luck #4: the Vite edition"
 description: "Now I have an Eleventy/Vite starter, and here’s some of the code that makes it go."
 author: Bryce Wray
@@ -23,9 +23,9 @@ Given the interest the community showed in my previous post, "[Eleventy + Vite =
 
 The new starter's repo is [`eleventy_vite_starter`](https://github.com/brycewray/eleventy_vite_starter). There's also an [online demo](https://eleventy-vite-starter.vercel.app/) which, if you're familiar with any of my other starters, may not float your boat---but the thing is, I was able to convert its predecessor to this config in well under an hour. That augurs well for your efforts, I would hope.
 
-<YellowBox>
-<strong>Update, 2021-08-22</strong>: Today, I switched my site repo **back** to my own bespoke setup, away from the Eleventy/Vite configuration described herein. The latter proved to be problematic during local development, particularly when I needed to test changes on devices on my local network. The mixing of the Eleventy and Vite processes just didn’t go well with that. However, I retain my great admiration for Vite, and will hope for a better Eleventy/Vite solution down the line. Perhaps it’ll come from <a href="https://snugug.com/musings/eleventy-plus-vite/" target="_blank" rel="nofollow">one particular plugin that requires the yet-to-come Eleventy 1.x</a>. As always, I’ll retain this post and <a href="/posts/2021/07/eleventy-vite-elite/">the previous one</a> for <a href="/posts/2019/10/otoh/">archival purposes</a>; and, for those who might yet be interested, I’ll also keep alive the starter repo described in this post.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-08-22**: Today, I switched my site repo **back** to my own bespoke setup, away from the Eleventy/Vite configuration described herein. The latter proved to be problematic during local development, particularly when I needed to test changes on devices on my local network. The mixing of the Eleventy and Vite processes just didn't go well with that. However, I retain my great admiration for Vite, and will hope for a better Eleventy/Vite solution down the line. Perhaps it'll come from [one particular plugin that requires the yet-to-come Eleventy 1.x](https://snugug.com/musings/eleventy-plus-vite/). As always, I'll retain this post and [the previous one](/posts/2021/07/eleventy-vite-elite/) for [archival purposes](/posts/2019/10/otoh/); and, for those who might yet be interested, I'll also keep alive the starter repo described in this post.
+</Box>
 
 ## The conversion process
 
@@ -253,9 +253,9 @@ I tossed out the existing `scripts` object in `package.json` in favor of the fol
   },
 ```
 
-<YellowBox>
-<strong>Note</strong>: I’ll explain later what these do.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: I'll explain later what these do.
+</Box>
 
 #### Templating
 

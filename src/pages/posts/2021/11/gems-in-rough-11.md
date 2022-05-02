@@ -1,8 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Gems in the rough #11"
 description: "Dueling announcements, CSP-allowed CSS, fun with LQIPs."
 author: Bryce Wray
@@ -17,9 +16,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@mbuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sung Jin Cho</a>; <a href="https://unsplash.com/s/photos/gemstones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the "Gems in the rough" series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators (SSGs)](https://jamstack.org/generators).
+</Box>
 
 ## News from Vercel and Cloudflare
 
@@ -63,6 +62,6 @@ If you want to see the resulting HTML from how `imgc` works, use your browser's 
 
 [^notInsp]: I say to use **View Source** rather than the Inspector because, on some browsers, using the Inspector won't show you the nonce value.
 
-<YellowBox>
-<strong>Note, 2022-04-30</strong>: The site’s <a href="/posts/2022/04/winds-change/">migration</a> to the <a href="https://astro.build" target="_blank" rel="nofollow">Astro</a> SSG has rendered this now irrelevant, since the <code>Imgc.astro</code> component which then took the place of the former repo’s <code>imgc</code> shortcode incorporates <a href="https://docs.astro.build/en/guides/styling/#scoped-styles" target="_blank" rel="nofollow">scoped styling</a> that Astro’s integration with <a href="https://vitejs.dev" target="_blank" rel="nofollow">Vite</a> handles at build time.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note, 2022-04-30**: The site's [migration](/posts/2022/04/winds-change/) to the [Astro](https://astro.build) SSG has rendered this now irrelevant, since the `Imgc.astro` component which then took the place of the former repo's `imgc` shortcode incorporates [scoped styling](https://docs.astro.build/en/guides/styling/#scoped-styles) that Astro's integration with [Vite](https://vitejs.dev) handles at build time.
+</Box>

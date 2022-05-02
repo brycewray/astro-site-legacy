@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Goodbye and hello • Part 3"
 description: "Performance is a heckuva drug: earlier considerations aside, I move the site to Vercel for a second time."
@@ -37,6 +37,6 @@ Why?
 
 So we'll see if I stick around this time. I hope this is not going to be the site-hosting equivalent of [last year's SSG "dance."](/posts/2019/12/sorta-strange-ssg-trip/) And, if you're one of my few but highly appreciated regular visitors, I'm sure you share that hope.
 
-<YellowBox>
-<strong>Note</strong>: <a href="/posts/2020/09/goodbye-hello-part-4/">To be continued</a> (sigh).
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: [To be continued](/posts/2020/09/goodbye-hello-part-4/) (sigh).
+</Box>

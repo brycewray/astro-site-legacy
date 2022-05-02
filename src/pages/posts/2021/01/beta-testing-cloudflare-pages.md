@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Beta-testing Cloudflare Pages"
 description: "I take a look at a new, possibly game-changing website-hosting platform and find some early glitchiness, but also plenty of potential."
 author: Bryce Wray
@@ -33,9 +33,9 @@ The Eleventy-based repo did, indeed, build with no problems due to the build pro
 
 So much for the good stuff about the build process; now for the bad stuff. Right now, the beta build process is **really slow**.
 
-<YellowBox>
-<strong>Update, 2021-02-12</strong>: Since I initially published this post, Cloudflare has significantly improved the build speeds. More on that below.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-02-12**: Since I initially published this post, Cloudflare has significantly improved the build speeds. More on that below.
+</Box>
 
 Here's a breakdown of the first successful build for each repo, with each time segment in `min:sec` form. The titles for each action are directly from the CFP logs for these builds, except that I capitalized "Git" and the logs didn't.
 
@@ -75,9 +75,9 @@ As for the less "automatic" ones that I handle via [GitHub Actions](https://gith
 
 So, clearly, the CFP folks have a lot of work to do on this part of it; and, based on a conversation I had with a Cloudflare staffer on the [Cloudflare Workers Discord server](https://blog.cloudflare.com/meet-the-workers-team-over-discord/), they're all too aware of that.
 
-<YellowBox>
-<strong>Update, 2021-02-12</strong>: Yesterday afternoon, Cloudflare pushed a change that dramatically cut the <strong>total</strong> build times. For a newer Hugo-based test site I’ve put on Cloudflare Pages, build now happens in about 45 seconds. While this is still slower than several of the competitors, the trend is definitely in the right direction.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-02-12**: Yesterday afternoon, Cloudflare pushed a change that dramatically cut the **total** build times. For a newer Hugo-based test site I've put on Cloudflare Pages, build now happens in about 45 seconds. While this is still slower than several of the competitors, the trend is definitely in the right direction.
+</Box>
 
 ## Fine online performance
 

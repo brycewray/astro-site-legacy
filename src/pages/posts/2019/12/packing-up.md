@@ -47,12 +47,12 @@ Until not all that many years ago, if you wanted to add JavaScript code to your 
 
 ```html
 <script type="text/javascript">
-	/* some JavaScript would go here */
+  /* some JavaScript would go here */
 </script>
 <!-- ...followed by some HTML ... -->
 <!-- ...and then, maybe, more JS ... -->
 <script type="text/javascript">
-	/* ...and so on... */
+  /* ...and so on... */
 </script>
 ```
 

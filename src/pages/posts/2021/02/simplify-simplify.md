@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Simplify, simplify"
 description: "A Thoreau-ly fine website, or the result of choosing between simplicity and FOMO."
@@ -107,9 +107,9 @@ So, over the last few days, I put in place this plan:
 
 At least until I decide that last item, I am maintaining two different themes in the Hugo repo. One is built on Tailwind, and the other on SCSS. (I named them "thoreau" and "thoreauscss," respectively.) While I continue to consider the choice, I can easily switch back and forth between them with a simple edit to the site's [config file](https://gohugo.io/getting-started/configuration/). *[**Update, 2021-03-01**: Decided to go with SCSS, but still have PostCSS for using [Autoprefixer](https://github.com/postcss/autoprefixer).]*
 
-<YellowBox>
-<strong>Important</strong>: Be assured that every compliment I’ve ever paid to Eleventy, Tailwind, and/or PostCSS still applies. For those who <em>don’t</em> have a problem with Node.js dependencies, I continue to give my highest recommendation to these projects, most especially Eleventy. All three are actively and lovingly maintained, and currently are far and away the best of their respective breeds (in Eleventy’s case, that would be JavaScript-based SSGs).
-</YellowBox>
+<Box cssClass="yellowBox">
+**Important**: Be assured that every compliment I've ever paid to Eleventy, Tailwind, and/or PostCSS still applies. For those who *don't* have a problem with Node.js dependencies, I continue to give my highest recommendation to these projects, most especially Eleventy. All three are actively and lovingly maintained, and currently are far and away the best of their respective breeds (in Eleventy's case, that would be JavaScript-based SSGs).
+</Box>
 
 ## Time to let others run
 

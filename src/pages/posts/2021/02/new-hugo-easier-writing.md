@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Imgc from '@components/Imgc.astro'
   import ImgcCaption from '@components/ImgcCaption.astro'
 title: "New in Hugo: easier writing"
@@ -35,9 +35,9 @@ Back when this site was on [Eleventy](https://11ty.dev), I could write the follo
 
 .&nbsp;.&nbsp;. and this would be the result:
 
-<YellowBox>
-<strong>Important</strong>: This is a paragraph that goes in a colored box so it’ll attract attention.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Important**: This is a paragraph that goes in a colored box so it'll attract attention.
+</Box>
 
 The alternative would be actually writing HTML within the Markdown, but that wasn't as convenient when it was necessary to add things like links and formatting:
 
@@ -53,9 +53,9 @@ The alternative would be actually writing HTML within the Markdown, but that was
 
 .&nbsp;.&nbsp;. to get the same result:
 
-<YellowBox>
-<strong>This</strong> is bold and <em>this</em> is italicized/obliqued, and <a href="https://gohugo.io/documentation" target="_blank" rel="nofollow">this link</a> goes to the Hugo documentation, while <a href="/posts/2021/02/simplify-simplify/">this post link</a> goes to the site’s recent <strong>“Simplify, simplify”</strong> post.
-</YellowBox>
+<Box cssClass="yellowBox">
+**This** is bold and *this* is italicized/obliqued, and [this link](https://gohugo.io/documentation) goes to the Hugo documentation, while [this post link](/posts/2021/02/simplify-simplify/) goes to the site's recent **"Simplify, simplify”** post.
+</Box>
 
 In Eleventy, I enjoyed this convenience through use of the [Markdown-it-attrs plugin](https://github.com/GerHobbelt/markdown-it-attrs) for the [Markdown-it parser](https://github.com/markdown-it/markdown-it). In Eleventy, you essentially put together your chosen parser with whatever plugins it needs to do what you want---footnoting, "smart" punctuation, and, yes, handling styling attributes.
 

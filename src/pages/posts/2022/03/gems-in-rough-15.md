@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
+  import Box from '@components/Box.astro'
 title: "Gems in the rough #15"
 description: "CFP Fast Builds update, Hugo/goldmark typography, another Tailwind-on-Hugo solution."
 author: Bryce Wray
@@ -17,9 +17,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@mbuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sung Jin Cho</a>; <a href="https://unsplash.com/s/photos/gemstones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators](https://jamstack.org/generators) (SSGs).
+</Box>
 
 ## CFP's "Fast Builds" fix nears full release
 

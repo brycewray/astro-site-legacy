@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Speaking up for Sass"
 description: "It may not be This Week’s Kewl Thing, but Sass/SCSS is still an invaluable part of web development."
 author: Bryce Wray
@@ -17,9 +17,9 @@ featured_image_caption: |
   <span class="caption">Image: Sass logo and Sass glasses icon, sourced from <a href="https://sass-lang.com" target="_blank" rel="noopener">Sass website</a>; adapted in <a href="https://affinity.serif.com/en-us/designer/" target="_blank" rel="noopener">Affinity&nbsp;Designer</a></span>
 ---
 
-<YellowBox>
-<strong>Note, 2021-04-04</strong>: I revised this article to remove some references that, as a reader correctly pointed out, didn’t really fit into what I was trying to say. (One of these days, I’ll learn not to write these pieces late on Friday nights when I’m really, really tired.)
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note, 2021-04-04**: I revised this article to remove some references that, as a reader correctly pointed out, didn't really fit into what I was trying to say. (One of these days, I'll learn not to write these pieces late on Friday nights when I'm really, really tired.)
+</Box>
 
 It's important for me to stay current with trends that affect my web development efforts. That's true whether we're talking about the websites I manage as part of the Day Job or just the tinkering I do with this personal site.
 

@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
 title: "Conversation piece"
@@ -27,9 +27,9 @@ Now, perhaps you don't *care* whether your readers have a chance to respond to y
 
 On the other hand, if you *do* want to provide such functionality but are uncertain how to proceed with a static site, I have some thoughts that might help you. All the services I'm mentioning are hosted, as I'm assuming you're running the site in a "serverless" environment ([as I recommend](/posts/2020/09/normal-persons-guide-static-website-hosting/))---such as on [Netlify](https://netlify.com), [Vercel](https://vercel.com), or [Render](https://render.com)---or otherwise are simply unable to install commenting software on a server you can control.
 
-<YellowBox>
-<strong>Note</strong>: Yes, there also are <a href="https://indieweb.org/webmention" target="_blank" rel="nofollow">webmentions</a>, as I <a href="/posts/2020/04/webmentions-three-ssgs-1/">explained earlier this year</a>, but they aren’t the easiest things to set up and maintain, even if you’re rather tech-savvy. This post is mainly for normal (<em>i.e.</em>, non-nerdy) folks who want more conventional commenting on their static websites.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: Yes, there also are [webmentions](https://indieweb.org/webmention), as I [explained earlier this year](/posts/2020/04/webmentions-three-ssgs-1/), but they aren't the easiest things to set up and maintain, even if you're rather tech-savvy. This post is mainly for normal (*i.e.*, non-nerdy) folks who want more conventional commenting on their static websites.
+</Box>
 
 ## Don't even consider Disqus
 

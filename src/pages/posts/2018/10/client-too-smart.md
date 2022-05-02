@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Imgc from '@components/Imgc.astro'
 title: "The client is too smart for you"
 description: "Pretty emails don’t work so well in an Outlook-centric business world."
@@ -59,6 +59,6 @@ And then it won't matter how smart the email client is.
 
 <br />
 
-<YellowBox>
-<strong>Note</strong>: The icons shown in the first graphic were originally designed by <a href="https://www.iconfinder.com/Fishmoby" target="_blank" rel="nofollow">Sergey Ershov</a> and are under the <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="nofollow">Creative Commons license (Attribution 3.0 Unported)</a>. That licensing requires me to indicate any changes I made, which were edits of the SVG originals for size and stroke color.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: The icons shown in the first graphic were originally designed by [Sergey Ershov](https://www.iconfinder.com/Fishmoby) and are under the [Creative Commons license (Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/). That licensing requires me to indicate any changes I made, which were edits of the SVG originals for size and stroke color.
+</Box>

@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Imgc from '@components/Imgc.astro'
 title: "Next steps?"
 description: "Some things I’ve learned while tinkering with Next.js."
@@ -18,9 +18,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@drew_beamer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Drew Beamer</a>; <a href="/s/photos/future?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<YellowBox>
-<strong>Update, 2021-04-15</strong>: After an initial miscommunication gave me the wrong impression about the thinking higher up, I learned that I won’t be doing this work, after all. However, I’m leaving this post in place for archival purposes and <a href="/posts/2019/10/otoh/">for the sake of transparency</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-04-15**: After an initial miscommunication gave me the wrong impression about the thinking higher up, I learned that I won't be doing this work, after all. However, I'm leaving this post in place for archival purposes and [for the sake of transparency](/posts/2019/10/otoh/).
+</Box>
 
 As I [mentioned a few days back](/posts/2021/03/gems-in-rough-03/), Day Job-related concerns have led me to spend time dabbling in the [Next.js](https://nextjs.org) [React](https://reactjs.org) framework. This is because I'm researching possible future options for my employers’ web presence, and Next.js seems to fit their needs pretty well.
 
@@ -116,9 +116,9 @@ import '@scss/global.scss';
 
 One of the ideas behind this project is to plan for how future teams can manage the involved sites. Where styling is concerned, I'm gambling that [Sass/SCSS](https://sass-lang.com) will still be around in the long term, rather than going with the currently hot [Tailwind CSS](https://tailwindcss.com). Besides, Tailwind's fixed units aren't quite precise enough for some of what I'm trying to do.[^extendTWCSS]
 
-<YellowBox>
-<strong>Note</strong>: Out of curiosity, I <em>did</em> try Tailwind with Next.js 10.0.7, and soon ran into a <a href="https://github.com/vercel/next.js/discussions/21319" target="_blank" rel="nofollow">memory glitch</a> that tends to crash the Next dev server. Anyway, I went back to SCSS in a hurry, and am perfectly happy with that choice.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: Out of curiosity, I *did* try Tailwind with Next.js 10.0.7, and soon ran into a [memory glitch](https://github.com/vercel/next.js/discussions/21319) that tends to crash the Next dev server. Anyway, I went back to SCSS in a hurry, and am perfectly happy with that choice.
+</Box>
 
 [^extendTWCSS]: Yes, I know you can extend Tailwind's built-in styles, use `@apply`, mix it in with some custom styles of your own, and so on. I've done all of those in the past. I still decided otherwise.
 

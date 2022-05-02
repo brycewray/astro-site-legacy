@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Beginner’s luck #3: adding a Zola starter"
 description: "For those interested in a (somewhat) easy take on Hugo, here’s a starter set for you."
 author: Bryce Wray
@@ -17,9 +17,9 @@ featured_image_caption: |
 
 ---
 
-<YellowBox>
-<strong>Update, 2021-07-20</strong>: Due to breaking changes introduced in Zola version 0.14.0 (released 2021-07-19), <strong>DO&nbsp;NOT</strong> use either starter set mentioned herein with that version or higher.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-07-20**: Due to breaking changes introduced in Zola version 0.14.0 (released 2021-07-19), **DO&nbsp;NOT** use either starter set mentioned herein with that version or higher.
+</Box>
 
 This will be an unusually short entry. I just wanted to advise that I've built my seventh [static site generator (SSG)](https://jamstack.org/generators) [starter set](/posts/2021/03/beginners-luck-update/). It uses [Zola](https://getzola.org), and you can find its GitHub repository at [https://github.com/brycewray/zola_solo](https://github.com/brycewray/zola_solo). There's also a [live demo](https://zola-solo.vercel.app).
 
@@ -29,6 +29,6 @@ If you want to use this starter set, be sure to check the repo README for some i
 
 All that aside, I had some nerdy fun building this starter, debugging it, and generally learning more about how Zola works. Perhaps it will similarly appeal to your own geekiness.
 
-<YellowBox>
-<strong>Update, 2021-06-26</strong>: I’ve now added an <strong>eighth</strong> starter repo. It’s <a href="https://github.com/brycewray/zola_twcss" target="_blank" rel="nofollow">another Zola starter</a> (with a <a href="https://zola-twcss.vercel.app" target="_blank" rel="nofollow">demo version</a> also live), but uses <a href="https://tailwindcss.com" target="_blank" rel="nofollow">Tailwind CSS</a>—<strong>including</strong> the <a href="https://tailwindcss.com/docs/just-in-time-mode" target="_blank" rel="nofollow">JIT mode</a>, which Hugo <strong>still</strong> doesn’t support—rather than Sass. Unlike the other repo that I added yesterday, this one likely will stay in active development at least for a while because of Zola’s ability to work with Tailwind and JIT, although I still am perturbed by Zola’s own shortcomings (notably about footnote-handling).
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-06-26**: I've now added an **eighth** starter repo. It's [another Zola starter](https://github.com/brycewray/zola_twcss) (with a [demo version](https://zola-twcss.vercel.app) also live), but uses [Tailwind CSS](https://tailwindcss.com)---**including** the [JIT mode](https://tailwindcss.com/docs/just-in-time-mode), which Hugo **still** doesn't support---rather than Sass. Unlike the other repo that I added yesterday, this one likely will stay in active development at least for a while because of Zola's ability to work with Tailwind and JIT, although I still am perturbed by Zola's own shortcomings (notably about footnote-handling).
+</Box>

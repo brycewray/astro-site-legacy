@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
 title: "Chasing 100: tips for optimizing your website"
@@ -64,9 +64,9 @@ But I don't argue with the data, and one test after another has shown me web fon
 
 That's also turned out to be the case when I provide them "locally," as opposed to pulling them directly off (*e.g.*) [Google Fonts](https://fonts.google.com), even after trying a [variety](https://csswizardry.com/2020/05/the-fastest-google-fonts/) of [excellent](https://www.reich-consulting.net/web-development/loading-web-fonts-without-performance-penalty-from-lighthouse/) [advice](https://www.filamentgroup.com/lab/load-css-simpler/) from very smart folks. Consequently, I go with system fonts, however much I'd like to use [certain](https://fonts.google.com/specimen/Public+Sans?vfonly) [typefaces](https://fonts.google.com/specimen/Vollkorn?vfonly) I admire.
 
-<YellowBox>
-<strong>Update, 2020-08-08</strong>: I’ve stricken through the remainder of this section, below, for reasons I explain in <a href="/posts/2020/08/google-fonts-privacy/">another post</a> about the privacy violations involved with using Google Fonts typefaces if they’re served *from* Google.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2020-08-08**: I've stricken through the remainder of this section, below, for reasons I explain in [another post](/posts/2020/08/google-fonts-privacy/) about the privacy violations involved with using Google Fonts typefaces if they're served *from* Google.
+</Box>
 
 ~~If your response is "Damn the performance hit, full speed ahead with Google Fonts":~~
 

@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
+  import Box from '@components/Box.astro'
   import LiteYT from '@components/Lite-YouTube.astro'
 title: "Mixed nuts #10"
 description: "A few things currently on my so-called mind."
@@ -17,9 +17,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://pixabay.com/users/ka_re-14461006/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5503118">Kai Reschke</a>; <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5503118">Pixabay</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Mixed nuts” series is a collection of random and, occasionally, relevant observations. The series originally was inspired, as noted in the <a href="/posts/2019/11/mixed-nuts-2019-11/">first “Mixed nuts” post</a>, by the famed “Scattershooting” newspaper columns penned by the late Blackie Sherrod.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the "Mixed nuts" series is a collection of random and, occasionally, relevant observations. The series originally was inspired, as noted in the [first "Mixed nuts" post](/posts/2019/11/mixed-nuts-2019-11/), by the famed "Scattershooting" newspaper columns penned by the late Blackie Sherrod.
+</Box>
 
 ---
 

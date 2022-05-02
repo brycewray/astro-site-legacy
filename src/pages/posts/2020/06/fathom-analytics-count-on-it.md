@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Imgc from '@components/Imgc.astro'
 title: "Fathom Analytics: count on it"
 description: "How to count visitors while protecting them—and yourself."
@@ -17,9 +17,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@swimstaralex?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Alexander Sinn</a>; <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<YellowBox>
-<strong>Affiliation disclaimer</strong>: What follows is my <em>honest opinion</em> of something I'm now using on this site and paying for with my own money. But I want to advise you up-front that, if you <a href="https://usefathom.com/ref/ZKHYWX" target="_blank" rel="nofollow">use this affiliate link (or others like it herein) to <strong>sign up with Fathom Analytics</strong></a>, I’ll get a commission—<strong><em>and</em></strong>&#32;<strong>you</strong> will get a <strong>$10 credit</strong> on your first invoice. So, if you like what I’m telling you here and want to <a href="https://usefathom.com/ref/ZKHYWX" target="_blank" rel="nofollow">give this product a try</a>, help out an old nerd <strong>and</strong> yourself and your visitors, okay? Thanks!
-</YellowBox>
+<Box cssClass="yellowBox">
+**Affiliation disclaimer**: What follows is my *honest opinion* of something I'm now using on this site and paying for with my own money. But I want to advise you up-front that, if you [use this affiliate link (or others like it herein) to **sign up with Fathom Analytics**](https://usefathom.com/ref/ZKHYWX), I'll get a commission---***and*** **you** will get a **$10 credit** on your first invoice. So, if you like what I'm telling you here and want to [give this product a try](https://usefathom.com/ref/ZKHYWX), help out an old nerd **and** yourself and your visitors, okay? Thanks!
+</Box>
 
 Got your own website? Wonder how it's doing out there?
 

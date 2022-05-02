@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "JIT is a game-changer for Tailwind CSS"
 description: "Why Tailwind’s new capabilities will give it even more  momentum among web developers."
 author: Bryce Wray
@@ -16,9 +16,9 @@ featured_image_alt: "Screen capture of HTML with Tailwind CSS styles"
 #featured_image_caption:
 ---
 
-<YellowBox>
-<strong>Update, 2021-04-05</strong>: As of the <a href="https://blog.tailwindcss.com/tailwindcss-2-1" target="_blank" rel="nofollow">release of Tailwind 2.1.0</a>, the feature described within is part of Tailwind core, although it’s still described as being “in preview.”
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-04-05**: As of the [release of Tailwind 2.1.0](https://blog.tailwindcss.com/tailwindcss-2-1), the feature described within is part of Tailwind core, although it's still described as being "in preview."
+</Box>
 
 Where the category of Major Events That I Did Not Expect to Occur This Week is concerned, you definitely can assign to it the [announcement](https://blog.tailwindcss.com/just-in-time-the-next-generation-of-tailwind-css) of a **just-in-time (JIT) compiler** for [Tailwind CSS](https://tailwindcss.com).
 

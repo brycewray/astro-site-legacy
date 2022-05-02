@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Tailwind-to-head with Hugo Pipes"
 description: "If your website draws that “render-blocking resource” gripe during tests, here’s one method for fighting it."
 author: Bryce Wray
@@ -17,9 +17,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://pixabay.com/users/stradus-833024/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5421210">Sárfi Benjámin</a>; <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5421210">Pixabay</a></span>
 ---
 
-<YellowBox>
-<strong>Note</strong>: For an <a href="https://11ty.dev" target="_blank" rel="nofollow">Eleventy</a>-based solution, see “<a href="/posts/2021/03/tailwind-head-eleventy/">Tailwind-to-head with Eleventy</a>” from a few weeks later.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: For a [Eleventy](https://11ty.dev)-based solution, see "[Tailwind-to-head with Eleventy](/posts/2021/03/tailwind-head-eleventy/)" from a few weeks later.
+</Box>
 
 External *vs.* internal---that is the question. At least, it is when you're considering how and where to provide CSS in your website.
 
@@ -33,9 +33,9 @@ This post isn't here to tell you whether one's firmly better than the other, sin
 
 This example assumes you already have both Tailwind CSS and [PostCSS](https://postcss.org) working successfully, with the `postcss.config.js` file and your main CSS file---called `index.css` in the example---in the proper places in your Hugo project. (I also suggest, although some will disagree, that you set the project's `package.json` so that, even during development, the [Node.js](https://nodejs.org) required by Tailwind and PostCSS is in **production** mode. Otherwise, the [PurgeCSS](https://purgecss.com) functionality built into Tailwind since v.2.0 won't be running and, thus, the CSS that ends up in your HTML's `<head>` will be massive.)
 
-<YellowBox>
-<strong>Note</strong>: I purposely am <strong>not</strong> straying into the whole realm of <a href="https://web.dev/extract-critical-css/" target="_blank" rel="nofollow">separating your CSS into critical and non-critical segments</a>, which is well beyond the purposely limited scope of this post—<strong>except</strong> to say that, if you’re properly using PurgeCSS with Tailwind, your resulting CSS probably is small enough that it essentially makes the whole question moot. At least, that’s been my experience when using Tailwind and PurgeCSS on both the Hugo and <a href="https://11ty.dev" target="_blank" rel="nofollow">Eleventy</a> SSGs.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: I purposely am **not** straying into the whole realm of [separating your CSS into critical and non-critical segments](https://web.dev/extract-critical-css/), which is well beyond the purposely limited scope of this post---**except** to say that, if you're properly using PurgeCSS with Tailwind, your resulting CSS probably is small enough that it essentially makes the whole question moot. At least, that's been my experience when using Tailwind and PurgeCSS on both the Hugo and [Eleventy](https://11ty.dev) SSGs.
+</Box>
 
 To let you see clearly the differences between doing this as external CSS and doing it as internal CSS, here is a sample of each. First, **external**:
 

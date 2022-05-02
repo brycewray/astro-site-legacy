@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Reply-to links in site feeds"
 description: "Thanks to a reader’s helpful advice, here’s how to enhance the code for your site’s RSS and JSON feeds."
 author: Bryce Wray
@@ -230,6 +230,6 @@ Now, on to the code.
 }
 ```
 
-<YellowBox>
-<strong>Note</strong>: Of course, if you’re already a subscriber to either of my feeds (and, if so, thank you!), you won't see the resulting “Reply via email” link in content that had been pulled into your chosen newsreader app before I implemented these code changes. The only way to see it in older content would be to flush the old posts and then reload them.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: Of course, if you're already a subscriber to either of my feeds (and, if so, thank you!), you won't see the resulting "Reply via email" link in content that had been pulled into your chosen newsreader app before I implemented these code changes. The only way to see it in older content would be to flush the old posts and then reload them.
+</Box>

@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Let all your devices see your site"
 description: "How to make “localhost” slightly less local."
 author: Bryce Wray
@@ -20,9 +20,9 @@ featured_image_caption: |
   </span>
 ---
 
-<YellowBox>
-<strong>Note</strong>: This post also appears on <a href="https://dev.to/brycewray/let-all-your-devices-see-your-site-27fd" target="_blank" rel="nofollow">dev.to</a> and was the subject of a <a href="https://news.ycombinator.com/item?id=30889663" target="_blank" rel="nofollow">Hacker News thread</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: This post also appears on [dev.to](https://dev.to/brycewray/let-all-your-devices-see-your-site-27fd) and was the subject of a [Hacker News thread](https://news.ycombinator.com/item?id=30889663).
+</Box>
 
 Today's subject may seem a niche-ish use case, but I have reason to believe otherwise.
 

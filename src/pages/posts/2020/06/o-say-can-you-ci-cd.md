@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "O say can you CI/CD?"
 description: "A way around the Netlify free-tier build limit."
@@ -182,9 +182,9 @@ jobs:
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID", "WEBMENTION_IO_TOKEN"]'
 ```
 
-<YellowBox>
-<strong>Note</strong>: If you use this approach, you need to make sure you <strong>don’t</strong> have your repo linked in Netlify for continuous deployment (in your site settings, that’s <strong>Build &amp; deploy</strong> &gt; <strong>Continuous deployment</strong>). Otherwise, the auto-builds will continue and, thus, keep adding to your used minutes.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: If you use this approach, you need to make sure you **don't** have your repo linked in Netlify for continuous deployment (in your site settings, that's **Build &amp; deploy** &gt; **Continuous deployment**). Otherwise, the auto-builds will continue and, thus, keep adding to your used minutes.
+</Box>
 
 Here's how it works.
 

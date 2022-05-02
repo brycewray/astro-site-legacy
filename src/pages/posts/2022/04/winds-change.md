@@ -1,7 +1,6 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
   import Disclaimer from '@components/Disclaimer.astro'
   import STweet from '@components/STweet.astro'
 title: "The winds of change"

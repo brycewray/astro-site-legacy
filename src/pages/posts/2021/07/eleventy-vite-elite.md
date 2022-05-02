@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
   import Imgc from '@components/Imgc.astro'
 title: "Eleventy plus Vite = elite"
@@ -30,9 +30,9 @@ Indeed, I am so sold on it that the site now runs off my [`eleventy_vite`](https
 
 How all this came about is our tale for today, friends and neighbors.
 
-<YellowBox>
-<strong>Update, 2021-08-22</strong>: Since the repo change had the unwanted but unavoidable effect of losing the Git history in <code>eleventy_solo</code>, I have since cloned <code>eleventy_solo</code> and added Vite to the resulting <code>eleventy_site</code> repo; I now run the site off that repo, instead. Then, today, I switched <strong>back</strong> to my own bespoke setup, away from the Eleventy/Vite configuration described herein. The latter proved to be problematic during local development, particularly when I needed to test changes on devices on my local network. The mixing of the Eleventy and Vite processes just didn’t go well with that. However, I retain my great admiration for Vite, and will hope for a better Eleventy/Vite solution down the line. Perhaps it’ll come from <a href="https://snugug.com/musings/eleventy-plus-vite/" target="_blank" rel="nofollow">one particular plugin that requires the yet-to-come Eleventy 1.x</a>. As always, I’ll retain this post and <a href="/posts/2021/07/beginners-luck-4-vite-edition/">the similarly-themed one which follows</a> for <a href="/posts/2019/10/otoh/">archival purposes</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-08-22**: Since the repo change had the unwanted but unavoidable effect of losing the Git history in `eleventy_solo`, I have since cloned `eleventy_solo` and added Vite to the resulting `eleventy_site` repo; I now run the site off that repo, instead. Then, today, I switched **back** to my own bespoke setup, away from the Eleventy/Vite configuration described herein. The latter proved to be problematic during local development, particularly when I needed to test changes on devices on my local network. The mixing of the Eleventy and Vite processes just didn't go well with that. However, I retain my great admiration for Vite, and will hope for a better Eleventy/Vite solution down the line. Perhaps it'll come from [one particular plugin that requires the yet-to-come Eleventy 1.x](https://snugug.com/musings/eleventy-plus-vite/). As always, I'll retain this post and [the similarly-themed one which follows](/posts/2021/07/beginners-luck-4-vite-edition/) for [archival purposes](/posts/2019/10/otoh/).
+</Box>
 
 ## Curiosity killed the cache
 
@@ -165,9 +165,9 @@ I mulled it over for a couple of hours; then I went back into my Vercel setup an
 
 Incidentally: although I urge you to read [Mr. East's article](https://medium.com/@SimonEast/clean-sass-and-js-with-eleventy-in-2021-using-vite-98747500d8f8) and look at [Mr. Papado&shy;georgo&shy;poulos's repo](https://github.com/fpapado/eleventy-with-vite) for yourself, I suggest you also spend a little time with [`eleventy-vite`](https://github.com/brycewray/eleventy_vite) to see how the code---some of which still has a lot of the original commenting from `eleventy-with-vite`---makes it all work with my code and content.
 
-<YellowBox>
-<strong>Note</strong>: I may have a follow-up post that delves into this more fully with actual code samples, much as I ended my CSS cache-busting posts troika with <a href="/posts/2020/12/hashing-out-cache-busting-fix-eleventy/">such a piece</a>; but this one surely is already long enough as it is, and there’s a <strong>lot</strong> of code to cover in such a post.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: I may have a follow-up post that delves into this more fully with actual code samples, much as I ended my CSS cache-busting posts troika with [such a piece](/posts/2020/12/hashing-out-cache-busting-fix-eleventy/); but this one surely is already long enough as it is, and there's a **lot** of code to cover in such a post.
+</Box>
 
 ## Good, but not perfect
 
@@ -185,9 +185,9 @@ Such was the case with the process I described herein. It started with a reader'
 
 Sometimes, lucky rabbits find carrots. So far, the Eleventy/Vite combo is proving to be a tasty morsel. I'll keep you advised as to my progress, including most definitely if this new way of handling the site should turn out unexpectedly to be more stick than carrot.
 
-<YellowBox>
-<strong>Update, 2021-07-25</strong>: I now have an Eleventy/Vite starter set online; see “<a href="/posts/2021/07/beginners-luck-4-vite-edition/">Beginner’s luck #4: the Vite edition</a>.”
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-07-25**: I now have an Eleventy/Vite starter set online; see "[Beginner's luck #4: the Vite edition](/posts/2021/07/beginners-luck-4-vite-edition/)."
+</Box>
 
 [^1]:	Of the hashed files, two are JS "helper" files which keep both the image "lazy-loading" functionality and the recently added all-Tailwind nav menu from violating the site's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)---specifically, its [`script-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) part.
 

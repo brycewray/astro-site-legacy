@@ -55,15 +55,15 @@ First, the CSS:
 
 ```css
 .ctr {
-	text-align: center;
+  text-align: center;
 }
 
 h2.h2big {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 .darkBlue {
-	color: #00000a1;
+  color: #00000a1;
 }
 ```
 
@@ -71,9 +71,8 @@ h2.h2big {
 And then the HTML:
 
 ```html
-
 <h2 class="ctr h2big darkBlue">
-	My big not-H1 headline that I want to be dark blue
+  My big not-H1 headline that I want to be dark blue
 </h2>
 
 ```

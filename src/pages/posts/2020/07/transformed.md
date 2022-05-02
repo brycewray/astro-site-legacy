@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Transformed"
 description: "The move to Cloudinary."
@@ -19,9 +19,9 @@ featured_image_caption: |
 
 <Disclaimer />
 
-<YellowBox>
-<strong>Update, 2020-08-05</strong>: If what you see herein makes you want to try Cloudinary, I request that you use <a href="https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/dqunpyaeqiizezj6lbdu" target="_blank" rel="nofollow">this invitation link</a>. <strong>Full disclosure</strong>: I will receive additional Cloudinary credits for each person who uses that link and subsequently enrolls with Cloudinary, even if only for the same ultra-generous free tier I describe in this post. Thanks in advance! <em>(The opinions herein are strictly my own and I was not compensated for them; the Cloudinary team provided this link to me <strong>after</strong> seeing what I’d already written.)</em>
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2020-08-05**: If what you see herein makes you want to try Cloudinary, I request that you use [this invitation link](https://cloudinary.com/invites/lpov9zyyucivvxsnalc5/dqunpyaeqiizezj6lbdu). **Full disclosure**: I will receive additional Cloudinary credits for each person who uses that link and subsequently enrolls with Cloudinary, even if only for the same ultra-generous free tier I describe in this post. Thanks in advance! *(The opinions herein are strictly my own and I was not compensated for them; the Cloudinary team provided this link to me **after** seeing what I'd already written.)*
+</Box>
 
 This is about what one might call a transformative process.
 

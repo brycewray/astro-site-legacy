@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Code comfort: Eleventy and webpack"
 description: "Some words about my Eleventy/webpack configuration."
 author: Bryce Wray
@@ -16,9 +16,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://pixabay.com/users/markusspiske-670330/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1486361">Markus Spiske</a>; <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1486361">Pixabay</a></span>
 ---
 
-<YellowBox>
-<strong>Note, 2020-09-09</strong>: Although the site long since is no longer using the stack mentioned here, at least some parts of the repo <a href="https://github.com/brycewray/eleventy_bundler" target="_blank" rel="noopener">remain online for viewing by the curious</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note, 2020-09-09**: Although the site long since is no longer using the stack mentioned here, at least some parts of the repo [remain online for viewing by the curious](https://github.com/brycewray/eleventy_bundler).
+</Box>
 
 *Following up on my [recent post](/posts/2019/12/packing-up/) about how I got this site back to my favorite [static site generator](https://staticgen.com) (SSG), [Eleventy](https://11ty.dev), and also provided some enhancements with the [webpack](https://webpack.js.org) bundler&nbsp;app&nbsp;.&nbsp;.&nbsp;.*
 

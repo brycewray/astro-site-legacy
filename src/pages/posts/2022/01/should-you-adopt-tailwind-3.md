@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
+  import Box from '@components/Box.astro'
 title: "Should you adopt Tailwind 3?"
 description: "Tailwind is making too much progress to ignore. Is it time to check out the latest version?"
 author: Bryce Wray
@@ -20,9 +20,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@youngprodigy3?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mike Szczepanski</a>; <a href="https://unsplash.com/s/photos/three?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 ---
 
-<BlueBox>
-<strong>Note</strong>: This article originally appeared on <a href="https://www.stackbit.com/blog/should-you-adopt-tailwind-3/" target="_blank" rel="nofollow">the Stackbit blog</a> and is &copy; 2022 <a href="https://www.stackbit.com/" target="_blank" rel="nofollow">Stackbit</a>. The article includes external edits (content-related and stylistic) for that site.
-</BlueBox>
+<Box cssClass="blueBox">
+**Note**: This article originally appeared on [the Stackbit blog](https://www.stackbit.com/blog/should-you-adopt-tailwind-3/) and is &copy; 2022 [Stackbit](https://www.stackbit.com/). The article includes external edits (content-related and stylistic) for that site.
+</Box>
 
 Whether you adore or abhor **utility-first** CSS — or fall somewhere in between those two extreme opinions — it’s not something a web developer can ignore these days. The most prominent example of this potentially polarizing styling approach is the seemingly ubiquitous **Tailwind CSS** framework.
 

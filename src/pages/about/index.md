@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/About.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Imgc from '@components/Imgc.astro'
 title: About me
 description: Not a bio (you’d fall asleep), but just some explanatory observations.
@@ -55,6 +55,6 @@ Thank you for stopping by. I hope you find this site a source of various little 
 
 Again, welcome.
 
-<YellowBox>
-<strong>Note</strong>: For those familiar with the site, you’ll see that this text now encompasses both the long-time “About me” text and the site’s original home page “welcome” text.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: For those familiar with the site, you'll see that this text now encompasses both the long-time "About me" text and the site's original home page "welcome" text.
+</Box>

@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Why I kept Ulysses"
 description: "Renewing the subscription for another year."
 author: Bryce Wray
@@ -94,6 +94,6 @@ You see, Ulysses 20 is coming soon, and hints from the Ulysses team in Leipzig i
 
 With any luck at all, I---and a very-much-still-alive WIP---will be waiting eagerly for it when it arrives.
 
-<YellowBox>
-<strong>Update, 2020-06-20</strong>: I decided to stay with the annual renewal past that additional two weeks, having made enough renewed progress on the WIP that I considered another year’s worth of Ulysses a worthy investment.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2020-06-20**: I decided to stay with the annual renewal past that additional two weeks, having made enough renewed progress on the WIP that I considered another year's worth of Ulysses a worthy investment.
+</Box>

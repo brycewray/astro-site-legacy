@@ -1,9 +1,8 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
   import Imgc from '@components/Imgc.astro'
+  import Box from '@components/Box.astro'
 title: "Gems in the rough #8"
 description: "Checking out Astro; comparing vendors."
 author: Bryce Wray
@@ -18,9 +17,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@mbuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sung Jin Cho</a>; <a href="https://unsplash.com/s/photos/gemstones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the "Gems in the rough" series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators (SSGs)](https://jamstack.org/generators).
+</Box>
 
 ## Astro: still rough, but promising
 
@@ -58,14 +57,14 @@ As for the actual performance numbers I see in Speedlify, you can check my [test
 - Cloudflare Pages and DOAP tend to be in the top two or three pretty consistently, while the Cloudflare Workers site and ASWA tend to be in the **bottom** two or three almost as consistently.
 - Render and Vercel are somewhat erratic, varying wildly from top three to bottom three. I'm at a loss to know why.
 
-<YellowBox>
-<strong>Update, 2021-08-14</strong>: Digital Ocean has cut the monthly build limit for App Platform static websites from the original 400 minutes to <strong>only 100</strong> minutes. (Of course, I could use GitHub Actions to get around this, as I explained in last year’s “<a href="/posts/2020/06/o-say-can-you-ci-cd/">O say can you CI/CD?</a>”—but, as a friend overseas would say, “I can't be arsed.”) Accordingly, I have taken the test repo off Digital Ocean, so the Speedlify test results mentioned above consist of only five sites as of now.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-08-14**: Digital Ocean has cut the monthly build limit for App Platform static websites from the original 400 minutes to **only 100** minutes. (Of course, I could use GitHub Actions to get around this, as I explained in last year's "[O say can you CI/CD?](/posts/2020/06/o-say-can-you-ci-cd/)"---but, as a friend overseas would say, "I can't be arsed.") Accordingly, I have taken the test repo off Digital Ocean, so the Speedlify test results mentioned above consist of only five sites as of now.
+</Box>
 
-<YellowBox>
-<strong>Update, 2021-09-18</strong>: Azure deleted my test ASWA site tonight (early on 2021-09-19 according to UTC) because, apparently, it doesn’t allow free static sites, after all, unlike the other vendors mentioned here. Consequently, the Speedlify test results now have four sites.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-09-18**: Azure deleted my test ASWA site tonight (early on 2021-09-19 according to UTC) because, apparently, it doesn't allow free static sites, after all, unlike the other vendors mentioned here. Consequently, the Speedlify test results now have four sites.
+</Box>
 
-<YellowBox>
-<strong>Update, 2021-09-25</strong>: I’ve turned off the cron jobs that run the test each day, so the results will be frozen going forward. It seemed nonsensical to keep running the tests since the list of sites was down to just four—two of them Cloudflare-based.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-09-25**: I've turned off the cron jobs that run the test each day, so the results will be frozen going forward. It seemed nonsensical to keep running the tests since the list of sites was down to just four---two of them Cloudflare-based.
+</Box>

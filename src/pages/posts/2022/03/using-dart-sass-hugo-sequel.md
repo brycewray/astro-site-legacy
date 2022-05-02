@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Using Dart Sass with Hugo—the sequel"
 subtitle: "A solution for even Node-haters"
 description: "Hugo’s chief developer comes up with a way to get Embedded Dart Sass on the host, after all."
@@ -18,9 +18,9 @@ featured_image_caption: |
   <span class="caption">Image: Sass logo and Sass glasses icon, sourced from <a href="https://sass-lang.com" target="_blank" rel="noopener">Sass website</a>; adapted in <a href="https://affinity.serif.com/en-us/designer/" target="_blank" rel="noopener">Affinity&nbsp;Designer</a></span>
 ---
 
-<YellowBox>
-<strong>Note</strong>: For a much more thorough discussion of recent <a href="https://sass-lang.com" target="_blank" rel="nofollow">Sass</a>-on-<a href="https://gohugo.io" target="_blank" rel="nofollow">Hugo</a> issues, please see my <a href="/posts/2022/03/using-dart-sass-hugo/">previous post</a>. This is a brief follow-up which will assume you’ve already read that one.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: For a much more thorough discussion of recent [Sass](https://sass-lang.com)-on-[Hugo](https://gohugo.io) issues, please see my [previous post](/posts/2022/03/using-dart-sass-hugo/). This is a brief follow-up which will assume you've already read that one.
+</Box>
 
 Just when I thought the method about which I wrote yesterday would be the only way Hugo users would get to use [Dart Sass](https://sass-lang.com/dart-sass) any time soon---well, as I said therein, albeit in a totally different context, "Ya Nevah Know."
 

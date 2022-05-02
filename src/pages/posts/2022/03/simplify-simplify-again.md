@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Simplify, simplify (again)"
 subtitle: "Back to basics, to coin a phrase"
@@ -91,13 +91,13 @@ All of this has led me to some key decisions:
 
 With any luck at all, this approach will enable me to maintain this site more efficiently, yet still keep my eyes on what else is happening in WebDevLand. I’m crossing my fingers.
 
-<YellowBox>
-<strong>Update, 2022-03-23</strong>: Slinkity creator/maintainer <a href="https://twitter.com/BHolmesDev" target="_blank" rel="nofollow">Ben Holmes</a> <a href="https://twitter.com/BHolmesDev/status/1506616758806802435" target="_blank" rel="nofollow">announced today</a> that he’s joining the Astro team, and <a href="https://twitter.com/BHolmesDev/status/1506621649944260610" target="_blank" rel="nofollow">indicated</a> that he may hand off Slinkity to someone else after getting Slinkity to v.1.x. How these developments will affect my aforementioned “stay current” plan remains to be seen.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2022-03-23**: Slinkity creator/maintainer [Ben Holmes](https://twitter.com/BHolmesDev) [announced today](https://twitter.com/BHolmesDev/status/1506616758806802435) that he’s joining the Astro team, and [indicated](https://twitter.com/BHolmesDev/status/1506621649944260610) that he may hand off Slinkity to someone else after getting Slinkity to v.1.x. How these developments will affect my aforementioned “stay current” plan remains to be seen.
+</Box>
 
-<YellowBox>
-<strong>Update, 2022-04-23</strong>: Well . . . “the foreseeable future” lasted only a month. After several days of serious experimentation with Astro, I moved the site there today. Will elaborate on all of this in a future post.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2022-04-23**: Well . . . "the foreseeable future" lasted only a month. After several days of serious experimentation with Astro, I moved the site there today. Will elaborate on all of this in a future post.
+</Box>
 
 [^1]:	Otherwise, some of the code would fail to appear in the code block because the SSG would treat it as *real* code rather than just text in a code block. Indeed, under certain circumstances, this “code” even could cause build errors.
 

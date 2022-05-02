@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Webmentions in three SSGs: Part 3"
 description: "Part 3 of a five-part series about incorporating the IndieWeb into three different static site generators (SSGs)—in this case, Hugo."
@@ -19,13 +19,13 @@ featured_image_caption: |
 
 <Disclaimer />
 
-<YellowBox>
-<strong>Note</strong>: This is Part 3 of a five-part series about how you can set up <a href="https://indieweb.org/Webmention" target="_blank" rel="nofollow">webmentions</a> in websites built by three different <a href="https://staticgen.com" target="_blank" rel="nofollow">static site generators</a>: <a href="https://11ty.dev" target="_blank" rel="nofollow">Eleventy</a> (the subject of <a href="/posts/2020/04/webmentions-three-ssgs-2/">Part 2</a>), <a href="https://gohugo.io" target="_blank" rel="nofollow">Hugo</a> (the subject of this part), and <a href="https://gatsbyjs.org" target="_blank" rel="nofollow">Gatsby</a> (covered in detail in <a href="/posts/2020/04/webmentions-three-ssgs-4/">Part 4</a>). In the <a href="/posts/2020/04/webmentions-three-ssgs-5/">conclusion</a>, you’ll find a bibliography of the best articles I found on the subject of this series. All of the articles link (even if only through tiny <a href="https://github.com" target="_blank" rel="nofollow">GitHub</a> logos) to their authors’ code. They were invaluable to this effort, and I encourage you to take particular notice of them and their authors.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: This is Part 3 of a five-part series about how you can set up [webmentions](https://indieweb.org/Webmention) in websites built by three different [static site generators](https://staticgen.com): [Eleventy](https://11ty.dev) (the subject of [Part 2](/posts/2020/04/webmentions-three-ssgs-2/)), [Hugo](https://gohugo.io) (the subject of this part), and [Gatsby](https://gatsbyjs.org) (covered in detail in [Part 4](/posts/2020/04/webmentions-three-ssgs-4/)). In the [conclusion](/posts/2020/04/webmentions-three-ssgs-5/), you'll find a bibliography of the best articles I found on the subject of this series. All of the articles link (even if only through tiny [GitHub](https://github.com) logos) to their authors’ code. They were invaluable to this effort, and I encourage you to take particular notice of them and their authors.
+</Box>
 
-<YellowBox>
-<strong>Added note, 2020-07-26</strong>: I have now archived the various configuration files linked within this series within a <a href="https://github.com/brycewray/files-webmentions" target="_blank" rel="nofollow">GitHub repo</a> of their own and changed the links accordingly, so as to make them immune to ongoing changes in the repos originally linked from this series.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Added note, 2020-07-26**: I have now archived the various configuration files linked within this series within a [GitHub repo](https://github.com/brycewray/files-webmentions) of their own and changed the links accordingly, so as to make them immune to ongoing changes in the repos originally linked from this series.
+</Box>
 
 In the [introduction](/posts/2020/04/webmentions-three-ssgs-1/) to this five-part series, I gave you a quick run-through about the [IndieWeb](https://indieweb.org) and the general setup of webmentions. In [Part 2](/posts/2020/04/webmentions-three-ssgs-2/), the subject was how you implement webmentions specifically in the [Eleventy](https://11ty.dev) SSG. Now, here in Part 3, we'll talk about implementing them in the [Hugo](https://gohugo.io) SSG.
 
@@ -63,9 +63,9 @@ Finally, after hours of sifting through similar issues reports from Hugo users, 
 "dev:wmFetch": "node -r dotenv/config assets/js/webmentions.js"
 ```
 
-<YellowBox>
-<strong>Note</strong>: If you deploy a repo like this through <a href="https://netlify.com" target="_blank" rel="nofollow">Netlify</a>, that <code>/.env</code> file is irrelevant in production, since the proper procedure is to <a href="https://docs.netlify.com/configure-builds/environment-variables/#declare-variables" target="_blank" rel="nofollow">let Netlify handle sending an environment variable</a> at the appropriate time. Other than during development, I use that file only for executing “production” builds on my local setup in the testing process through the <code>testbuild</code> script in <code>/package.json</code>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: If you deploy a repo like this through [Netlify](https://netlify.com), that `/.env` file is irrelevant in production, since the proper procedure is to [let Netlify handle sending an environment variable](https://docs.netlify.com/configure-builds/environment-variables/#declare-variables) at the appropriate time. Other than during development, I use that file only for executing "production" builds on my local setup in the testing process through the `testbuild` script in `/package.json`.
+</Box>
 
 
 ## Hugo: Displaying webmentions

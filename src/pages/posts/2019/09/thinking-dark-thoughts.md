@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Thinking dark thoughts"
 description: "As Dark Mode grows in use, it’s easy to make your site dark-friendly."
@@ -89,9 +89,9 @@ Yes, that can be tedious, particularly if you haven't yet done code blocks with 
 
 And then there are those third-party [iframes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) you can't control, at least not all that well.
 
-<YellowBox>
-<strong>Note, 2020-08-08</strong>: The following explanation was from before I stopped embedding third-party content, such as from Twitter, as a result of this site’s belatedly adopted <a href="/privacy/">privacy policy</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note, 2020-08-08**: The following explanation was from before I stopped embedding third-party content, such as from Twitter, as a result of this site's belatedly adopted [privacy policy](/privacy/).
+</Box>
 
 In my site's case, [Twitter](https://twitter.com) is the chief offender. Dark Mode and the default white Twitter background do not play nicely together. So I followed [Twitter's dev docs](https://developer.twitter.com/en/docs) and, through JavaScript-adjusted `<meta>` tags, told my site's embedded Twitter content to "listen" to the user's Dark Mode/Light Mode setting and change accordingly.[^noscript]
 

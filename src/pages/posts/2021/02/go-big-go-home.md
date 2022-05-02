@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Imgc from '@components/Imgc.astro'
   import ImgcCaption from '@components/ImgcCaption.astro'
 title: "Go big or Go home?"
@@ -19,9 +19,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a>; <a href="/s/photos/computer-code?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<YellowBox>
-<strong>Note</strong>: After you read this post, please see also <a href="/posts/2021/11/go-big-go-home-sequel/">its sequel</a> for what I believe is a much more usable result.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: After you read this post, please see also [its sequel](/posts/2021/11/go-big-go-home-sequel/) for what I believe is a much more usable result.
+</Box>
 
 Imagine that you're about to take your first drive as owner of a shiny new vehicle which you chose after weeks of research and comparison.
 

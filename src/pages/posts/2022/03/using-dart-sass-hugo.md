@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 # layout: singlepost
 title: "Using Dart Sass with Hugo"
@@ -20,9 +20,9 @@ featured_image_caption: |
   <span class="caption">Image: Sass logo and Sass glasses icon, sourced from <a href="https://sass-lang.com" target="_blank" rel="noopener">Sass website</a>; adapted in <a href="https://affinity.serif.com/en-us/designer/" target="_blank" rel="noopener">Affinity&nbsp;Designer</a></span>
 ---
 
-<YellowBox>
-<strong>Update, 2022-03-09</strong>: Things changed dramatically the day after I originally wrote this, so there’s a <a href="/posts/2022/03/using-dart-sass-hugo-sequel/">sequel</a> you’ll definitely want to read after this one.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2022-03-09**: Things changed dramatically the day after I originally wrote this, so there's a [sequel](/posts/2022/03/using-dart-sass-hugo-sequel/) you'll definitely want to read after this one.
+</Box>
 
 <Disclaimer />
 
@@ -134,9 +134,9 @@ Then, the version for **internal** CSS:
 {{ end }}
 ```
 
-<YellowBox>
-<strong>Note</strong>: In case it would help, I’ve also put up a minimal <a href="https://github.com/brycewray/hugo-npm-sass" target="_blank" rel="nofollow">demo repo</a> and <a href="https://hugo-npm-sass.vercel.app/" target="_blank" rel="nofollow">site</a> based on this code.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: In case it would help, I've also put up a minimal [demo repo](https://github.com/brycewray/hugo-npm-sass) and [site](https://hugo-npm-sass.vercel.app/) based on this code.
+</Box>
 
 ## The fight for mindshare
 

@@ -1,8 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import STweet from '@components/STweet.astro'
 title: "Gems in the rough #14"
 description: "Full-time Eleventy, variables in Hugo, learning from a nice tweet, using web fonts with internal CSS."
@@ -19,9 +18,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@mbuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sung Jin Cho</a>; <a href="https://unsplash.com/s/photos/gemstones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators](https://jamstack.org/generators) (SSGs).
+</Box>
 
 ## Eleventy goes full-time
 
@@ -86,9 +85,9 @@ I am perturbed to have remained ignorant of this up to now, since Hugo 0.48 appe
 
 ## Learning from a friendly hat-tip
 
-<YellowBox>
-<strong>Note</strong>: As will quickly become obvious, the text in this segment dates from before I got the static tweet appearing as it should, as shown below, but I’ve left the original content mostly intact for the sake of <a href="/posts/2019/10/otoh/">transparency</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: As will quickly become obvious, the text in this segment dates from before I got the static tweet appearing as it should, as shown below, but I've left the original content mostly intact for the sake of [transparency](/posts/2019/10/otoh/).
+</Box>
 
 This showed up in my Twitter feed a few days ago, referring to those aforementioned [recent](/posts/2022/02/static-tweets-eleventy-hugo/) [posts](/posts/2022/02/static-tweets-eleventy-hugo-part-2/) about embedding static versions of tweets:
 

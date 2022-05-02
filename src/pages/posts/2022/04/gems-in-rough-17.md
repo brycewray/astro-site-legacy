@@ -1,8 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Gems in the rough #17"
 description: "A GitHub Discussions oddity, Netlify Edge Functions, feed readers with built-in browsers."
 author: Bryce Wray
@@ -18,9 +17,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@mbuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sung Jin Cho</a>; <a href="https://unsplash.com/s/photos/gemstones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators](https://jamstack.org/generators) (SSGs).
+</Box>
 
 ## Getting giscus going again
 
@@ -42,9 +41,9 @@ I then posted word of this to a few Discords where I thought it might be useful;
 
 **However**, I'd missed the most sensible solution of all: give the GitHub Discussions their **own separate repo** and point giscus to it from, well, whichever repo may be hosting this site at whatever time. (Thanks to the Astro team's [Sarah Rainsberger](https://twitter.com/sarah11918) for the idea!) So, now, the comments live in [a `comments` repo](https://github.com/brycewray/comments), where they should be eternally safe from my fickleness.
 
-<YellowBox>
-<strong>Later update</strong>: Turned out that, while the previous comments and reactions were indeed back on the site, it wasn’t possible for anyone to enter <strong>new</strong> ones—<strong>until</strong> (and, again, I have Sarah Rainsberger to thank for giving me the word that things were amiss) I went back into the giscus website and obtained a new set of variables for the <code>comments</code> repo. <strong>Now</strong> it all works again. So that’s one more thing you have to do in such a case.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Later update**: Turned out that, while the previous comments and reactions were indeed back on the site, it wasn't possible for anyone to enter **new** ones---**until** (and, again, I have Sarah Rainsberger to thank for giving me the word that things were amiss) I went back into the giscus website and obtained a new set of variables for the `comments` repo. **Now** it all works again. So that's one more thing you have to do in such a case.
+</Box>
 
 ## Netlify Edge Functions
 

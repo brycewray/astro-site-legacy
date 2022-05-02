@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Goodbye and hello • Part 2"
 description: "Why I decided to come back to Netlify."
@@ -53,6 +53,6 @@ Of course, switching back from Vercel to Netlify involved some fiddling, [DNS](h
 
 As a result, the original post's title---"Goodbye, hello"---turned out to be a little more nuanced than I'd originally intended. However things turned out, I am happy to be back within Netlify's "old" but comfy confines and no longer watching its bustling, friendly community from the outside, remembering all too fondly how nice it felt to be even an insignificant part of it.
 
-<YellowBox>
-<strong>Note</strong>: <a href="/posts/2020/08/goodbye-hello-part-3/">To be continued</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: [To be continued](/posts/2020/08/goodbye-hello-part-3/).
+</Box>

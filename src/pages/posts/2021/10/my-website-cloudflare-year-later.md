@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "My website and Cloudflare, a year later"
 description: "It’s perhaps not so much “love/hate” as it is geeky curiosity combined with an old guy’s impatience."
 author: Bryce Wray
@@ -46,9 +46,9 @@ With Vercel, you can try to do that through a `vercel.json` file, but the proble
 
 While it's (always) a work in progress, you can see my spaghetti-ish implementation of such a Worker at [this GitHub repo](https://github.com/brycewray/cache-nonce-mix). I put up the repo as part of a Cloudflare contest I entered for the LOLs, but I hope you'll find it useful, too. As you'll see within the code, I gained a great deal of inspiration from others’ contributions ("shoulders of giants," again).
 
-<YellowBox>
-<strong>Update, 2021-10-26</strong>: Vercel announced today at the latest <strong><a href="https://nextjs.org" target="_blank" rel="nofollow">Next.js</a> Conf</strong> event that it was introducing <strong><a href="https://vercel.com/features/edge-functions" target="_blank" rel="nofollow">Edge Functions</a></strong>. Although the Edge Functions functionality is in beta for now and its <a href="https://github.com/vercel/examples/tree/main/edge-functions" target="_blank" rel="nofollow">examples</a> so far are entirely Next.js-based—as you’d expect, given that Vercel is Next’s creator—it may well be that, soon, I’ll be able to host the site on Vercel while using an Edge Function to do what I currently do with that CF Worker when the site is on Cloudflare Pages. If Cloudflare doesn’t fix my gripes with Pages (see below) in fairly short order, such a move will be awfully tempting, my aforementioned CDN comparisons notwithstanding.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-10-26**: Vercel announced today at the latest **[Next.js](https://nextjs.org) Conf** event that it was introducing **[Edge Functions](https://vercel.com/features/edge-functions)**. Although the Edge Functions functionality is in beta for now and its [examples](https://github.com/vercel/examples/tree/main/edge-functions) so far are entirely Next.js-based---as you'd expect, given that Vercel is Next's creator---it may well be that, soon, I'll be able to host the site on Vercel while using an Edge Function to do what I currently do with that CF Worker when the site is on Cloudflare Pages. If Cloudflare doesn't fix my gripes with Pages (see below) in fairly short order, such a move will be awfully tempting, my aforementioned CDN comparisons notwithstanding.
+</Box>
 
 ## What makes me leave (sometimes)
 

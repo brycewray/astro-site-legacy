@@ -1,8 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import STweet from '@components/STweet.astro'
 title: "Gems in the rough #13"
 description: "Why I’ve recently backtracked on configurations for CSS and image-handling."
@@ -19,9 +18,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@mbuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sung Jin Cho</a>; <a href="https://unsplash.com/s/photos/gemstones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators](https://jamstack.org/generators).
+</Box>
 
 As it turns out, this edition of “Gems in the rough” is mostly about why I decided to revert this website to a couple of earlier configurations. I share these stories on the chance that they might help you justify similar choices, should they be necessary.
 
@@ -35,17 +34,17 @@ In such instances, I couldn’t realistically expect my Safari-using visitors to
 
 The bottom line: I’m once again using internal CSS here and probably will keep doing so indefinitely, since I suspect there’s zero likelihood for the foreseeable future that Apple will stop requiring Webkit for iOS browsers.
 
-<YellowBox>
-<strong>Update, 2022-01-14</strong>: Well, as it turned out, “indefinitely” was pushing it a bit. After a few days of what one might call “<a href="https://web.dev/cls/" target="_blank" rel="nofollow">CLS</a> hell” whenever one goes from one page to another within the site, due to web fonts’ being loaded anew on each page, I reverted the site to <strong>external</strong> CSS. (Sigh.)
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2022-01-14**: Well, as it turned out, "indefinitely" was pushing it a bit. After a few days of what one might call "[CLS](https://web.dev/cls/) hell" whenever one goes from one page to another within the site, due to web fonts’ being loaded anew on each page, I reverted the site to **external** CSS. (Sigh.)
+</Box>
 
-<YellowBox>
-<strong>Further update, 2022-02-01</strong>: The actual solution was obvious—give up web fonts. Thus, today (at least for now), I did, and re-reverted the site to internal CSS <em>without</em> “CLS hell.” We’ll see how that works.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Further update, 2022-02-01**: The actual solution was obvious---give up web fonts. Thus, today (at least for now), I did, and re-reverted the site to internal CSS *without* "CLS hell." We'll see how that works.
+</Box>
 
-<YellowBox>
-<strong>Still further update, 2022-02-18</strong>: “After further review,” I’m now back to web fonts <strong>and</strong> back to internal CSS. (Well, <em>mostly</em> internal CSS.) I explain it in <a href="/posts/2022/02/gems-in-rough-14/#making-web-fonts-work-with-internal-css">this section</a> of the <a href="/posts/2022/02/gems-in-rough-14/">next</a> “Gems in the rough.”
-</YellowBox>
+<Box cssClass="yellowBox">
+**Still further update, 2022-02-18**: "After further review," I'm now back to web fonts **and** back to internal CSS. (Well, *mostly* internal CSS.) I explain it in [this section](/posts/2022/02/gems-in-rough-14/#making-web-fonts-work-with-internal-css) of the [next](/posts/2022/02/gems-in-rough-14/) “Gems in the rough.”
+</Box>
 
 ## A wave-off on AVIFs
 

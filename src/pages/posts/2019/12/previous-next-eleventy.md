@@ -25,16 +25,16 @@ You see, the most workable method I'd found so far from among the [starter proje
 
 ```html
 {% if collections.post[idx] %}
-	<p class="ctr">
-		<strong>Next</strong>:
-		<a class="next" href="{{ collections.post[idx].url }}">{{ collections.post[idx].data.title }}</a>
-	</p>
+  <p class="ctr">
+    <strong>Next</strong>:
+    <a class="next" href="{{ collections.post[idx].url }}">{{ collections.post[idx].data.title }}</a>
+  </p>
 {% endif %}
 {% if collections.post[idx-2] %}
-	<p class="ctr">
-		<strong>Previous</strong>:
-		<a class="previous" href="{{ collections.post[idx-2].url }}">{{ collections.post[idx-2].data.title }}</a>
-	</p>
+  <p class="ctr">
+    <strong>Previous</strong>:
+    <a class="previous" href="{{ collections.post[idx-2].url }}">{{ collections.post[idx-2].data.title }}</a>
+  </p>
 {% endif %}
 ```
 

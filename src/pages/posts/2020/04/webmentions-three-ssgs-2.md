@@ -1,7 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
   import Disclaimer from '@components/Disclaimer.astro'
 title: "Webmentions in three SSGs: Part 2"
 description: "Part 2 of a five-part series about incorporating the IndieWeb into three different static site generators (SSGs)—in this case, Eleventy."
@@ -19,13 +19,13 @@ featured_image_caption: |
 
 <Disclaimer />
 
-<YellowBox>
-<strong>Note</strong>: This is Part 2 of a five-part series about how you can set up <a href="https://indieweb.org/Webmention" target="_blank" rel="nofollow">webmentions</a> in websites built by three different <a href="https://staticgen.com" target="_blank" rel="nofollow">static site generators</a> (SSGs): <a href="https://11ty.dev" target="_blank" rel="nofollow">Eleventy</a> (the subject of this part), <a href="https://gohugo.io" target="_blank" rel="nofollow">Hugo</a> (the subject of <a href="/posts/2020/04/webmentions-three-ssgs-3/">Part 3</a>), and <a href="https://gatsbyjs.org" target="_blank" rel="nofollow">Gatsby</a> (covered in detail in <a href="/posts/2020/04/webmentions-three-ssgs-4/">Part 4</a>). In the <a href="/posts/2020/04/webmentions-three-ssgs-5/">conclusion</a>, you’ll find a bibliography of the best articles I found on the subject of this series. All of the articles link (even if only through tiny <a href="https://github.com" target="_blank" rel="nofollow">GitHub</a> logos) to their authors’ code. They were invaluable to this effort, and I encourage you to take particular notice of them and their authors.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: This is Part 2 of a five-part series about how you can set up [webmentions](https://indieweb.org/Webmention) in websites built by three different [static site generators](https://staticgen.com) (SSGs): [Eleventy](https://11ty.dev) (the subject of this part), [Hugo](https://gohugo.io) (the subject of [Part 3](/posts/2020/04/webmentions-three-ssgs-3/)), and [Gatsby](https://gatsbyjs.org) (covered in detail in [Part 4](/posts/2020/04/webmentions-three-ssgs-4/)). In the [conclusion](/posts/2020/04/webmentions-three-ssgs-5/), you'll find a bibliography of the best articles I found on the subject of this series. All of the articles link (even if only through tiny [GitHub](https://github.com) logos) to their authors’ code. They were invaluable to this effort, and I encourage you to take particular notice of them and their authors.
+</Box>
 
-<YellowBox>
-<strong>Added note, 2020-07-26</strong>: I have now archived the various configuration files linked within this series within a <a href="https://github.com/brycewray/files-webmentions" target="_blank" rel="nofollow">GitHub repo</a> of their own and changed the links accordingly, so as to make them immune to ongoing changes in the repos originally linked from this series.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Added note, 2020-07-26**: I have now archived the various configuration files linked within this series within a [GitHub repo](https://github.com/brycewray/files-webmentions) of their own and changed the links accordingly, so as to make them immune to ongoing changes in the repos originally linked from this series.
+</Box>
 
 Having covered the purpose of this series, the [IndieWeb](https://indieweb.org), and the general setup of webmentions in this series’ [introduction](/posts/2020/04/webmentions-three-ssgs-1/), we'll now get into details about implementing them in the [Eleventy](https://11ty.dev) SSG.
 

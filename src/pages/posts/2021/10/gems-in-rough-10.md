@@ -1,8 +1,7 @@
 ---
 setup: |
   import Layout from '@layouts/Post.astro'
-  import BlueBox from '@components/BlueBox.astro'
-  import YellowBox from '@components/YellowBox.astro'
+  import Box from '@components/Box.astro'
 title: "Gems in the rough #10"
 description: "A (perhaps) surprising requirement for native lazy-loading, the Slinkity project, problems with Cloudflare Pages."
 author: Bryce Wray
@@ -17,9 +16,9 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://unsplash.com/@mbuff?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sung Jin Cho</a>; <a href="https://unsplash.com/s/photos/gemstones?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></span>
 ---
 
-<BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
-</BlueBox>
+<Box cssClass="blueBox">
+Each entry in the "Gems in the rough" series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators (SSGs)](https://jamstack.org/generators).
+</Box>
 
 ## Native lazy-loading: a surprise
 
@@ -33,9 +32,9 @@ The [Eleventy](https://11ty.dev) SSG is [nearing the release of version 1.0.x](h
 
 ## Cloudflare Pages: the glitches continue
 
-<YellowBox>
-<strong>Update, 2021-10-03</strong>: I learned today that the problem I note below was due to an <a href="https://github.com/postcss/postcss-cli/issues/404" target="_blank" rel="nofollow">incompatibility between the recently released version 9.x of the <code>postcss-cli</code> package and any Node.js version prior to 12.20</a>. The usual way you get around that when building to your hosting vendor of choice, assuming it’s using a Node.js version that fits this qualification, is to add a <code>NODE_VERSION</code> environment variable set to at least <code>12.20.0</code>. (Consult your respective vendor’s documentation for details.) In my site’s case, I am currently spec’g <code>14.16.0</code> since that conforms to the Node version I run locally. Finally: despite my having learned this, I’ll leave the remainder of this part of the article as it was for the sake of <a href="/posts/2019/10/otoh/">transparency</a>.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-10-03**: I learned today that the problem I note below was due to an [incompatibility between the recently released version 9.x of the `postcss-cli` package and any Node.js version prior to 12.20](https://github.com/postcss/postcss-cli/issues/404). The usual way you get around that when building to your hosting vendor of choice, assuming it's using a Node.js version that fits this qualification, is to add a `NODE_VERSION` environment variable set to at least `12.20.0`. (Consult your respective vendor's documentation for details.)  In my site's case, I am currently spec’g `14.16.0` since that conforms to the Node version I run locally. Finally: despite my having learned this, I'll leave the remainder of this part of the article as it was for the sake of [transparency](/posts/2019/10/otoh/).
+</Box>
 
 Until yesterday, I had used [Cloudflare Pages](https://pages.cloudflare.com) (and, with it, the Cloudflare CDN) to host this site, off-and-on, for a while. I've written in the past about the technical challenges of this still-new platform, particularly where build times are concerned; but, yesterday, the problems reached a new, show-stopping level.
 
@@ -68,10 +67,10 @@ This behavior began after [yesterday's worldwide incident with Let's Encrypt SSL
 
 Whether any of this is applicable to you, I have no idea; I'm just tossing it out there for your consideration before you rely on CFP, a platform which remains both highly interesting and aggravatingly glitchy.
 
-<YellowBox>
-<strong>Note</strong>: Ironically enough, when I first tried to issue <strong>this</strong> post, Vercel (to which I’d reverted yesterday after the aforementioned CFP issues) was having a system-wide outage of its API and dashboard which, you guessed it, prevented the site build. Ya can’t win.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Note**: Ironically enough, when I first tried to issue **this** post, Vercel (to which I'd reverted yesterday after the aforementioned CFP issues) was having a system-wide outage of its API and dashboard which, you guessed it, prevented the site build. Ya can't win.
+</Box>
 
-<YellowBox>
-<strong>Update, 2021-10-02</strong>: Today I tested Cloudflare Pages again and found that, by <strong>deleting</strong> my previous setups there and <strong>restoring</strong> them, the errors stopped. I have no idea what happened, but scripts that failed as noted above are now working fine. Weird. Anyway, I moved the site back to Cloudflare to take advantage once again of this vendor’s superior CDN.
-</YellowBox>
+<Box cssClass="yellowBox">
+**Update, 2021-10-02**: Today I tested Cloudflare Pages again and found that, by **deleting** my previous setups there and **restoring** them, the errors stopped. I have no idea what happened, but scripts that failed as noted above are now working fine. Weird. Anyway, I moved the site back to Cloudflare to take advantage once again of this vendor's superior CDN.
+</Box>
