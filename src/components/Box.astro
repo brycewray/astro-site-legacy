@@ -1,6 +1,7 @@
 ---
 // import {micromark} from 'micromark';
 // import {gfm, gfmHtml} from 'micromark-extension-gfm';
+import sanitizeHtml from 'sanitize-html';
 import { marked } from 'marked';
 
 marked.setOptions({
@@ -11,7 +12,7 @@ marked.setOptions({
 let htmlOut = '';
 htmlOut = await Astro.slots.render('default');
 htmlOut = marked.parse(htmlOut);
-
+htmlOut = sanitizeHtml(htmlOut);
 htmlOut = htmlOut
   .replace(
     `<a href="http`,

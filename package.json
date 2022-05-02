@@ -29,6 +29,7 @@
     "rehype-external-links": "^1.0.1",
     "remark-footnotes": "^4.0.1",
     "remark-gfm": "^3.0.1",
+    "sanitize-html": "^2.7.0",
     "sass": "^1.51.0",
     "twitter-api-client": "^1.5.2"
   },
