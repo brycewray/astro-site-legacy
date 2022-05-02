@@ -7,7 +7,7 @@ title: "Better notifications in the Preside email app"
 description: "How to use MailMate with Preside for quick and audible email notifications on your iOS devices."
 author: Bryce Wray
 date: 2021-07-03T16:20:00-05:00
-lastmod: 2022-02-12T11:14:00-06:00
+lastmod: 2022-05-01T19:51:00-05:00
 discussionId: "2021-07-better-notifications-preside-email-app"
 featured_image: apple-iphone-in-hands-closeup-1281744_5472x3648-with-preside-icon_90pct.jpg
 featured_image_width: 5472
@@ -84,7 +84,7 @@ Ready? Here we go.
 `{$User}`/Library/Application Support/MailMate/Bundles/
 
 <IndentAfterLI>
-**Keep this Finder window open** while you perform the next steps.
+<strong>Keep this Finder window open</strong> while you perform the next steps.
 </IndentAfterLI>
 
 5. Open your chosen terminal app. If the app doesn't open at the `{$User}` level, execute the necessary command(s) to get to there.
@@ -101,7 +101,7 @@ git clone https://github.com/richwaters/PresideNotify.git PresideNotify
 8. In that folder, you'll see an item called "Preside.mmBundle," which is the MailMate bundle for PresideNotify. **Copy** it from **that** Finder window to `{$User}`/Library/Application Support/MailMate/Bundles/ in the **other** Finder window.
 
 <IndentAfterLI>
-Although the Finder makes "Preside.mmBundle" appear to be a special sort of file, it's actually a folder, as the following few steps will make clear.
+Although the Finder makes “Preside.mmBundle” appear to be a special sort of file, it’s actually a folder, as the following few steps will make clear.
 </IndentAfterLI>
 
 9. Back in the terminal app, execute the following command to navigate to the necessary location for the next few steps (and the quotation marks **are** required):
@@ -114,7 +114,7 @@ cd "Library/Application Support/MailMate/Bundles/Preside.mmBundle/Support/bin/"
 11. Use your chosen command-line text editor to open this shell file. [Here is the original on GitHub](https://github.com/richwaters/PresideNotify/blob/master/Preside.mmBundle/Support/bin/preside_notify.sh), to which you may want to refer in the next few steps to keep the line numbering straight.
 
 <IndentAfterLI>
-Because the original **doesn't** set Preside notifications to have any audio **and** doesn't tell you which of your (presumed-to-be) multiple accounts is providing a new email, we're going to fix that.
+Because the original <strong>doesn’t</strong> set Preside notifications to have any audio <strong>and</strong> doesn’t tell you which of your (presumed-to-be) multiple accounts is providing a new email, we’re going to fix that.
 </IndentAfterLI>
 
 12. On line 9, delete the opening `#` (which otherwise comments-out the line) so it reads as:
@@ -123,7 +123,7 @@ alertSound="GHSound_ChurchBell.mp3"
 ```
 
 <IndentAfterLI>
-For a list of the available sounds you can use instead of that default one, see the [URL File Reference](https://github.com/richwaters/PresideNotify#url-reference). (I personally am partial to `GHSound_Piano1.mp3`, but to each his/her own.)
+For a list of the available sounds you can use instead of that default one, see the <a href="https://github.com/richwaters/PresideNotify#url-reference" target="_blank" rel="nofollow">URL File Reference</a>. (I personally am partial to <code>GHSound_Piano1.mp3</code>, but to each his/her own.)
 </IndentAfterLI>
 
 13. Go down to line 68, which currently is:
@@ -132,7 +132,7 @@ msgTxt="${alertPrefix} From: ${fromStr}, Subject: ${MM_SUBJECT}"
 ```
 
 <IndentAfterLI>
-This is the line which controls the "banner" text which you'll see on your iOS device screen when you get a notification.
+This is the line which controls the “banner” text which you’ll see on your iOS device screen when you get a notification.
 </IndentAfterLI>
 
 14. Edit the line so that it reads as follows:
@@ -141,7 +141,7 @@ msgTxt="${alertPrefix} Account: ${MM_ACCOUNT} • From: ${fromStr} • Subject: 
 ```
 
 <IndentAfterLI>
-This will result in a notification message that tells you the sending account **and** separates the items nicely, since they'll appear on one text line. [You can just copy/paste that line **or**, to enter the bullet character on a Mac, hold down the **option** key (&#8997;) and press **8**.]
+This will result in a notification message that tells you the sending account <strong>and</strong> separates the items nicely, since they’ll appear on one text line. [You can just copy/paste that line <strong>or<strong>, to enter the bullet character on a Mac, hold down the <strong>Option</strong> key (&#8997;) and press <strong>8</strong>.]
 </IndentAfterLI>
 
 15. Now, let's add a line that will **use** the "alert sound" in the first place. **After** line 77 (that's `--data-urlencode "ghEnableEmailActions=1" \`) but **before** line 79, add the following line:

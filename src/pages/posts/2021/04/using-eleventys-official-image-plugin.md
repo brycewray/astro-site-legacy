@@ -188,7 +188,7 @@ Now, just build your site, and Eleventy Image will do its magic everywhere withi
 />
 
 <ImgcCaption>
-**Disclaimer**: Image is sourced from Cloudinary (without using Eleventy&nbsp;Image) whenever the site is built with a non-Eleventy&nbsp;SSG, **but** this does show the result of the generated&nbsp;code.
+<strong>Disclaimer</strong>: Image is sourced from Cloudinary (without using Eleventy&nbsp;Image) whenever the site is built with a non-Eleventy&nbsp;SSG, **but** this does show the result of the generated&nbsp;code.
 </ImgcCaption>
 
 Of course, you'll want to get a sneak peek by running Eleventy in development mode and viewing your site locally, in case you need to adjust your site's CSS so each resulting image appears as you want.[^sizesInfo]

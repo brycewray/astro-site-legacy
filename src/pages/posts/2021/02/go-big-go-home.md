@@ -56,7 +56,7 @@ For example, I can insert all the code required for a responsive display of the 
 <Imgc url="Apple_new-macbookpro-wallpaper-screen_11102020_1984x1118.jpg" alt="Partially opened MacBook Pro laptop" width="1984" height="1118" />
 
 <ImgcCaption>
-Image: [Apple, Inc.](https://www.apple.com/newsroom/2020/11/introducing-the-next-generation-of-mac/)
+Image: <a href="https://www.apple.com/newsroom/2020/11/introducing-the-next-generation-of-mac/" target="_blank" rel="nofollow">Apple, Inc.</a>
 </ImgcCaption>
 
 .&nbsp;.&nbsp;. by inserting this shortcode in my Eleventy repo:
