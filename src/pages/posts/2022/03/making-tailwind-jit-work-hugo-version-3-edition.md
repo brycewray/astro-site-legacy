@@ -6,7 +6,7 @@ title: "Making Tailwind JIT work with Hugo, the Version 3 edition"
 description: "A Hugo fix for Tailwind CSS v.3—with a surprise bonus."
 author: Bryce Wray
 date: 2022-03-06T16:16:00-06:00
-lastmod: 2022-03-08T08:17:00-06:00
+lastmod: 2022-05-01T21:28:00-05:00
 discussionId: "2022-03-making-tailwind-jit-work-hugo-version-3-edition"
 featured_image: "2021-11-21_screenshot_TWCSS-on-Hugo_enlgd_3254x1564.png"
 featured_image_width: 3254
@@ -113,7 +113,7 @@ module.exports = {
     'tailwindcss/nesting': {},
     tailwindcss: {},
   }
-}
+};
 ```
 
 And, for me, one of the biggest benefits of doing Tailwind-on-Hugo this way is the freedom to ditch the uglified CSS conflagration I described in my earlier post in favor of something similar to this  simplified[^importPath] example:
