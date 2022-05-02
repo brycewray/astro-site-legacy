@@ -17,6 +17,7 @@
     "axios": "^0.27.2",
     "date-fns": "^2.28.0",
     "feed": "^4.2.2",
+    "marked": "^4.0.15",
     "md5": "^2.3.0",
     "micromark": "^3.0.10",
     "micromark-extension-gfm": "^2.0.1",
