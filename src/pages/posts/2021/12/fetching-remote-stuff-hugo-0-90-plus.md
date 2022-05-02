@@ -63,11 +63,11 @@ Here’s what’s going on:
 {{ if $LQIP_get.Err }}
   {{ warnf "%s" . }}
   {{/*
-  We output an error message.
+    We output an error message.
   */}}
 {{ else }}
   {{/*
-  [Handle things normally.]
+    [Handle things normally.]
   */}}
 {{ end }}
 ```

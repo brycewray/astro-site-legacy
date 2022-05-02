@@ -44,32 +44,32 @@ Now, on to the code.
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ metadata.title }}</title>
-	<subtitle>{{ metadata.subtitle }}</subtitle>
-	<link href="{{ metadata.feedUrl }}" rel="self"/>
-	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-	<id>{{ metadata.url }}</id>
-	<author>
-		<name>{{ metadata.authors.name }}</name>
-	</author>
-	{%- for item in collections.all | reverse -%}
-		{%- if loop.index0 < 10 -%}
-			{%- set absolutePostUrl -%}{{ item.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.authors.name }}</name>
+  </author>
+  {%- for item in collections.all | reverse -%}
+    {%- if loop.index0 < 10 -%}
+      {%- set absolutePostUrl -%}{{ item.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
       {%- set emailReplyHTML -%}<p><a href="mailto:bw@brycewray.com?subject=Re: “{{ item.data.title }}”">Reply via email</a></p>{%- endset -%}
       {%- set finalHTMLContent = [item.templateContent, emailReplyHTML] | join -%}
-			<entry>
-				<title>{{ item.data.title }}</title>
-				<link href="{{ absolutePostUrl }}"/>
-				<updated>{{ item.date | dateToRfc3339 }}</updated>
-				<id>{{ absolutePostUrl }}</id>
-				<summary>{%- if item.data.subtitle -%}{{ item.data.subtitle }}{%- else -%}""{%- endif -%}{%- if item.data.description %} • {{ item.data.description }}{%- else -%}"[No description]"{%- endif -%}</summary>
-				<content type="html">
+      <entry>
+        <title>{{ item.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ item.date | dateToRfc3339 }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <summary>{%- if item.data.subtitle -%}{{ item.data.subtitle }}{%- else -%}""{%- endif -%}{%- if item.data.description %} • {{ item.data.description }}{%- else -%}"[No description]"{%- endif -%}</summary>
+        <content type="html">
           {{ finalHTMLContent | htmlToAbsoluteUrls(absolutePostUrl) }}
         </content>
-			</entry>
-		{%- endif -%}
-	{%- endfor %}
+      </entry>
+    {%- endif -%}
+  {%- endfor %}
 </feed>
 ```
 

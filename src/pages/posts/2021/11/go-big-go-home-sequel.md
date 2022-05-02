@@ -35,15 +35,15 @@ Anyway, let's get to the real recipe. If you need help with the Hugo-/Go-specifi
 {{- $height := .Get "height" -}}
 
 {{/*
-	I'm separating the Cloudinary-related vars
-	for greater flexibility, especially in case
-	somebody else wants to borrow this code for
-	his/her own Cloudinary setup and
-	transformation ("xFm") choices.
-	For example, incorporating the first var
-	($cloudName) into the second var ($cloudiBase)
-	allows tailoring the shortcode to one's own
-	Cloudinary account.
+  I'm separating the Cloudinary-related vars
+  for greater flexibility, especially in case
+  somebody else wants to borrow this code for
+  his/her own Cloudinary setup and
+  transformation ("xFm") choices.
+  For example, incorporating the first var
+  ($cloudName) into the second var ($cloudiBase)
+  allows tailoring the shortcode to one's own
+  Cloudinary account.
 */}}
 {{- $cloudName := "brycewray-com" }}
 {{- $cloudiBase := printf "%s%s%s" "https://res.cloudinary.com/" {{ $cloudName }} "/image/upload/" -}}
@@ -51,28 +51,28 @@ Anyway, let's get to the real recipe. If you need help with the Hugo-/Go-specifi
 {{/* $xFmPart1 := "f_auto,q_auto:eco,w_" */}}
 {{- $xFmPart2 := ",x_0,z_1/" -}}
 {{/*
-	Due to the colon in the `q_auto:eco` parameter,
-	I type out the value of `$xFmPart1` below to
-	avoid the "#ZgotmplZ" annoyance, which I couldn't
-	resolve with `safeHTML` or other similar methods.
-	See also:
-	- https://gohugo.io/functions/safehtml/
-	- https://gohugo.io/functions/safehtmlattr/
-	- https://stackoverflow.com/questions/36382624/how-to-get-rid-of-zgotmplz-from-html-template-in-golang
-	- https://pkg.go.dev/html/template#hdr-A_fuller_picture
+  Due to the colon in the `q_auto:eco` parameter,
+  I type out the value of `$xFmPart1` below to
+  avoid the "#ZgotmplZ" annoyance, which I couldn't
+  resolve with `safeHTML` or other similar methods.
+  See also:
+  - https://gohugo.io/functions/safehtml/
+  - https://gohugo.io/functions/safehtmlattr/
+  - https://stackoverflow.com/questions/36382624/how-to-get-rid-of-zgotmplz-from-html-template-in-golang
+  - https://pkg.go.dev/html/template#hdr-A_fuller_picture
 */}}
 
 {{/*
-	The following vars seem pointless when we're
-	using this for only one type of image, but am
-	keeping in case I ever decide to use other
-	kinds of images again (e.g., full-sized "hero
-	images" with their own specific requirements)
-	and, thus, have good reason to select these
-	items programmatically.
-	Of course, CSS classes vary from site to site,
-	but the ones shown here work for my site as of
-	this writing.
+  The following vars seem pointless when we're
+  using this for only one type of image, but am
+  keeping in case I ever decide to use other
+  kinds of images again (e.g., full-sized "hero
+  images" with their own specific requirements)
+  and, thus, have good reason to select these
+  items programmatically.
+  Of course, CSS classes vary from site to site,
+  but the ones shown here work for my site as of
+  this writing.
 */}}
 {{- $imgBd5 := md5 $src -}}
 {{- $divClass := "relative" -}}

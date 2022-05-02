@@ -82,28 +82,28 @@ With those understood, here we go&nbsp;.&nbsp;.&nbsp;.
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>{{ metadata.title }}</title>
-	<subtitle>{{ metadata.subtitle }}</subtitle>
-	<link href="{{ metadata.feedUrl }}" rel="self"/>
-	<link href="{{ metadata.url }}"/>
-	<updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-	<id>{{ metadata.url }}</id>
-	<author>
-		<name>{{ metadata.authors.name }}</name>
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <link href="{{ metadata.feedUrl }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.authors.name }}</name>
 	</author>
 	{%- for item in collections.all | reverse -%}
-		{%- if loop.index0 < 10 -%}
-			{%- set absolutePostUrl -%}{{ item.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
-			<entry>
-				<title>{{ item.data.title }}</title>
-				<link href="{{ absolutePostUrl }}"/>
-				<updated>{{ item.date | dateToRfc3339 }}</updated>
-				<id>{{ absolutePostUrl }}</id>
-				<summary>{%- if item.data.subtitle -%}{{ item.data.subtitle }}{%- else -%}""{%- endif -%}{%- if item.data.description %} • {{ item.data.description }}{%- else -%}"[No description]"{%- endif -%}</summary>
-				<content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
-			</entry>
-		{%- endif -%}
-	{%- endfor %}
+    {%- if loop.index0 < 10 -%}
+      {%- set absolutePostUrl -%}{{ item.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
+      <entry>
+        <title>{{ item.data.title }}</title>
+        <link href="{{ absolutePostUrl }}"/>
+        <updated>{{ item.date | dateToRfc3339 }}</updated>
+        <id>{{ absolutePostUrl }}</id>
+        <summary>{%- if item.data.subtitle -%}{{ item.data.subtitle }}{%- else -%}""{%- endif -%}{%- if item.data.description %} • {{ item.data.description }}{%- else -%}"[No description]"{%- endif -%}</summary>
+        <content type="html">{{ item.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+      </entry>
+    {%- endif -%}
+  {%- endfor %}
 </feed>
 ```
 
@@ -217,16 +217,16 @@ I've noted [before](/posts/2020/12/eleventy-hugo-comparing-contrasting/) that Hu
 
 ```yaml
 outputFormats:
-	json:
-		baseName: "index"
-		mediaType: "application/json"
-		isPlainText: true
+  json:
+    baseName: "index"
+    mediaType: "application/json"
+    isPlainText: true
 
 outputs:
-	home:
-		- html
-		- rss
-		- json
+  home:
+    - html
+    - rss
+    - json
 ```
 
 2. Hugo comes with a built-in template for the RSS feed, so there's no need to come up with one.

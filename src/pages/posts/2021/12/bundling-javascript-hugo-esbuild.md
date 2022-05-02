@@ -34,19 +34,19 @@ The file from which we’ll be bundling is `/assets/js/index.js` (Hugo Pipes pro
 
 ```js
 /*
-	First, we import the two JS files that
-	we're bundling. The `vanilla-lazyload`
-	package exports a module, `LazyLoad`,
-	so we import it directly.
+  First, we import the two JS files that
+  we're bundling. The `vanilla-lazyload`
+  package exports a module, `LazyLoad`,
+  so we import it directly.
 */
 import LazyLoad from './assets/js/lazyload_17-5-0.esm.js';
 import './assets/js/instantpage_5-1-0.js';
 // The latter runs Instant.Page directly.
 
 /*
-	As for the `LazyLoad` module, we run it
-	with one parameter.
-	(https://github.com/verlok/vanilla-lazyload)
+  As for the `LazyLoad` module, we run it
+  with one parameter.
+  (https://github.com/verlok/vanilla-lazyload)
 */
 var lazyLoadInstance = new LazyLoad({
   threshold: 150,

@@ -68,7 +68,7 @@ So, with all that understood, here we go.
 7. Select **everything** in that **Documents** folder.
 
 <YellowBox>
-<strong>Note:</strong> Well, <em>almost</em> everything. I suggest being careful about any folder that is identified in the <strong>List</string> view as an “App Library” (often possessing an app’s logo on the folder icon in the default <strong>Icons</strong> view)—one notable example of which, in my case, is <a href="https://ia.net/writer" target="_blank" rel="nofollow">iA Writer</a>. Leave folders of that type in the <strong>iCloud Drive</strong> folder’s <strong>Documents</strong> folder. While you <em>can</em> move those items if you wish, just be forewarned that either the current app or its future versions might have a problem with the different location.
+<strong>Note:</strong> Well, <em>almost</em> everything. I suggest being careful about any folder that is identified in the <strong>List</strong> view as an “App Library” (often possessing an app’s logo on the folder icon in the default <strong>Icons</strong> view)—one notable example of which, in my case, is <a href="https://ia.net/writer" target="_blank" rel="nofollow">iA Writer</a>. Leave folders of that type in the <strong>iCloud Drive</strong> folder’s <strong>Documents</strong> folder. While you <em>can</em> move those items if you wish, just be forewarned that either the current app or its future versions might have a problem with the different location.
 </YellowBox>
 
 8. Drag it all to the **2-Documents** folder.

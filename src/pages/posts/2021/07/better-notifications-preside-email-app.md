@@ -141,7 +141,7 @@ msgTxt="${alertPrefix} Account: ${MM_ACCOUNT} • From: ${fromStr} • Subject: 
 ```
 
 <IndentAfterLI>
-This will result in a notification message that tells you the sending account <strong>and</strong> separates the items nicely, since they’ll appear on one text line. [You can just copy/paste that line <strong>or<strong>, to enter the bullet character on a Mac, hold down the <strong>Option</strong> key (&#8997;) and press <strong>8</strong>.]
+This will result in a notification message that tells you the sending account <strong>and</strong> separates the items nicely, since they’ll appear on one text line. [You can just copy/paste that line <strong>or</strong>, to enter the bullet character on a Mac, hold down the <strong>Option</strong> key (&#8997;) and press <strong>8</strong>.]
 </IndentAfterLI>
 
 15. Now, let's add a line that will **use** the "alert sound" in the first place. **After** line 77 (that's `--data-urlencode "ghEnableEmailActions=1" \`) but **before** line 79, add the following line:

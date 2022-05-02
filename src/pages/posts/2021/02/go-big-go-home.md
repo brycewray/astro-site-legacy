@@ -8,7 +8,7 @@ title: "Go big or Go home?"
 description: "How some image-handling code moved from Eleventy to Hugo."
 author: Bryce Wray
 date: 2021-02-10T07:55:00-06:00
-lastmod: 2022-04-21T22:39:00-05:00
+lastmod: 2022-05-01T20:59:00-05:00
 #draft: false
 discussionId: "2021-02-go-big-go-home"
 featured_image: "markus-spiske-70Rir5vB96U-unsplash_5760x3840.jpg"
@@ -87,36 +87,36 @@ Here's the JavaScript version, on which the Go version was based[^origCode]:
 [^origCode]: This is a revised version because the *original* JS provides for an [LQIP-using preview](https://endler.dev/2017/image-previews/), the need for which ended when I [removed hero images](/posts/2021/01/leaner-cleaner/)).
 
 ```js
-const respSizes = require(`../../../_data/siteparams.json`).respSizes
-var cloudiBase = 'https://res.cloudinary.com/brycewray-com/image/upload/'
-var xFmPart1 = 'f_auto,q_auto:eco,w_'
-var xFmPart2 = ',x_0,z_1/' // note ending slash
+const respSizes = require(`../../../_data/siteparams.json`).respSizes;
+var cloudiBase = 'https://res.cloudinary.com/brycewray-com/image/upload/';
+var xFmPart1 = 'f_auto,q_auto:eco,w_';
+var xFmPart2 = ',x_0,z_1/'; // note ending slash
 
 module.exports = (url, alt, width, height) => {
-  divClass = `relative`
-  imgClass = `containedImage`
-  nscClass = `containedImage`
-  dataSzes = `(min-width: 1024px) 100vw, 50vw`
+  divClass = `relative`;
+  imgClass = `containedImage`;
+  nscClass = `containedImage`;
+  dataSzes = `(min-width: 1024px) 100vw, 50vw`;
 
-  var separator = ', '
+  var separator = ', ';
 
-  var stringtoRet = ``
+  var stringtoRet = ``;
   stringtoRet = `<div class="${divClass}">
-  <img class="${imgClass}" data-src="${cloudiBase + xFmPart1 + "600" + xFmPart2 + url}" data-srcset="`
+  <img class="${imgClass}" data-src="${cloudiBase + xFmPart1 + "600" + xFmPart2 + url}" data-srcset="`;
   respSizes.forEach(size => {
     if (size <= width) {
-      stringtoRet += `${cloudiBase + xFmPart1 + size + xFmPart2 + url} ${size}w`
-      stringtoRet += separator
+      stringtoRet += `${cloudiBase + xFmPart1 + size + xFmPart2 + url} ${size}w`;
+      stringtoRet += separator;
     }
-  })
-  stringtoRet = stringtoRet.substring(0, stringtoRet.length - 2)
+  });
+  stringtoRet = stringtoRet.substring(0, stringtoRet.length - 2);
   stringtoRet += `" alt="${alt}" width="${width}" height="${height}" loading="lazy" sizes="${dataSzes}" />
   <noscript>
     <img class="${nscClass}" src="${cloudiBase + xFmPart1 + "300" + xFmPart2 + url}" alt="${alt}" />
   </noscript>
-  </div>`
+  </div>`;
 
-  return stringtoRet
+  return stringtoRet;
 }
 ```
 

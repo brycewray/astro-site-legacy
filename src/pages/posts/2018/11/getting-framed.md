@@ -58,5 +58,5 @@ In the meantime, in our non-ideal world: when the decision is totally up to me, 
 <br />
 
 <YellowBox>
-<strong>Note</strong>: Many thanks to Carol Skelly for “<a href="https://medium.com/wdstack/bootstrap-is-still-better-than-css-grid-for-creating-layouts-522b7baf0411" target="_blank" rel="nofollow">Bootstrap (Flexbox</a> is still better than CSS Grid for creating layouts,” and Maria Antonietta Perna for “<a href="https://www.sitepoint.com/css-grid-layout-vs-css-frameworks-debate/" target="_blank" rel="nofollow">The CSS Grid layout vs. CSS frameworks debate</a>.”
+<strong>Note</strong>: Many thanks to Carol Skelly for “<a href="https://medium.com/wdstack/bootstrap-is-still-better-than-css-grid-for-creating-layouts-522b7baf0411" target="_blank" rel="nofollow">Bootstrap (Flexbox) is still better than CSS Grid for creating layouts</a>,” and Maria Antonietta Perna for “<a href="https://www.sitepoint.com/css-grid-layout-vs-css-frameworks-debate/" target="_blank" rel="nofollow">The CSS Grid layout vs. CSS frameworks debate</a>.”
 </YellowBox>

@@ -166,7 +166,7 @@ I mulled it over for a couple of hours; then I went back into my Vercel setup an
 Incidentally: although I urge you to read [Mr. East's article](https://medium.com/@SimonEast/clean-sass-and-js-with-eleventy-in-2021-using-vite-98747500d8f8) and look at [Mr. Papado&shy;georgo&shy;poulos's repo](https://github.com/fpapado/eleventy-with-vite) for yourself, I suggest you also spend a little time with [`eleventy-vite`](https://github.com/brycewray/eleventy_vite) to see how the code---some of which still has a lot of the original commenting from `eleventy-with-vite`---makes it all work with my code and content.
 
 <YellowBox>
-<strong>Note</strong>: I may have a follow-up post that delves into this more fully with actual code samples, much as I ended my CSS cache-busting posts troika with <a href="/posts/2020/12/hashing-out-cache-busting-fix-eleventy/">such a piece</a>; but this one surely is already long enough as it is, and there’s a <strong>lot</code> of code to cover in such a post.
+<strong>Note</strong>: I may have a follow-up post that delves into this more fully with actual code samples, much as I ended my CSS cache-busting posts troika with <a href="/posts/2020/12/hashing-out-cache-busting-fix-eleventy/">such a piece</a>; but this one surely is already long enough as it is, and there’s a <strong>lot</strong> of code to cover in such a post.
 </YellowBox>
 
 ## Good, but not perfect

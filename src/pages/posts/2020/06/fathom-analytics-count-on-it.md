@@ -18,7 +18,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-<strong>Affiliation disclaimer</strong>: What follows is my <em>honest opinion</em> of something I'm now using on this site and paying for with my own money. But I want to advise you up-front that, if you <a href="https://usefathom.com/ref/ZKHYWX" target="_blank" rel="nofollow">use this affiliate link (or others like it herein) to <strong>sign up with Fathom Analytics</strong></a>, I’ll get a commission—<strong><em>and</em></strong> <strong>you</strong> will get a <strong>$10 credit</strong> on your first invoice. So, if you like what I’m telling you here and want to <a href="https://usefathom.com/ref/ZKHYWX" target="_blank" rel="nofollow">give this product a try</a>, help out an old nerd <strong>and</strong> yourself and your visitors, okay? Thanks!
+<strong>Affiliation disclaimer</strong>: What follows is my <em>honest opinion</em> of something I'm now using on this site and paying for with my own money. But I want to advise you up-front that, if you <a href="https://usefathom.com/ref/ZKHYWX" target="_blank" rel="nofollow">use this affiliate link (or others like it herein) to <strong>sign up with Fathom Analytics</strong></a>, I’ll get a commission—<strong><em>and</em></strong>&#32;<strong>you</strong> will get a <strong>$10 credit</strong> on your first invoice. So, if you like what I’m telling you here and want to <a href="https://usefathom.com/ref/ZKHYWX" target="_blank" rel="nofollow">give this product a try</a>, help out an old nerd <strong>and</strong> yourself and your visitors, okay? Thanks!
 </YellowBox>
 
 Got your own website? Wonder how it's doing out there?

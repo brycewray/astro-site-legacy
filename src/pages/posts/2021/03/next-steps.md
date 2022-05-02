@@ -7,7 +7,7 @@ title: "Next steps?"
 description: "Some things I’ve learned while tinkering with Next.js."
 author: Bryce Wray
 date: 2021-03-11T16:30:00-06:00
-lastmod: 2022-04-30T17:35:00-05:00
+lastmod: 2022-05-01T21:03:00-05:00
 #draft: false
 discussionId: "2021-03-next-steps"
 featured_image: "crystal-ball-drew-beamer-xU5Mqq0Chck-unsplash_5284x3522.jpg"
@@ -49,7 +49,7 @@ export default function Footer() {
       </footer>
    </>
   )
-}
+};
 ```
 
 So, in that respect at least, the past runs with Gatsby, React, and JSX amounted to a net positive.
