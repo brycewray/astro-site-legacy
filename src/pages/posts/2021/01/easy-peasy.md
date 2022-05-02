@@ -18,7 +18,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Acknowledgment**: This is based on, and an attempted homage to, "[It's The Future](https://circleci.com/blog/its-the-future/)" by Paul Biggar and the admittedly derivative "[How it feels to learn JavaScript in 2016](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)" by Jose Aguinaga. I do **not** pretend this is in the originals’ amazing league.
+<strong>Acknowledgment</strong>: This is based on, and an attempted homage to, “<a href="https://circleci.com/blog/its-the-future/" target="_blank" rel="nofollow">It’s The Future</a>” by Paul Biggar and the admittedly derivative “<a href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f" target="_blank" rel="nofollow">How it feels to learn JavaScript in 2016</a>” by Jose Aguinaga. I do <strong>not</strong> pretend this is in the originals’ amazing league.
 </YellowBox>
 
 Hey, thanks for taking my call during your lunch hour. I hope you can help me with a personal website project I have in mind. Jeannie told me you'd be the right person to ask in her group.

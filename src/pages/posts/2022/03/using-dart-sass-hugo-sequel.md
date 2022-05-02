@@ -19,7 +19,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Note**: For a much more thorough discussion of recent [Sass](https://sass-lang.com)-on-[Hugo](https://gohugo.io) issues, please see my [previous post](/posts/2022/03/using-dart-sass-hugo/). This is a brief follow-up which will assume you've already read that one.
+<strong>Note</strong>: For a much more thorough discussion of recent <a href="https://sass-lang.com" target="_blank" rel="nofollow">Sass</a>-on-<a href="https://gohugo.io" target="_blank" rel="nofollow">Hugo</a> issues, please see my <a href="/posts/2022/03/using-dart-sass-hugo/">previous post</a>. This is a brief follow-up which will assume you’ve already read that one.
 </YellowBox>
 
 Just when I thought the method about which I wrote yesterday would be the only way Hugo users would get to use [Dart Sass](https://sass-lang.com/dart-sass) any time soon---well, as I said therein, albeit in a totally different context, "Ya Nevah Know."

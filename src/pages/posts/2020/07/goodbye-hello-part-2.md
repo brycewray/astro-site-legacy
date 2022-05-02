@@ -54,5 +54,5 @@ Of course, switching back from Vercel to Netlify involved some fiddling, [DNS](h
 As a result, the original post's title---"Goodbye, hello"---turned out to be a little more nuanced than I'd originally intended. However things turned out, I am happy to be back within Netlify's "old" but comfy confines and no longer watching its bustling, friendly community from the outside, remembering all too fondly how nice it felt to be even an insignificant part of it.
 
 <YellowBox>
-**Note**: [To be continued](/posts/2020/08/goodbye-hello-part-3/).
+<strong>Note</strong>: <a href="/posts/2020/08/goodbye-hello-part-3/">To be continued</a>.
 </YellowBox>

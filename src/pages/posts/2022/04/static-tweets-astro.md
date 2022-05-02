@@ -20,7 +20,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Update, 2022-04-12**: The [Astro](https://astro.build) team has come up with an [`astro-embed` project](https://github.com/astro-community/astro-embed) which will accomplish everything described herein and much more, so I encourage you to use it rather than the component described herein. That said, perhaps this post will still be of some educational value, especially for those new to Astro.
+<strong>Update, 2022-04-12</strong>: The <a href="https://astro.build" target="_blank" rel="nofollow">Astro</a> team has come up with an <a href="https://github.com/astro-community/astro-embed" target="_blank" rel="nofollow"><code>astro-embed</code> project</a> which will accomplish everything described herein and much more, so I encourage you to use it rather than the component described herein. That said, perhaps this post will still be of some educational value, especially for those new to Astro.
 </YellowBox>
 
 Perhaps you saw one or both of my [earlier](/posts/2022/02/static-tweets-eleventy-hugo/) [posts](/posts/2022/02/static-tweets-eleventy-hugo-part-2/) about how to embed fully static (thus, **not** privacy-violating) tweets in the [Eleventy](https://11ty.dev) and [Hugo](https://gohugo.io) static site generators (SSGs). If not, you may want to read at least the [first one](/posts/2022/02/static-tweets-eleventy-hugo/) for background because, in this post, I offer a similar---albeit briefer---piece about how to do this with the **[Astro](https://astro.build)** SSG.
@@ -57,7 +57,7 @@ Now, you can **create the component** in, of course, your Astro project's top-le
 The following is my `STweetV2.astro` component, based on the logic and styling of my [previously posted](/posts/2022/02/static-tweets-eleventy-hugo-part-2/#the-stweetv2-shortcode) Hugo shortcode for interacting with v.2 of the Twitter API:
 
 <YellowBox>
-**Note**: When I wrote this, a [bug](https://github.com/withastro/compiler/issues/354) caused Astro to crash if an `import` statement was anywhere other than the top of the file, so that's why I don't have the comments at the top as might otherwise seem logical.
+<strong>Note</strong>: When I wrote this, a <a href="https://github.com/withastro/compiler/issues/354" target="_blank" rel="nofollow">bug</a> caused Astro to crash if an <code>import</code> statement was anywhere other than the top of the file, so that’s why I don't have the comments at the top as might otherwise seem logical.
 </YellowBox>
 
 ```astro

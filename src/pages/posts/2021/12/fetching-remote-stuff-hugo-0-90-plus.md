@@ -19,7 +19,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Important update**: I have updated this article due to the [release of Hugo 0.91.0](https://github.com/gohugoio/hugo/releases/tag/v0.91.0), which made a breaking change in the feature around which my original text was centered. **In short**: Hugo 0.90.x used `resources.Get` to fetch remote items but Hugo 0.91.0+ uses `resources.GetRemote` instead, so I've altered this article accordingly. You may wish to check [Hugo Issue #9285](https://github.com/gohugoio/hugo/issues/9285) to see why the change occurred.
+<strong>Important update</strong>: I have updated this article due to the <a href="https://github.com/gohugoio/hugo/releases/tag/v0.91.0" target="_blank" rel="nofollow">release of Hugo 0.91.0</a>, which made a breaking change in the feature around which my original text was centered. <strong>In short</strong>: Hugo 0.90.x used <code>resources.Get</code> to fetch remote items but Hugo 0.91.0+ uses <code>resources.GetRemote</code> instead, so I’ve altered this article accordingly. You may wish to check <a href="https://github.com/gohugoio/hugo/issues/9285" target="_blank" rel="nofollow">Hugo Issue #9285</a> to see why the change occurred.
 </YellowBox>
 
 The [release earlier this week of version 0.90.0](https://github.com/gohugoio/hugo/releases/tag/v0.90.0) of the [Hugo](https://gohugo.io) [static site generator](https://jamstack.org/generators) (SSG) suddenly made its [Hugo Pipes](https://gohugo.io/hugo-pipes) asset pipeline considerably more powerful by adding, for the first time, the ability to fetch and process *remote* assets. Previously, Hugo Pipes could work with only *local* assets—*i.e.*, files actually in a Hugo project’s repository. Now, as the 0.90.0 release notes explained:

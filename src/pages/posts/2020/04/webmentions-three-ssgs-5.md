@@ -20,11 +20,11 @@ featured_image_caption: |
 <Disclaimer />
 
 <YellowBox>
-**Note**: This is the conclusion of a five-part series about how you can set up [webmentions](https://indieweb.org/Webmention) in websites built by three different [static site generators](https://staticgen.com): [Eleventy](https://11ty.dev) (the subject of [Part 2](/posts/2020/04/webmentions-three-ssgs-2/)), [Hugo](https://gohugo.io) (the subject of [Part 3](/posts/2020/04/webmentions-three-ssgs-3/)), and [Gatsby](https://gatsbyjs.org) (covered in detail in [Part 4](/posts/2020/04/webmentions-three-ssgs-4/)).
+<strong>Note</strong>: This is the conclusion of a five-part series about how you can set up <a href="https://indieweb.org/Webmention" target="_blank" rel="nofollow">webmentions</a> in websites built by three different <a href="https://staticgen.com" target="_blank" rel="nofollow">static site generators</a>: <a href="https://11ty.dev" target="_blank" rel="nofollow">Eleventy</a> (the subject of <a href="/posts/2020/04/webmentions-three-ssgs-2/">Part 2</a>), <a href="https://gohugo.io" target="_blank" rel="nofollow">Hugo</a> (the subject of <a href="/posts/2020/04/webmentions-three-ssgs-3/">Part 3</a>), and <a href="https://gatsbyjs.org" target="_blank" rel="nofollow">Gatsby</a> (covered in detail in <a href="/posts/2020/04/webmentions-three-ssgs-4/">Part 4</a>).
 </YellowBox>
 
 <YellowBox>
-**Added note, 2020-07-26**: I have now archived the various configuration files linked within this series within a [GitHub repo](https://github.com/brycewray/files-webmentions) of their own and changed the links accordingly, so as to make them immune to ongoing changes in the repos originally linked from this series.
+<strong>Added note, 2020-07-26</strong>: I have now archived the various configuration files linked within this series within a <a href="https://github.com/brycewray/files-webmentions" target="_blank" rel="nofollow">GitHub repo</a> of their own and changed the links accordingly, so as to make them immune to ongoing changes in the repos originally linked from this series.
 </YellowBox>
 
 [Yes, Virginia](https://en.wikipedia.org/wiki/Yes,_Virginia,_there_is_a_Santa_Claus), there *is* an end to this series.

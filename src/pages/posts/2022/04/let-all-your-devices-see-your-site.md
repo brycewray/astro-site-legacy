@@ -21,7 +21,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Note**: This post also appears on [dev.to](https://dev.to/brycewray/let-all-your-devices-see-your-site-27fd) and was the subject of a [Hacker News thread](https://news.ycombinator.com/item?id=30889663).
+<strong>Note</strong>: This post also appears on <a href="https://dev.to/brycewray/let-all-your-devices-see-your-site-27fd" target="_blank" rel="nofollow">dev.to</a> and was the subject of a <a href="https://news.ycombinator.com/item?id=30889663" target="_blank" rel="nofollow">Hacker News thread</a>.
 </YellowBox>
 
 Today's subject may seem a niche-ish use case, but I have reason to believe otherwise.

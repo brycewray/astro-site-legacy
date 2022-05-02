@@ -21,7 +21,7 @@ featured_image_caption: |
 In "[Forward PaaS](/posts/2020/10/forward-paas)," I told you about [Cloudflare](https://cloudflare.com)'s [Platform-as-a-Service](https://en.wikipedia.org/wiki/Platform_as_a_service) (PaaS) offering, [Cloudflare Workers combined with KV storage](https://www.cloudflare.com/products/workers-kv/), and some of its aspects that intrigued me. In the end, its only real drawback is that, unlike many [other options](/posts/2020/09/normal-persons-guide-static-website-hosting/) for hosting one's static website, an optimal use thereof isn't completely free. Five bucks a month for the Workers Unbundled plan is no bank-breaker; still, as the man says, "Cheap is good, but free is better."
 
 <YellowBox>
-**Update, 2020-12-12**: I've since updated the "[Forward PaaS](/posts/2020/10/forward-paas/)" post because of the subsequent announcement of a **free** tier for Cloudflare Workers KV storage---the existence and performance of which completely eliminated any remaining reluctance I had about that solution (as long as one doesn't have to update the site frequently, in which case the free tier's upload limits can be problematic). I'm leaving this post here just in case its information would be of use, and also for the sake of [transparency](/posts/2019/10/otoh/).
+<strong>Update, 2020-12-12</strong>: I’ve since updated the “<a href="/posts/2020/10/forward-paas/">Forward PaaS</a>” post because of the subsequent announcement of a <strong>free</strong> tier for Cloudflare Workers KV storage—the existence and performance of which completely eliminated any remaining reluctance I had about that solution (as long as one doesn’t have to update the site frequently, in which case the free tier’s upload limits can be problematic). I’m leaving this post here just in case its information would be of use, and also for the sake of <a href="/posts/2019/10/otoh/">transparency</a>.
 </YellowBox>
 
 That's why I thought I would write this little piece about two other free hosting options for your additional consideration. One has been around for over a decade, while the other emerged in only the last couple of months. While both offer great performance despite being free, they also share one singular disadvantage that *might* dissuade you from considering them.
@@ -54,7 +54,7 @@ DO Tech Support informed me, very courteously, that I'd need some [Docker](https
 - Second, using Docker with DOAP *isn't* free, thus---at that time---obviating the chance to use DOAP for free, which was the whole point of my interest.
 
 <YellowBox>
-**Note**: If that screen capture from the DOAP page makes you wonder about whether DOAP really is free, be advised that the "Starting at $5/mo" line is referring to web *apps*, **not** static websites. In fact, DOAP does support free hosting of up to three static websites.
+<strong>Note</strong>: If that screen capture from the DOAP page makes you wonder about whether DOAP really is free, be advised that the “Starting at $5/mo” line is referring to web <em>apps</em>, <strong>not</strong> static websites. In fact, DOAP does support free hosting of up to three static websites.
 </YellowBox>
 
 Just as courteously, I replied to DO Tech Support that DO might want to check on how competing vendors make it so easy to host static sites, and then I went on my merry way for the time being.

@@ -20,7 +20,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Recommendation**: While I very much appreciate your stopping by to read this, I **strongly** recommend that, instead, you check out [Aleksandr Hovhannisyan](https://github.com/AleksandrHovhannisyan)'s **far** superior article, "[Lazily Loading Images with the 11ty Image Plugin](https://www.aleksandrhovhannisyan.com/blog/eleventy-image-lazy-loading/)."
+<strong>Recommendation</strong>: While I very much appreciate your stopping by to read this, I <strong>strongly</strong> recommend that, instead, you check out <a href="https://github.com/AleksandrHovhannisyan" target="_blank" rel="nofollow">Aleksandr Hovhannisyan</a>’s <strong>far</strong> superior article, “<a href="https://www.aleksandrhovhannisyan.com/blog/eleventy-image-lazy-loading/" target="_blank" rel="nofollow">Lazily Loading Images with the 11ty Image Plugin</a>.”
 </YellowBox>
 
 <Disclaimer />
@@ -101,7 +101,7 @@ module.exports = function (eleventyConfig) {
 .&nbsp;.&nbsp;. so let's go into that in-between area where I put those comments, above, and create an `image` shortcode (note the lower-case "i”) by adding the code shown below.
 
 <YellowBox>
-**Update, 2021-04-28**: Due to a problem reported to me by a user of one of my [starter sets](/posts/2021/03/beginners-luck-update/), I swapped out the code that previously was here with code that is based on *synchronous*, rather than *asynchronous*, usage. To read more about the difference, see [this section](https://www.11ty.dev/docs/plugins/image/#synchronous-usage) of the Eleventy Image documentation. I've also updated those starter sets accordingly.
+<strong>Update, 2021-04-28</strong>: Due to a problem reported to me by a user of one of my <a href="/posts/2021/03/beginners-luck-update/">starter sets</a>, I swapped out the code that previously was here with code that is based on <em>synchronous</em>, rather than <em>asynchronous</em>, usage. To read more about the difference, see <a href="https://www.11ty.dev/docs/plugins/image/#synchronous-usage" target="_blank" rel="nofollow">this section</a> of the Eleventy Image documentation. I’ve also updated those starter sets accordingly.
 </YellowBox>
 
 ```js
@@ -145,13 +145,13 @@ For each image file you "feed" this shortcode in your Markdown (we'll explain th
 [^inOut]: For more details on the file formats Eleventy Image can accept (input) and create (output), see [its documentation](https://www.11ty.dev/docs/plugins/image/).
 
 <YellowBox>
-**Additional note, 2021-04-25**: If you have a *lot* of images you'll be running through this process, you'd best keep the `widths` array short, since more entries in `widths`---and, for that matter, `formats`---will result in even more files that Eleventy Image will have to create at build time. That can result in not only an extremely slow build but also, for local builds, a suddenly very hot CPU on your computer. Play with this over time and see what combination of image quantity, `widths` options, and `formats` options will work best for your project.
+<strong>Additional note, 2021-04-25</strong>: If you have a <em>lot</em> of images you’ll be running through this process, you’d best keep the <code>widths</code> array short, since more entries in <code>widths</code>—and, for that matter, <code>formats</code>—will result in even more files that Eleventy Image will have to create at build time. That can result in not only an extremely slow build but also, for local builds, a suddenly very hot CPU on your computer. Play with this over time and see what combination of image quantity, <code>widths</code> options, and <code>formats</code> options will work best for your project.
 </YellowBox>
 
 The setting for `urlPath` tells your site's pages to think of these images as being located in the site's `/images/` folder; and the `outputDir` setting tells Eleventy Image to copy them to the right location to make that work (given the standard Eleventy output directory of `./site`).
 
 <YellowBox>
-**Note**: The Eleventy Image documentation's ["Use this in your templates" section](https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates) has other examples you may prefer.
+<strong>Note</strong>: The Eleventy Image documentation’s <a href="https://www.11ty.dev/docs/plugins/image/#use-this-in-your-templates" target="_blank" rel="nofollow">“Use this in your templates” section</a> has other examples you may prefer.
 </YellowBox>
 
 Now, let's get this show on the road.

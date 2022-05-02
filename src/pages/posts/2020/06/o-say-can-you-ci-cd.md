@@ -183,7 +183,7 @@ jobs:
 ```
 
 <YellowBox>
-**Note**: If you use this approach, you need to make sure you **don't** have your repo linked in Netlify for continuous deployment (in your site settings, that's **Build &amp; deploy** &gt; **Continuous deployment**). Otherwise, the auto-builds will continue and, thus, keep adding to your used minutes.
+<strong>Note</strong>: If you use this approach, you need to make sure you <strong>don’t</strong> have your repo linked in Netlify for continuous deployment (in your site settings, that’s <strong>Build &amp; deploy</strong> &gt; <strong>Continuous deployment</strong>). Otherwise, the auto-builds will continue and, thus, keep adding to your used minutes.
 </YellowBox>
 
 Here's how it works.

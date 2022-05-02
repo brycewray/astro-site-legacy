@@ -18,7 +18,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Note, 2021-04-04**: I revised this article to remove some references that, as a reader correctly pointed out, didn't really fit into what I was trying to say. (One of these days, I'll learn not to write these pieces late on Friday nights when I'm really, really tired.)
+<strong>Note, 2021-04-04</strong>: I revised this article to remove some references that, as a reader correctly pointed out, didn’t really fit into what I was trying to say. (One of these days, I’ll learn not to write these pieces late on Friday nights when I’m really, really tired.)
 </YellowBox>
 
 It's important for me to stay current with trends that affect my web development efforts. That's true whether we're talking about the websites I manage as part of the Day Job or just the tinkering I do with this personal site.

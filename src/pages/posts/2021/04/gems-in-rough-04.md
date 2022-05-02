@@ -21,7 +21,7 @@ featured_image_caption: |
 Yes, friends, [once again](/posts/2021/03/gems-in-rough-03/) we're going to go through a few instances of folderol, borderline fulmination, and perhaps foolishness about developing stuff for Ye Olde Webbe.
 
 <YellowBox>
-**Update, 2021-04-15**: After an initial miscommunication gave me the wrong impression about the thinking higher up, I learned that I won't be doing the [Next.js](https://nextjs.org)-related Day Job work mentioned below, after all. However, I'm leaving this post as-is for archival purposes and [for the sake of transparency](/posts/2019/10/otoh/).
+<strong>Update, 2021-04-15</strong>: After an initial miscommunication gave me the wrong impression about the thinking higher up, I learned that I won’t be doing the <a href="https://nextjs.org" target="_blank" rel="nofollow">Next.js</a>-related Day Job work mentioned below, after all. However, I’m leaving this post as-is for archival purposes and <a href="/posts/2019/10/otoh/">for the sake of transparency</a>.
 </YellowBox>
 
 ---

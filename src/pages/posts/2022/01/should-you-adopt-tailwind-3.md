@@ -21,7 +21,7 @@ featured_image_caption: |
 ---
 
 <BlueBox>
-**Note**: This article originally appeared on [the Stackbit blog](https://www.stackbit.com/blog/should-you-adopt-tailwind-3/) and is &copy; 2022 [Stackbit](https://www.stackbit.com/). The article includes external edits (content-related and stylistic) for that site.
+<strong>Note</strong>: This article originally appeared on <a href="https://www.stackbit.com/blog/should-you-adopt-tailwind-3/" target="_blank" rel="nofollow">the Stackbit blog</a> and is &copy; 2022 <a href="https://www.stackbit.com/" target="_blank" rel="nofollow">Stackbit</a>. The article includes external edits (content-related and stylistic) for that site.
 </BlueBox>
 
 Whether you adore or abhor **utility-first** CSS — or fall somewhere in between those two extreme opinions — it’s not something a web developer can ignore these days. The most prominent example of this potentially polarizing styling approach is the seemingly ubiquitous **Tailwind CSS** framework.

@@ -20,7 +20,7 @@ featured_image_caption: |
 ---
 
 <BlueBox>
-Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators](https://jamstack.org/generators) (SSGs).
+Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
 </BlueBox>
 
 ## Eleventy goes full-time
@@ -87,7 +87,7 @@ I am perturbed to have remained ignorant of this up to now, since Hugo 0.48 appe
 ## Learning from a friendly hat-tip
 
 <YellowBox>
-**Note**: As will quickly become obvious, the text in this segment dates from before I got the static tweet appearing as it should, as shown below, but I've left the original content mostly intact for the sake of [transparency](/posts/2019/10/otoh/).
+<strong>Note</strong>: As will quickly become obvious, the text in this segment dates from before I got the static tweet appearing as it should, as shown below, but I’ve left the original content mostly intact for the sake of <a href="/posts/2019/10/otoh/">transparency</a>.
 </YellowBox>
 
 This showed up in my Twitter feed a few days ago, referring to those aforementioned [recent](/posts/2022/02/static-tweets-eleventy-hugo/) [posts](/posts/2022/02/static-tweets-eleventy-hugo-part-2/) about embedding static versions of tweets:

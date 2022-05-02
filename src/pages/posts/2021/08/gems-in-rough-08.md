@@ -8,7 +8,7 @@ title: "Gems in the rough #8"
 description: "Checking out Astro; comparing vendors."
 author: Bryce Wray
 date: 2021-08-04T16:30:00-05:00
-lastmod: 2022-02-12T11:04:00-06:00
+lastmod: 2022-05-01T18:56:00-05:00
 discussionId: "2021-08-gems-in-rough-08"
 featured_image: "gemstones-sung-jin-cho-0d3qxUozE-0-unsplash_7315x4881.jpg"
 featured_image_width: 7315
@@ -19,7 +19,7 @@ featured_image_caption: |
 ---
 
 <BlueBox>
-Each entry in the "Gems in the rough" series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by [static site generators (SSGs)](https://jamstack.org/generators).
+Each entry in the “Gems in the rough” series is a collection of tips, explanations, and/or idle observations which I hope will be at least somewhat useful to those of you with websites built by <a href="https://jamstack.org/generators" target="_blank" rel="nofollow">static site generators (SSGs)</a>.
 </BlueBox>
 
 ## Astro: still rough, but promising
@@ -59,15 +59,13 @@ As for the actual performance numbers I see in Speedlify, you can check my [test
 - Render and Vercel are somewhat erratic, varying wildly from top three to bottom three. I'm at a loss to know why.
 
 <YellowBox>
-**Update, 2021-08-14**: Digital Ocean has cut the monthly build limit for App Platform static websites from the original 400 minutes to **only 100** minutes.[^CICD] Accordingly, I have taken the test repo off Digital Ocean, so the Speedlify test results mentioned above consist of only five sites as of now.
-</YellowBox>
-
-[^CICD]: Of course, I could use GitHub Actions to get around this, as I explained in last year's "[O say can you CI/CD?](/posts/2020/06/o-say-can-you-ci-cd/)"---but, as a friend overseas would say, "I can't be arsed."
-
-<YellowBox>
-**Update, 2021-09-18**: Azure deleted my test ASWA site tonight (early on 2021-09-19 according to UTC) because, apparently, it doesn't allow free static sites, after all, unlike the other vendors mentioned here. Consequently, the Speedlify test results now have four sites.
+<strong>Update, 2021-08-14</strong>: Digital Ocean has cut the monthly build limit for App Platform static websites from the original 400 minutes to <strong>only 100</strong> minutes. (Of course, I could use GitHub Actions to get around this, as I explained in last year’s “<a href="/posts/2020/06/o-say-can-you-ci-cd/">O say can you CI/CD?</a>”—but, as a friend overseas would say, “I can't be arsed.”) Accordingly, I have taken the test repo off Digital Ocean, so the Speedlify test results mentioned above consist of only five sites as of now.
 </YellowBox>
 
 <YellowBox>
-**Update, 2021-09-25**: I've turned off the cron jobs that run the test each day, so the results will be frozen going forward. It seemed nonsensical to keep running the tests since the list of sites was down to just four---two of them Cloudflare-based.
+<strong>Update, 2021-09-18</strong>: Azure deleted my test ASWA site tonight (early on 2021-09-19 according to UTC) because, apparently, it doesn’t allow free static sites, after all, unlike the other vendors mentioned here. Consequently, the Speedlify test results now have four sites.
+</YellowBox>
+
+<YellowBox>
+<strong>Update, 2021-09-25</strong>: I’ve turned off the cron jobs that run the test each day, so the results will be frozen going forward. It seemed nonsensical to keep running the tests since the list of sites was down to just four—two of them Cloudflare-based.
 </YellowBox>

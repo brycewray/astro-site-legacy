@@ -15,7 +15,7 @@ bw@brycewray.com\
 *(Spammers, you and your bots will never get past my **Junk** folder, so don't bother.)*
 
 <YellowBox>
-**Note**: I'm always interested in *mentioning* what my readers have to say, so please let me know in your email if that's acceptable. To respect your [privacy](/privacy), I will **not** attribute your comments to you unless you give your explicit permission. *(However, I still may quote you while giving you anonymity. Even if you've given your permission to quote you by name, I reserve the right to quote you anonymously.)*
+<strong>Note</strong>: I’m always interested in <strong>mentioning</strong> what my readers have to say, so please let me know in your email if that’s acceptable. To respect your <a href="/privacy/">privacy</a>, I will <strong>not</strong> attribute your comments to you unless you give your explicit permission. <em>(However, I still may quote you while giving you anonymity. Even if you’ve given your permission to quote you by name, I reserve the right to quote you anonymously.)</em>
 </YellowBox>
 
 ## Follow me

@@ -17,7 +17,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Note, 2020-09-09**: Although the site long since is no longer using the stack mentioned here, at least some parts of the repo [remain online for viewing by the curious](https://github.com/brycewray/eleventy_bundler).
+<strong>Note, 2020-09-09</strong>: Although the site long since is no longer using the stack mentioned here, at least some parts of the repo <a href="https://github.com/brycewray/eleventy_bundler" target="_blank" rel="noopener">remain online for viewing by the curious</a>.
 </YellowBox>
 
 *Following up on my [recent post](/posts/2019/12/packing-up/) about how I got this site back to my favorite [static site generator](https://staticgen.com) (SSG), [Eleventy](https://11ty.dev), and also provided some enhancements with the [webpack](https://webpack.js.org) bundler&nbsp;app&nbsp;.&nbsp;.&nbsp;.*

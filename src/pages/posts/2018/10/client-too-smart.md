@@ -60,5 +60,5 @@ And then it won't matter how smart the email client is.
 <br />
 
 <YellowBox>
-**Note**: The icons shown in the first graphic were originally designed by [Sergey Ershov](https://www.iconfinder.com/Fishmoby) and are under the [Creative Commons license (Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/). That licensing requires me to indicate any changes I made, which were edits of the SVG originals for size and stroke color.
+<strong>Note</strong>: The icons shown in the first graphic were originally designed by <a href="https://www.iconfinder.com/Fishmoby" target="_blank" rel="nofollow">Sergey Ershov</a> and are under the <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="nofollow">Creative Commons license (Attribution 3.0 Unported)</a>. That licensing requires me to indicate any changes I made, which were edits of the SVG originals for size and stroke color.
 </YellowBox>

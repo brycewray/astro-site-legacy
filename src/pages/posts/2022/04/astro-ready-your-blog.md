@@ -19,7 +19,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Note**: This post also appears on [dev.to](https://dev.to/brycewray/is-astro-ready-for-your-blog-63m).
+<strong>Note</strong>: This post also appears on <a href="https://dev.to/brycewray/is-astro-ready-for-your-blog-63m" target="_blank" rel="nofollow">dev.to</a>.
 </YellowBox>
 
 <Disclaimer />
@@ -121,7 +121,7 @@ Astro has no built-in support for [Sass](https://sass-lang.com)[^SassAstro] or [
 **Comparison**: The same is true for Eleventy, Gatsby, and Next.js. Hugo has built-in support for an older, [deprecated](https://sass-lang.com/blog/libsass-is-deprecated) form of Sass, and needs [some](/posts/2022/03/using-dart-sass-hugo-sequel/) [help](/posts/2022/03/making-tailwind-jit-work-hugo-version-3-edition/) to work with the current versions of Sass and Tailwind.
 
 <YellowBox>
-**Correction**: [Ben Holmes](https://twitter.com/BHolmesDev) of the Astro team (see the "Components" section further down) reminded me on Discord that Astro does offer an official [integration](https://docs.astro.build/en/guides/integrations-guide/) for [Tailwind CSS](https://github.com/withastro/astro/tree/main/packages/integrations/tailwind). Thanks for the catch, sir!
+<strong>Correction</strong>: <a href="https://twitter.com/BHolmesDev" target="_blank" rel="nofollow">Ben Holmes</a> of the Astro team (see the “Components” section further down) reminded me on Discord that Astro does offer an official <a href="https://docs.astro.build/en/guides/integrations-guide/" target="_blank" rel="nofollow">integration</a> for <a href="https://github.com/withastro/astro/tree/main/packages/integrations/tailwind" target="_blank" rel="nofollow">Tailwind CSS</a>. Thanks for the catch, sir!
 </YellowBox>
 
 ## Hydration

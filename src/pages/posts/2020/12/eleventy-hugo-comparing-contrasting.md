@@ -146,7 +146,7 @@ Here's just one example. With this adaptability, you can enjoy a wider choice of
 Curious? Check some of the many [Eleventy starter projects](https://www.11ty.dev/docs/starter/) and see the many, varied ways they use the mind-boggling number of available packages to make some magic.
 
 <YellowBox>
-**Note**: It's believed that Eleventy soon will reach version 1.0.x, which is likely to involve some breaking changes; and, as you can suspect, such "breaking" is going to include how Eleventy works with those other packages. If you have an existing Eleventy site when this new version goes live, before upgrading your main site to that new version you should first test it thoroughly, ideally within at least one *test* site on your chosen host.
+<strong>Note</strong>: It’s believed that Eleventy soon will reach version 1.0.x, which is likely to involve some breaking changes; and, as you can suspect, such “breaking” is going to include how Eleventy works with those other packages. If you have an existing Eleventy site when this new version goes live, before upgrading your main site to that new version you should first test it thoroughly, ideally within at least one <em>test</em> site on your chosen host.
 </YellowBox>
 
 ## A no-lose coin-flip?

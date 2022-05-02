@@ -20,7 +20,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Note**: After you read this post, please see also [its sequel](/posts/2021/11/go-big-go-home-sequel/) for what I believe is a much more usable result.
+<strong>Note</strong>: After you read this post, please see also <a href="/posts/2021/11/go-big-go-home-sequel/">its sequel</a> for what I believe is a much more usable result.
 </YellowBox>
 
 Imagine that you're about to take your first drive as owner of a shiny new vehicle which you chose after weeks of research and comparison.

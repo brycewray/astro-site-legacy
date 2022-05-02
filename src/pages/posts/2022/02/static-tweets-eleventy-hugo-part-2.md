@@ -19,7 +19,7 @@ featured_image_caption: |
 ---
 
 <YellowBox>
-**Update, 2022-04-12**: Based on [work](https://github.com/astro-community/astro-embed) by the [Astro](https://astro.build) team, I have enhanced the shortcode described in the [previous post](/posts/2022/02/static-tweets-eleventy-hugo/) (and the accompanying styling) so it also can handle animations embedded in tweets. Unfortunately, this isn't possible with the one described in **this** post, as I explain in an update below.
+<strong>Update, 2022-04-12</strong>: Based on <a href="https://github.com/astro-community/astro-embed" target="_blank" rel="nofollow">work</a> by the <a href="https://astro.build" target="_blank" rel="nofollow">Astro</a> team, I have enhanced the shortcode described in the <a href="/posts/2022/02/static-tweets-eleventy-hugo/">previous post</a> (and the accompanying styling) so it also can handle animations embedded in tweets. Unfortunately, this isn’t possible with the one described in <strong>this</strong> post, as I explain in an update below.
 </YellowBox>
 
 A few days ago, I issued [a post](/posts/2022/02/static-tweets-eleventy-hugo/) explaining how to embed fully static Twitter content in your [Eleventy](https://11ty.dev/)- or [Hugo](https://gohugo.io/)-based website. (If you haven’t yet read that post, please do so before proceeding, so you can better understand what follows below.)
@@ -168,10 +168,8 @@ And here’s the `stweetv2.html` shortcode itself. As in the case of the `stweet
 ```
 
 <YellowBox>
-**Update, 2022-04-12**: I revised this shortcode slightly after learning that the Twitter v2 API [doesn’t currently support animations](https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/media).[^formerContent] So, if you know you'll want to embed tweets with videos or animated GIFs, you'll be better off using the `stweet` shortcode from the [previous article](/posts/2022/02/static-tweets-eleventy-hugo/): its older API **does** support them.
+<strong>Update, 2022-04-12</strong>: I revised this shortcode slightly after learning that the Twitter v2 API <a href="https://developer.twitter.com/en/docs/twitter-api/data-dictionary/object-model/media" target="_blank" rel="nofollow">doesn’t currently support animations]</a>. (The shortcode now simply shows nothing for such an item, as opposed to how it formerly displayed a link to the original tweet—a link which is already down in the timestamp.) So, if you know you’ll want to embed tweets with videos or animated GIFs, you’ll be better off using the <code>stweet</code> shortcode from the <a href="/posts/2022/02/static-tweets-eleventy-hugo/">previous article</a>: its older API <strong>does</strong> support them.
 </YellowBox>
-
-[^formerContent]: The shortcode now simply shows nothing for such an item, as opposed to how it formerly displayed a link to the original tweet---a link which is already down in the timestamp.
 
 ## Testing with `cURL`
 
