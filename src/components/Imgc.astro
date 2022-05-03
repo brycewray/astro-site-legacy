@@ -74,17 +74,11 @@ End, LQIP-to-Base64
   @use '../styles/variables' as var; // SCSS partial
 
   .bkgdHandler {
-    background: var(--imgBkgd);
+    background-color: var.$default-color;
+    background-image: var(--imgBkgd);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
-  .imgc {
-    &-div {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   }
   img.containedImage {
     display: block;
