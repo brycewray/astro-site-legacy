@@ -51,7 +51,7 @@ export async function get() {
   // }
 
   for (let postkey in allPosts) {
-    if (allPosts[postkey].frontmatter.date && allPosts[postkey].frontmatter.title) {
+    if (allPosts[postkey].frontmatter.date && allPosts[postkey].frontmatter.title && !allPosts[postkey].frontmatter.draft) {
       let post = allPosts[postkey];
       let awaitedPost = await post.default();
       let featImg = '';
@@ -66,7 +66,7 @@ export async function get() {
       // console.log("Metadata = " + awaitedPost.metadata);
       theTitle = post.frontmatter.title;
       // theContent = awaitedPost.metadata.source;
-      theContent = awaitedPost.metadata.html;
+      // theContent = awaitedPost.metadata.html; // can't handle components
       theDescription = post.frontmatter.description;
       // theContent = micromark(theContent, {
       //   extensions: [
@@ -91,7 +91,7 @@ export async function get() {
         title: theTitle,
         id: `https://www.brycewray.com/${post.url}/`,
         link: `https://www.brycewray.com/${post.url}/`,
-        // description: theDescription,
+        description: theDescription,
         content: theDescription,
         // content: theContent,
         author: [
