@@ -6,7 +6,8 @@
     "dev": "astro dev --experimental-static-build --experimental-integrations",
     "start": "astro dev --experimental-static-build --experimental-integrations",
     "build": "astro build --experimental-static-build --experimental-integrations",
-    "preview": "astro preview --experimental-static-build --experimental-integrations"
+    "preview": "astro preview --experimental-static-build --experimental-integrations",
+    "format": "npx prettier -w ."
   },
   "devDependencies": {
     "@astrojs/preact": "^0.1.2",
@@ -35,6 +36,7 @@
   },
   "dependencies": {
     "preact": "^10.7.1",
+    "prettier-plugin-astro": "^0.0.12",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1"
   }
