@@ -17,3 +17,5 @@ public/**/*.*
 src/data/**/*.*
 src/styles/**/*.*
 info.js
+*.json.js
+*.xml.js
