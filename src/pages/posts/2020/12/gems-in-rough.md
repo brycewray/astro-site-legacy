@@ -65,7 +65,7 @@ In case that discussion about the various vendors’ CDN capabilities has you th
 
 ### Be careful about DNSSEC
 
-I think I'll simply repeat something I offered as a footnote to "[Goodbye and hello • Part 2](/posts/2020/07/goodbye-hello-part-2/)" a few months back, when I was explaining how I'd returned (briefly, as it turned out) to Netlify after initially [leaving Netlify for Vercel](/posts/2020/07/goodbye-hello/):
+I think I'll simply repeat something I offered as a footnote to “[Goodbye and hello • Part 2](/posts/2020/07/goodbye-hello-part-2/)” a few months back, when I was explaining how I'd returned (briefly, as it turned out) to Netlify after initially [leaving Netlify for Vercel](/posts/2020/07/goodbye-hello/):
 
 > While switching from Netlify's domain name servers to Google's during the site move to Vercel, I'd also activated [DNS System Security Extensions (DNSSEC)](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions). When I first began to return the site to Netlify and point my domain to Netlify's name servers because [that apparently works best with its CDN](https://css-tricks.com/using-your-domain-with-a-netlify-hosted-site/), I found that I first had to *de*-activate DNSSEC---and, quoting [the appropriate Google Support page](https://support.google.com/domains/answer/6387342?hl=en): "When you turn on DNSSEC, it takes roughly 2 hours for DNSSEC to activate completely. When you turn it off, there's a delay of up to 2 **days** before deactivation." [Emphasis added.] As it turned out, it took a full day. Anyway, lesson learned.
 

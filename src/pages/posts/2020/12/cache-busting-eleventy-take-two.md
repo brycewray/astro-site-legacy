@@ -17,7 +17,7 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://pixabay.com/users/humusak-137455/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=549087">jan mesaros</a>; <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=549087">Pixabay</a></span>
 ---
 
-*Before reading this article, please review "[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy/)" (despite how flawed its proposed solution turned out to be) for details on the importance of cache-busting your CSS and why Eleventy---at least, as of this writing---needs some external help with performing that function. In any event, I think you'll get a lot more out of **this** article if you've first read **that** one; and, so that I can omit some explainers and thus keep this already long article from being even longer, I will assume you've already done so.*
+*Before reading this article, please review “[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy/)” (despite how flawed its proposed solution turned out to be) for details on the importance of cache-busting your CSS and why Eleventy---at least, as of this writing---needs some external help with performing that function. In any event, I think you'll get a lot more out of **this** article if you've first read **that** one; and, so that I can omit some explainers and thus keep this already long article from being even longer, I will assume you've already done so.*
 
 ----
 
@@ -31,7 +31,7 @@ Second, please understand that the plugin I mentioned in that article does, in f
 
 Before I get into how I discovered what was wrong with the info I'd previously presented, let me explain how I handle CSS for [this site's repository](https://github.com/brycewray/eleventy_solo) as well as the [repo](https://github.com/brycewray/eleventy_solo_starter) for the [starter site](https://eleventy-solo-starter.netlify.app)[^bLuck] that's based on this site, because that's important for understanding how the plugin in question *could* have been fine under other circumstances.
 
-[^bLuck]: See "[Beginner's luck](/posts/2020/07/beginners-luck/)" for my original announcement of that starter site.
+[^bLuck]: See “[Beginner's luck](/posts/2020/07/beginners-luck/)” for my original announcement of that starter site.
 
 While you certainly *can* do everything for your site with just one original CSS file, I tend to break my CSS into multiple files (for example, `prismjs.css` is dedicated to formatting code blocks) and then use PostCSS to *import* and *combine* them into one final file for the site to use. It not only makes it easier to organize styles; it also is the approach [recommended](https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports) in [Tailwind CSS](https://tailwindcss.com)'s documentation. Thus, my repo's `/src/assets/css/index.css` file currently[^fontsCSS] looks like this:
 
@@ -65,7 +65,7 @@ I initially thought it might have something to do with the order in which I was 
 
 ## Back to the caching board
 
-Over the next few days, I repeated my earlier process of researching the specific problem of cache-busting on Eleventy. The first time around, I'd found one article particularly helpful due to the depth of detail it gave the subject: Roy Revelt's "[Our Cache Busting Setup on Eleventy](https://codsen.com/articles/our-cache-busting-setup-on-eleventy/)." So, although I went back through all the other articles I'd read on the initial loop, I kept returning to Revelt's article when I ran into dead ends elsewhere. Here are the key points I learned from it either the first time through or during this second iteration:
+Over the next few days, I repeated my earlier process of researching the specific problem of cache-busting on Eleventy. The first time around, I'd found one article particularly helpful due to the depth of detail it gave the subject: Roy Revelt's “[Our Cache Busting Setup on Eleventy](https://codsen.com/articles/our-cache-busting-setup-on-eleventy/).” So, although I went back through all the other articles I'd read on the initial loop, I kept returning to Revelt's article when I ran into dead ends elsewhere. Here are the key points I learned from it either the first time through or during this second iteration:
 
 - The aforementioned interim solution---which involves appending a query string to the `index.css` file name, resulting in a name like `index.css?v=1604094309`---isn't advisable because "URL parameters can get discarded anywhere in the file journey."
 - The ideal result (although even this article counseled for something easier) is that the final CSS file name is built from hashing of the *contents*.
@@ -106,7 +106,7 @@ To my delight, it worked! And, by "it worked," I mean that the hash at the end o
 
 ## To fork or not&nbsp;to&nbsp;fork&nbsp;.&nbsp;.&nbsp;.
 
-Once I had this working to my satisfaction, I implemented it on the [starter set](https://github.com/brycewray/eleventy_solo_starter), too. So, if you're just getting started with Eleventy, please feel free to fork that repo. However, if you already have an Eleventy-based site, by all means make whatever other use you can of this cache-busting solution. In either case, I heartily suggest you read "[Our Cache Busting Setup on Eleventy](https://codsen.com/articles/our-cache-busting-setup-on-eleventy/)" so you have a better understanding of the thinking behind all this.
+Once I had this working to my satisfaction, I implemented it on the [starter set](https://github.com/brycewray/eleventy_solo_starter), too. So, if you're just getting started with Eleventy, please feel free to fork that repo. However, if you already have an Eleventy-based site, by all means make whatever other use you can of this cache-busting solution. In either case, I heartily suggest you read “[Our Cache Busting Setup on Eleventy](https://codsen.com/articles/our-cache-busting-setup-on-eleventy/)” so you have a better understanding of the thinking behind all this.
 
 In the starter set repo, the files of note are:
 

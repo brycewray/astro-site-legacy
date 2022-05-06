@@ -35,7 +35,7 @@ In such instances, I couldn’t realistically expect my Safari-using visitors to
 The bottom line: I’m once again using internal CSS here and probably will keep doing so indefinitely, since I suspect there’s zero likelihood for the foreseeable future that Apple will stop requiring Webkit for iOS browsers.
 
 <Box cssClass="yellowBox">
-**Update, 2022-01-14**: Well, as it turned out, "indefinitely" was pushing it a bit. After a few days of what one might call "[CLS](https://web.dev/cls/) hell" whenever one goes from one page to another within the site, due to web fonts’ being loaded anew on each page, I reverted the site to **external** CSS. (Sigh.)
+**Update, 2022-01-14**: Well, as it turned out, "indefinitely" was pushing it a bit. After a few days of what one might call “[CLS](https://web.dev/cls/) hell” whenever one goes from one page to another within the site, due to web fonts’ being loaded anew on each page, I reverted the site to **external** CSS. (Sigh.)
 </Box>
 
 <Box cssClass="yellowBox">

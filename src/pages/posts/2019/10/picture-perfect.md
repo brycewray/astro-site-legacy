@@ -43,11 +43,11 @@ You see, these three SSGs can do some pretty cool image processing if you keep i
 
 Want proof? (If you want details on the specific items involved, please follow the links.)
 
-- **Gatsby**: "[If any of the \[image\] paths used do not resolve to a file\[,\] Gatsby will not create child nodes, instead leaving the \[path\] value as a string](https://www.orangejellyfish.com/blog/a-comprehensive-guide-to-images-in-gatsby/)."
+- **Gatsby**: “[If any of the \[image\] paths used do not resolve to a file\[,\] Gatsby will not create child nodes, instead leaving the \[path\] value as a string](https://www.orangejellyfish.com/blog/a-comprehensive-guide-to-images-in-gatsby/).”
 
-- **Gridsome**: "[Only local, relative image paths will be compressed by Gridsome](https://gridsome.org/docs/images/)."
+- **Gridsome**: “[Only local, relative image paths will be compressed by Gridsome](https://gridsome.org/docs/images/).”
 
-- **Hugo**: "[The `image` is a Page Resource, and the \[image\] processing methods listed below does not work \[sic\] on images inside your `/static` folder](https://gohugo.io/content-management/image-processing/)."
+- **Hugo**: “[The `image` is a Page Resource, and the \[image\] processing methods listed below does not work \[sic\] on images inside your `/static` folder](https://gohugo.io/content-management/image-processing/).”
 
 ## Where's the fire, buddy?
 

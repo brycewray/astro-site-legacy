@@ -17,7 +17,7 @@ featured_image_alt: "Screen capture from Hugo showing HTML with Tailwind CSS sty
 
 <Disclaimer />
 
-This is a follow-up to my post from a few months back, "[Making Tailwind JIT work with Hugo](/posts/2021/11/making-tailwind-jit-work-hugo/)." The code I suggested in that post worked fine when [Tailwind CSS](https://tailwindcss.com) was still in Version 2.x, but things got a little more complicated when [Tailwind 3.0 appeared](https://tailwindcss.com/blog/tailwindcss-v3) just a few weeks later.
+This is a follow-up to my post from a few months back, “[Making Tailwind JIT work with Hugo](/posts/2021/11/making-tailwind-jit-work-hugo/).” The code I suggested in that post worked fine when [Tailwind CSS](https://tailwindcss.com) was still in Version 2.x, but things got a little more complicated when [Tailwind 3.0 appeared](https://tailwindcss.com/blog/tailwindcss-v3) just a few weeks later.
 
 So, [as Daffy Duck would say](https://looneytunes.fandom.com/wiki/Rabbit_Fire_(transcript)), "let's try that again." And, spoiler alert: if you prefer to style your [Hugo](https://gohugo.io) site with [Sass/SCSS](https://sass-lang.com), I'll have some good and surprising news for you, too.
 
@@ -27,7 +27,7 @@ Perhaps you've already read the earlier post and thus don't need a total recap o
 
 - [The release of Tailwind 2.1](https://tailwindcss.com/blog/just-in-time-the-next-generation-of-tailwind-css) added **just-in-time (JIT) functionality** to the framework. This eliminated one of its biggest drawbacks up to that point. Before then, Tailwind would generate gigantic CSS files which required an occasionally problematic *purging* process to become suitable for distribution. With JIT---at that time, an opt-in feature---Tailwind created only enough CSS to handle whichever files you were having it "watch." In short, its CSS now was starting small and building up, rather than starting elephantine and trying to shrink.
 - This was a great improvement, but some apps didn't play so cheerfully with Tailwind JIT, and one of them was Hugo. Tailwind-with-JIT either would lock up Hugo or cause it to crash, in each case because Tailwind couldn't find a [`stdin`](https://www.computerhope.com/jargon/s/stdin.htm) file. This would later turn out to be an issue with [PostCSS](https://postcss.org), on which Tailwind typically depends.
-- A few months later, Hugo user [Praveen Juge](https://github.com/praveenjuge) cooked up an ingenious workaround, about which he wrote in "[Use Tailwind JIT with Hugo](https://praveenjuge.com/blog/use-tailwind-jit-with-hugo/)." It made use of a Tailwind 2.x capability that allowed **not** using PostCSS, thus avoiding the problem.
+- A few months later, Hugo user [Praveen Juge](https://github.com/praveenjuge) cooked up an ingenious workaround, about which he wrote in “[Use Tailwind JIT with Hugo](https://praveenjuge.com/blog/use-tailwind-jit-with-hugo/).” It made use of a Tailwind 2.x capability that allowed **not** using PostCSS, thus avoiding the problem.
 - However, Juge's approach, which he demonstrated in a [deliberately bare-bones Hugo project](https://github.com/praveenjuge/hugo-tailwind-jit), presented some issues when I tried adding it to an existing Hugo repo.
 - Then, as I explained in that aforementioned [earlier post](/posts/2021/11/making-tailwind-jit-work-hugo/), I poked around with Hugo, Juge's approach, and Tailwind 2.x until I managed to make everything work together. I didn't care at all for the way this method forced me to restructure my CSS[^CSSmess] but, hey, it produced the final result I wanted.
 

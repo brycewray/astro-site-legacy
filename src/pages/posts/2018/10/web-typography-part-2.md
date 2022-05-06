@@ -65,7 +65,7 @@ So, what to do?
 
 ## Goin’ back to the classics---sort of
 
-What I've chosen, and what quite a few sites have chosen, is to go back in time and trust the so-called "[system fonts stack](https://woorkup.com/system-font/)." That refers to the system-default sans-serif typefaces on people's individual devices. They're already there, and they load virtually instantaneously. If you're doubting the wisdom of such an approach considering my earlier explanation of how that worked in the 1990s, please understand that this is a major case of "That was then and this is now."
+What I've chosen, and what quite a few sites have chosen, is to go back in time and trust the so-called “[system fonts stack](https://woorkup.com/system-font/).” That refers to the system-default sans-serif typefaces on people's individual devices. They're already there, and they load virtually instantaneously. If you're doubting the wisdom of such an approach considering my earlier explanation of how that worked in the 1990s, please understand that this is a major case of "That was then and this is now."
 
 Two things are far, far better than they were in the olden days: system typefaces and the displays on which they appear. In the early days of the web, a [typical user](http://www.relativelyinteresting.com/comparing-todays-computers-to-1995s/) was fortunate to have something as nice as, say, a seventeen-inch, 256-color, 1,024 &times; 768 monitor (in the form of a bulky [CRT](https://whatis.techtarget.com/definition/cathode-ray-tube-CRT), of course); therefore, system typefaces not only didn't _have_ to be but, indeed, _couldn't_ be truly high-resolution. But, now, super-high-res flat displays of all sizes on a multiplicity of devices are normal, and so are extra-high-quality system typefaces. If I've said it once, I've said it a hundred times: I love living in the future.
 
@@ -132,6 +132,6 @@ A few days after I began writing this, I converted the site over to [Bootstrap 4
 
 At first, I was sufficiently unimpressed with this simplification that I overrode it in my site-wide CSS with the more comprehensive "system fonts stack" I mentioned above. However, after some experimentation with how the Bootstrap 4 version looked in certain Linux distributions as compared to what I was using, I decided I preferred Bootstrap's way, after all, and changed my CSS accordingly. The vast majority of you, covered by the first three entries, will never know the difference; but, on a few odd combinations of OS and devices, the Bootstrap version is better. Lesson learned; _mea&nbsp;culpa_.
 
-[^1]:	"[Typeface](https://en.wikipedia.org/wiki/Typeface)," Wikipedia, retrieved 2018-10-22.
+[^1]:	“[Typeface](https://en.wikipedia.org/wiki/Typeface),” Wikipedia, retrieved 2018-10-22.
 
 [^2]:	Unless you're using WordPress and the GeneratePress theme, in which case you can follow [Brian Jackson's advice](https://woorkup.com/system-font/).

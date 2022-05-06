@@ -36,7 +36,7 @@ One thing you do when you have analytics set up for your site, as I've done for 
 
 [^offLine]: **Update, 2022-02-12**: It appears the Linux Rig site is no longer available, so I’ve removed its links from this page.
 
-The referral seemed odd since I rarely, if ever, mention Linux here; so, my curiosity aroused, I did some searching and, eventually, came across the source of the referral link. It was a brief piece which had been prompted by my publication of, and borrowed the title from, what as of now is this site's most-viewed article, "[Why I left Ulysses](/posts/2019/04/why-left-ulysses/)." It even was dated from a few days after I'd posted the original.
+The referral seemed odd since I rarely, if ever, mention Linux here; so, my curiosity aroused, I did some searching and, eventually, came across the source of the referral link. It was a brief piece which had been prompted by my publication of, and borrowed the title from, what as of now is this site's most-viewed article, “[Why I left Ulysses](/posts/2019/04/why-left-ulysses/).” It even was dated from a few days after I'd posted the original.
 
 Now I was really curious, given that the Mac-only, proprietary Ulysses neither runs on Linux nor is FOSS.
 
@@ -66,11 +66,11 @@ Back to the writing: about the only FOSS/cross-platform option I've ever seen th
 
 There are a number of Mark Text reviews out there, such as:
 
-- "[Mark Text vs. Typora: Best Markdown Editor For Linux?](https://www.linuxjournal.com/content/mark-text-vs-typora-best-markdown-editor-linux)" (October 13, 2020) by Sarvottam Kumar for Linux Journal.
-- "[Mark Text --- simple and elegant open source Markdown editor](https://www.linuxlinks.com/mark-text-simple-elegant-markdown-distraction-free-editor/)" (September 14, 2020) by Steve Emms for LinuxLinks.
-- "[UberWriter Vs. Mark Text](https://www.linuxandubuntu.com/home/uberwriter-vs-mark-text)" (May 16, 2019) by "Sohail" for LinuxAndUbuntu.com.
-- "[App Review: Mark Text](https://hypertextzone.net/blog/ivans1/marktext)" (November 21, 2018) by Ivan Stanton.
-- "[Mark Text: FOSS Markdown Editor With Realtime Preview](https://www.linuxuprising.com/2018/05/mark-text-foss-markdown-editor-with.html)" (last updated July 6, 2018) by "Logix" for Linux Uprising.
+- “[Mark Text vs. Typora: Best Markdown Editor For Linux?](https://www.linuxjournal.com/content/mark-text-vs-typora-best-markdown-editor-linux)” (October 13, 2020) by Sarvottam Kumar for Linux Journal.
+- “[Mark Text --- simple and elegant open source Markdown editor](https://www.linuxlinks.com/mark-text-simple-elegant-markdown-distraction-free-editor/)” (September 14, 2020) by Steve Emms for LinuxLinks.
+- “[UberWriter Vs. Mark Text](https://www.linuxandubuntu.com/home/uberwriter-vs-mark-text)” (May 16, 2019) by "Sohail" for LinuxAndUbuntu.com.
+- “[App Review: Mark Text](https://hypertextzone.net/blog/ivans1/marktext)” (November 21, 2018) by Ivan Stanton.
+- “[Mark Text: FOSS Markdown Editor With Realtime Preview](https://www.linuxuprising.com/2018/05/mark-text-foss-markdown-editor-with.html)” (last updated July 6, 2018) by "Logix" for Linux Uprising.
 
 I suggest reading those to get a fuller picture of Mark Text than what you're about to get from me, which is simply about how it worked for me in writing this particular content for the site.
 

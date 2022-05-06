@@ -36,11 +36,11 @@ How all this came about is our tale for today, friends and neighbors.
 
 ## Curiosity killed the cache
 
-A few days ago, a reader named Chad Henry contacted me about my 2020 article, "[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy)." In that post and two [follow-up](/posts/2020/12/cache-busting-eleventy-take-two) [pieces](/posts/2020/12/hashing-out-cache-busting-fix-eleventy), I discussed the need, and explained methods, for a website to keep its visitors’ [browser caches](https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/) from storing older versions of the site's CSS whenever that code changes.
+A few days ago, a reader named Chad Henry contacted me about my 2020 article, “[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy).” In that post and two [follow-up](/posts/2020/12/cache-busting-eleventy-take-two) [pieces](/posts/2020/12/hashing-out-cache-busting-fix-eleventy), I discussed the need, and explained methods, for a website to keep its visitors’ [browser caches](https://www.bigcommerce.com/ecommerce-answers/what-browser-cache-and-why-it-important/) from storing older versions of the site's CSS whenever that code changes.
 
 In short: if the browser sees a file called *index.css*, it's going to assume it's the same *index.css* it already saw, and cached, on a previous visit. As a result, the browser won't use the site's **current** *index.css* if the file has changed since that visit. The way to do the desired "cache-busting" typically involves changing the CSS file name, usually by appending a [hash](https://www.sentinelone.com/cybersecurity-101/hashing/) of its content, every time there are any changes in the CSS. Ideally, the site automatically generates such name changes at build time *and* injects them within the site's HTML in such a way that everything just works. (That is: you don't want the HTML still to be referring to *index-2eXy57Qa.css* if the CSS file's **newly** generated name is *index-34Dk83Af.css*.)
 
-My eventual solution for all this, as I explained in "[Hashing out a cache-busting fix for Eleventy](/posts/2020/12/hashing-out-cache-busting-fix-eleventy/)," was a JavaScript file, called `csshash.js` (originally `cssdate.js`, but that's another story), which the repo's `package.json` would run at build time to (a.) generate a new name for the site's CSS file whenever its content had changed and (b.) inject the name into the site-wide `head`.
+My eventual solution for all this, as I explained in “[Hashing out a cache-busting fix for Eleventy](/posts/2020/12/hashing-out-cache-busting-fix-eleventy/),” was a JavaScript file, called `csshash.js` (originally `cssdate.js`, but that's another story), which the repo's `package.json` would run at build time to (a.) generate a new name for the site's CSS file whenever its content had changed and (b.) inject the name into the site-wide `head`.
 
 Of course, it's not just CSS files that present such problems. Whenever the content of any normally cached file changes, that file requires cache-busting. So, what Chad wanted to know was: did I have similar methods to offer regarding cache-busting of JavaScript files?
 
@@ -58,7 +58,7 @@ Ah, yes, [webpack](https://webpack.js.org)---that household-name-class *bundler*
 
 Incidentally, in case you're unaware of the purpose of a bundler, here's a greatly simplified explanation.[^Zhou] A bundler works at build time for a website or web app to combine certain separate assets, like CSS or JS files, into one *bundle*---with hashed file name---per file type, references to which it then injects into the website's HTML. That's trickier than it sounds because the bundler also automatically reconciles any conflicts among variables in the multiple JS files. The bundling process helps the website's performance because it can deliver the same content in fewer downloadable files.
 
-[^Zhou]: I would also refer you, as I've done before, to Victor Zhou's "[Why Webpack? (or, How Not to Serve JavaScript)](https://victorzhou.com/blog/why-you-should-use-webpack/)," which covers the subject well, albeit from an early-2019 and highly webpack-centric perspective.
+[^Zhou]: I would also refer you, as I've done before, to Victor Zhou's “[Why Webpack? (or, How Not to Serve JavaScript)](https://victorzhou.com/blog/why-you-should-use-webpack/),” which covers the subject well, albeit from an early-2019 and highly webpack-centric perspective.
 
 As a result, instead of having this in your HTML:
 
@@ -100,7 +100,7 @@ My initial use of Eleventy began over Labor Day weekend, 2019. This was a few we
 
 The first time with Eleventy, I wanted to convert the site from a [Hugo](https://gohugo.io)-based setup on which I'd used [Sass/SCSS](https://sass-lang.com) for styling. Only thing was: Eleventy, from the beginning, has been intended as something that you configure to function as needed, and that includes one's [asset pipeline](https://mxb.dev/blog/eleventy-asset-pipeline/). I'd gotten spoiled by how Hugo's built-in [Hugo Pipes](https://gohugo.io/hugo-pipes/) functionality had made compiling Sass to CSS so effortless but, at that time, I couldn't find any examples of how to accomplish it in Eleventy. A few searches later, I started using the [Gulp](https://gulpjs.com) [task runner](https://medium.com/tiny-code-lessons/javascript-task-runners-explained-c4762728bda), plus some plugins, to give Eleventy similar Sass-to-CSS compilation capabilities.
 
-Those several times during 2019 that I tried or used Gatsby had shown me how much it gained from being joined at the hip with the webpack bundler tool; so, near the end of 2019, I grafted webpack and Eleventy together and, as described in "[Packing up](/posts/2019/12/packing-up/)," introduced my combo to the site in the `eleventy_bundler` repo (which, although [still available](https://github.com/brycewray/eleventy_bundler) for viewing by the curious, is only a shadow of its former self).
+Those several times during 2019 that I tried or used Gatsby had shown me how much it gained from being joined at the hip with the webpack bundler tool; so, near the end of 2019, I grafted webpack and Eleventy together and, as described in “[Packing up](/posts/2019/12/packing-up/),” introduced my combo to the site in the `eleventy_bundler` repo (which, although [still available](https://github.com/brycewray/eleventy_bundler) for viewing by the curious, is only a shadow of its former self).
 
 This served until the second quarter of 2020. Then, tired of dealing with the increasing hassles of webpack configuration but unable to find a suitable replacement tool (including the much-touted [Parcel](https://parceljs.org)), I decided to drop webpack in favor of doing everything through scripts in `package.json`---and, at the time, an image-processing script for build time that, later, [got replaced](/posts/2020/07/transformed/) in favor of using [Cloudinary](https://cloudinary.com).
 
@@ -112,7 +112,7 @@ At first, this bundler-less approach apparently simplified things greatly. I had
 
 However, it was a false kind of simplicity. I flat-out didn't worry about cache-busting back then. Only later in 2020, when I became more aware of its importance, would I begin properly scripting for it.
 
-In the year-plus following the switch away from webpack, my `package.json` scripting became pretty convoluted. It *worked*, mind you, but I found myself often searching for ways to do things "manually" that a bundler tool would do. Moreover, as in the embarrassing SNAFU I described in a later edit to "[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy/)," some solutions I chose turned out to be not so great.
+In the year-plus following the switch away from webpack, my `package.json` scripting became pretty convoluted. It *worked*, mind you, but I found myself often searching for ways to do things "manually" that a bundler tool would do. Moreover, as in the embarrassing SNAFU I described in a later edit to “[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy/),” some solutions I chose turned out to be not so great.
 
 Fast-forward to earlier this week---and my still all-too-"manual" approach to cache-busting both CSS and JS (especially the JS) at build time.
 
@@ -134,7 +134,7 @@ Over the last few months, I'd read and heard many good things about the ease and
 
 Fortunately, by this particular day that I was once again researching the subject, I saw two key links:
 
-- Simon East's *Medium* article, "[Clean SASS and JS with Eleventy in 2021 (Using Vite)](https://medium.com/@SimonEast/clean-sass-and-js-with-eleventy-in-2021-using-vite-98747500d8f8)," which relied heavily on&nbsp;.&nbsp;.&nbsp;.
+- Simon East's *Medium* article, “[Clean SASS and JS with Eleventy in 2021 (Using Vite)](https://medium.com/@SimonEast/clean-sass-and-js-with-eleventy-in-2021-using-vite-98747500d8f8),” which relied heavily on&nbsp;.&nbsp;.&nbsp;.
 - Fotis Papado&shy;georgo&shy;poulos's repo, [`eleventy-with-vite`](https://github.com/fpapado/eleventy-with-vite), which is self-announced as "a template (or demo) for integrating Vite with Eleventy."
 
 I'd seen `eleventy-with-vite` before and perused some of its code, but until that day had feared it might not work with my existing site and, thus, figured it wasn't worth the try.
@@ -186,11 +186,11 @@ Such was the case with the process I described herein. It started with a reader'
 Sometimes, lucky rabbits find carrots. So far, the Eleventy/Vite combo is proving to be a tasty morsel. I'll keep you advised as to my progress, including most definitely if this new way of handling the site should turn out unexpectedly to be more stick than carrot.
 
 <Box cssClass="yellowBox">
-**Update, 2021-07-25**: I now have an Eleventy/Vite starter set online; see "[Beginner's luck #4: the Vite edition](/posts/2021/07/beginners-luck-4-vite-edition/)."
+**Update, 2021-07-25**: I now have an Eleventy/Vite starter set online; see “[Beginner's luck #4: the Vite edition](/posts/2021/07/beginners-luck-4-vite-edition/).”
 </Box>
 
 [^1]:	Of the hashed files, two are JS "helper" files which keep both the image "lazy-loading" functionality and the recently added all-Tailwind nav menu from violating the site's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)---specifically, its [`script-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) part.
 
-[^2]:	With webpack, you need to set up special "[loaders](https://webpack.js.org/loaders/)" for various file formats, which is still another way Vite cleans webpack's clock for a busy web dev.
+[^2]:	With webpack, you need to set up special “[loaders](https://webpack.js.org/loaders/)” for various file formats, which is still another way Vite cleans webpack's clock for a busy web dev.
 
 [^3]:	To confirm that it was Vite's fault and not related to the Eleventy/Vite combo and/or any of my own sometimes questionable code, I ["scaffolded" a bare-bones Vite repo](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), imported a font file and an image file, and got the same results: hashed/bundled files, but no reference to them in `manifest.json`.

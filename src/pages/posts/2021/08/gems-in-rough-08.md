@@ -60,7 +60,7 @@ As for the actual performance numbers I see in Speedlify, you can check my [test
 - Render and Vercel are somewhat erratic, varying wildly from top three to bottom three. I'm at a loss to know why.
 
 <Box cssClass="yellowBox">
-**Update, 2021-08-14**: Digital Ocean has cut the monthly build limit for App Platform static websites from the original 400 minutes to **only 100** minutes. (Of course, I could use GitHub Actions to get around this, as I explained in last year's "[O say can you CI/CD?](/posts/2020/06/o-say-can-you-ci-cd/)"---but, as a friend overseas would say, "I can't be arsed.") Accordingly, I have taken the test repo off Digital Ocean, so the Speedlify test results mentioned above consist of only five sites as of now.
+**Update, 2021-08-14**: Digital Ocean has cut the monthly build limit for App Platform static websites from the original 400 minutes to **only 100** minutes. (Of course, I could use GitHub Actions to get around this, as I explained in last year's “[O say can you CI/CD?](/posts/2020/06/o-say-can-you-ci-cd/)”---but, as a friend overseas would say, "I can't be arsed.") Accordingly, I have taken the test repo off Digital Ocean, so the Speedlify test results mentioned above consist of only five sites as of now.
 </Box>
 
 <Box cssClass="yellowBox">

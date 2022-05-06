@@ -61,7 +61,7 @@ I say "new look" because, back in June, I'd spent the better part of a Sunday pl
 
 Apart from those experiences, one overarching concern I had about Cloudinary was whether I'd be able to stay within its free tier, given my large and growing supply of site images and the fact that *each* transformation of *each* image would be counted against the monthly 25-*credit* limit. I knew each transformation was only a tiny fraction of that limit and so the math didn't indicate I'd really have a problem, but my fear-of-the-unknown reaction remained.
 
-Fortunately, I got over it after viewing the Cloudinary tutorial video, "[Understanding Cloudinary's Transformation Quotas](https://www.youtube.com/watch?v=kkAk_5jQPFE)," which explains the whole thing quite well. And, indeed, once I tried again and spent a few *more* hours testing, I realized that my site's needs would easily fit within the Cloudinary free tier.
+Fortunately, I got over it after viewing the Cloudinary tutorial video, “[Understanding Cloudinary's Transformation Quotas](https://www.youtube.com/watch?v=kkAk_5jQPFE),” which explains the whole thing quite well. And, indeed, once I tried again and spent a few *more* hours testing, I realized that my site's needs would easily fit within the Cloudinary free tier.
 
 After I uploaded all the images[^SVGandIcons], which actually went pretty quickly, I retooled my long-standing `lazy-picture.js`[^Verlok] [shortcode](https://11ty.dev/docs/shortcodes) so that it would, rather than seeking out multiple *locally* processed images from the site's own storage, instead call the special *transformation URLs* the images have in Cloudinary.
 

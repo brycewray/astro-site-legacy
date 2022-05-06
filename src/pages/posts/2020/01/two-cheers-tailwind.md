@@ -25,7 +25,7 @@ A couple of weekends ago, I tweeted a question for the web devs among my few but
 
 Then it got retweeted by the [Tailwind CSS](https://tailwindcss.com) [Twitter account](https://twitter.com/tailwindcss) and, well, my phone was pretty actively "bink"-ing at me for a few hours thereafter.
 
-Tens of thousands of "[impressions](https://help.twitter.com/en/managing-your-account/using-the-tweet-activity-dashboard)" and a few dozen mostly enthusiastic answers later, I had a pretty clear, albeit obviously biased, direction&nbsp;.&nbsp;.&nbsp;.
+Tens of thousands of “[impressions](https://help.twitter.com/en/managing-your-account/using-the-tweet-activity-dashboard)” and a few dozen mostly enthusiastic answers later, I had a pretty clear, albeit obviously biased, direction&nbsp;.&nbsp;.&nbsp;.
 
 *Yeah, man, go for it*.
 
@@ -97,14 +97,14 @@ That remains TBD.
 
 Finally, here are the best from among the many articles I've been reading (often, several times) recently while considering all this stuff:
 
-- "[CSS Utility Classes and 'Separation of Concerns'](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)" by Adam Wathan, the creator of Tailwind CSS.
-- "[In Defense of Utility-first CSS](https://frontstuff.io/in-defense-of-utility-first-css)" by Sarah Dayan.
-- "[A Year of Utility Classes](https://css-irl.info/a-year-of-utility-classes/)" by Michelle Barker.
-- "[The Perils of Functional CSS](https://www.browserlondon.com/blog/2019/06/10/functional-css-perils/)" by Jay Freestone.
-- "[Utility First and CSS Components: A Reconciliation](https://regisphilibert.com/note/utility-class-css-components-reconciled/)" by Régis Philibert.
-- "[Use Tailwind or Roll Your Own CSS Utility Library?](https://blog.bitsrc.io/use-tailwind-or-roll-your-own-css-utility-library-fdaa89659117)" by Oliver Williams.
-- "[In Defense of Functional CSS](https://critter.blog/2018/06/08/in-defense-of-functional-css/)" by Mike Crittenden.
-- "[Why I Haven't Jumped on the Tailwind CSS Bandwagon](https://block81.com/blog/why-i-havent-jumped-on-the-tailwind-css-bandwagon)" by Angie Herrera.
+- “[CSS Utility Classes and 'Separation of Concerns'](https://adamwathan.me/css-utility-classes-and-separation-of-concerns/)” by Adam Wathan, the creator of Tailwind CSS.
+- “[In Defense of Utility-first CSS](https://frontstuff.io/in-defense-of-utility-first-css)” by Sarah Dayan.
+- “[A Year of Utility Classes](https://css-irl.info/a-year-of-utility-classes/)” by Michelle Barker.
+- “[The Perils of Functional CSS](https://www.browserlondon.com/blog/2019/06/10/functional-css-perils/)” by Jay Freestone.
+- “[Utility First and CSS Components: A Reconciliation](https://regisphilibert.com/note/utility-class-css-components-reconciled/)” by Régis Philibert.
+- “[Use Tailwind or Roll Your Own CSS Utility Library?](https://blog.bitsrc.io/use-tailwind-or-roll-your-own-css-utility-library-fdaa89659117)” by Oliver Williams.
+- “[In Defense of Functional CSS](https://critter.blog/2018/06/08/in-defense-of-functional-css/)” by Mike Crittenden.
+- “[Why I Haven't Jumped on the Tailwind CSS Bandwagon](https://block81.com/blog/why-i-havent-jumped-on-the-tailwind-css-bandwagon)” by Angie Herrera.
 
 ---
 

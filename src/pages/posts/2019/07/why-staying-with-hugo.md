@@ -65,7 +65,7 @@ Boy, howdy, did I dodge a bullet when he declined.[^demur] Only now do I know ju
 
 You see, what I **didn't** do back then was follow up from those tutorials by setting up my own Gatsby site; all I saw at the time was the carefully charted path laid out in the tutorials. As you can well guess, they make it seem that, if you just follow the instructions, you'll have a Gatsby site up, running, and data-gulping faster than you can say, "F. Scott Fitzgerald."[^Leo]
 
-[^Leo]: Or "[Leonardo DiCaprio](https://www.imdb.com/title/tt1343092/?ref_=fn_al_tt_3)" or even "[Robert Redford](https://www.imdb.com/title/tt0071577/?ref_=fn_al_tt_4)," if you're so inclined.
+[^Leo]: Or “[Leonardo DiCaprio](https://www.imdb.com/title/tt1343092/?ref_=fn_al_tt_3)” or even “[Robert Redford](https://www.imdb.com/title/tt0071577/?ref_=fn_al_tt_4),” if you're so inclined.
 
 ***Disclaimer echo:*** *Some can. As I'll make clear, I couldn't---at least, not beyond the tiny confines of the "starter" site that you get by default with the* ```gatsby new``` *command.*
 

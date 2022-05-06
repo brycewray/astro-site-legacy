@@ -165,7 +165,7 @@ Incidentally, I took advantage of this exploration to try the [`@use`](https://s
 
 As I said earlier, part of the work I'm doing for this learning experience involves rebuilding one of our currently WordPress-based sites as closely as possible. Since that site uses [FontAwesome](https://fontawesome.com) characters in its navigation menu, I wanted to do the same---but **without** having to link to FontAwesome itself.
 
-Fortunately, FontAwesome has an "[official React component](https://fontawesome.com/docs/web/use-with/react/)," which makes that a breeze:
+Fortunately, FontAwesome has an “[official React component](https://fontawesome.com/docs/web/use-with/react/),” which makes that a breeze:
 
 ```jsx
 import nav from '@scss/Nav.module.scss';

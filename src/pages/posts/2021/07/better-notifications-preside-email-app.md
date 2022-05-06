@@ -20,7 +20,7 @@ featured_image_caption: |
 
 This is for all you power users who wield both the [MailMate](https://freron.com) Mac email app and [Preside](https://www.preside.io) iOS email app.
 
-In my post, "[Battle of the iOS email heavyweights](/posts/2020/05/battle-ios-email-heavyweights/)," I noted that the only thing that rubbed me the wrong way about the otherwise excellent (and, indeed, amazing) Preside was its not-so-great handling of notifications. This is intended as a feature, not a bug. Preside's developer, [Rich Waters](https://github.com/richwaters), [believes](https://preside.io/faq.html#Notifications) email notifications impair one's productivity.[^UGvsFAQs]
+In my post, “[Battle of the iOS email heavyweights](/posts/2020/05/battle-ios-email-heavyweights/),” I noted that the only thing that rubbed me the wrong way about the otherwise excellent (and, indeed, amazing) Preside was its not-so-great handling of notifications. This is intended as a feature, not a bug. Preside's developer, [Rich Waters](https://github.com/richwaters), [believes](https://preside.io/faq.html#Notifications) email notifications impair one's productivity.[^UGvsFAQs]
 
 [^UGvsFAQs]: Indeed, the [Preside User Guide](https://preside.io/userGuide.html) doesn't even mention notifications. For the official word on them, you have to go to the [Preside FAQs](https://preside.io/faq.html#Notifications).
 

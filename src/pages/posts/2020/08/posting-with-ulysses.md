@@ -79,7 +79,7 @@ This was an interesting experiment, but I likely will stick with iA Writer for t
 
 Still, glitches aside, it was fun to give the newest Ulysses a shot at writing posts again. Perhaps some day Ulysses will have a setting to turn off some of the unwanted behavior I mentioned herein---call it an "iA Writer mode" or "SSG mode." That would make it pretty hard to beat for someone who would like to stay within Big U for *all* his or her writing tasks.[^6]
 
-[^1]:	First hinted at in "[iA for IO?](/posts/2019/02/ia-for-io/)"
+[^1]:	First hinted at in “[iA for IO?](/posts/2019/02/ia-for-io/)”
 
 [^2]:	Although this was seemingly allowed only on Mac, my use of Git and [Working Copy](/posts/2019/07/roger-copy/) got me around that little problem.
 

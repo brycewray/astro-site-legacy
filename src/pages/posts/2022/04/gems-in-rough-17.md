@@ -23,7 +23,7 @@ Each entry in the “Gems in the rough” series is a collection of tips, explan
 
 ## Getting giscus going again
 
-I [noted](/posts/2022/03/gems-in-rough-16/#trying-giscus) in the previous "[Gems in the rough](/posts/2022/03/gems-in-rough-16/)" that I was trying the [giscus](https://giscus.app) commenting system. giscus uses the [GitHub Discussions](https://docs.github.com/en/discussions) API and brings in comments from Discussions that it automatically creates on your site's repository.
+I [noted](/posts/2022/03/gems-in-rough-16/#trying-giscus) in the previous “[Gems in the rough](/posts/2022/03/gems-in-rough-16/)” that I was trying the [giscus](https://giscus.app) commenting system. giscus uses the [GitHub Discussions](https://docs.github.com/en/discussions) API and brings in comments from Discussions that it automatically creates on your site's repository.
 
 At the time I issued that post, I had no expectation of migrating the site to a different repo. Still, even after [I did](/posts/2022/04/winds-change/), I figured, *Ah, no problem, I'll just [transfer the Discussions](https://docs.github.com/en/discussions/managing-discussions-for-your-community/managing-discussions#transferring-a-discussion) from the previous repo to the new one, and everything will work again.*
 

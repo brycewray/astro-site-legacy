@@ -26,7 +26,7 @@ For that matter: the `wm-11ty-js` branch actually is how I got to the point whic
 
 > .&nbsp;.&nbsp;.&nbsp;it didn't take me long to realize that I simply don't know enough JavaScript to implement a *full* switchover. .&nbsp;.&nbsp;.&nbsp;in the end, I still was left with multiple key templates in .njk. It wasn't so terrible, but, well, the intent had been to switch, completely. And I couldn't.
 
-That was what I wrote a few weeks ago. But, as my past posts have shown, your friendly post boy, here, takes his lumps from a first-time-around learning experience, nurses his wounds, and then keeps coming back until he gets it right---or, at least, as right as he can. So it was with [CSS Grid](/posts/2018/11/grid-locked-no-more/), my "[dance](/posts/2019/12/sorta-strange-ssg-trip/)" with multiple [SSGs](https://staticgen.com) in general and [Gatsby](/posts/2019/10/now-gatsby-geezer/) in particular (before I [wised up and came back to Eleventy](/posts/2019/12/packing-up/), of course), and [PostCSS](/posts/2020/01/two-cheers-tailwind/).
+That was what I wrote a few weeks ago. But, as my past posts have shown, your friendly post boy, here, takes his lumps from a first-time-around learning experience, nurses his wounds, and then keeps coming back until he gets it right---or, at least, as right as he can. So it was with [CSS Grid](/posts/2018/11/grid-locked-no-more/), my “[dance](/posts/2019/12/sorta-strange-ssg-trip/)” with multiple [SSGs](https://staticgen.com) in general and [Gatsby](/posts/2019/10/now-gatsby-geezer/) in particular (before I [wised up and came back to Eleventy](/posts/2019/12/packing-up/), of course), and [PostCSS](/posts/2020/01/two-cheers-tailwind/).
 
 And, yea verily, so it was with JavaScript-only templating.
 
@@ -42,7 +42,7 @@ I had carefully followed the [Eleventy site](https://11ty.dev)'s [great explanat
 
 And, oddly enough: I was able to do so chiefly because of my experience with [Gatsby](https://gatsbyjs.org)---especially my [recently](/posts/2020/04/different-modes-different-code/) making public both Gatsby- and [Hugo](https://gohugo.io)-based repos of this site. While the all-JavaScript[^React] code for the Gatsby version of the paginated posts list wasn't directly transferrable, chiefly because of Gatsby's reliance on [GraphQL](https://graphql.org), there were enough similarities that I could find my way.
 
-[^React]: Albeit that it was using [React](https://reactjs.org), of course, but that wasn't the obstacle it would've been a few months ago before the "[dance](/posts/2019/12/sorta-strange-ssg-trip/)" somewhat toughened me to dealing with it.
+[^React]: Albeit that it was using [React](https://reactjs.org), of course, but that wasn't the obstacle it would've been a few months ago before the “[dance](/posts/2019/12/sorta-strange-ssg-trip/)” somewhat toughened me to dealing with it.
 
 ### Webmentions
 
@@ -96,7 +96,7 @@ He has rapidly become someone to watch in the Eleventy community, and a nicer an
 
 ### Max Böck and Sia Karamalegos
 
-Mr. Böck's "[Static IndieWeb pt2: using Webmentions](https://mxb.dev/blog/using-webmentions-on-static-sites/)" and Ms. Karamalegos's "[An In-Depth Tutorial of Webmentions + Eleventy](https://sia.codes/posts/webmentions-eleventy-in-depth/)," the latter based on the former, were the original sources of the Nunjucks-based webmentions templates I began using near the end of 2019. Thus, it was only natural that I returned to these amazingly informative posts when I chose to make .11ty.js versions of that code.
+Mr. Böck's “[Static IndieWeb pt2: using Webmentions](https://mxb.dev/blog/using-webmentions-on-static-sites/)” and Ms. Karamalegos's “[An In-Depth Tutorial of Webmentions + Eleventy](https://sia.codes/posts/webmentions-eleventy-in-depth/),” the latter based on the former, were the original sources of the Nunjucks-based webmentions templates I began using near the end of 2019. Thus, it was only natural that I returned to these amazingly informative posts when I chose to make .11ty.js versions of that code.
 
 (Fortunately, I didn't have to bug them with questions online this time, as I did the first time around a few months back.)
 

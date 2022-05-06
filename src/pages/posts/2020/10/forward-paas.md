@@ -35,7 +35,7 @@ That said, I was initially concerned that the free tier might come up short comp
 **Important**: Still, be sure that you test this fairly extensively with lots of changes before you commit your site to it, because this can result in more "requests" in a given amount of time than the free tier allows.
 </Box>
 
-With the three hosts I described in "[A normal person's guide to static website hosting](/posts/2020/09/normal-persons-guide-static-website-hosting/)," deploying content is as simple and quick as pushing a commit to your chosen online repository. With Cloudflare Workers, you have to use Cloudflare's `wrangler` command-line interface (CLI) tools (which I'd compare favorably to [Firebase](https://firebase.google.com)'s CLI tools). I'm currently mitigating this through a [GitHub Action](https://github.com/features/actions),  an approach similar to what I described in "[O say can you CI/CD?](/posts/2020/06/o-say-can-you-ci-cd/)" and "[Ignition sequence start](/posts/2020/09/ignition-sequence-start/)"; but none of this is for normal, non-nerdy folks.
+With the three hosts I described in “[A normal person's guide to static website hosting](/posts/2020/09/normal-persons-guide-static-website-hosting/),” deploying content is as simple and quick as pushing a commit to your chosen online repository. With Cloudflare Workers, you have to use Cloudflare's `wrangler` command-line interface (CLI) tools (which I'd compare favorably to [Firebase](https://firebase.google.com)'s CLI tools). I'm currently mitigating this through a [GitHub Action](https://github.com/features/actions),  an approach similar to what I described in “[O say can you CI/CD?](/posts/2020/06/o-say-can-you-ci-cd/)” and “[Ignition sequence start](/posts/2020/09/ignition-sequence-start/)”; but none of this is for normal, non-nerdy folks.
 
 (For those who care: the GitHub Action is at the end of this post. In fact, I provided two: one for the [Hugo](https://gohugo.io) static site generator (SSG), and one for the [Eleventy](https://11ty.dev) SSG.)
 
@@ -51,7 +51,7 @@ Since I wasn't quite sure upfront how this would work for me, I bought only one 
 
 ## Appendix: CFW + KV GHAs---OK?
 
-As promised above, here are the GitHub Actions for publishing the site, whether built by Hugo or by Eleventy, to my Cloudflare Worker and its KV storage. You'll find no great difference between them and the GitHub Actions I put in "[Ignition sequence start](/posts/2020/09/ignition-sequence-start/)" for publishing to Firebase---with the possible exception of the fact that I'm using a [Cloudflare-created GitHub Action](https://github.com/cloudflare/wrangler-action) to handle the `wrangler` stuff. Of course, the value of `secrets.CF_API_TOKEN` is stored in the repo's **Secrets** settings in GitHub.
+As promised above, here are the GitHub Actions for publishing the site, whether built by Hugo or by Eleventy, to my Cloudflare Worker and its KV storage. You'll find no great difference between them and the GitHub Actions I put in “[Ignition sequence start](/posts/2020/09/ignition-sequence-start/)” for publishing to Firebase---with the possible exception of the fact that I'm using a [Cloudflare-created GitHub Action](https://github.com/cloudflare/wrangler-action) to handle the `wrangler` stuff. Of course, the value of `secrets.CF_API_TOKEN` is stored in the repo's **Secrets** settings in GitHub.
 
 ### For Hugo
 

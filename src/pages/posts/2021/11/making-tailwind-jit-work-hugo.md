@@ -48,7 +48,7 @@ In short: the conventional and even [Tailwind-recommended](https://tailwindcss.c
 
 ## Workaround efforts
 
-Multiple Hugo users have proposed workarounds for the issue while waiting for a resolution from Pedersen and his fellow maintainers. In my casual observation of Hugo Discourse traffic concerning these suggestions, the one that seems to have gained the most traction was described in [Praveen Juge](https://praveenjuge.com/)'s "[Use Tailwind JIT with Hugo](https://praveenjuge.com/blog/use-tailwind-jit-with-hugo/)" post. It was accompanied by his [hugo-tailwind-jit repo](https://github.com/praveenjuge/hugo-tailwind-jit).
+Multiple Hugo users have proposed workarounds for the issue while waiting for a resolution from Pedersen and his fellow maintainers. In my casual observation of Hugo Discourse traffic concerning these suggestions, the one that seems to have gained the most traction was described in [Praveen Juge](https://praveenjuge.com/)'s “[Use Tailwind JIT with Hugo](https://praveenjuge.com/blog/use-tailwind-jit-with-hugo/)” post. It was accompanied by his [hugo-tailwind-jit repo](https://github.com/praveenjuge/hugo-tailwind-jit).
 
 In essence, Juge's workaround involved using the [Tailwind command line interface](https://tailwindcss.com/docs/installation#using-tailwind-cli) (CLI), called directly from within a project's `node_modules` structure, to do all the usual Tailwind JIT things **without** invoking the PostCSS CLI, and thus without causing Hugo any problems. If we can assume ENT8R was correct in blaming the glitch on the interaction between PostCSS and Tailwind JIT, Juge's suggestion was a logical fix.
 

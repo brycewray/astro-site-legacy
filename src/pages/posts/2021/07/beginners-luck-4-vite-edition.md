@@ -19,7 +19,7 @@ featured_image_caption: |
 
 A quickie for you (if you don't count the code blocks, that is) . . .
 
-Given the interest the community showed in my previous post, "[Eleventy + Vite = elite](/posts/2021/07/eleventy-vite-elite/)," I thought I'd go ahead and issue [yet another starter set](/posts/2021/06/beginners-luck-3-adding-zola-starter/): an [Eleventy](https://11ty.dev)/[Vite](https://vitejs.dev) combo. To make it, I simply cloned the existing [`eleventy_solo_starter_njk` repository](https://github.com/brycewray/eleventy_solo_starter_njk) and converted it for use with Vite as described herein. That means it gives you Eleventy with [Nunjucks](https://mozilla.github.io/nunjucks) templating, Vite, **and** [Tailwind CSS](https://tailwindcss.com) (plus [JIT](https://tailwindcss.com/docs/just-in-time-mode)) to boot.
+Given the interest the community showed in my previous post, “[Eleventy + Vite = elite](/posts/2021/07/eleventy-vite-elite/),” I thought I'd go ahead and issue [yet another starter set](/posts/2021/06/beginners-luck-3-adding-zola-starter/): an [Eleventy](https://11ty.dev)/[Vite](https://vitejs.dev) combo. To make it, I simply cloned the existing [`eleventy_solo_starter_njk` repository](https://github.com/brycewray/eleventy_solo_starter_njk) and converted it for use with Vite as described herein. That means it gives you Eleventy with [Nunjucks](https://mozilla.github.io/nunjucks) templating, Vite, **and** [Tailwind CSS](https://tailwindcss.com) (plus [JIT](https://tailwindcss.com/docs/just-in-time-mode)) to boot.
 
 The new starter's repo is [`eleventy_vite_starter`](https://github.com/brycewray/eleventy_vite_starter). There's also an [online demo](https://eleventy-vite-starter.vercel.app/) which, if you're familiar with any of my other starters, may not float your boat---but the thing is, I was able to convert its predecessor to this config in well under an hour. That augurs well for your efforts, I would hope.
 
@@ -29,7 +29,7 @@ The new starter's repo is [`eleventy_vite_starter`](https://github.com/brycewray
 
 ## The conversion process
 
-As noted in "Eleventy + Vite = elite," I simply borrowed code from Fotis Papado&shy;georgo&shy;poulos's repo, [`eleventy-with-vite`](https://github.com/fpapado/eleventy-with-vite), with additional guidance from Simon East's *Medium* article, "[Clean SASS and JS with Eleventy in 2021 (Using Vite)](https://medium.com/@SimonEast/clean-sass-and-js-with-eleventy-in-2021-using-vite-98747500d8f8)."
+As noted in "Eleventy + Vite = elite," I simply borrowed code from Fotis Papado&shy;georgo&shy;poulos's repo, [`eleventy-with-vite`](https://github.com/fpapado/eleventy-with-vite), with additional guidance from Simon East's *Medium* article, “[Clean SASS and JS with Eleventy in 2021 (Using Vite)](https://medium.com/@SimonEast/clean-sass-and-js-with-eleventy-in-2021-using-vite-98747500d8f8).”
 
 Specifically, here's what I did to turn the `eleventy_solo_starter_njk` clone into `eleventy_vite_starter`. If you prefer just to add Vite to your own Eleventy repo, you can do the same, so consider these as steps to follow.
 
@@ -305,7 +305,7 @@ Then, I finished by changing the closing, CSS-related part of the site-wide `hea
   </head>
 ```
 
-In development mode, the CSS appears here in `head` as internal CSS. In production mode, this is a reference to a separate CSS file that Vite has hashed and renamed appropriately for cache-busting (see "[Eleventy + Vite = elite](/posts/2021/07/eleventy-vite-elite/)" for more on that.)
+In development mode, the CSS appears here in `head` as internal CSS. In production mode, this is a reference to a separate CSS file that Vite has hashed and renamed appropriately for cache-busting (see “[Eleventy + Vite = elite](/posts/2021/07/eleventy-vite-elite/)” for more on that.)
 
 And that was it.
 

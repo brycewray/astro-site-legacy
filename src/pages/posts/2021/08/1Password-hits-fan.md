@@ -17,7 +17,7 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://pixabay.com/users/foto_und_pinsel-6558995/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5359174">Foto_und_Pinsel</a>; <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5359174">Pixabay</a></span>
 ---
 
-Not long ago, I wrote "[Two paths to password management](/posts/2021/06/two-paths-password-management/)." It was an admittedly lengthy piece about using password management software to keep your online credentials as safe as possible.
+Not long ago, I wrote “[Two paths to password management](/posts/2021/06/two-paths-password-management/).’ It was an admittedly lengthy piece about using password management software to keep your online credentials as safe as possible.
 
 Earlier this week, AgileBits, the company behind the [1Password](https://1password.com) app, ignited a firestorm by revealing that the Mac version of the upcoming 1Password 8:
 
@@ -38,7 +38,7 @@ The move from a native macOS app to an Electron-based app touched a particular n
 
 The simple answer is that Electron makes for a lot "heavier" app where RAM and processing power are concerned, because it includes the Chromium browser and NodeJS, built in from the start, on top of whatever else it may offer.[^Terzi] For example, Microsoft's cross-platform [Visual Studio Code](https://code.visualstudio.com) dev tool is one of the more familiar Electron apps for nerds like me, and---while it's very good at what it does and, frankly, can do things it *couldn't* do without those Electron underpinnings---it also can tend to bog down what you're doing. And I find that happening on a computer with 64 GB of RAM, so I can only imagine what happens to more modestly configured computers.
 
-[^Terzi]: For a great explanation of the benefits and gotchas of Electron-based apps, see Federico Terzi's "[Why Electron is a Necessary Evil](https://federicoterzi.com/blog/why-electron-is-a-necessary-evil/)."
+[^Terzi]: For a great explanation of the benefits and gotchas of Electron-based apps, see Federico Terzi's “[Why Electron is a Necessary Evil](https://federicoterzi.com/blog/why-electron-is-a-necessary-evil/).”
 
 1Password's PR team tried to counter this anticipated anger by stressing, repeatedly, that performance wouldn't suffer because the new version is built also on the [Rust programming language](https://www.rust-lang.org/), but early users of the current beta version seemed unimpressed, if my reading of the "room" (namely, the collective of various 1Password-oriented blog posts and forum comments) is any good indicator.
 
@@ -64,7 +64,7 @@ All that said, where would I recommend "never-again" 1Password users haul their 
 - On Android: [KeePass2Android](https://github.com/PhilippC/keepass2android/).
 - Synchronization across your devices: any cloud vendor will do as long as your devices can access individual files on it. This is one particular beauty of the KeePass way: all you're doing is sharing a KeePass-formatted file. You can use whichever vendor suits you.
 
-As for migrating existing credentials from 1Password: ah, well, that's a pain. (Remember what I said at the end of the original: it's best to pick a "way" and stay with it because inter-"way" migration gets ugly.) The best advice I can offer about that is Ryan Nickel's 2019 article, "[Migrating from 1Password to KeePassXC](https://ryannickel.com/html/migrating_from_1password_to_keepassxc.html)." Follow his instructions to the letter and it'll work, but it still won't be easy and you'll find, as he correctly notes, a lot of post-migration cleanup to do.[^migration]
+As for migrating existing credentials from 1Password: ah, well, that's a pain. (Remember what I said at the end of the original: it's best to pick a "way" and stay with it because inter-"way" migration gets ugly.) The best advice I can offer about that is Ryan Nickel's 2019 article, “[Migrating from 1Password to KeePassXC](https://ryannickel.com/html/migrating_from_1password_to_keepassxc.html).” Follow his instructions to the letter and it'll work, but it still won't be easy and you'll find, as he correctly notes, a lot of post-migration cleanup to do.[^migration]
 
 [^migration]: To be fair, though, cleanup will be necessary even if you migrate between the offerings of two different **non**-KeePass way vendors.
 

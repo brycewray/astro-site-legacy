@@ -17,7 +17,7 @@ featured_image_caption: |
   <span class="caption">Image: <a href="https://pixabay.com/users/stradus-833024/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5421210">Sárfi Benjámin</a>; <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5421210">Pixabay</a></span>
 ---
 
-Last month, I posted "[Tailwind-to-head with Hugo Pipes](/posts/2021/02/tailwind-head-hugo-pipes/)," an explanation of how to achieve internal CSS---styles injected into the HTML `head` rather than existing in a separate .css file---in a [Hugo](https://gohugo.io)-based site. In particular, this procedure involved CSS from the popular [Tailwind CSS](https://tailwindcss.com) framework, although I also showed how to do it with [SCSS](https://sass-lang.com). Each method was easy because of Hugo's built-in asset pipeline, [Hugo Pipes](https://gohugo.io/hugo-pipes).
+Last month, I posted “[Tailwind-to-head with Hugo Pipes](/posts/2021/02/tailwind-head-hugo-pipes/),” an explanation of how to achieve internal CSS---styles injected into the HTML `head` rather than existing in a separate .css file---in a [Hugo](https://gohugo.io)-based site. In particular, this procedure involved CSS from the popular [Tailwind CSS](https://tailwindcss.com) framework, although I also showed how to do it with [SCSS](https://sass-lang.com). Each method was easy because of Hugo's built-in asset pipeline, [Hugo Pipes](https://gohugo.io/hugo-pipes).
 
 By contrast, [Eleventy](https://11ty.dev), the other popular [static site generator](https://jamstack.org/generators) I typically recommend, has no such asset pipeline. As a result, more tech-savvy Eleventy users (and, given Eleventy's popularity among the web dev crowd, they are legion) often try to achieve similar results through use of build tools like [webpack](https://webpack.js.org), [Parcel](https://parceljs.org), and [Gulp](https://gulpjs.com), among others.
 
@@ -158,4 +158,4 @@ And, while I briefly considered trying to convert my site over to [Next.js](http
 
 [^nested]: Let's just say that you don't want to start from scratch, knowledge-wise, and try to make a Next.js site understand a path like `/posts/2021/03/this-is-my-post-title`. It's actually pretty easy if you're dealing with HTML-in-JS files, thanks to the really clever routing built into Next, but not so much with Markdown files. It's not lost on me that nearly every blogging example for Next.js you can find out there has its Markdown files in only *one* level. But *nested* levels? Ha.
 
-.&nbsp;.&nbsp;. which, of course, has "[danced](/posts/2019/12/sorta-strange-ssg-trip/)" me back to Eleventy and Tailwind, albeit Tailwind with the JIT compiler. So there y'go.
+.&nbsp;.&nbsp;. which, of course, has “[danced](/posts/2019/12/sorta-strange-ssg-trip/)” me back to Eleventy and Tailwind, albeit Tailwind with the JIT compiler. So there y'go.

@@ -65,7 +65,7 @@ At first, things went pretty smoothly. I whacked all the webpack config files, a
 
 However, I soon ran into what appeared to be an insurmountable roadblock to my ever being able to make `eleventy_solo` anything but a locally running experiment: I couldn't find a workable way to process the few images the site still has.
 
-With the Eleventy/webpack combo, I'd used the [responsive-loader](https://www.npmjs.com/package/responsive-loader) webpack add-on to create and then process [responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images), and the [lazysizes](https://github.com/aFarkas/lazysizes) library to make them "[lazy-load](https://en.wikipedia.org/wiki/Lazy_loading)" on nearly all browsers. My hope had been to replace them in `eleventy_solo` with some Eleventy plugins but, for reasons I still don't understand, I couldn't get those plugins to work successfully in the new repo.
+With the Eleventy/webpack combo, I'd used the [responsive-loader](https://www.npmjs.com/package/responsive-loader) webpack add-on to create and then process [responsive images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images), and the [lazysizes](https://github.com/aFarkas/lazysizes) library to make them “[lazy-load](https://en.wikipedia.org/wiki/Lazy_loading)” on nearly all browsers. My hope had been to replace them in `eleventy_solo` with some Eleventy plugins but, for reasons I still don't understand, I couldn't get those plugins to work successfully in the new repo.
 
 So, while I had everything else working pretty well, I was still delivering only one size of each image, and an unprocessed (generally too large) image file at that. And, if I really did ever want to make `eleventy_solo` *the* repo for this site, I wasn't about to let *that* be the best I could do.
 
@@ -87,7 +87,7 @@ But how did Tailwind get back into the picture?
 
 Well, one lunchtime, I decided out of curiosity to check up on what's been going on in the Tailwind universe. While I read articles about it from time to time, I also like to watch video tutorials to see if there is something I've missed about this popular framework.
 
-This day, my search brought up a video of a presentation that Tailwind creator [Adam Wathan](https://adamwathan.me/going-full-time-on-tailwind-css/) gave at [last year's Laracon US event](https://laravel-news.com/talks-and-photos-laracon-us-2019). The talk was called "[Tailwind CSS Best Practice Patterns](https://www.youtube.com/watch?v=J_7_mnFSLDg)." Perhaps the most interesting point Mr. Wathan made, early on, was&nbsp;.&nbsp;.&nbsp;.
+This day, my search brought up a video of a presentation that Tailwind creator [Adam Wathan](https://adamwathan.me/going-full-time-on-tailwind-css/) gave at [last year's Laracon US event](https://laravel-news.com/talks-and-photos-laracon-us-2019). The talk was called “[Tailwind CSS Best Practice Patterns](https://www.youtube.com/watch?v=J_7_mnFSLDg).” Perhaps the most interesting point Mr. Wathan made, early on, was&nbsp;.&nbsp;.&nbsp;.
 
 *"Tailwind is an [API](https://en.wikipedia.org/wiki/Application_programming_interface) for your design system.”*
 

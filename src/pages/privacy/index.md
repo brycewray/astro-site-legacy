@@ -22,7 +22,7 @@ This site's traffic goes through [Cloudflare](https://cloudflare.com) and is con
 
 ### Fathom Analytics
 
-This site uses [Fathom Analytics](https://usefathom.com), which [does not store your personal data in any way](https://usefathom.com/blog/anonymization). Please refer also to my article, "[Fathom Analytics: count on it](/posts/2020/06/fathom-analytics-count-on-it/)."
+This site uses [Fathom Analytics](https://usefathom.com), which [does not store your personal data in any way](https://usefathom.com/blog/anonymization). Please refer also to my article, “[Fathom Analytics: count on it](/posts/2020/06/fathom-analytics-count-on-it/).”
 
 ### giscus
 
@@ -30,9 +30,9 @@ The site's [giscus](https://giscus.app) commenting system, which is based on the
 
 ### Google Fonts
 
-When I learned that the use of [Google Fonts](https://fonts.google.com) *served from* Google will transmit a visitor's apparently **not** anonymized IP address[^Issue1495] to Google, I quit using this product (and suggesting to others that they use it) and, instead, served from my own site any typefaces that aren't part of the so-called "[system fonts stack](/posts/2018/10/web-typography-part-2/)."
+When I learned that the use of [Google Fonts](https://fonts.google.com) *served from* Google will transmit a visitor's apparently **not** anonymized IP address[^Issue1495] to Google, I quit using this product (and suggesting to others that they use it) and, instead, served from my own site any typefaces that aren't part of the so-called “[system fonts stack](/posts/2018/10/web-typography-part-2/).”
 
-[^Issue1495]: For the discussion that convinced me to go this route after my initial skepticism about its necessity, see the Google Fonts GitHub issue, "[GDPR compliance](https://github.com/google/fonts/issues/1495)."
+[^Issue1495]: For the discussion that convinced me to go this route after my initial skepticism about its necessity, see the Google Fonts GitHub issue, “[GDPR compliance](https://github.com/google/fonts/issues/1495).”
 
 ### Twitter
 
@@ -40,4 +40,4 @@ This site reproduces tweets as purely static text and downloaded images with no 
 
 ### YouTube
 
-This site uses [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed) to provide YouTube embeds that respect your privacy. For details concerning how this works, see Sia Karamalegos's article, "[Faster YouTube embeds in Eleventy](https://sia.codes/posts/lite-youtube-embed-eleventy/)," on which this site's related templating is based.
+This site uses [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed) to provide YouTube embeds that respect your privacy. For details concerning how this works, see Sia Karamalegos's article, “[Faster YouTube embeds in Eleventy](https://sia.codes/posts/lite-youtube-embed-eleventy/),” on which this site's related templating is based.

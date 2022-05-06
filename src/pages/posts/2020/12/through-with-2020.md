@@ -65,7 +65,7 @@ And, with those cheery thoughts, I segue to offering you a review of this site's
 
 ## June
 
-- **[Why I kept Ulysses](/posts/2020/06/why-kept-ulysses/)**---Following up on "[Murdered darlings](/posts/2020/04/murdered-darlings/)," I explained why I not only *wasn't* giving up on Ulysses but also *wasn't* deep-sixing the attempt at a novel.
+- **[Why I kept Ulysses](/posts/2020/06/why-kept-ulysses/)**---Following up on “[Murdered darlings](/posts/2020/04/murdered-darlings/),” I explained why I not only *wasn't* giving up on Ulysses but also *wasn't* deep-sixing the attempt at a novel.
 - **[Fathom Analytics: Count on it](/posts/2020/06/fathom-analytics-count-on-it/)**---Dumped other website analytics products in favor of what I'd found to be the [cream of the crop](https://usefathom.com/ref/ZKHYWX) (affiliate link) where respecting the *privacy* of one's visitors is concerned.
 - **[O say can you CI/CD?](/posts/2020/06/o-say-can-you-ci-cd/)**---Provided ways for [Netlify](https://netlify.com) users (at that time, I was one of ’em) to get around the 300-minute monthly build limit on that web host's free tier.
 
@@ -113,7 +113,7 @@ And, with those cheery thoughts, I segue to offering you a review of this site's
 
 ## December
 
-- **[Cache-busting in Eleventy, take two](/posts/2020/12/cache-busting-eleventy-take-two/)**---Tried to *mea-culpa*-ize my way out of the problem in "[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy/)" with a different solution, one based on bespoke code. When I got questions about the specifics, that led to&nbsp;.&nbsp;.&nbsp;.
+- **[Cache-busting in Eleventy, take two](/posts/2020/12/cache-busting-eleventy-take-two/)**---Tried to *mea-culpa*-ize my way out of the problem in “[Using PostCSS for cache-busting in Eleventy](/posts/2020/11/using-postcss-cache-busting-eleventy/)” with a different solution, one based on bespoke code. When I got questions about the specifics, that led to&nbsp;.&nbsp;.&nbsp;.
 - **[Hashing out a cache-busting fix for Eleventy](/posts/2020/12/hashing-out-cache-busting-fix-eleventy/)**---.&nbsp;.&nbsp;. wherein I went into more detail, including providing the code itself rather than just tossing off links about it.
 - **[Gems in the rough](/posts/2020/12/gems-in-rough/)**---Passed along a few helpful (?) nuggets of info about managing a static website.
 - **[Eleventy and Hugo: Comparing and contrasting](/posts/2020/12/eleventy-hugo-comparing-contrasting/)**---Suggested how one might choose between the two SSGs I'd [previously recommended](/posts/2020/09/normal-persons-guide-static-websites/) as "best-in-show."

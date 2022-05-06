@@ -34,7 +34,7 @@ Although I [gave up](/posts/2021/02/simplify-simplify/) using [Tailwind CSS](htt
 
 Incoming soon to one of my arms: shot #1 of the [COVID-19](/posts/2020/03/coherence-covid-19/) vaccine. As of this writing, I'm scheduled to get it on the morning of February 17 about ten miles from home, but the weather forecast for then is pretty nasty. Still: if I **can** get there that morning, you can bet I will.
 
-*To repeat my update to my recent article, "[Beta-testing Cloudflare Pages](/posts/2021/01/beta-testing-cloudflare-pages/)," since the initial post really slammed the [platform](https://pages.cloudflare.com)'s build speeds:*
+*To repeat my update to my recent article, “[Beta-testing Cloudflare Pages](/posts/2021/01/beta-testing-cloudflare-pages/),” since the initial post really slammed the [platform](https://pages.cloudflare.com)'s build speeds:*
 
 > ***Update, 2021-02-12**: Yesterday afternoon, Cloudflare pushed a change that dramatically cut the **total** build times. For a newer Hugo-based test site I’ve put on Cloudflare Pages, build now happens in about 45 seconds. While this is still slower than several of the competitors, the trend is definitely in the right direction.*
 

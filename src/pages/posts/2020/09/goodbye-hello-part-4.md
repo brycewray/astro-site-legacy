@@ -19,7 +19,7 @@ featured_image_caption: |
 
 <Disclaimer />
 
-Rather than continuing to pile addenda on the original "[Goodbye and hello](/posts/2020/07/goodbye-hello/)" post about how I moved this site from [Netlify](https://netlify.com) to [Vercel](https://vercel.com) some weeks back, I've turned those addenda into [separate](/posts/2020/07/goodbye-hello-part-2/) [posts](/posts/2020/08/goodbye-hello-part-3/), each dated according to when I'd added its content to the first post. When I look at others’ sites, I gather this is the more common---not to mention less mutually aggravating---way of explaining such changes to one's readers.
+Rather than continuing to pile addenda on the original “[Goodbye and hello](/posts/2020/07/goodbye-hello/)” post about how I moved this site from [Netlify](https://netlify.com) to [Vercel](https://vercel.com) some weeks back, I've turned those addenda into [separate](/posts/2020/07/goodbye-hello-part-2/) [posts](/posts/2020/08/goodbye-hello-part-3/), each dated according to when I'd added its content to the first post. When I look at others’ sites, I gather this is the more common---not to mention less mutually aggravating---way of explaining such changes to one's readers.
 
 ----
 

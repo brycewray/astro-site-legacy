@@ -73,7 +73,7 @@ First, lest we forget, there were several months *before* I embarked on "the dan
 
 - **[Lessons learned](/posts/2019/07/lessons-learned/)**---A few days later, in the naíve belief that I was safely with Hugo forever and would never again dally with "the kewl kids’ SSGs," I wrote this little description of some of the things I’d learned or figured out during Gatsby Experiment I. One of those was that you shouldn’t put a [Git](https://git-scm.com) repository on a cloud-sync account, the remedy to which was the subject of my next post&nbsp;.&nbsp;.&nbsp;.
 
-- **[Roger, Copy](/posts/2019/07/roger-copy/)**---.&nbsp;.&nbsp;.&nbsp;wherein I lauded, as I still do, the excellent [Working Copy](https://workingcopyapp.com/) source-control app for iOS. Won’t be any "dance" with this app, because it’s the gold standard. I "[pity the fool](https://www.overthinkingit.com/2010/05/04/i-pity-the-fool-origin/)" who tries to topple it.
+- **[Roger, Copy](/posts/2019/07/roger-copy/)**---.&nbsp;.&nbsp;.&nbsp;wherein I lauded, as I still do, the excellent [Working Copy](https://workingcopyapp.com/) source-control app for iOS. Won’t be any "dance" with this app, because it’s the gold standard. I “[pity the fool](https://www.overthinkingit.com/2010/05/04/i-pity-the-fool-origin/)” who tries to topple it.
 
 So things settled down for a little while, "dance"-wise; but, in my always troublesome mind, I was already hearing the "whispers" I’d mention later. More on that when we get to September. First&nbsp;.&nbsp;.&nbsp;.
 

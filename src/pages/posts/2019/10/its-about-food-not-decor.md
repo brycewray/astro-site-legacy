@@ -34,7 +34,7 @@ Yeah, right.
 
 No one cares about which make of truck brought the food to the restaurant; they just expect, by God, to have **good** food served to them.
 
-In the most recent such post, I had quoted "[The pros of using a boring stack](https://flaviocopes.com/boring-stack/)" by Flavio Copes, but apparently didn't grasp sufficiently the most telling point he made:
+In the most recent such post, I had quoted “[The pros of using a boring stack](https://flaviocopes.com/boring-stack/)” by Flavio Copes, but apparently didn't grasp sufficiently the most telling point he made:
 
 > .&nbsp;.&nbsp;. if you want to create a blog and be serious at it, then use the most boring and bulletproof thing you can find. Definitely **don’t work on your blog infrastructure if you want to do any serious blogging**.
 >

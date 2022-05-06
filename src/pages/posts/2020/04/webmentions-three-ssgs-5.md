@@ -51,7 +51,7 @@ Also, it'll often surprise me what I pick up from how others’ code works, espe
 
 - [Bridgy](https://brid.gy) and its [FAQs page masquerading as an About page](https://brid.gy/about).
 
-- [IndieWebCamp site](https://indieweb.org) and its [wiki](https://indieweb.org/IndieWeb), particularly the page "[Getting Started](https://indieweb.org/Getting_Started)."
+- [IndieWebCamp site](https://indieweb.org) and its [wiki](https://indieweb.org/IndieWeb), particularly the page “[Getting Started](https://indieweb.org/Getting_Started).”
 
 - [IndieWebify.me: A guide to getting you on the IndieWeb](https://indiewebify.me).
 
@@ -59,28 +59,28 @@ Also, it'll often surprise me what I pick up from how others’ code works, espe
 
 ### Eleventy sites (Part 2)
 
-- [Max Böck](https://mxb.dev), "[Static IndieWeb pt2: Using Webmentions](https://mxb.dev/blog/using-webmentions-on-static-sites/)."
+- [Max Böck](https://mxb.dev), “[Static IndieWeb pt2: Using Webmentions](https://mxb.dev/blog/using-webmentions-on-static-sites/).”
 
-- [Sia Karamalegos](https://sia.codes), "[An In-Depth Tutorial of Webmentions + Eleventy](https://sia.codes/posts/webmentions-eleventy-in-depth/)."
+- [Sia Karamalegos](https://sia.codes), “[An In-Depth Tutorial of Webmentions + Eleventy](https://sia.codes/posts/webmentions-eleventy-in-depth/).”
 
 ### Hugo sites (Part 3)
 
-- [Amit Gawande](https://www.amitgawande.com), "[IndieWebify Your Hugo Website](https://www.amitgawande.com/indiewebify-hugo-website/)."
+- [Amit Gawande](https://www.amitgawande.com), “[IndieWebify Your Hugo Website](https://www.amitgawande.com/indiewebify-hugo-website/).”
 
-- [Keith J. Grant](https://keithjgrant.com), "[Adding Webmention Support to a Static Site](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/)."
+- [Keith J. Grant](https://keithjgrant.com), “[Adding Webmention Support to a Static Site](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/).”
 
-- [Paul Kinlan](https://paul.kinlan.me), "[Using Web Mentions in a static site (Hugo)](https://paul.kinlan.me/using-web-mentions-in-a-static-sitehugo/)."
+- [Paul Kinlan](https://paul.kinlan.me), “[Using Web Mentions in a static site (Hugo)](https://paul.kinlan.me/using-web-mentions-in-a-static-sitehugo/).”
 
-- [Jamie Tanna](https://www.jvt.me), "[Displaying Webmentions on my Hugo website](https://www.jvt.me/posts/2019/03/18/displaying-webmentions/)."
+- [Jamie Tanna](https://www.jvt.me), “[Displaying Webmentions on my Hugo website](https://www.jvt.me/posts/2019/03/18/displaying-webmentions/).”
 
-- "[Anyone for Webmention?](https://discourse.gohugo.io/t/anyone-for-webmention/10411)" (from the [Hugo community forums](https://discourse.gohugo.io)).
+- “[Anyone for Webmention?](https://discourse.gohugo.io/t/anyone-for-webmention/10411)” (from the [Hugo community forums](https://discourse.gohugo.io)).
 
 ### Gatsby sites (Part 4)
 
-- [Chris Biscardi](https://www.christopherbiscardi.com), "[Building Gatsby Plugin Webmentions](https://www.christopherbiscardi.com/post/building-gatsby-plugin-webmentions)."
+- [Chris Biscardi](https://www.christopherbiscardi.com), “[Building Gatsby Plugin Webmentions](https://www.christopherbiscardi.com/post/building-gatsby-plugin-webmentions).”
 
-- [Sung M. Kim](https://sung.codes), "[Clientside Webmentions in Gatsby](https://sung.codes/blog/2020/02/17/clientside-webmentions-in-gatsby/)."
+- [Sung M. Kim](https://sung.codes), “[Clientside Webmentions in Gatsby](https://sung.codes/blog/2020/02/17/clientside-webmentions-in-gatsby/).”
 
-- [Chad Lee](https://www.chadly.net), "[Embracing the IndieWeb](https://www.chadly.net/embracing-the-indieweb/)."
+- [Chad Lee](https://www.chadly.net), “[Embracing the IndieWeb](https://www.chadly.net/embracing-the-indieweb/).”
 
-- [Knut Melvær](https://www.knutmelvaer.no), "[Getting started with Webmentions in Gatsby](https://www.knutmelvaer.no/blog/2019/06/getting-started-with-webmentions-in-gatsby/)."
+- [Knut Melvær](https://www.knutmelvaer.no), “[Getting started with Webmentions in Gatsby](https://www.knutmelvaer.no/blog/2019/06/getting-started-with-webmentions-in-gatsby/).”

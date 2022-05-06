@@ -31,7 +31,7 @@ oldComments: |
 ---
 
 <Box cssClass="yellowBox">
-**Note, 2019-05-04**: I've learned some additional information since the original post (2019-04-20) which doesn't truly exonerate Ulysses regarding the sync issues described herein **but** does raise serious questions about just where the fault really lies. So I went back and renewed the Ulysses sub after all. For details, see "[Boxed in](/posts/2019/05/boxed-in/)."
+**Note, 2019-05-04**: I've learned some additional information since the original post (2019-04-20) which doesn't truly exonerate Ulysses regarding the sync issues described herein **but** does raise serious questions about just where the fault really lies. So I went back and renewed the Ulysses sub after all. For details, see “[Boxed in](/posts/2019/05/boxed-in/).”
 </Box>
 
 I quit using [Ulysses](https://ulysses.app) today.
@@ -124,13 +124,13 @@ Then, further down the page, I found a [follow-up from the original poster](http
 
 > I'm still using Ulysses. But I've been giving a long, hard, awkward stare at iA Writer over the past few days. .&nbsp;.&nbsp;. Partially because I have The Fear now. .&nbsp;.&nbsp;. Partially because iA [Writer] matches the features in Ulysses that I use, and I don't use many of the features in Ulysses. .&nbsp;.&nbsp;. And frankly, I'm worn out from fiddling around with apps. Plain-text might finally allow my soul to rest.
 
-Ouch. Oof. "[Down goes Frazier](https://www.ozy.com/performance/down-goes-frazier/1395)."
+Ouch. Oof. “[Down goes Frazier](https://www.ozy.com/performance/down-goes-frazier/1395).”
 
 Had my trouble been a one-shot deal, an isolated incident, that would've been one thing. But the comments on that page and others told me that this, in fact, was a glitch that numerous Ulysses users had encountered over the years.
 
-Since sync&rsquo;ing is one of those cases where "[failure is not an option](https://en.wikipedia.org/wiki/Failure_Is_Not_an_Option)," I now had to decide whether to continue storing my work within this app which, heretofore, I'd trusted completely.
+Since sync&rsquo;ing is one of those cases where “[failure is not an option](https://en.wikipedia.org/wiki/Failure_Is_Not_an_Option),” I now had to decide whether to continue storing my work within this app which, heretofore, I'd trusted completely.
 
-And, in case you've decided I was being too hasty, that I was letting one odd occurrence and some random complaints on the web sour me on a perfectly fine app: that Sunday afternoon wasn't the end of the trouble. I continued to suffer various types of a Ulysses/iCloud "[failure to communicate](https://www.americanrhetoric.com/MovieSpeeches/moviespeechcoolhandluke2.html)," and even lost some work as a result. Moreover, *none* of my other apps---most especially iA Writer, with its support for [Open in Place](https://developer.apple.com/document-based-apps/) as well as its fully transparent file storage in the Finder and the iOS Files app, as opposed to the workings of the obscurely located Ulysses Library[^Library]---had so much as a whisper of trouble dealing with iCloud.
+And, in case you've decided I was being too hasty, that I was letting one odd occurrence and some random complaints on the web sour me on a perfectly fine app: that Sunday afternoon wasn't the end of the trouble. I continued to suffer various types of a Ulysses/iCloud “[failure to communicate](https://www.americanrhetoric.com/MovieSpeeches/moviespeechcoolhandluke2.html),” and even lost some work as a result. Moreover, *none* of my other apps---most especially iA Writer, with its support for [Open in Place](https://developer.apple.com/document-based-apps/) as well as its fully transparent file storage in the Finder and the iOS Files app, as opposed to the workings of the obscurely located Ulysses Library[^Library]---had so much as a whisper of trouble dealing with iCloud.
 
 [^Library]: For further details on how and where the Ulysses Library stores files, see: "The Library, and File Management" in [this article](https://mariusmasalar.me/ulysses-vs-ia-writer-a-new-comparison-7015c899e883/) by Marius Masalar. (In the original version of this post, I also referenced an excellent 2017 Ulysses review by [Chris Rosser](https://chrisrosser.net/), but it no longer appears on his website.)
 

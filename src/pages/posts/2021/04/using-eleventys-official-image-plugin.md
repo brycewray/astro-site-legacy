@@ -20,7 +20,7 @@ featured_image_caption: |
 ---
 
 <Box cssClass="yellowBox">
-**Recommendation**: While I very much appreciate your stopping by to read this, I **strongly** recommend that, instead, you check out [Aleksandr Hovhannisyan](https://github.com/AleksandrHovhannisyan)'s **far** superior article, "[Lazily Loading Images with the 11ty Image Plugin](https://www.aleksandrhovhannisyan.com/blog/eleventy-image-lazy-loading/)."
+**Recommendation**: While I very much appreciate your stopping by to read this, I **strongly** recommend that, instead, you check out [Aleksandr Hovhannisyan](https://github.com/AleksandrHovhannisyan)'s **far** superior article, “[Lazily Loading Images with the 11ty Image Plugin](https://www.aleksandrhovhannisyan.com/blog/eleventy-image-lazy-loading/).”
 </Box>
 
 <Disclaimer />
@@ -56,7 +56,7 @@ So what? Well&nbsp;.&nbsp;.&nbsp;.
 
 One answer to that is: you don't, **if** you're willing to do all that image processing on your own. Certainly, that's quite possible. You can do it in Photoshop, or Affinity Photo, or GIMP, or what-have-you. But that takes a **lot** of time and work. And, even if you're not worried about that part, you may not be **able** to save files in the space-saving [WebP format](https://developers.google.com/speed/webp) now accepted by most modern browsers.[^webP]
 
-[^webP]: I discussed this in last year's "[So much for heroes](/posts/2020/02/so-much-for-heroes/)."
+[^webP]: I discussed this in last year's “[So much for heroes](/posts/2020/02/so-much-for-heroes/).”
 
 Another answer is: you don't, **if** you don't care about how your visitors experience your site. If you're fine with every visitor getting the exactly same image file regardless of the visitor's screen size or connectivity quality, then just put up one version of each image and be done with it.
 

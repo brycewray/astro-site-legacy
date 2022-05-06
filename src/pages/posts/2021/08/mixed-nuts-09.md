@@ -25,7 +25,7 @@ My work department was supposed to have returned to the office on a "hybrid" bas
 
 *My iPhone still shows a Battery Health reading of 94%, which isn't bad at all considering that I've had the phone for nearly four years. However, in recent days, I found it using far more battery juice than normal. After trying a variety of web-based suggestions, I noticed the App Store app had been unusually power-thirsty. Further investigation revealed that, although I'd set it to download app updates automatically, it apparently had left a bunch of ’em in the chute for several days. Perhaps, I surmised, it'd been "phoning home" to Apple about it fairly often, thus draining the battery much more than usually. All I know for sure is that, once I manually triggered the pending updates, the battery's behavior returned to a more-or-less normal state. (If it later turns out this **wasn't** the fix after all, I'll update this appropriately.)*
 
-In a few days, I'll be providing what they call on Twitter "some personal news." Whether you'll care is, as always, totally up to you, but it will be a significant milestone for your erstwhile correspondent. "[Be here. Aloha.](https://en.wikipedia.org/wiki/Hawaii_Five-O_(1968_TV_series)#Credits)"
+In a few days, I'll be providing what they call on Twitter "some personal news." Whether you'll care is, as always, totally up to you, but it will be a significant milestone for your erstwhile correspondent. “[Be here. Aloha.](https://en.wikipedia.org/wiki/Hawaii_Five-O_(1968_TV_series)#Credits)”
 
 *My inability to watch my home team's ballgames on a regular basis due to what I [called the "RSNs flap"](/posts/2020/02/youtube-tv-rsns-flap/) has had about the effect I'd figured it would: I have spent virtually no time this year watching **any** MLB games. While I doubt that the MLB moguls care about the viewing habit of this old fart, they **should** worry that an entire younger generation of potential baseball fans also is being shut out. In a decade or two, the owners and players might just find almost no one left (in the U.S., at least) still caring about, much less willing to pay to see, the sport that's made them all rich.*
 
@@ -38,7 +38,7 @@ The only thing I could say to that was:
 
 > Ah, but you're working on a false assumption: *i.e.*, if I could avoid shiny objects themselves, then I could avoid recommendations thereof. But that's a huge "if."
 
-Another reader, having seen my "[Conversation piece](/posts/2020/10/conversation-piece/)" article reviewing methods of allowing commenting on static websites, asked why I no longer had such commenting on my site. As I told him:
+Another reader, having seen my “[Conversation piece](/posts/2020/10/conversation-piece/)” article reviewing methods of allowing commenting on static websites, asked why I no longer had such commenting on my site. As I told him:
 
 > I decided to go with strictly emails after reading a few articles by fellow bloggers indicating that they preferred communicating by email with their readers, believing---as I have found, too---that such communications usually provided greater value to both sides.
 

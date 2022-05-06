@@ -64,7 +64,7 @@ Except I didn't learn until that very morning---and this is where I really feel 
 
 How did I miss that??
 
-I am still embarrassed. In the words of Donald Sutherland in *Animal House*: "[Listen, I'm not joking. This is *my job*!](https://www.imdb.com/title/tt0077975/quotes?item=qt0479929)"
+I am still embarrassed. In the words of Donald Sutherland in *Animal House*: “[Listen, I'm not joking. This is *my job*!](https://www.imdb.com/title/tt0077975/quotes?item=qt0479929)”
 
 ## Share the shame, but share the help, too
 

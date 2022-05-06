@@ -18,7 +18,7 @@ featured_image_caption: |
 ---
 
 <Box cssClass="yellowBox">
-**Note**: For a [Eleventy](https://11ty.dev)-based solution, see "[Tailwind-to-head with Eleventy](/posts/2021/03/tailwind-head-eleventy/)" from a few weeks later.
+**Note**: For a [Eleventy](https://11ty.dev)-based solution, see “[Tailwind-to-head with Eleventy](/posts/2021/03/tailwind-head-eleventy/)” from a few weeks later.
 </Box>
 
 External *vs.* internal---that is the question. At least, it is when you're considering how and where to provide CSS in your website.

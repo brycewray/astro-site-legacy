@@ -23,7 +23,7 @@ Okay, then, let's try the truth.
 
 ## You can't delete the past
 
-When I wrote and posted "[It's about the food, not the decor](/posts/2019/10/its-about-food-not-decor/)," I was in a sour mood over my various twists and turns in recent months---played out in embarrassing detail on this site---about which [static site generator](https://www.staticgen.com) (SSG) I'd use *for* this site. So, while stuck in traffic on the way home and fuming inwardly, I thought, "Screw this. Just wipe all the posts off there, swear never to write any more like those, and you're done."
+When I wrote and posted “[It's about the food, not the decor](/posts/2019/10/its-about-food-not-decor/),” I was in a sour mood over my various twists and turns in recent months---played out in embarrassing detail on this site---about which [static site generator](https://www.staticgen.com) (SSG) I'd use *for* this site. So, while stuck in traffic on the way home and fuming inwardly, I thought, "Screw this. Just wipe all the posts off there, swear never to write any more like those, and you're done."
 
 As the old wisdom goes, it's not a good idea to make a decision out of spite.
 
@@ -31,15 +31,15 @@ Fortunately, I (sometimes) have more lucid thoughts. I'm hoping I'll look back o
 
 The simple truth is that I screwed up.
 
-I took down the following posts about my SSG dance, redirecting them to "[It's about the food, not the decor](/posts/2019/10/its-about-food-not-decor/)":
+I took down the following posts about my SSG dance, redirecting them to “[It's about the food, not the decor](/posts/2019/10/its-about-food-not-decor/)”:
 
-- "[Why I'm staying with Hugo](/posts/2019/07/why-staying-with-hugo/)."
+- “[Why I'm staying with Hugo](/posts/2019/07/why-staying-with-hugo/).”
 
-- "[Lessons learned](/posts/2019/07/lessons-learned/)."
+- “[Lessons learned](/posts/2019/07/lessons-learned/).”
 
-- "[Why I left Hugo for Eleventy](/posts/2019/09/why-left-hugo-eleventy/)."
+- “[Why I left Hugo for Eleventy](/posts/2019/09/why-left-hugo-eleventy/).”
 
-- "[Back with Hugo](/posts/2019/09/back-with-hugo/)."
+- “[Back with Hugo](/posts/2019/09/back-with-hugo/).”
 
 .&nbsp;.&nbsp;. thinking that would somehow absolve me of my apparent (?) and ridiculous skittishness.
 
@@ -53,7 +53,7 @@ But you can't delete the past. Moreover, you shouldn't try.
 
 Anyway, when I realized this, I knew the only proper thing to do was to restore those posts. So I did.
 
-I even brought back a *non*-SSG-related post, "[Why I left Ulysses](/posts/2019/04/why-left-ulysses/)," that I deleted months ago after [discovering](/posts/2019/05/boxed-in/) I'd been wrong about the decision that post described. Different case, same reasoning.
+I even brought back a *non*-SSG-related post, “[Why I left Ulysses](/posts/2019/04/why-left-ulysses/),” that I deleted months ago after [discovering](/posts/2019/05/boxed-in/) I'd been wrong about the decision that post described. Different case, same reasoning.
 
 *Mea culpa*.
 
@@ -61,7 +61,7 @@ I even brought back a *non*-SSG-related post, "[Why I left Ulysses](/posts/2019/
 
 Now that I've apologized and, I hope, recompensed for my errors, I also want to retract another retraction---well, *sort of* a retraction, in that it was retracting certain posts *in advance*.
 
-In "[It's about the food, not the decor](/posts/2019/10/its-about-food-not-decor)" and, to some extent, "[Back with Hugo](/posts/2019/09/back-with-hugo)," I said I was done being meta about how I put together this site with whichever SSG I choose to use at the time. A [Flavio Copes post](https://flaviocopes.com/boring-stack/) had convinced me of the wisdom of taking such a stand.
+In “[It's about the food, not the decor](/posts/2019/10/its-about-food-not-decor)” and, to some extent, “[Back with Hugo](/posts/2019/09/back-with-hugo),” I said I was done being meta about how I put together this site with whichever SSG I choose to use at the time. A [Flavio Copes post](https://flaviocopes.com/boring-stack/) had convinced me of the wisdom of taking such a stand.
 
 However, since then, I've read quite a few other folks’ posts about, guess what, how they do their sites with one SSG or another, their migration of those sites between SSGs, their choices and the occasional ruing thereof, and so on. And I've found them fascinating.
 

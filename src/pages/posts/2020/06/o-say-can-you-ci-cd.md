@@ -75,7 +75,7 @@ One obvious choice, albeit a drastic one, would be to leave Netlify for another 
 
 Keep in mind this central fact: Netlify's 300-minute monthly cap is for builds *on its infrastructure*. However, if you simply do the build *somewhere else* and then do only the *deploy* on Netlify's infrastructure, you use *zero* Netlify build minutes---after which the actual deployment not only isn't even counted as a build but also usually takes well under ten *seconds*.
 
-Fortunately for us, a fellow named Marek Pukaj already led the way with his article, "[Build with GitHub Actions, host on Netlify](https://medium.com/@MarekPukaj/build-with-github-actions-host-on-netlify-ebf5fa505616)." As he explained:
+Fortunately for us, a fellow named Marek Pukaj already led the way with his article, “[Build with GitHub Actions, host on Netlify](https://medium.com/@MarekPukaj/build-with-github-actions-host-on-netlify-ebf5fa505616).” As he explained:
 
 > One possible solution *[to Netlify's 300-minute monthly build limit]* is to move the build process to GitHub Actions. &nbsp;.&nbsp;.&nbsp;. With GitHub Actions, you have **2,000 free build minutes per month**, which is nearly **7 times** more than with Netlify. *[Emphasis his.]*
 

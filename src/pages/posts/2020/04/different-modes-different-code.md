@@ -20,7 +20,7 @@ As we all hunker down from [COVID-19](/posts/2020/03/coherence-covid-19/), maint
 
 I like to look at other people's website code, partly out of geeky curiosity and partly in search of new and better ways of handling this site. A few days ago, I began considering a little project that might be both interesting to me and useful to others.
 
-I still had the private repositories, or *repos*, from this site's time in the [Hugo](https://gohugo.io) and [Gatsby](https://gatsbyjs.org) [static site generators](https://staticgen.com) (SSGs), during last year's "[dance](/posts/2019/12/sorta-strange-ssg-trip/)." Each was far from ideal, as is sadly true for the repo for this site. Still: what if, for the sake of other curious souls, I made those repos public?
+I still had the private repositories, or *repos*, from this site's time in the [Hugo](https://gohugo.io) and [Gatsby](https://gatsbyjs.org) [static site generators](https://staticgen.com) (SSGs), during last year's “[dance](/posts/2019/12/sorta-strange-ssg-trip/).” Each was far from ideal, as is sadly true for the repo for this site. Still: what if, for the sake of other curious souls, I made those repos public?
 
 ## Baring all?
 
@@ -110,7 +110,7 @@ Here's how I handled this page, since it had no images at the time I originally 
 
 **But**&nbsp;.&nbsp;.&nbsp;.
 
-It was a different story for a post that *did* have at least one image. Ironically, "[So much for heroes](/posts/2020/02/so-much-for-heroes/)," the one about *getting rid of* hero images, does have an image: a screen capture to show how those hero images had looked. So I left it in the Gatsby-esque method, which meant the Markdown file would be `index.md` inside the directory `/src/pages/posts/2019/02/so-much-for-heroes/`, which also had that one image.
+It was a different story for a post that *did* have at least one image. Ironically, “[So much for heroes](/posts/2020/02/so-much-for-heroes/),” the one about *getting rid of* hero images, does have an image: a screen capture to show how those hero images had looked. So I left it in the Gatsby-esque method, which meant the Markdown file would be `index.md` inside the directory `/src/pages/posts/2019/02/so-much-for-heroes/`, which also had that one image.
 
 Thankfully, there aren't *that* many posts left with images in them, so this wasn't as big a deal as it may seem.
 

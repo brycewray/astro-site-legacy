@@ -43,7 +43,7 @@ Fortunately, there's a better way.
 
 ## Borrowing some great advice
 
-Before I give you the particulars, please be aware that I didn't come up with the most important part of these instructions. I simply found it by chance one day and, given its relative obscurity, realized I should share it with my fellow Mac users. If you want to see the original, go to "[How to Disable iCloud Desktop &amp; Documents on Mac](https://osxdaily.com/2017/07/06/disable-icloud-desktop-documents-mac/)"---dated July 6, 2017---and search that page for the name "James Howie," because it's *his* comment, provided over two years after the article's initial publication, whence this advice sprang. To Mr. Howie, wherever he is: a huge "thank you," sir.
+Before I give you the particulars, please be aware that I didn't come up with the most important part of these instructions. I simply found it by chance one day and, given its relative obscurity, realized I should share it with my fellow Mac users. If you want to see the original, go to “[How to Disable iCloud Desktop &amp; Documents on Mac](https://osxdaily.com/2017/07/06/disable-icloud-desktop-documents-mac/)”---dated July 6, 2017---and search that page for the name "James Howie," because it's *his* comment, provided over two years after the article's initial publication, whence this advice sprang. To Mr. Howie, wherever he is: a huge "thank you," sir.
 
 ### Important notes
 

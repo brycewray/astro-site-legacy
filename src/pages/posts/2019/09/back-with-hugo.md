@@ -62,7 +62,7 @@ Thus, I was back to preferring the all-in-one-box, single-binary goodness of Hug
 
 On the day this week when I was pondering whether to revert to Hugo, egg-on-my-face be damned, I encountered one particular article that made the choice a lot easier---if not less personally embarrassing, given the big deal I'd made about the short-lived change.
 
-Back in January, Flavio Copes, the well-known developer and prolific tech blogger (not to mention Hugo user), wrote a piece called "[The pros of using a boring stack](https://flaviocopes.com/boring-stack/)." Among his many salient-as-usual points (and the boldfacing is all his):
+Back in January, Flavio Copes, the well-known developer and prolific tech blogger (not to mention Hugo user), wrote a piece called “[The pros of using a boring stack](https://flaviocopes.com/boring-stack/).” Among his many salient-as-usual points (and the boldfacing is all his):
 
 > .&nbsp;.&nbsp;. if you want to create a blog and be serious at it, then use the most boring and bulletproof thing you can find. Definitely **don't work on your blog infrastructure if you want to do any serious blogging**.
 >

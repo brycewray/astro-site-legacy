@@ -38,7 +38,7 @@ Speaking of Tailwind, more on that in a bit.
 
 ## Next.js needs Vercel
 
-In the Day Job, I've begun work on rebuilding my employer's websites in [Vercel](https://vercel.com)'s [Next.js framework](https://nextjs.org) (yes, I got approval for what I mentioned in "[Next steps?](/posts/2021/03/next-steps/)”). A word to the wise: while Next.js is superb and getting better all the time, you should use it with Vercel's website hosting if at all possible. Some of Next's coolest features, notably the image optimization features [introduced last year](https://nextjs.org/blog/next-10), really need Vercel's special back-end tooling to work their best---or, in some cases, at all.[^VercelMktg] (You'll find a disquieting number of related posts on [Stack Overflow](https://stackoverflow.com), among other places.)
+In the Day Job, I've begun work on rebuilding my employer's websites in [Vercel](https://vercel.com)'s [Next.js framework](https://nextjs.org) (yes, I got approval for what I mentioned in “[Next steps?](/posts/2021/03/next-steps/)”). A word to the wise: while Next.js is superb and getting better all the time, you should use it with Vercel's website hosting if at all possible. Some of Next's coolest features, notably the image optimization features [introduced last year](https://nextjs.org/blog/next-10), really need Vercel's special back-end tooling to work their best---or, in some cases, at all.[^VercelMktg] (You'll find a disquieting number of related posts on [Stack Overflow](https://stackoverflow.com), among other places.)
 
 [^VercelMktg]: I guess they're not kidding around with that top-of-screen message in the Next.js website: "Deploy on the platform made for Next.js."
 
@@ -52,7 +52,7 @@ Just a quick reminder for you: sometime next month, Google will make a significa
 
 Oh, yes, about Tailwind&nbsp;.&nbsp;.&nbsp;.
 
-In "[Speaking up for Sass](/posts/2021/04/speaking-up-for-sass/)," I (foot)noted that one of the reasons I'd moved this site off Tailwind CSS and back to Sass was because, in that aforementioned Day Job web dev work, I'd picked Sass for the styling and didn't want to be jumping back and forth between one method at work and another at home. The *reason* I'd selected Sass was because I felt that, when my inevitable successor takes over the code base, it would be better for him/her if we hadn't chosen a Styling Flavor of the Month.
+In “[Speaking up for Sass](/posts/2021/04/speaking-up-for-sass/),” I (foot)noted that one of the reasons I'd moved this site off Tailwind CSS and back to Sass was because, in that aforementioned Day Job web dev work, I'd picked Sass for the styling and didn't want to be jumping back and forth between one method at work and another at home. The *reason* I'd selected Sass was because I felt that, when my inevitable successor takes over the code base, it would be better for him/her if we hadn't chosen a Styling Flavor of the Month.
 
 However, in the days since, I've continued to research the choice. I've found that, increasingly, dev team leads are encouraging adoption of utility-first CSS, exactly for the purpose of making it *easier* for successors to take over existing code. These advocates’ shared point is that, for someone new to a code base, it's easier to figure out how to make changes if one doesn't have to worry about all the existing interrelationships among the base's various web pages and styling cascades.
 

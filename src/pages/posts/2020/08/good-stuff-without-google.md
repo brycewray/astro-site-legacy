@@ -20,7 +20,7 @@ Early in this site's history, I issued a post in [two](/posts/2018/10/web-typogr
 
 That said: if you're willing to give up some [performance points](/posts/2020/07/chasing-100-tips-optimizing-website/), your site can gain a bit greater visual distinctiveness through the use of those other fonts, especially since there are so many cool, free typefaces out there for the grabbing and simple installation. [Google Fonts](https://fonts.google.com) is the source that comes most readily to mind, I'm sure.
 
-Unfortunately, as I explained in "[Google Fonts and privacy](/posts/2020/08/google-fonts-privacy/)," you don't want to provide those fonts straight off Google's servers unless you want to violate your visitors’ privacy and, for that matter, run afoul of various types of legislation enacted to protect that privacy. The most obvious alternative is simply to download the desired fonts from Google Fonts and install them in your site, then set your site to serve them "locally," so to speak.
+Unfortunately, as I explained in “[Google Fonts and privacy](/posts/2020/08/google-fonts-privacy/),” you don't want to provide those fonts straight off Google's servers unless you want to violate your visitors’ privacy and, for that matter, run afoul of various types of legislation enacted to protect that privacy. The most obvious alternative is simply to download the desired fonts from Google Fonts and install them in your site, then set your site to serve them "locally," so to speak.
 
 However, there's a trick to doing that. And it gets even trickier if you want to use **variable fonts** rather than just ordinary fonts---and, I would suggest, in many cases you'd be wise to do.
 
@@ -210,7 +210,7 @@ So there you are; that's how you jump through the hoops, as I put it. I think on
 
 If your site can make use of variable fonts, believe me when I tell you: the hoops are worth that trouble---for you and your website's visitors.
 
-[^1]:	I also urge you to consult "[Introduction to variable fonts on the web](https://web.dev/variable-fonts/)" and  "[Variable fonts guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)," from which I derived this information.
+[^1]:	I also urge you to consult “[Introduction to variable fonts on the web](https://web.dev/variable-fonts/)” and  “[Variable fonts guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide),” from which I derived this information.
 
 [^2]:	The google-webfonts-helper site lets you choose between files and CSS for "Best Support" (.woff2 and .woff, for both modern and obsolete browsers) and "Modern Browsers" (.woff2 only).
 

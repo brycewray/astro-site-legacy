@@ -39,7 +39,7 @@ Before my fellow non-Europeans wonder why I, a guy in the U.S., care about wheth
 
 I didn't know until this week that Google Fonts typefaces, if served by Google, also run afoul of the GDPR.
 
-When I first learned of this in the August 6, 2020, edition of the "Go Make Things" daily email newsletter I receive from developer [Chris Ferdinandi](https://gomakethings.com), my initial reaction was to doubt this information. I was even more skeptical about it after I read the [Google Fonts FAQ](https://developers.google.com/fonts/faq), specifically the following excerpts from a section entitled "[What does using the Google Fonts API mean for the privacy of my users?](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users)":
+When I first learned of this in the August 6, 2020, edition of the "Go Make Things" daily email newsletter I receive from developer [Chris Ferdinandi](https://gomakethings.com), my initial reaction was to doubt this information. I was even more skeptical about it after I read the [Google Fonts FAQ](https://developers.google.com/fonts/faq), specifically the following excerpts from a section entitled “[What does using the Google Fonts API mean for the privacy of my users?](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users)”:
 
 > Use of Google Fonts is unauthenticated. No cookies are sent by website visitors to the Google Fonts API. Requests to the Google Fonts API are made to resource-specific domains, such as fonts.googleapis.com or fonts.gstatic.com, so that your requests for fonts are separate from and do not contain any credentials you send to google.com while using other Google services that are authenticated, such as Gmail. .&nbsp;.&nbsp;.&nbsp;[Because of caching,] website visitors send very few requests to Google: We only see 1 CSS request per font family, per day, per browser.
 
@@ -60,7 +60,7 @@ Fortunately, I didn't stop researching the matter.
 
 ## Issue #1495
 
-What changed my mind was "[GDPR compliance](https://github.com/google/fonts/issues/1495)," Issue #1495 within the [Google Fonts repo](https://github.com/google/fonts) on GitHub.
+What changed my mind was “[GDPR compliance](https://github.com/google/fonts/issues/1495),” Issue #1495 within the [Google Fonts repo](https://github.com/google/fonts) on GitHub.
 
 Issue #1495, first filed a few weeks before the GDPR was to go into effect, was an attempt by developers to determine Google's official position regarding the impact by Google-served Google Fonts on a website's GDPR compliance. These devs hoped Google would provide a definitive statement about exactly what the corporation receives whenever someone visits a site where Google-served Google Fonts are in use.
 
@@ -76,7 +76,7 @@ While there probably are ways to do that when one has total control of the serve
 
 Moreover, I wouldn't *want* to do that. I'm annoyed whenever I encounter all this permissions-requesting stuff on one site after another, and I don't want to put my visitors through it.
 
-So, yesterday, I began serving my chosen Google Fonts typefaces "locally." I initially obtained them from [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts), but using those precludes using [variable fonts](https://css-tricks.com/google-fonts-variable-fonts/), as I prefer; so I had to jump through a few hoops to obtain those variable fonts---yes, from Google---and "locally" provide them. (I explain the procedure in "[Good stuff without Google](/posts/2020/08/good-stuff-without-google/).”)
+So, yesterday, I began serving my chosen Google Fonts typefaces "locally." I initially obtained them from [google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts), but using those precludes using [variable fonts](https://css-tricks.com/google-fonts-variable-fonts/), as I prefer; so I had to jump through a few hoops to obtain those variable fonts---yes, from Google---and "locally" provide them. (I explain the procedure in “[Good stuff without Google](/posts/2020/08/good-stuff-without-google/).”)
 
 Anyway: because Google updates Google Fonts typefaces frequently, I will have to monitor their versions and keep my "local" copies straight. That's fine. I get to keep the site's typography as I want, while keeping the site from helping Google track you to even the limited extent that Google-served typefaces apparently do.
 

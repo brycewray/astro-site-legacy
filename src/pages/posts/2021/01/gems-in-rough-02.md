@@ -70,11 +70,11 @@ So, if you're a Hugo user right now, you have two options where it comes to good
 
 Those who have inflicted upon themselves the curse of reading any significant number of my posts are all too aware that I have a thing about using footnotes. Often, lots of ’em. So it kinda griped my cookies (as the technical term is used) that Eleventy---when properly set up for footnotes in the first place through use of the [markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote) plugin for Eleventy's usual [markdown-it](https://github.com/markdown-it/markdown-it) parser---always encased the footnote numbers in brackets. Brackets!! Argh.
 
-Here's an example, using a screen capture of a paragraph from last year's "[YouTube TV and the RSNs flap](/posts/2020/02/youtube-tv-rsns-flap/)":
+Here's an example, using a screen capture of a paragraph from last year's “[YouTube TV and the RSNs flap](/posts/2020/02/youtube-tv-rsns-flap/)”:
 
 <Imgc url="Eleventy-bracketed-footnotes_2520x844.png" alt="Paragraph ending in a footnote whose number is bracketed" width="2520" height="844" />
 
-But it turns out there's been an answer out there for months, in the form of [Mark Llobrera](https://www.markllobrera.com)'s "[Eleventy: Markdown and Footnotes](https://www.markllobrera.com/posts/eleventy-markdown-and-footnotes/)," in which he prescribed adding the following code within the part of the `.eleventy.js` config file that specifies how markdown-it and its various plugins will work with Eleventy:
+But it turns out there's been an answer out there for months, in the form of [Mark Llobrera](https://www.markllobrera.com)'s “[Eleventy: Markdown and Footnotes](https://www.markllobrera.com/posts/eleventy-markdown-and-footnotes/),” in which he prescribed adding the following code within the part of the `.eleventy.js` config file that specifies how markdown-it and its various plugins will work with Eleventy:
 
 ```js
 markdownLibrary.renderer.rules.footnote_caption = (tokens, idx) => {

@@ -23,7 +23,7 @@ Largely since I'm *not* a heavy email user and [purposely don't use my go-to pho
 
 Fair warning to the uninitiated: MailMate isn't "pretty." Its interface is busy and dated-looking (although, like just about everything else in the app, highly customizable). **But** MailMate **is** solid, powerful, ultra-compliant with email standards, and loaded with more features than any user could ever possibly exhaust. And that's exactly how its creator and lone developer---Benny Kjær Nielsen, Ph.D in computer science---wants it. The same goes for the true power users[^OtherMMReviews] whom his work targets.
 
-[^OtherMMReviews]: Since [my article](/posts/2019/06/ahoy-mate) last year wasn't deep enough to give MailMate its due, please also check out the more recent "[MailMate](https://tyler.io/mailmate/)" and "[Additional MailMate Tips](https://tyler.io/additional-mailmate-tips/)" by Tyler Hall, and "[MailMate Review](https://canion.me/mailmate-review)" by Andrew Canion.
+[^OtherMMReviews]: Since [my article](/posts/2019/06/ahoy-mate) last year wasn't deep enough to give MailMate its due, please also check out the more recent “[MailMate](https://tyler.io/mailmate/)” and “[Additional MailMate Tips](https://tyler.io/additional-mailmate-tips/)” by Tyler Hall, and “[MailMate Review](https://canion.me/mailmate-review)” by Andrew Canion.
 
 But what about when those power users are away from their Macs and depending on iPhones or iPads?
 
@@ -195,7 +195,7 @@ Incidentally: AltaMail's notifications can be a little slow, too, unless you act
 So, in truth, neither Preside nor AltaMail has a totally clean slate on notifications when compared to the old standby, Apple Mail. However, that's true for virtually all other third-party iOS email apps unless they're running your emails through their servers (potentially a [violation](https://www.vice.com/en_us/article/pkekmb/free-email-apps-spying-on-you-edison-slice-cleanfox) of your security) which, fortunately, neither of these apps does.
 
 <Box cssClass="yellowBox">
-**Update, 2021-07-03**: For an explanation of how to get more immediate notifications from Preside, see my later post, "[Better notifications in the Preside email app](/posts/2021/07/better-notifications-preside-email-app/)."
+**Update, 2021-07-03**: For an explanation of how to get more immediate notifications from Preside, see my later post, “[Better notifications in the Preside email app](/posts/2021/07/better-notifications-preside-email-app/).”
 </Box>
 
 ## The winnah

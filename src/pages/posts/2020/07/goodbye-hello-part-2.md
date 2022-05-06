@@ -19,7 +19,7 @@ featured_image_caption: |
 
 <Disclaimer />
 
-In case you haven't yet seen "[Transformed](/posts/2020/07/transformed/)," I just finished moving virtually all my site's images to [Cloudinary](https://cloudinary.com). It turned out the lifting of this image-handling and -storing burden had one additional, nice side-benefit.
+In case you haven't yet seen “[Transformed](/posts/2020/07/transformed/),” I just finished moving virtually all my site's images to [Cloudinary](https://cloudinary.com). It turned out the lifting of this image-handling and -storing burden had one additional, nice side-benefit.
 
 It let me **return to [Netlify](https://netlify.com)**, slightly over a month after leaving.
 
