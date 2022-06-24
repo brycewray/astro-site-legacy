@@ -130,28 +130,13 @@ for(let x = 0; x < postsNumber; x++) {
 	<body>
 		<Header />
     <main>
-      {featured_image && (
-        <PostFeatImg
-          featured_image={featured_image}
-          featured_image_alt={featured_image_alt}
-          featured_image_width={featured_image_width}
-          featured_image_height={featured_image_height}
-          featured_image_caption={featured_image_caption}
-          tmpl="posts"
-          title={title}
-          description={description}
-          date={date}
-          lastmod={lastmod}
-        />
-      ) || (
-        <Billboard
-          title={title}
-          subtitle={subtitle}
-          description={description}
-          date={date}
-          lastmod={lastmod}
-        />
-      )}
+      <Billboard
+        title={title}
+        subtitle={subtitle}
+        description={description}
+        date={date}
+        lastmod={lastmod}
+      />
 			<Post >
 				<slot />
         <div class="contactBtn">
